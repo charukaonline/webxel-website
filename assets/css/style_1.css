@@ -103,6 +103,231 @@ header .icons #menu-bars {
     display: none;
 }
 
+#search-form {
+    position: fixed;
+    top: -110%;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 1004;
+    background: rgba(0, 0, 0, 0.99);
+    /* background: transparent;
+    backdrop-filter: blur(20px); */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 1rem;
+}
+
+#search-form.active {
+    top: 0;
+}
+
+#search-form #search-box {
+    width: 50rem;
+    border-bottom: .1rem solid var(--header-background-color);
+    padding: 1rem 0;
+    color: #fff;
+    font-size: 3rem;
+    text-transform: none;
+    background: none;
+}
+
+#search-form #search-box::placeholder {
+    color: #eee;
+}
+
+#search-form #search-box::-webkit-search-cancel-button {
+    -webkit-appearance: none;
+}
+
+#search-form label{
+    color: #fff;
+    font-size: 2rem;
+}
+
+#search-form label:hover {
+    color: #fff;
+}
+
+#search-form #search-form-close {
+    position: absolute;
+    color: var(--header-background-color);
+    cursor: pointer;
+    top: 2.5rem;
+    right: 3rem;
+    font-size: 20px;
+}
+
+.home {
+    margin-top: 80px;
+    height: 100vh;
+    background: #000;
+}
+
+.intro {
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url('/webxel-website/assets/images/pexels-sharad-bhat-4007744.jpg');
+    background-size: cover;
+}
+
+.home .intro h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--font-color);
+    font-size: 54px;
+    /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+}
+
+.home .intro h3 {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #6e6e73;
+    font-size: 30px;
+}
+
+.home .intro a {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--btn-color);
+    font-size: 27px;
+}
+
+.home .intro .fa-chevron-right {
+    color: var(--btn-color);
+    font-size: 20px;
+}
+
+.home .intro a:hover,
+.home .intro .fa-chevron-right:hover {
+    letter-spacing: 0.1rem;
+}
+
+.home .content {
+    height: 100vh;
+    color: black;
+}
+
+.home .content h1 {
+    padding-top: 80px;
+    text-align: center;
+    font-size: 38px;
+    padding-bottom: 99px;
+}
+
+.home .content .flex-container {
+    padding-top: 1rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr));
+    gap: .9rem;
+}
+
+.home .content .flex-container .flex-box1 {
+    padding: 13.5rem;
+    background: #fff;
+    color: var(--font-color);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url('/webxel-website/assets/images/pexels-pixabay-276452.jpg');
+    background-size: cover;
+    border-radius: 2rem;
+    border: .1rem solid rgba(0, 0, 0, .2);
+    box-shadow: var(--box-shadow);
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    outline: none;
+    border: none;
+    font-size: 20px
+}
+.home .content .flex-container .flex-box2 {
+    padding: 13.5rem;
+    background: #fff;
+    color: var(--font-color);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url('/webxel-website/assets/images/pexels-mengliu-di-3679525.jpg');
+    background-size: cover;
+    border-radius: 2rem;
+    border: .1rem solid rgba(0, 0, 0, .2);
+    box-shadow: var(--box-shadow);
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    outline: none;
+    border: none;
+    font-size: 20px
+}
+.home .content .flex-container .flex-box3 {
+    padding: 13.5rem;
+    background: #fff;
+    color: var(--font-color);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url('/webxel-website/assets/images/1.jpg');
+    background-size: cover;
+    border-radius: 2rem;
+    border: .1rem solid rgba(0, 0, 0, .2);
+    box-shadow: var(--box-shadow);
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    outline: none;
+    border: none;
+    font-size: 20px
+}
+.home .content .flex-container .flex-box4 {
+    padding: 13.5rem;
+    background: #fff;
+    color: var(--font-color);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url('/webxel-website/assets/images/pexels-erik-mclean-4889302.jpg');
+    background-size: cover;
+    border-radius: 2rem;
+    border: .1rem solid rgba(0, 0, 0, .2);
+    box-shadow: var(--box-shadow);
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    outline: none;
+    border: none;
+    font-size: 20px
+}
+
+.home .content .flex-container .flex-box1 h3,
+.home .content .flex-container .flex-box2 h3,
+.home .content .flex-container .flex-box3 h3,
+.home .content .flex-container .flex-box4 h3 {
+    color: var(--font-color);
+    font-size: 28px;
+}
+
+.home .content .flex-container .flex-box1 p,
+.home .content .flex-container .flex-box2 p,
+.home .content .flex-container .flex-box3 p,
+.home .content .flex-container .flex-box4 p {
+    margin-top: 1rem;
+    display: inline-block;
+    font-size: 1.9rem;
+    color: #d3d3d8;
+    border-radius: .5rem;
+    padding: .8rem 3rem;
+}
+
+.home .content .flex-container .btn {
+    margin-top: 1rem;
+    display: inline-block;
+    font-size: 1.7rem;
+    color: var(--btn-color);
+    border-radius: .5rem;
+    cursor: pointer;
+    padding: .8rem 3rem;
+}
+
+.home .content .flex-container .btn:hover {
+    background: var(--box-shadow);
+    letter-spacing: .1rem;
+}
+
 /* Footer */
 footer {
     width: 100%;
