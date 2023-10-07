@@ -15,7 +15,6 @@ window.onscroll = () => {
 document.querySelector('#search-icon').onclick = () => {
     document.querySelector('#search-form').classList.toggle('active');
 }
-
 // Search bar close
 document.querySelector('#search-form-close').onclick = () => {
     document.querySelector('#search-form').classList.remove('active');
