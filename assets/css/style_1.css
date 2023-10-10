@@ -104,50 +104,6 @@ header .icons #menu-bars {
     display: none;
 }
 
-/* Service form */
-#service-form {
-    position: fixed;
-    top: -110%;
-    left: 0;
-    height: 85%;
-    width: 100%;
-    z-index: 1004;
-    background: rgb(40, 40, 40);
-    box-shadow: var(--form-box-shadow);
-    /* background: transparent;
-    backdrop-filter: blur(20px); */
-    align-items: center;
-    /* justify-content: center; */
-    padding: 0;
-}
-
-#service-form.active {
-    top: 0;
-}
-
-#service-form #service-box::-webkit-service-cancel-button {
-    -webkit-appearance: none;
-}
-
-#service-form label {
-    cursor: pointer;
-    padding-top: 2.7rem;
-    margin-top: 2.7rem;
-    color: #fff;
-    font-size: 18px;
-    margin-left: 60px;
-    display: grid;
-}
-
-#service-form #service-form-close {
-    position: absolute;
-    color: var(--header-background-color);
-    cursor: pointer;
-    top: 2.5rem;
-    right: 3rem;
-    font-size: 20px;
-}
-
 /* Search form */
 #search-form {
     position: fixed;
