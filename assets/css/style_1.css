@@ -214,7 +214,7 @@ header .icons #menu-bars {
 
 .intro {
     height: 100vh;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url('/assets/images/pexels-sharad-bhat-4007744.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url('/assets/images/home-page-cover.jpg');
     background-size: cover;
 }
 
@@ -297,19 +297,19 @@ header .icons #menu-bars {
 }
 
 .home .content .flex-container .flex-box1 {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url('/assets/images/pexels-pixabay-276452.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url('/assets/images/web-development-service-home.jpg');
 }
 
 .home .content .flex-container .flex-box2 {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url('/assets/images/pexels-mengliu-di-3679525.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url('/assets/images/video-animation-service-home.jpg');
 }
 
 .home .content .flex-container .flex-box3 {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url('/assets/images/1.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url('/assets/images/app-development-service-home.jpg');
 }
 
 .home .content .flex-container .flex-box4 {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url('/assets/images/pexels-erik-mclean-4889302.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url('/assets/images/graphic-design-service-home.jpg');
 }
 
 .home .content .flex-container .flex-box1 h3,
