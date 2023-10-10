@@ -19,12 +19,3 @@ document.querySelector('#search-icon').onclick = () => {
 document.querySelector('#search-form-close').onclick = () => {
     document.querySelector('#search-form').classList.remove('active');
 }
-
-// Service form toggle
-document.querySelector('#service').onclick = () => {
-    document.querySelector('#service-form').classList.toggle('active');
-}
-// Service form close
-document.querySelector('#service-form-close').onclick = () => {
-    document.querySelector('#service-form').classList.remove('active');
-}
