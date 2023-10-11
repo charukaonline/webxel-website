@@ -47,7 +47,7 @@ html {
 
 .about .intro h1 {
     position: absolute;
-    top: 30%;
+    top: 28%;
     left: 50%;
     transform: translate(-50%, -50%);
     color: var(--font-color);
@@ -66,7 +66,7 @@ html {
 
 .about .about-desc {
     position: absolute;
-    top: 62%;
+    top: 78%;
     left: 50%;
     transform: translate(-50%, -50%);
     color: var(--font-color);
@@ -74,75 +74,95 @@ html {
     text-align: justify;
 }
 
-.about .content h1 {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: var(--font-color);
-    font-size: 30px;
-}
-
-/* Container for team members */
-.team-container {
+.about .content {
     height: 100vh;
-    color: black;
-    /* display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between; */
 }
 
-/* Styling for individual team members */
-.team-member {
-    flex: 0 0 calc(33.33% - 16px);
-    margin-bottom: 16px;
-    padding: 8px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    transition: transform 0.2s;
-    /* filter: grayscale(100%); */
+.about .content .heading {
+    padding-top: 80px;
+    text-align: center;
+    font-size: 38px;
+    padding-bottom: 99px;
+    color: var(--font-color);
 }
 
-.team-member:hover {
+.about .content .flex-container {
+    padding-top: 1rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr));
+    gap: .5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.about .content .flex-container .flex-box1,
+.about .content .flex-container .flex-box2,
+.about .content .flex-container .flex-box3,
+.about .content .flex-container .flex-box4,
+.about .content .flex-container .flex-box5,
+.about .content .flex-container .flex-box6,
+.about .content .flex-container .flex-box7,
+.about .content .flex-container .flex-box8,
+.about .content .flex-container .flex-box9 {
+    padding: 13.5rem;
+    background: #fff;
+    background-size: cover;
+    color: var(--font-color);
+    background-size: cover;
+    border-radius: 2rem;
+    border: .1rem solid rgba(0, 0, 0, .2);
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    outline: none;
+    border: none;
+    font-size: 20px
+}
+
+.about .content .flex-container .flex-box1 h2,
+.about .content .flex-container .flex-box2 h2,
+.about .content .flex-container .flex-box3 h2,
+.about .content .flex-container .flex-box4 h2,
+.about .content .flex-container .flex-box5 h2,
+.about .content .flex-container .flex-box6 h2,
+.about .content .flex-container .flex-box7 h2,
+.about .content .flex-container .flex-box8 h2,
+.about .content .flex-container .flex-box9 h2{
+    color: var(--bg-color);
+    font-size: 15px;
+}
+
+.about .content .flex-container .flex-box1 p,
+.about .content .flex-container .flex-box2 p,
+.about .content .flex-container .flex-box3 p,
+.about .content .flex-container .flex-box4 p,
+.about .content .flex-container .flex-box5 p,
+.about .content .flex-container .flex-box6 p,
+.about .content .flex-container .flex-box7 p,
+.about .content .flex-container .flex-box8 p,
+.about .content .flex-container .flex-box9 p{
+    margin-top: 1rem;
+    display: inline-block;
+    font-size: 13px;
+    color: var(--bg-color);
+    border-radius: .5rem;
+    padding: .8rem 3rem;
+}
+
+.about .content .flex-container .flex-box1:hover,
+.about .content .flex-container .flex-box2:hover,
+.about .content .flex-container .flex-box3:hover,
+.about .content .flex-container .flex-box4:hover,
+.about .content .flex-container .flex-box5:hover,
+.about .content .flex-container .flex-box6:hover,
+.about .content .flex-container .flex-box7:hover,
+.about .content .flex-container .flex-box8:hover,
+.about .content .flex-container .flex-box9:hover {
     transform: translateY(-5px);
 }
 
-/* Image styling */
-.team-member img {
-    width: 95%;
-}
-
-/* Team member name and title styling */
-.team-member-info {
-    text-align: center;
-}
-
-/* Add styling for the about section 
-        .about-section {
-            padding: 30px;
-            text-align: center;
-            background-color: #09090a;
-            color: white;
-        }*/
-
-/* Add styling for the about section */
-.about-section {
-    padding-top: 40px;
-    /* Equal spacing from the top */
-    padding-bottom: 20px;
-    /* Equal spacing from the bottom */
-    text-align: center;
-    background-color: #09090a;
-    color: white;
-}
-
-
-/* Add styling for the welcome section */
-.Welcome {
-    text-align: center;
-}
-
 /* Styling for the "Contact" button */
-.button {
+.about .content .flex-container .button {
     border: none;
     outline: 0;
     display: inline-block;
@@ -163,15 +183,16 @@ html {
 footer {
     width: 100%;
     height: 25%;
-    background: var(--header-background-color);
+    /* background: var(--header-background-color); */
     display: flex;
     justify-content: center;
-    background: #f5f5f7;
+    background: var(--bg-color);
     position: absolute;
-    bottom: -1820px;
+    bottom: -1950px;
     padding: 100px 0 30px;
     font-size: 13px;
     line-height: 18px;
+    color: #6e6e73;
 }
 
 .footer_wrapper {
@@ -188,11 +209,13 @@ footer {
 .footer_wrapper ul li {
     margin: 15px 0;
     letter-spacing: 0.1px;
+    color: #6e6e73;
 }
 
 .footer_links {
     width: 100%;
     display: flex;
+    color: #6e6e73;
 }
 
 .footer_links_column {
@@ -207,12 +230,14 @@ footer {
     margin-top: 20px;
     margin-bottom: 13px;
     letter-spacing: .5px;
+    color: #6e6e73;
 }
 
 .footer_links_column a {
-    color: rgba(0, 0, 0, .8);
+    /* color: rgba(0, 0, 0, .8); */
     font-size: 12px;
     margin-bottom: 12px;
+    color: #736e71;
 }
 
 .footer-copyright {
@@ -222,7 +247,7 @@ footer {
     align-items: center;
     justify-content: center;
     font-size: 13px;
-    color: rgba(0, 0, 0, .8);
+    color: #6e6e73;
     margin-top: 4px;
     position: relative;
 }
