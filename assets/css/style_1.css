@@ -343,24 +343,25 @@ header .icons #menu-bars {
 }
 
 .home .progress {
-    height: 70vh;
+    height: 100vh;
     color: var(--bg-color);
 }
 
 .home .progress .flex-container {
-    padding-top: .3rem;
+    padding-top: 1.8rem;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr));
-    gap: 1.7rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
+    gap: 5rem;
+    padding-left: 5rem;
+    padding-right: 5rem;
 }
 
 .home .progress .flex-container .flex-box1,
 .home .progress .flex-container .flex-box2,
-.home .progress .flex-container .flex-box3 {
-    top: 95px;
-    padding: 5rem;
+.home .progress .flex-container .flex-box3,
+.home .progress .flex-container .flex-box4 {
+    top: 25px;
+    padding: 6rem;
     color: var(--bg-color);
     box-shadow: 0 5px 10px rgba(0, 0, 0, .4);
     background: #fff;
@@ -377,19 +378,21 @@ header .icons #menu-bars {
 
 .home .progress .flex-container .flex-box1 h1,
 .home .progress .flex-container .flex-box2 h1,
-.home .progress .flex-container .flex-box3 h1 {
+.home .progress .flex-container .flex-box3 h1,
+.home .progress .flex-container .flex-box4 h1 {
     padding-top: 10px;
     color: var(--bg-color);
-    font-size: 20px;
+    font-size: 24px;
 }
 
 .home .progress .flex-container .flex-box1 p,
 .home .progress .flex-container .flex-box2 p,
-.home .progress .flex-container .flex-box3 p {
+.home .progress .flex-container .flex-box3 p,
+.home .progress .flex-container .flex-box4 p {
     margin-top: 1rem;
     display: inline-block;
     text-align: center;
-    font-size: 37px;
+    font-size: 40px;
     color: var(--bg-color);
     border-radius: .5rem;
     padding: .8rem 3rem;
@@ -403,7 +406,7 @@ header .icons #menu-bars {
 
 .home .customers-review .heading {
     position: absolute;
-    top: 498%;
+    top: 528%;
     left: 50%;
     transform: translate(-50%, -50%);
     color: var(--font-color);
@@ -476,7 +479,7 @@ footer {
     justify-content: center;
     background: #f5f5f7;
     position: absolute;
-    bottom: -3350px;
+    bottom: -3500px;
     padding: 100px 0 30px;
     font-size: 13px;
     line-height: 18px;
