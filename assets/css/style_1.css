@@ -315,10 +315,10 @@ header .icons #menu-bars {
 }
 
 .about .home-about .heading {
-    position: absolute;
-    padding-top: 250px;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    position: relative;
+    padding-top: 100px;
+    left: 43%;
+    /* transform: translate(-50%, -50%); */
     color: var(--font-color);
     font-size: 38px;
 }
