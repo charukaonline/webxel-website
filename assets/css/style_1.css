@@ -215,19 +215,19 @@ header .icons #menu-bars {
     letter-spacing: 0.1rem;
 }
 
-.home .content {
+.content {
     height: 100vh;
     color: black;
 }
 
-.home .content h1 {
+.content h1 {
     padding-top: 80px;
     text-align: center;
     font-size: 38px;
     padding-bottom: 99px;
 }
 
-.home .content .flex-container {
+.content .flex-container {
     padding-top: .3rem;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr));
@@ -236,10 +236,10 @@ header .icons #menu-bars {
     padding-right: 1rem;
 }
 
-.home .content .flex-container .flex-box1,
-.home .content .flex-container .flex-box2,
-.home .content .flex-container .flex-box3,
-.home .content .flex-container .flex-box4 {
+.content .flex-container .flex-box1,
+.content .flex-container .flex-box2,
+.content .flex-container .flex-box3,
+.content .flex-container .flex-box4 {
     padding: 13.5rem;
     background: #fff;
     color: var(--font-color);
@@ -255,34 +255,34 @@ header .icons #menu-bars {
     font-size: 20px
 }
 
-.home .content .flex-container .flex-box1 {
+.content .flex-container .flex-box1 {
     background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url('/assets/images/web-development-service-home.jpg');
 }
 
-.home .content .flex-container .flex-box2 {
+.content .flex-container .flex-box2 {
     background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url('/assets/images/video-animation-service-home.jpg');
 }
 
-.home .content .flex-container .flex-box3 {
+.content .flex-container .flex-box3 {
     background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url('/assets/images/app-development-service-home.jpg');
 }
 
-.home .content .flex-container .flex-box4 {
+.content .flex-container .flex-box4 {
     background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url('/assets/images/graphic-design-service-home.jpg');
 }
 
-.home .content .flex-container .flex-box1 h3,
-.home .content .flex-container .flex-box2 h3,
-.home .content .flex-container .flex-box3 h3,
-.home .content .flex-container .flex-box4 h3 {
+.content .flex-container .flex-box1 h3,
+.content .flex-container .flex-box2 h3,
+.content .flex-container .flex-box3 h3,
+.content .flex-container .flex-box4 h3 {
     color: var(--font-color);
     font-size: 28px;
 }
 
-.home .content .flex-container .flex-box1 p,
-.home .content .flex-container .flex-box2 p,
-.home .content .flex-container .flex-box3 p,
-.home .content .flex-container .flex-box4 p {
+.content .flex-container .flex-box1 p,
+.content .flex-container .flex-box2 p,
+.content .flex-container .flex-box3 p,
+.content .flex-container .flex-box4 p {
     margin-top: 1rem;
     display: inline-block;
     font-size: 1.9rem;
@@ -291,7 +291,7 @@ header .icons #menu-bars {
     padding: .8rem 3rem;
 }
 
-.home .content .flex-container .btn {
+.content .flex-container .btn {
     margin-top: 1rem;
     display: inline-block;
     font-size: 1.7rem;
@@ -301,12 +301,12 @@ header .icons #menu-bars {
     padding: .8rem 3rem;
 }
 
-.home .content .flex-container .btn:hover {
+.content .flex-container .btn:hover {
     background: var(--box-shadow);
     letter-spacing: .1rem;
 }
 
-.home .home-about {
+.about .home-about {
     margin-top: 570px;
     height: 100vh;
     /* background: #000; */
@@ -314,7 +314,7 @@ header .icons #menu-bars {
     background-size: cover;
 }
 
-.home .home-about .heading {
+.about .home-about .heading {
     position: absolute;
     top: 340%;
     left: 50%;
@@ -323,7 +323,7 @@ header .icons #menu-bars {
     font-size: 38px;
 }
 
-.home .home-about h3 {
+.about .home-about h3 {
     position: absolute;
     top: 358%;
     left: 50%;
@@ -333,7 +333,7 @@ header .icons #menu-bars {
     text-align: center;
 }
 
-.home .home-about a {
+.about .home-about a {
     position: absolute;
     top: 378%;
     left: 50%;
@@ -342,12 +342,12 @@ header .icons #menu-bars {
     font-size: 27px;
 }
 
-.home .progress {
+.progress {
     height: 100vh;
     color: var(--bg-color);
 }
 
-.home .progress .flex-container {
+.progress .flex-container {
     padding-top: 1.8rem;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr));
@@ -356,10 +356,10 @@ header .icons #menu-bars {
     padding-right: 5rem;
 }
 
-.home .progress .flex-container .flex-box1,
-.home .progress .flex-container .flex-box2,
-.home .progress .flex-container .flex-box3,
-.home .progress .flex-container .flex-box4 {
+.progress .flex-container .flex-box1,
+.progress .flex-container .flex-box2,
+.progress .flex-container .flex-box3,
+.progress .flex-container .flex-box4 {
     top: 25px;
     padding: 6rem;
     color: var(--bg-color);
@@ -376,19 +376,19 @@ header .icons #menu-bars {
     font-size: 20px
 }
 
-.home .progress .flex-container .flex-box1 h1,
-.home .progress .flex-container .flex-box2 h1,
-.home .progress .flex-container .flex-box3 h1,
-.home .progress .flex-container .flex-box4 h1 {
+.progress .flex-container .flex-box1 h1,
+.progress .flex-container .flex-box2 h1,
+.progress .flex-container .flex-box3 h1,
+.progress .flex-container .flex-box4 h1 {
     padding-top: 10px;
     color: var(--bg-color);
     font-size: 24px;
 }
 
-.home .progress .flex-container .flex-box1 p,
-.home .progress .flex-container .flex-box2 p,
-.home .progress .flex-container .flex-box3 p,
-.home .progress .flex-container .flex-box4 p {
+.progress .flex-container .flex-box1 p,
+.progress .flex-container .flex-box2 p,
+.progress .flex-container .flex-box3 p,
+.progress .flex-container .flex-box4 p {
     margin-top: 1rem;
     display: inline-block;
     text-align: center;
@@ -398,13 +398,13 @@ header .icons #menu-bars {
     padding: .8rem 3rem;
 }
 
-.home .customers-review {
+.customers-review {
     height: 100vh;
     background: #000;
     color: var(--font-color);
 }
 
-.home .customers-review .heading {
+.customers-review .heading {
     position: absolute;
     top: 528%;
     left: 50%;
@@ -413,7 +413,7 @@ header .icons #menu-bars {
     font-size: 38px;
 }
 
-.home .customers-review .flex-container {
+.customers-review .flex-container {
     padding-top: .3rem;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr));
@@ -422,9 +422,9 @@ header .icons #menu-bars {
     padding-right: 1rem;
 }
 
-.home .customers-review .flex-container .flex-box1,
-.home .customers-review .flex-container .flex-box2,
-.home .customers-review .flex-container .flex-box3 {
+.customers-review .flex-container .flex-box1,
+.customers-review .flex-container .flex-box2,
+.customers-review .flex-container .flex-box3 {
     top: 155px;
     padding: 4rem;
     color: var(--bg-color);
@@ -443,24 +443,24 @@ header .icons #menu-bars {
     font-size: 20px
 }
 
-.home .customers-review .flex-container .flex-box1 h1,
-.home .customers-review .flex-container .flex-box2 h1,
-.home .customers-review .flex-container .flex-box3 h1 {
+.customers-review .flex-container .flex-box1 h1,
+.customers-review .flex-container .flex-box2 h1,
+.customers-review .flex-container .flex-box3 h1 {
     padding-top: 10px;
     color: var(--bg-color);
     font-size: 18px;
 }
 
-.home .customers-review .flex-container .flex-box1 h3,
-.home .customers-review .flex-container .flex-box2 h3,
-.home .customers-review .flex-container .flex-box3 h3 {
+.customers-review .flex-container .flex-box1 h3,
+.customers-review .flex-container .flex-box2 h3,
+.customers-review .flex-container .flex-box3 h3 {
     color: var(--bg-color);
     font-size: 15px;
 }
 
-.home .customers-review .flex-container .flex-box1 p,
-.home .customers-review .flex-container .flex-box2 p,
-.home .customers-review .flex-container .flex-box3 p {
+.customers-review .flex-container .flex-box1 p,
+.customers-review .flex-container .flex-box2 p,
+.customers-review .flex-container .flex-box3 p {
     margin-top: 1rem;
     display: inline-block;
     text-align: center;
@@ -614,31 +614,39 @@ hr {
         top: 8rem;
     }
 
+    .home {
+        margin-top: 55px;
+    }
+    
+    .intro {
+        background-size: cover;
+    }
+
     .home-content {
         max-width: 990px;
         padding-left: 3rem;
     }
 
     .home .intro h1 {
-        font-size: 21.3px;
+        font-size: 35.6px;
     }
 
     .home .intro h3 {
-        top: 58%;
-        font-size: 16.5px;
+        top: 65%;
+        font-size: 28.67px;
     }
 
     .home .intro a {
-        font-size: 15px;
-        top: 65%;
+        font-size: 24px;
+        top: 76%;
     }
 
     .home .intro .fa-chevron-right {
-        font-size: 15px;
+        font-size: 24px;
     }
 
     .home .content h1 {
-        font-size: 21.3px;
+        font-size: 28.67px;
     }
 
     .home .content .flex-container {
@@ -649,22 +657,82 @@ hr {
     .home .content .flex-container .flex-box2 h3,
     .home .content .flex-container .flex-box3 h3,
     .home .content .flex-container .flex-box4 h3 {
-        font-size: 21.3px;
+        font-size: 24px;
     }
 
     .home .content .flex-container .flex-box1 p,
     .home .content .flex-container .flex-box2 p,
     .home .content .flex-container .flex-box3 p,
     .home .content .flex-container .flex-box4 p {
-        font-size: 16.5px;
+        font-size: 15px;
     }
 
+    .home .home-about {
+        margin-top: 1370px;
+    }
+    
+    .home .home-about .heading {
+        top: 480%;
+        font-size: 28.67px;
+    }
+    
+    .home .home-about h3 {
+        top: 510%;
+        font-size: 22px;
+    }
+    
+    .home .home-about a {
+        top: 530%;
+        font-size: 22px;
+    }
+    
+    .home .progress .flex-container .flex-box1 h1,
+    .home .progress .flex-container .flex-box2 h1,
+    .home .progress .flex-container .flex-box3 h1,
+    .home .progress .flex-container .flex-box4 h1 {
+        font-size: 20px;
+    }
+    
+    .home .progress .flex-container .flex-box1 p,
+    .home .progress .flex-container .flex-box2 p,
+    .home .progress .flex-container .flex-box3 p,
+    .home .progress .flex-container .flex-box4 p {
+        font-size: 30px;
+    }
+
+    .home .customers-review {
+        display: none;
+    }
+/*     
+    .home .customers-review .heading {
+        top: 528%;
+        font-size: 38px;
+    }
+    
+    .home .customers-review .flex-container .flex-box1 h1,
+    .home .customers-review .flex-container .flex-box2 h1,
+    .home .customers-review .flex-container .flex-box3 h1 {
+        font-size: 18px;
+    }
+    
+    .home .customers-review .flex-container .flex-box1 h3,
+    .home .customers-review .flex-container .flex-box2 h3,
+    .home .customers-review .flex-container .flex-box3 h3 {
+        font-size: 15px;
+    }
+    
+    .home .customers-review .flex-container .flex-box1 p,
+    .home .customers-review .flex-container .flex-box2 p,
+    .home .customers-review .flex-container .flex-box3 p {
+        font-size: 18px;
+    } */
+
     footer {
-        bottom: -2480px;
+        bottom: -4150px;
     }
 
     .footer_wrapper {
-        width: 450px;
+        width: 350px;
     }
 
     .footer_links_column_title span {
@@ -672,7 +740,7 @@ hr {
     }
     
     .footer_links_column .content {
-        font-size: 10px;
+        font-size: 9px;
     }
 
 }
@@ -771,8 +839,65 @@ hr {
         font-size: 15px;
     }
 
+    .home .home-about {
+        margin-top: 1270px;
+    }
+    
+    .home .home-about .heading {
+        top: 340%;
+        font-size: 38px;
+    }
+    
+    .home .home-about h3 {
+        top: 358%;
+        font-size: 27px;
+    }
+    
+    .home .home-about a {
+        top: 378%;
+        font-size: 27px;
+    }
+    
+    .home .progress .flex-container .flex-box1 h1,
+    .home .progress .flex-container .flex-box2 h1,
+    .home .progress .flex-container .flex-box3 h1,
+    .home .progress .flex-container .flex-box4 h1 {
+        padding-top: 10px;
+        font-size: 24px;
+    }
+    
+    .home .progress .flex-container .flex-box1 p,
+    .home .progress .flex-container .flex-box2 p,
+    .home .progress .flex-container .flex-box3 p,
+    .home .progress .flex-container .flex-box4 p {
+        font-size: 40px;
+    }
+    
+    .home .customers-review .heading {
+        top: 528%;
+        font-size: 38px;
+    }
+    
+    .home .customers-review .flex-container .flex-box1 h1,
+    .home .customers-review .flex-container .flex-box2 h1,
+    .home .customers-review .flex-container .flex-box3 h1 {
+        font-size: 18px;
+    }
+    
+    .home .customers-review .flex-container .flex-box1 h3,
+    .home .customers-review .flex-container .flex-box2 h3,
+    .home .customers-review .flex-container .flex-box3 h3 {
+        font-size: 15px;
+    }
+    
+    .home .customers-review .flex-container .flex-box1 p,
+    .home .customers-review .flex-container .flex-box2 p,
+    .home .customers-review .flex-container .flex-box3 p {
+        font-size: 18px;
+    }
+
     footer {
-        bottom: -2780px;
+        bottom: -4780px;
     }
 
     .footer_wrapper {

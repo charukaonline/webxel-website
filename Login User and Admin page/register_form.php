@@ -46,13 +46,13 @@
     <!-- Header section start -->
     <header>
 
-        <a href="../index.html" class="logo">W&#x039E;&#x042;X&#x039E;L</a>
+        <a href="/index.php" class="logo">W&#x039E;&#x042;X&#x039E;L</a>
 
         <nav class="navbar">
-            <a href="../index.html">Home</a>
+            <a href="/index.php">Home</a>
             <a href="#" id="service">Services</a>
             <a href="#">Contact Us</a>
-            <a href="#">About Us</a>
+            <a href="/about_us.php">About Us</a>
         </nav>
 
         <div class="icons">
