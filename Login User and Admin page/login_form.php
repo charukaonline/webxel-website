@@ -1,5 +1,5 @@
-<!-- <?php
-
+<?php
+    
     @include 'config.php';
 
     session_start();
@@ -10,7 +10,7 @@
         $cpass = md5($_POST['cpassword']);
         $user_type = $_POST['user-type'];
 
-        $select = "SELECT * FROM user_form WHERE email = '$email' && password = '$pass' ";
+        $select = "SELECT * FROM login_and_register WHERE email = '$email' && password = '$pass' ";
 
         $result = mysqli_query($conn, $select);
 
@@ -20,13 +20,13 @@
             if($row['user_type'] == 'admin') {
                 
                 $_SESSION['admin_name'] = $row['name'];
-                header('location:admin_page.php');    
+                header('location: /Admin panel/admin_page.php');    
             
             }
             elseif($row['user_type'] == 'user') {
             
                 $_SESSION['user_name'] = $row['name'];
-                header('location:user_page.php');    
+                header('location: /User panel/user_page.php');    
             
             }
         }
@@ -35,28 +35,29 @@
         }
     };
 
-?> -->
+?>
+
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login form</title>
 
-    <link rel="stylesheet" href="/assets/css/style_1.css">
+    <link rel="stylesheet" href="/assets/css/index.css">
     <link rel="stylesheet" href="/assets/css/register_and_login.css">
 
-    <title>WEBXEL - Sign In Form</title>
 </head>
 <body>
 
     <!-- Header section start -->
     <header>
 
-        <a href="../index.html" class="logo">W&#x039E;&#x042;X&#x039E;L</a>
+        <a href="/index.html" class="logo">W&#x039E;&#x042;X&#x039E;L</a>
 
         <nav class="navbar">
-            <a href="../index.html">Home</a>
+            <a href="/index.html">Home</a>
             <a href="#" id="service">Services</a>
             <a href="#">Contact Us</a>
             <a href="#">About Us</a>
@@ -98,20 +99,20 @@
 
             <h3>Sign in to W&#x039E;&#x042;X&#x039E;L</h3>
 
-            <!-- <?php
+            <?php
                 if(isset($error)) {
                     foreach($error as $error) {
                         echo '<span class="error-msg">'.$error.'</span>';
                     };
                 };
-            ?> -->
+            ?>
 
             <input type="email" name="email" placeholder="Email" required>
             <input type="password" name="password" placeholder="Password">
 
             <input type="submit" name="submit" value="Sign in" class="form-btn">
 
-            <p>Don't have an account? <a href="register_form.html">Create Now</a></p>
+            <p>Don't have an account? <a href="register_form.php">Create Now</a></p>
 
         </form>
 
@@ -134,8 +135,6 @@
         </div>
     </footer>
     <!-- Footer section end -->
-
-    <script src="/assets/js/script_1.js"></script>
 
 </body>
 </html>

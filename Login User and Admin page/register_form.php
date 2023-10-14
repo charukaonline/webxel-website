@@ -1,4 +1,4 @@
-<!-- <?php
+<?php
     
     @include 'config.php';
 
@@ -9,7 +9,7 @@
         $cpass = md5($_POST['cpassword']);
         $user_type = $_POST['user-type'];
 
-        $select = "SELECT * FROM user_form WHERE email = '$email' && password = '$pass' ";
+        $select = "SELECT * FROM login_and_register WHERE email = '$email' && password = '$pass' ";
 
         $result = mysqli_query($conn, $select);
 
@@ -21,38 +21,38 @@
                 $error[] = 'Password not matched!';
             }
             else {
-                $insert = "INSERT INTO user_form (name, email, password, user_type) VALUES ('$name', '$email', '$pass', '$user_type')";
+                $insert = "INSERT INTO login_and_register (name, email, password, user_type) VALUES ('$name', '$email', '$pass', '$user_type')";
                 mysqli_query($conn, $insert);
                 header('location:login_form.php');
             }
         }
     };
 
-?> -->
+?>
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register form</title>
 
-    <link rel="stylesheet" href="/assets/css/style_1.css">
+    <link rel="stylesheet" href="/assets/css/index.css">
     <link rel="stylesheet" href="/assets/css/register_and_login.css">
 
-    <title>WEBXEL - Register Form</title>
 </head>
 <body>
 
     <!-- Header section start -->
     <header>
 
-        <a href="../index.html" class="logo">W&#x039E;&#x042;X&#x039E;L</a>
+        <a href="/index.php" class="logo">W&#x039E;&#x042;X&#x039E;L</a>
 
         <nav class="navbar">
-            <a href="../index.html">Home</a>
+            <a href="/index.php">Home</a>
             <a href="#" id="service">Services</a>
             <a href="#">Contact Us</a>
-            <a href="#">About Us</a>
+            <a href="/about_us.php">About Us</a>
         </nav>
 
         <div class="icons">
@@ -91,27 +91,26 @@
 
             <h3>Create Your Account</h3>
 
-            <!-- <?php
+            <?php
                 if(isset($error)) {
                     foreach($error as $error) {
                         echo '<span class="error-msg">'.$error.'</span>';
                     };
                 };
-            ?> -->
+            ?>
 
-            <input type="text" name="name" placeholder="First name" required>
-            <input type="text" name="name" placeholder="Second name" required>
+            <input type="text" name="name" placeholder="Name" required>
             <input type="email" name="email" placeholder="Email" required>
             <input type="password" name="password" placeholder="Password" required>
             <input type="password" name="cpassword" placeholder="Confirm password" required>
-            <!-- <select name="user-type">
+            <select name="user-type">
                 <option value="user">User</option>
                 <option value="admin">Admin</option>
-            </select> -->
+            </select>
 
             <input type="submit" name="submit" value="register now" class="form-btn">
             
-            <p>already have an account? <a href="signin_form.html">Sign In Now</a></p>
+            <p>already have an account? <a href="login_form.php">Sign In Now</a></p>
 
         </form>
 
@@ -134,8 +133,6 @@
         </div>
     </footer>
     <!-- Footer section end -->
-
-    <script src="/assets/js/script_1.js"></script>
 
 </body>
 </html>
