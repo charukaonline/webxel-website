@@ -45,7 +45,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login form</title>
 
-    <link rel="stylesheet" href="/assets/css/style_1.css">
+    <link rel="stylesheet" href="/assets/css/index.css">
     <link rel="stylesheet" href="/assets/css/register_and_login.css">
 
 </head>
