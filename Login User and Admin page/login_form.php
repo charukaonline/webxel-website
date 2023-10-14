@@ -41,12 +41,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+<meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login form</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
     <link rel="stylesheet" href="/assets/css/index.css">
     <link rel="stylesheet" href="/assets/css/register_and_login.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/c4254e24a8.js"></script>
+
+    <title>wEBXEL - Login form</title>
 
 </head>
 <body>
@@ -54,10 +61,10 @@
     <!-- Header section start -->
     <header>
 
-        <a href="/index.html" class="logo">W&#x039E;&#x042;X&#x039E;L</a>
+        <a href="/index.php" class="logo">W&#x039E;&#x042;X&#x039E;L</a>
 
         <nav class="navbar">
-            <a href="/index.html">Home</a>
+            <a href="/index.php">Home</a>
             <a href="#" id="service">Services</a>
             <a href="#">Contact Us</a>
             <a href="#">About Us</a>
@@ -66,23 +73,11 @@
         <div class="icons">
             <i class="fas fa-bars" id="menu-bars"></i>
             <i class="fas fa-search" id="search-icon"></i>
-            <a href="/User Register and Sign In forms/signin_form.html"><i class="fas fa-user" id="login-icon"></i></a>
+            <a href="/User Register and Sign In forms/register_form.php"><i class="fas fa-user" id="login-icon"></i></a>
         </div>
 
     </header>
     <!-- Header section end -->
-
-    <!-- Service form start -->
-    <form action="" id="service-form">
-        <i class="fas fa-times" id="service-form-close"></i>
-        <label for="">Web Design and Development</label>
-        <label for="">Graphic Design</label>
-        <label for="">App Development</label>
-        <label for="">Video and Animation</label>
-        <label for="">Content writing & translation</label>
-        <label for="">Marketing & Advertising</label>
-    </form>
-    <!-- Service form end -->
 
     <!--Search form start-->
     <form action="" id="search-form">
