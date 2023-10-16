@@ -1,9 +1,34 @@
+<!-- <?php
+
+if (isset($_GET['query'])) {
+
+    $searchQuery = htmlspecialchars($_GET['query']);
+
+    @include 'Login User and Admin page\config.php';
+
+    $sql = "SELECT * FROM pages WHERE content LIKE '%$searchQuery%'";
+    $result = $conn->query($sql);
+
+    if ($result->num_rows > 0) {
+        while ($row = $result->fetch_assoc()) {
+            echo "Title: " . $row["title"] . "<br>";
+            echo "Content: " . $row["content"] . "<br><br>";
+        }
+    } else {
+        echo "0 results found";
+    }
+    $conn->close();
+}
+?> -->
+
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
-    <meta name="description" content="WEBXEL, webxel, Technology Service, Technical Support, IT Service, web developing">
+    <meta name="description"
+        content="WEBXEL, webxel, Technology Service, Technical Support, IT Service, web developing">
     <meta name="keywords" content="HTML,CSS,JavaScript,PHP">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -43,7 +68,7 @@
     <!--Header section end-->
 
     <!--Search form start-->
-    <form action="" id="search-form">
+    <form action="" id="search-form" method="GET">
         <input type="search" placeholder="Search here..." name="" id="search-box">
         <label for="search-box" class="fas fa-search"></label>
         <i class="fas fa-times" id="search-form-close"></i>
@@ -58,6 +83,36 @@
             <h3>Always ahead. Always in style.</h3>
             <a href="#">Learn more <i class=" fas fa-regular fa-chevron-right"></i></a>
         </div>
+
+        <!-- Chat Bot section start -->
+        <div class="chat-btn">
+            <button id="init">START CHAT</button>
+        </div>
+        <div id="chat-section">
+            <div class="child" id="chatbot">
+                <div class="header">
+                    <div class="h-child">
+                        <img src="/assets/images/chatbot (1).png" alt="avatar" id="avatar">
+                        <div>
+                            <span class="name">Chatbot</span>
+                            <br>
+                            <span style="color:lawngreen">online</span>
+                        </div>
+                    </div>
+                    <div>
+                        <button class="refBtn"><i class="fa fa-refresh" onclick="initChat()"></i></button>
+                    </div>
+                </div>
+
+                <div id="chat-box">
+
+                </div>
+                <div class="chat-footer">
+                    <span>powered by @W&#x039E;&#x042;X&#x039E;L</span>
+                </div>
+            </div>
+        </div>
+        <!-- Chat Bot section end -->
 
     </section>
     <!-- Home section end -->
@@ -177,7 +232,8 @@
             <div class="flex-box2">
                 <p>Their products are strong and long-lasting, which makes them a fantastic investment for anyone,
                     <br>I can say with confidence.
-                    <br>I heartily endorse WEBXEL to anyone who is searching for high-quality service.</p>
+                    <br>I heartily endorse WEBXEL to anyone who is searching for high-quality service.
+                </p>
                 <h1>Richard Oliver</h1>
                 <h3>Gym Owner</h3>
             </div>
@@ -253,9 +309,11 @@
     </footer>
     <!-- Footer section end -->
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TimelineMax.min.js" integrity="sha512-0xrMWUXzEAc+VY7k48pWd5YT6ig03p4KARKxs4Bqxb9atrcn2fV41fWs+YXTKb8lD2sbPAmZMjKENiyzM/Gagw=="
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TimelineMax.min.js"
+        integrity="sha512-0xrMWUXzEAc+VY7k48pWd5YT6ig03p4KARKxs4Bqxb9atrcn2fV41fWs+YXTKb8lD2sbPAmZMjKENiyzM/Gagw=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js" integrity="sha512-DkPsH9LzNzZaZjCszwKrooKwgjArJDiEjA5tTgr3YX4E6TYv93ICS8T41yFHJnnSmGpnf0Mvb5NhScYbwvhn2w==" 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"
+        integrity="sha512-DkPsH9LzNzZaZjCszwKrooKwgjArJDiEjA5tTgr3YX4E6TYv93ICS8T41yFHJnnSmGpnf0Mvb5NhScYbwvhn2w=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="/assets/js/index.js"></script>
 
