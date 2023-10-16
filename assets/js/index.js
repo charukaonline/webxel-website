@@ -45,3 +45,29 @@ window.addEventListener('scroll', function () {
         });
     }
 });
+
+// Animation for h1 tag
+window.addEventListener("scroll", function () {
+
+    var h1 = document.querySelector("h1");
+    var popServices = document.getElementById("home");
+    var rect = popServices.getBoundingClientRect();
+    var position = rect.top;
+
+    if (position <= window.innerHeight && position >= 0) {
+        TweenMax.to(h1, 1, { opacity: 1, y: 0, ease: Power2.easeOut });
+    } else {
+        TweenMax.to(h1, 1, { opacity: 0, y: 70, ease: Power2.easeOut });
+    }
+
+    var h1 = document.querySelector("h1.heading");
+    var popServices = document.getElementById("pop-services");
+    var rect = popServices.getBoundingClientRect();
+    var position = rect.top;
+
+    if (position <= window.innerHeight && position >= 0) {
+        TweenMax.to(h1, 1, { opacity: 1, y: 0, ease: Power2.easeOut });
+    } else {
+        TweenMax.to(h1, 1, { opacity: 0, y: 70, ease: Power2.easeOut });
+    }
+});

@@ -8,7 +8,7 @@
     --hover-color: rgba(0, 0, 0, 1);
     --btn-color: rgb(41, 99, 215);
     --font-color: #fff;
-    --box-shadow: 0 .3rem 1.5rem #d9dadc;
+    --box-shadow: 0 5px 10px rgba(0, 0, 0, .4);
     --form-box-shadow: 0 10px 10px 10px rgb(40, 40, 40, 40);
     --h2-font: 3rem;
 }
