@@ -58,7 +58,34 @@
 </head>
 <body>
 
-    <?php include('navbar.php') ?>
+    <!-- Header section start -->
+    <header>
+
+        <a href="/index.php" class="logo">W&#x039E;&#x042;X&#x039E;L</a>
+
+        <nav class="navbar">
+            <a href="/index.php">Home</a>
+            <a href="#" id="service">Services</a>
+            <a href="#">Contact Us</a>
+            <a href="#">About Us</a>
+        </nav>
+
+        <div class="icons">
+            <i class="fas fa-bars" id="menu-bars"></i>
+            <i class="fas fa-search" id="search-icon"></i>
+            <a href="/User Register and Sign In forms/register_form.php"><i class="fas fa-user" id="login-icon"></i></a>
+        </div>
+
+    </header>
+    <!-- Header section end -->
+
+    <!--Search form start-->
+    <form action="" id="search-form">
+        <input type="search" placeholder="Search here..." name="" id="search-box">
+        <label for="search-box" class="fas fa-search"></label> 
+        <i class="fas fa-times" id="search-form-close"></i>
+    </form>
+    <!-- Search form end -->
     
     <!-- Sign in form section start -->
     <section class="signin-form-container">
