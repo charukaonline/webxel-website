@@ -1,27 +1,3 @@
-<!-- <?php
-
-if (isset($_GET['query'])) {
-
-    $searchQuery = htmlspecialchars($_GET['query']);
-
-    @include 'Login User and Admin page\config.php';
-
-    $sql = "SELECT * FROM pages WHERE content LIKE '%$searchQuery%'";
-    $result = $conn->query($sql);
-
-    if ($result->num_rows > 0) {
-        while ($row = $result->fetch_assoc()) {
-            echo "Title: " . $row["title"] . "<br>";
-            echo "Content: " . $row["content"] . "<br><br>";
-        }
-    } else {
-        echo "0 results found";
-    }
-    $conn->close();
-}
-?> -->
-
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -46,34 +22,7 @@ if (isset($_GET['query'])) {
 
 <body>
 
-    <!--Header section start-->
-    <header>
-
-        <a href="index.html" class="logo">W&#x039E;&#x042;X&#x039E;L</a>
-
-        <nav class="navbar">
-            <a href="index.html">Home</a>
-            <a href="#">Services</a>
-            <a href="#">Contact Us</a>
-            <a href="#">About Us</a>
-        </nav>
-
-        <div class="icons">
-            <i class="fas fa-bars" id="menu-bars"></i>
-            <i class="fas fa-search" id="search-icon"></i>
-            <a href="/User Register and Sign In forms/login_form.php"><i class="fas fa-user" id="login-icon"></i></a>
-        </div>
-
-    </header>
-    <!--Header section end-->
-
-    <!--Search form start-->
-    <form action="" id="search-form" method="GET">
-        <input type="search" placeholder="Search here..." name="" id="search-box">
-        <label for="search-box" class="fas fa-search"></label>
-        <i class="fas fa-times" id="search-form-close"></i>
-    </form>
-    <!-- Search form end -->
+    <?php include('navbar.php'); ?>
 
     <!-- Home section start -->
     <section class="home" id="home">
@@ -253,61 +202,7 @@ if (isset($_GET['query'])) {
 
     <div class="space"></div>
 
-    <!-- Footer section start -->
-    <footer class="footer">
-        <div class="footer_wrapper">
-            <ul>
-                <li>1. New services coming late 2024.</li>
-                <li>2. We've squashed some pesky bugs to ensure a smoother and more reliable experience for all users.
-                </li>
-                <li>3. Our team has worked on optimizing various aspects of W&#x039E;&#x042;X&#x039E;L, resulting in
-                    faster load times and improved efficiency.</li>
-            </ul>
-
-            <div class="footer_links">
-
-                <div class="footer_links_column">
-                    <div class="footer_links_column_title"><a
-                            href="index.php"><span>W&#x039E;&#x042;X&#x039E;L</span></a></div>
-                    <div class="content">
-                        <h3>Always ahead. <br> Always in style.</h3>
-                    </div>
-                </div>
-
-                <div class="footer_links_column">
-                    <div class="footer_links_column_title">Services</div>
-                    <a href="#">Graphics & Design</a>
-                    <a href="#">Web Development</a>
-                    <a href="#">Application Development</a>
-                    <a href="#">Video & Animation</a>
-                    <a href="#">Content Writing</a>
-                    <a href="#">Marketing & Advertising</a>
-                </div>
-
-                <div class="footer_links_column">
-                    <div class="footer_links_column_title">About</div>
-                    <a href="#">Our Team</a>
-                    <a href="#">Privacy Policy</a>
-                    <a href="#">Terms of Use</a>
-                </div>
-
-                <div class="footer_links_column">
-                    <div class="footer_links_column_title">Social Media</div>
-                    <a href="#"><i class='bx bxl-github'></i></a>
-                    <a href="#"><i class='bx bxl-linkedin'></i></a>
-                    <a href="#"><i class='bx bxl-facebook'></i></a>
-                    <a href="#"><i class='bx bxl-twitter'></i></a>
-                </div>
-            </div>
-
-            <hr>
-
-            <div class="footer-copyright">
-                <p>Copyright © W&#x039E;&#x042;X&#x039E;L 2023</p>
-            </div>
-
-    </footer>
-    <!-- Footer section end -->
+    <?php include('footer.php'); ?>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TimelineMax.min.js"
         integrity="sha512-0xrMWUXzEAc+VY7k48pWd5YT6ig03p4KARKxs4Bqxb9atrcn2fV41fWs+YXTKb8lD2sbPAmZMjKENiyzM/Gagw=="
