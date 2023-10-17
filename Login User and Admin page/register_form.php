@@ -50,46 +50,7 @@
 </head>
 <body>
 
-    <!-- Header section start -->
-    <header>
-
-        <a href="/index.php" class="logo">W&#x039E;&#x042;X&#x039E;L</a>
-
-        <nav class="navbar">
-            <a href="/index.php">Home</a>
-            <a href="#" id="service">Services</a>
-            <a href="#">Contact Us</a>
-            <a href="/about_us.php">About Us</a>
-        </nav>
-
-        <div class="icons">
-            <i class="fas fa-bars" id="menu-bars"></i>
-            <i class="fas fa-search" id="search-icon"></i>
-            <a href="/User Register and Sign In forms/login_form.php"><i class="fas fa-user" id="login-icon"></i></a>
-        </div>
-
-    </header>
-    <!-- Header section end -->
-
-    <!-- Service form start -->
-    <form action="" id="service-form">
-        <i class="fas fa-times" id="service-form-close"></i>
-        <label for="">Web Design and Development</label>
-        <label for="">Graphic Design</label>
-        <label for="">App Development</label>
-        <label for="">Video and Animation</label>
-        <label for="">Content writing & translation</label>
-        <label for="">Marketing & Advertising</label>
-    </form>
-    <!-- Service form end -->
-
-    <!--Search form start-->
-    <form action="" id="search-form">
-        <input type="search" placeholder="Search here..." name="" id="search-box">
-        <label for="search-box" class="fas fa-search"></label> 
-        <i class="fas fa-times" id="search-form-close"></i>
-    </form>
-    <!-- Search form end -->
+    <?php include('navbar.php') ?>
     
     <!-- Register form section start -->
     <section class="register-form-container">

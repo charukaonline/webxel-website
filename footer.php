@@ -3,8 +3,7 @@
     <div class="footer_wrapper">
         <ul>
             <li>1. New services coming late 2024.</li>
-            <li>2. We've squashed some pesky bugs to ensure a smoother and more reliable experience for all users.
-            </li>
+            <li>2. We've squashed some pesky bugs to ensure a smoother and more reliable experience for all users.</li>
             <li>3. Our team has worked on optimizing various aspects of W&#x039E;&#x042;X&#x039E;L, resulting in
                 faster load times and improved efficiency.</li>
         </ul>
