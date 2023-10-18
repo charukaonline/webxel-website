@@ -164,7 +164,7 @@ header .icons #menu-bars {
 
 /* Home section */
 .home {
-    margin-top: 74px;
+    margin-top: 70px;
     height: 100vh;
     background: #000;
     background-image: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url('/assets/images/home-page-cover.jpg');
