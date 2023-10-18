@@ -8,6 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
     <link rel="stylesheet" href="/assets/css/index.css">
@@ -20,34 +21,7 @@
 
 <body>
 
-    <!--Header section start-->
-    <header>
-
-        <a href="index.html" class="logo">W&#x039E;&#x042;X&#x039E;L</a>
-
-        <nav class="navbar">
-            <a href="index.html">Home</a>
-            <a href="#">Services</a>
-            <a href="#">Contact Us</a>
-            <a href="#">About Us</a>
-        </nav>
-
-        <div class="icons">
-            <i class="fas fa-bars" id="menu-bars"></i>
-            <i class="fas fa-search" id="search-icon"></i>
-            <a href="/User Register and Sign In forms/login_form.php"><i class="fas fa-user" id="login-icon"></i></a>
-        </div>
-
-    </header>
-    <!--Header section end-->
-
-    <!--Search form start-->
-    <form action="" id="search-form">
-        <input type="search" placeholder="Search here..." name="" id="search-box">
-        <label for="search-box" class="fas fa-search"></label>
-        <i class="fas fa-times" id="search-form-close"></i>
-    </form>
-    <!-- Search form end -->
+    <?php include('navbar.php'); ?>
 
     <!-- Home section start -->
     <section class="home" id="home">
@@ -57,6 +31,36 @@
             <h3>Always ahead. Always in style.</h3>
             <a href="#">Learn more <i class=" fas fa-regular fa-chevron-right"></i></a>
         </div>
+
+        <!-- Chat Bot section start -->
+        <div class="chat-btn">
+            <button id="init">START CHAT</button>
+        </div>
+        <div id="chat-section">
+            <div class="child" id="chatbot">
+                <div class="header">
+                    <div class="h-child">
+                        <img src="/assets/images/chatbot (1).png" alt="avatar" id="avatar">
+                        <div>
+                            <span class="name">Chatbot</span>
+                            <br>
+                            <span style="color:lawngreen">online</span>
+                        </div>
+                    </div>
+                    <div>
+                        <button class="refBtn"><i class="fa fa-refresh" onclick="initChat()"></i></button>
+                    </div>
+                </div>
+
+                <div id="chat-box">
+
+                </div>
+                <div class="chat-footer">
+                    <span>powered by @W&#x039E;&#x042;X&#x039E;L</span>
+                </div>
+            </div>
+        </div>
+        <!-- Chat Bot section end -->
 
     </section>
     <!-- Home section end -->
@@ -122,30 +126,34 @@
     <!-- Progress section starts -->
     <section class="progress" id="progress">
 
-        <div class="flex-container">
+        <div id="container">
 
-            <div class="flex-box1">
-                <p>11</p>
-                <h1>Projects Completed</h1>
+            <div class="flex-container">
+
+                <div class="flex-box1">
+                    <p><span class="count" max-data="11">0</span></p>
+                    <h1>Projects Completed</h1>
+                </div>
+
+                <div class="flex-box2">
+                    <p><span class="count" max-data="9">0</span></p>
+                    <h1>Active Clients</h1>
+                </div>
+
             </div>
 
-            <div class="flex-box2">
-                <p>9</p>
-                <h1>Active Clients</h1>
-            </div>
+            <div class="flex-container">
 
-        </div>
+                <div class="flex-box3">
+                    <p><span class="count" max-data="6">0</span></p>
+                    <h1>Ongoing Projects</h1>
+                </div>
 
-        <div class="flex-container">
+                <div class="flex-box4">
+                    <p><span class="count" max-data="23">0</span></p>
+                    <h1>Happy Customers</h1>
+                </div>
 
-            <div class="flex-box3">
-                <p>6</p>
-                <h1>Ongoing Projects</h1>
-            </div>
-
-            <div class="flex-box4">
-                <p>20+</p>
-                <h1>Happy Customers</h1>
             </div>
 
         </div>
@@ -172,7 +180,8 @@
             <div class="flex-box2">
                 <p>Their products are strong and long-lasting, which makes them a fantastic investment for anyone,
                     <br>I can say with confidence.
-                    <br>I heartily endorse WEBXEL to anyone who is searching for high-quality service.</p>
+                    <br>I heartily endorse WEBXEL to anyone who is searching for high-quality service.
+                </p>
                 <h1>Richard Oliver</h1>
                 <h3>Gym Owner</h3>
             </div>
@@ -192,63 +201,16 @@
 
     <div class="space"></div>
 
-    <!-- Footer section start -->
-    <footer class="footer">
-        <div class="footer_wrapper">
-            <ul>
-                <li>1. New services coming late 2024.</li>
-                <li>2. We've squashed some pesky bugs to ensure a smoother and more reliable experience for all users.
-                </li>
-                <li>3. Our team has worked on optimizing various aspects of W&#x039E;&#x042;X&#x039E;L, resulting in
-                    faster load times and improved efficiency.</li>
-            </ul>
+    <?php include('footer.php'); ?>
 
-            <div class="footer_links">
-
-                <div class="footer_links_column">
-                    <div class="footer_links_column_title"><a
-                            href="index.php"><span>W&#x039E;&#x042;X&#x039E;L</span></a></div>
-                    <div class="content">
-                        <h3>Always ahead. <br> Always in style.</h3>
-                    </div>
-                </div>
-
-                <div class="footer_links_column">
-                    <div class="footer_links_column_title">Services</div>
-                    <a href="#">Graphics & Design</a>
-                    <a href="#">Web Development</a>
-                    <a href="#">Application Development</a>
-                    <a href="#">Video & Animation</a>
-                    <a href="#">Content Writing</a>
-                    <a href="#">Marketing & Advertising</a>
-                </div>
-
-                <div class="footer_links_column">
-                    <div class="footer_links_column_title">About</div>
-                    <a href="#">Our Team</a>
-                    <a href="#">Privacy Policy</a>
-                    <a href="#">Terms of Use</a>
-                </div>
-
-                <div class="footer_links_column">
-                    <div class="footer_links_column_title">Social Media</div>
-                    <a href="#"><i class='bx bxl-github'></i></a>
-                    <a href="#"><i class='bx bxl-linkedin'></i></a>
-                    <a href="#"><i class='bx bxl-facebook'></i></a>
-                    <a href="#"><i class='bx bxl-twitter'></i></a>
-                </div>
-            </div>
-
-            <hr>
-
-            <div class="footer-copyright">
-                <p>Copyright © W&#x039E;&#x042;X&#x039E;L 2023</p>
-            </div>
-
-    </footer>
-    <!-- Footer section end -->
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TimelineMax.min.js"
+        integrity="sha512-0xrMWUXzEAc+VY7k48pWd5YT6ig03p4KARKxs4Bqxb9atrcn2fV41fWs+YXTKb8lD2sbPAmZMjKENiyzM/Gagw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"
+        integrity="sha512-DkPsH9LzNzZaZjCszwKrooKwgjArJDiEjA5tTgr3YX4E6TYv93ICS8T41yFHJnnSmGpnf0Mvb5NhScYbwvhn2w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="/assets/js/index.js"></script>
+
 
 </body>
 
