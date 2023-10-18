@@ -36,6 +36,7 @@ if (!isset($_SESSION['admin_name'])) {
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
+                    <h2>Hello Admin</h2>
 
                     <div class="row mt-4">
                         <div class="col-lg-5 col-sm-5">
@@ -45,7 +46,7 @@ if (!isset($_SESSION['admin_name'])) {
                                         <i class="material-icons opacity-10">weekend</i>
                                     </div>
                                     <div class="text-end pt-1">
-                                        <p class="text-sm mb-0 text-capitalize">Bookings</p>
+                                        <p class="text-sm mb-0 text-capitalize">Sales</p>
                                         <h4 class="mb-0">281</h4>
                                     </div>
                                 </div>
@@ -62,7 +63,7 @@ if (!isset($_SESSION['admin_name'])) {
                                         <i class="material-icons opacity-10">leaderboard</i>
                                     </div>
                                     <div class="text-end pt-1">
-                                        <p class="text-sm mb-0 text-capitalize">Today's Users</p>
+                                        <p class="text-sm mb-0 text-capitalize">Visitors</p>
                                         <h4 class="mb-0">2,300</h4>
                                     </div>
                                 </div>
