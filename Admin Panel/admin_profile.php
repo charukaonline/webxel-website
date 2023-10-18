@@ -1,3 +1,15 @@
+<?php
+
+@include 'config.php';
+
+session_start();
+
+if (!isset($_SESSION['admin_name'])) {
+    header('location: /Login User and Admin page/login_form.php');
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -23,7 +35,6 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <h2>Hello Admin</h2>
 
                     <div class="row mt-4">
                         <div class="col-lg-5 col-sm-5">

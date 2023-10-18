@@ -114,7 +114,7 @@ if (!isset($_SESSION['admin_name'])) {
                     </div>
                 </div>
 
-                <?php include('includes/footer.php'); ?>
+                <?php include('./includes/footer.php'); ?>
 
 </body>
 
