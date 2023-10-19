@@ -8,6 +8,10 @@ if (!isset($_SESSION['admin_name'])) {
     header('location: /Login User and Admin page/login_form.php');
 }
 
+$adminID = $_SESSION['admin_name'];
+$getData = mysqli_query($conn, "SELECT * FROM login_and_register WHERE id = '$adminID' ");
+$row = mysqli_fetch_assoc($getData);
+
 ?>
 
 <!DOCTYPE html>
@@ -21,6 +25,8 @@ if (!isset($_SESSION['admin_name'])) {
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900|Roboto+Slab:400,700" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
     <link id="pagestyle" href="../assets/css/material-dashboard.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
 
     <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
 </head>
@@ -87,7 +93,7 @@ if (!isset($_SESSION['admin_name'])) {
 
                                     <div class="row">
                                         <div class="col-lg-3 col-md-4 label ">Full Name</div>
-                                        <div class="col-lg-9 col-md-8"><?php echo $_SESSION['admin_name'] ?></div>
+                                        <div class="col-lg-9 col-md-8"><?php echo $row['admin_name'] ?></div>
                                     </div>
 
                                     <div class="row">
@@ -140,7 +146,7 @@ if (!isset($_SESSION['admin_name'])) {
                                         <div class="row mb-3">
                                             <label for="fullName" class="col-md-4 col-lg-3 col-form-label">Full Name</label>
                                             <div class="col-md-8 col-lg-9">
-                                                <input name="fullName" type="text" class="form-control" id="fullName" value="Kevin Anderson">
+                                                <input name="fullName" type="text" class="form-control" id="fullName" value="<?php echo $row['name']; ?>">
                                             </div>
                                         </div>
 
