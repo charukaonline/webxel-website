@@ -146,6 +146,12 @@ header .icons #menu-bars {
 #search-form label{
     color: #fff;
     font-size: 2rem;
+    cursor: pointer;
+}
+
+#search-form button {
+    background: none;
+    cursor: pointer;
 }
 
 #search-form label:hover {

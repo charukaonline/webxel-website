@@ -2,9 +2,8 @@
     
     @include 'config.php';
 
-    session_start();
-
     if(isset($_POST['submit'])){
+        $name = mysqli_real_escape_string($conn, $_POST['name']);
         $email = mysqli_real_escape_string($conn, $_POST['email']);
         $pass = md5($_POST['password']);
         $cpass = md5($_POST['cpassword']);
@@ -15,33 +14,26 @@
         $result = mysqli_query($conn, $select);
 
         if(mysqli_num_rows($result) > 0){
-            $row = mysqli_fetch_array($result);
-
-            if($row['user_type'] == 'admin') {
-                
-                $_SESSION['admin_name'] = $row['name'];
-                header('location: /Admin panel/admin_dashboard.php');    
-            
-            }
-            elseif($row['user_type'] == 'user') {
-            
-                $_SESSION['user_name'] = $row['name'];
-                header('location: /User panel/user_page.php');    
-            
-            }
+            $error[] = 'User already exists!';
         }
         else {
-            $error[] = 'incorrect email or password!';
+            if($pass != $cpass) {
+                $error[] = 'Password not matched!';
+            }
+            else {
+                $insert = "INSERT INTO login_and_register (name, email, password, user_type) VALUES ('$name', '$email', '$pass', '$user_type')";
+                mysqli_query($conn, $insert);
+                header('location:login_form.php');
+            }
         }
     };
 
 ?>
 
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
@@ -53,7 +45,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <script src="https://kit.fontawesome.com/c4254e24a8.js"></script>
 
-    <title>WEBXEL - Login form</title>
+    <title>WEBXEL - Register form</title>
 
 </head>
 <body>
@@ -67,13 +59,13 @@
             <a href="/index.php">Home</a>
             <a href="#" id="service">Services</a>
             <a href="#">Contact Us</a>
-            <a href="#">About Us</a>
+            <a href="/about_us.php">About Us</a>
         </nav>
 
         <div class="icons">
             <i class="fas fa-bars" id="menu-bars"></i>
             <i class="fas fa-search" id="search-icon"></i>
-            <a href="/User Register and Sign In forms/register_form.php"><i class="fas fa-user" id="login-icon"></i></a>
+            <a href="/Login_User_and_Admin_page/login_form.php"><i class="fas fa-user" id="login-icon"></i></a>
         </div>
 
     </header>
@@ -82,17 +74,17 @@
     <!--Search form start-->
     <form action="" id="search-form">
         <input type="search" placeholder="Search here..." name="" id="search-box">
-        <label for="search-box" class="fas fa-search"></label> 
+        <button type="submit"><label for="search-box" class="fas fa-search"></label></button>
         <i class="fas fa-times" id="search-form-close"></i>
     </form>
     <!-- Search form end -->
     
-    <!-- Sign in form section start -->
-    <section class="signin-form-container">
+    <!-- Register form section start -->
+    <section class="register-form-container">
 
         <form action="" method="post">
 
-            <h3>Sign in to W&#x039E;&#x042;X&#x039E;L</h3>
+            <h3>Create Your Account</h3>
 
             <?php
                 if(isset($error)) {
@@ -102,17 +94,23 @@
                 };
             ?>
 
+            <input type="text" name="name" placeholder="Name" required>
             <input type="email" name="email" placeholder="Email" required>
-            <input type="password" name="password" placeholder="Password">
+            <input type="password" name="password" placeholder="Password" required>
+            <input type="password" name="cpassword" placeholder="Confirm password" required>
+            <select name="user-type">
+                <option value="user">User</option>
+                <option value="admin">Admin</option>
+            </select>
 
-            <input type="submit" name="submit" value="Sign in" class="form-btn">
-
-            <p>Don't have an account? <a href="register_form.php">Create Now</a></p>
+            <input type="submit" name="submit" value="register now" class="form-btn">
+            
+            <p>already have an account? <a href="login_form.php">Sign In Now</a></p>
 
         </form>
 
     </section>
-    <!-- Sign in form section end -->
+    <!-- Register form section end -->
 
     <!-- Footer section start -->
     <footer class="footer">
@@ -122,7 +120,7 @@
                 <li>2. We've squashed some pesky bugs to ensure a smoother and more reliable experience for all users.</li>
                 <li>3. Our team has worked on optimizing various aspects of W&#x039E;&#x042;X&#x039E;L, resulting in faster load times and improved efficiency.</li>
             </ul>
-            
+
             <div class="footer-copyright">
                 <p>Copyright © W&#x039E;&#x042;X&#x039E;L 2023</p>
             </div>
@@ -130,6 +128,8 @@
         </div>
     </footer>
     <!-- Footer section end -->
+
+    <script src="/assets/js/index.js"></script>
 
 </body>
 </html>

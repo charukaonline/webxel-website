@@ -5,7 +5,7 @@
 session_start();
 
 if (!isset($_SESSION['admin_name'])) {
-    header('location: /Login User and Admin page/login_form.php');
+    header('location: /Login_User_and_Admin_page/login_form.php');
 }
 
 $adminID = $_SESSION['admin_name'];
