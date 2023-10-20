@@ -50,7 +50,7 @@
 
     <div class="team-container">
         <div class="team-member">
-            <img src="image/nith-in-w1N1WmLDyHU-unsplash.jpg" alt="Don Sanoj">
+            <img src="/assets/images/nith-in-w1N1WmLDyHU-unsplash.jpg" alt="Don Sanoj">
             <div class="team-member-info">
                 <h2>Don Sanoj</h2>
                 <p>CEO & Founder</p>
@@ -60,7 +60,7 @@
         </div>
 
         <div class="team-member">
-            <img src="image/albert-dera-ILip77SbmOE-unsplash.jpg" alt="Shayan Hennedige">
+            <img src="/assets/images/albert-dera-ILip77SbmOE-unsplash.jpg" alt="Shayan Hennedige">
             <div class="team-member-info">
                 <h2>Shayan Hennedige</h2>
                 <p>Art Director</p>
@@ -70,7 +70,7 @@
         </div>
 
         <div class="team-member">
-            <img src="image/c.jpg" alt="Charuka Karunarathna">
+            <img src="assets/images/c.jpg" alt="Charuka Karunarathna">
             <div class="team-member-info">
                 <h2>Charuka Karunarathna</h2>
                 <p>Designer</p>
@@ -81,7 +81,7 @@
 
 
         <div class="team-member">
-            <img src="image/oliver-ragfelt-khV4fTy6-D8-unsplash.jpg" alt="Thanuka Rathnayake">
+            <img src="assets/images/oliver-ragfelt-khV4fTy6-D8-unsplash.jpg" alt="Thanuka Rathnayake">
             <div class="team-member-info">
                 <h2>Thanuka Rathnayake</h2>
                 <p>CEO & Founder</p>
@@ -91,7 +91,7 @@
         </div>
 
         <div class="team-member">
-            <img src="image/joseph-gonzalez-iFgRcqHznqg-unsplash.jpg" alt="Mhateesha NSBM">
+            <img src="/assets/images/joseph-gonzalez-iFgRcqHznqg-unsplash.jpg" alt="Mhateesha NSBM">
             <div class="team-member-info">
                 <h2>Mhateesha NSBM</h2>
                 <p>Art Director</p>
@@ -101,7 +101,7 @@
         </div>
 
         <div class="team-member">
-            <img src="image/clarisse-meyer-x9cXI2eQLBw-unsplash.jpg" alt="Dulvanya">
+            <img src="/assets/images/clarisse-meyer-x9cXI2eQLBw-unsplash.jpg" alt="Dulvanya">
             <div class="team-member-info">
                 <h2>Dulvanya</h2>
                 <p>Designer</p>
@@ -111,7 +111,7 @@
         </div>
 
         <div class="team-member">
-            <img src="image/jim-flores-dE6c9RZoyL8-unsplash.jpg" alt="Hasini">
+            <img src="/assets/images/jim-flores-dE6c9RZoyL8-unsplash.jpg" alt="Hasini">
             <div class="team-member-info">
                 <h2>Hasini Gunatilaka</h2>
                 <p>CEO & Founder</p>
@@ -121,7 +121,7 @@
         </div>
 
         <div class="team-member">
-            <img src="image/pj-go-arPZr6tqsoA-unsplash.jpg" alt="Tharushi Perera">
+            <img src="/assets/images/pj-go-arPZr6tqsoA-unsplash.jpg" alt="Tharushi Perera">
             <div class="team-member-info">
                 <h2>Tharushi Perera</h2>
                 <p>Art Director</p>
@@ -132,7 +132,7 @@
         </div>
 
         <div class="team-member">
-            <img src="image/slav-romanov-BrEAp01_m5w-unsplash.jpg" alt="Rosi">
+            <img src="/assets/images/slav-romanov-BrEAp01_m5w-unsplash.jpg" alt="Rosi">
             <div class="team-member-info">
                 <h2>Samudi Ganawardana</h2>
                 <p>Designer</p>
