@@ -33,15 +33,61 @@ html {
     background-size: auto;
 }
 
+
+
+/* Container for team members */
+.team-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: #e1e5e7;
+
+}
+
+/* Styling for individual team members */
+.team-member {
+    flex: 0 0 calc(33.33% - 16px);
+    margin-bottom: 16px;
+    padding: 8px;
+    box-shadow: 0 4px 8px 0 b;
+    transition: transform 0.2s;
+    border-radius: 35px;
+
+    /* filter: grayscale(100%); */
+}
+
+.team-member:hover {
+    transform: translateY(-5px);
+
+}
+
+/* Image styling */
+.team-member img {
+    width: 95%;
+    border-radius: 35px;
+}
+
+/* Team member name and title styling */
+.team-member-info {
+    text-align: center;
+    font-size: medium;
+
+}
+
+.team-member-info p button {
+    border-radius: 30px;
+}
+
+/* Add styling for the about section */
 .about {
-    margin-top: 80px;
+    /* margin-top: 80px; */
     height: 100vh;
     background: #000;
 }
 
 .about .intro {
-    height: 100vh;
-    /* background-image: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url('/assets/images/home-page-cover.jpg'); */
+    /* height: 100vh; */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url('home-page-cover.jpg');
     background-size: cover;
 }
 
@@ -54,6 +100,7 @@ html {
     font-size: 54px;
     /* animation: name duration timing-function delay iteration-count direction fill-mode; */
 }
+
 
 .about .intro h3 {
     position: absolute;
@@ -78,187 +125,21 @@ html {
     height: 100vh;
 }
 
-.about .content .heading {
-    padding-top: 80px;
-    text-align: center;
-    font-size: 38px;
-    padding-bottom: 99px;
-    color: var(--font-color);
-}
-
-.about .content .flex-container {
-    padding-top: 1rem;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr));
-    gap: .5rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
-}
-
-.about .content .flex-container .flex-box1,
-.about .content .flex-container .flex-box2,
-.about .content .flex-container .flex-box3,
-.about .content .flex-container .flex-box4,
-.about .content .flex-container .flex-box5,
-.about .content .flex-container .flex-box6,
-.about .content .flex-container .flex-box7,
-.about .content .flex-container .flex-box8,
-.about .content .flex-container .flex-box9 {
-    padding: 13.5rem;
-    background: #fff;
-    background-size: cover;
-    color: var(--font-color);
-    background-size: cover;
-    border-radius: 2rem;
-    border: .1rem solid rgba(0, 0, 0, .2);
-    position: relative;
-    overflow: hidden;
-    text-align: center;
-    outline: none;
-    border: none;
-    font-size: 20px
-}
-
-.about .content .flex-container .flex-box1 h2,
-.about .content .flex-container .flex-box2 h2,
-.about .content .flex-container .flex-box3 h2,
-.about .content .flex-container .flex-box4 h2,
-.about .content .flex-container .flex-box5 h2,
-.about .content .flex-container .flex-box6 h2,
-.about .content .flex-container .flex-box7 h2,
-.about .content .flex-container .flex-box8 h2,
-.about .content .flex-container .flex-box9 h2{
-    color: var(--bg-color);
-    font-size: 15px;
-}
-
-.about .content .flex-container .flex-box1 p,
-.about .content .flex-container .flex-box2 p,
-.about .content .flex-container .flex-box3 p,
-.about .content .flex-container .flex-box4 p,
-.about .content .flex-container .flex-box5 p,
-.about .content .flex-container .flex-box6 p,
-.about .content .flex-container .flex-box7 p,
-.about .content .flex-container .flex-box8 p,
-.about .content .flex-container .flex-box9 p{
-    margin-top: 1rem;
-    display: inline-block;
-    font-size: 13px;
-    color: var(--bg-color);
-    border-radius: .5rem;
-    padding: .8rem 3rem;
-}
-
-.about .content .flex-container .flex-box1:hover,
-.about .content .flex-container .flex-box2:hover,
-.about .content .flex-container .flex-box3:hover,
-.about .content .flex-container .flex-box4:hover,
-.about .content .flex-container .flex-box5:hover,
-.about .content .flex-container .flex-box6:hover,
-.about .content .flex-container .flex-box7:hover,
-.about .content .flex-container .flex-box8:hover,
-.about .content .flex-container .flex-box9:hover {
-    transform: translateY(-5px);
-}
-
 /* Styling for the "Contact" button */
-.about .content .flex-container .button {
+.button {
     border: none;
     outline: 0;
     display: inline-block;
     padding: 8px;
     color: white;
-    background-color: #000;
+    background-color: #32393d;
     text-align: center;
     cursor: pointer;
     width: 100%;
     transition: background-color 0.3s;
+
 }
 
 .button:hover {
     background-color: #555;
-}
-
-/* Footer */
-footer {
-    width: 100%;
-    height: 25%;
-    /* background: var(--header-background-color); */
-    display: flex;
-    justify-content: center;
-    background: var(--bg-color);
-    position: absolute;
-    bottom: -1950px;
-    padding: 100px 0 30px;
-    font-size: 13px;
-    line-height: 18px;
-    color: #6e6e73;
-}
-
-.footer_wrapper {
-    width: 970px;
-}
-
-.footer_wrapper ul {
-    font-size: 12px;
-    list-style: none;
-    color: #6e6e73;
-    border-bottom: 1px solid var(--bg-color);
-}
-
-.footer_wrapper ul li {
-    margin: 15px 0;
-    letter-spacing: 0.1px;
-    color: #6e6e73;
-}
-
-.footer_links {
-    width: 100%;
-    display: flex;
-    color: #6e6e73;
-}
-
-.footer_links_column {
-    width: 200px;
-    display: flex;
-    flex-direction: column;
-}
-
-.footer_links_column_title {
-    font-weight: 400;
-    font-size: 12px;
-    margin-top: 20px;
-    margin-bottom: 13px;
-    letter-spacing: .5px;
-    color: #6e6e73;
-}
-
-.footer_links_column a {
-    /* color: rgba(0, 0, 0, .8); */
-    font-size: 12px;
-    margin-bottom: 12px;
-    color: #736e71;
-}
-
-.footer-copyright {
-    width: 100%;
-    height: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 13px;
-    color: #6e6e73;
-    margin-top: 4px;
-    position: relative;
-}
-
-hr {
-    width: 100%;
-    border: 0;
-    border-bottom: 1px solid #707793;
-    margin: 20px auto;
-}
-
-h2 {
-    font-size: larger;
 }
