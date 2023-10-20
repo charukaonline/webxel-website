@@ -398,6 +398,18 @@ header .icons #menu-bars {
     padding-bottom: 99px;
 }
 
+@keyframes animation {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 .pop-services .flex-container {
     padding-top: .3rem;
     display: grid;
