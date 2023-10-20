@@ -49,42 +49,33 @@
     <h2 style="text-align:center">Our Team</h2> <br><br>
 
     <div class="team-container">
+
         <div class="team-member">
-            <img src="/assets/images/nith-in-w1N1WmLDyHU-unsplash.jpg" alt="Don Sanoj">
+            <img src="assets/images/c.jpg" alt="Charuka Karunarathna">
             <div class="team-member-info">
-                <h2>Don Sanoj</h2>
-                <p>CEO & Founder</p>
-                <p>sanojA@gmail.com</p>
+                <h2>Charuka Karunarathna</h2>
+                <p>Front End & Back End Developer</p>
+                <p>Charuk@gmail.com</p>
                 <p><button class="button">Contact</button></p>
             </div>
         </div>
+        
 
         <div class="team-member">
             <img src="/assets/images/albert-dera-ILip77SbmOE-unsplash.jpg" alt="Shayan Hennedige">
             <div class="team-member-info">
                 <h2>Shayan Hennedige</h2>
-                <p>Art Director</p>
+                <p>Front End Developer</p>
                 <p>shayanH@gmail.com</p>
                 <p><button class="button">Contact</button></p>
             </div>
         </div>
 
         <div class="team-member">
-            <img src="assets/images/c.jpg" alt="Charuka Karunarathna">
-            <div class="team-member-info">
-                <h2>Charuka Karunarathna</h2>
-                <p>Designer</p>
-                <p>Charuk@gmail.com</p>
-                <p><button class="button">Contact</button></p>
-            </div>
-        </div>
-
-
-        <div class="team-member">
             <img src="assets/images/oliver-ragfelt-khV4fTy6-D8-unsplash.jpg" alt="Thanuka Rathnayake">
             <div class="team-member-info">
                 <h2>Thanuka Rathnayake</h2>
-                <p>CEO & Founder</p>
+                <p>Front End Developer</p>
                 <p>ThanukaR@gmail.com</p>
                 <p><button class="button">Contact</button></p>
             </div>
@@ -94,7 +85,7 @@
             <img src="/assets/images/joseph-gonzalez-iFgRcqHznqg-unsplash.jpg" alt="Mhateesha NSBM">
             <div class="team-member-info">
                 <h2>Mhateesha NSBM</h2>
-                <p>Art Director</p>
+                <p>Front End Developer</p>
                 <p>Teesha@gmail.com</p>
                 <p><button class="button">Contact</button></p>
             </div>
@@ -104,7 +95,7 @@
             <img src="/assets/images/clarisse-meyer-x9cXI2eQLBw-unsplash.jpg" alt="Dulvanya">
             <div class="team-member-info">
                 <h2>Dulvanya</h2>
-                <p>Designer</p>
+                <p>Front End Developer</p>
                 <p>DulvanyaM@gmail.com</p>
                 <p><button class="button">Contact</button></p>
             </div>
@@ -114,7 +105,7 @@
             <img src="/assets/images/jim-flores-dE6c9RZoyL8-unsplash.jpg" alt="Hasini">
             <div class="team-member-info">
                 <h2>Hasini Gunatilaka</h2>
-                <p>CEO & Founder</p>
+                <p>Front End Developer</p>
                 <p>HasiniG@gmail.com</p>
                 <p><button class="button">Contact</button></p>
             </div>
@@ -124,7 +115,7 @@
             <img src="/assets/images/pj-go-arPZr6tqsoA-unsplash.jpg" alt="Tharushi Perera">
             <div class="team-member-info">
                 <h2>Tharushi Perera</h2>
-                <p>Art Director</p>
+                <p>Front End Developer</p>
                 <p>Perera@gmail.com</p>
 
                 <p><button class="button">Contact</button></p>
@@ -135,11 +126,22 @@
             <img src="/assets/images/slav-romanov-BrEAp01_m5w-unsplash.jpg" alt="Rosi">
             <div class="team-member-info">
                 <h2>Samudi Ganawardana</h2>
-                <p>Designer</p>
+                <p>Front End Developer</p>
                 <p>Rosi@gmail.com</p>
                 <p><button class="button">Contact</button></p>
             </div>
         </div>
+
+        <div class="team-member">
+            <img src="/assets/images/nith-in-w1N1WmLDyHU-unsplash.jpg" alt="Don Sanoj">
+            <div class="team-member-info">
+                <h2>Sanoj Aminda</h2>
+                <p>Front End & Back End Developer</p>
+                <p>sanojA@gmail.com</p>
+                <p><button class="button">Contact</button></p>
+            </div>
+        </div>
+
     </div>
     <br>
     <br><br>
