@@ -17,7 +17,7 @@
                 </a>
 
                 <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
-                    <a href="/Admin Panel/admin_profile.php">
+                    <a href="/Admin_Panel/admin_profile.php">
                         <h6><?php echo $_SESSION['admin_name'] ?></h6>
                         <span>Web Designer</span>
                     </a>
