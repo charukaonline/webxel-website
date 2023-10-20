@@ -111,6 +111,13 @@
 
             <input type="submit" name="submit" value="Sign in" class="form-btn">
 
+            <div class="method">
+                <a href="#" class="method-action">
+                    <i class='bx bxl-google'></i>
+                    <span>Sign in with Google</span>
+                </a>
+            </div>
+
             <p>Don't have an account? <a href="register_form.php">Create Now</a></p>
 
         </form>

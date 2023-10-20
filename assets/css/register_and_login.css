@@ -84,8 +84,30 @@ html {
     color: var(--font-color);
 }
 
+.signin-form-container form .method {
+    margin: 0 1rem 0 1rem;
+}
+
+.signin-form-container form .method-action {
+    margin-top: 1.5rem;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    color: var(--btn-color);
+    text-rendering: optimizeLegibility;
+}
+
+.signin-form-container form .method-action i {
+    color: var(--bg-color);
+    font-size: 22px;
+}
+
 .signin-form-container form p {
-    margin-top: 14px;
+    margin-top: 18px;
     font-size: 16px;
     color: rgba(0, 0, 0, .8);
 }
@@ -111,7 +133,7 @@ html {
     align-items: center;
     justify-content: center;
     padding: 200px;
-    padding-top: 85px;
+    padding-top: 100px;
     background: var(--header-background-color);
 }
 
