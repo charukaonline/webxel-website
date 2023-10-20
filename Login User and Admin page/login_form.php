@@ -20,7 +20,7 @@
             if($row['user_type'] == 'admin') {
                 
                 $_SESSION['admin_name'] = $row['name'];
-                header('location: /Admin panel/admin_page.php');    
+                header('location: /Admin panel/admin_dashboard.php');    
             
             }
             elseif($row['user_type'] == 'user') {
