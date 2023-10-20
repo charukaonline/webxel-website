@@ -17,22 +17,18 @@
         if(mysqli_num_rows($result) > 0){
             $row = mysqli_fetch_array($result);
 
-            // if($row['user_type'] == 'admin') {
+            if($row['user_type'] == 'admin') {
                 
-            //     $_SESSION['admin_name'] = $row['name'];
-            //     header('location: /Admin_panel/admin_dashboard.php');    
+                $_SESSION['admin_name'] = $row['name'];
+                header('location: /Admin_panel/admin_dashboard.php');    
             
-            // }
-            // elseif($row['user_type'] == 'user') {
+            }
+            elseif($row['user_type'] == '') {
             
-            //     $_SESSION['user_name'] = $row['name'];
-            //     header('location: /User_panel/user_page.php');    
+                $_SESSION['user_name'] = $row['name'];
+                header('location: /User_panel/user_page.php');    
             
-            // }
-
-            // If there are any admins, First comment the below code. Then Open the comment above code.
-            $_SESSION['user_name'] = $row['name'];
-            header('location: /User_panel/user_page.php');
+            }
         }
         else {
             $error[] = 'incorrect email or password!';
