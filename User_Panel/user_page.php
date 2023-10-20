@@ -28,9 +28,9 @@
             <h3>Hi, <span>user</span></h3>
             <h1>Welcome <span><?php echo $_SESSION['user_name'] ?></span></h1>
             <p>this is user page</p>
-            <a href="login_form.php" class="btn">Login</a>
+            <a href="/Login_User_and_Admin_page/login_form.php" class="btn">Login</a>
             <a href="register_form.php" class="btn">Register</a>
-            <a href="logout.php" class="btn">Logout</a>
+            <a href="/Login_User_and_Admin_page/logout.php" class="btn">Logout</a>
         </div>
 
     </div>

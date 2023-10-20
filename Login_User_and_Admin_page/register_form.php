@@ -98,10 +98,11 @@
             <input type="email" name="email" placeholder="Email" required>
             <input type="password" name="password" placeholder="Password" required>
             <input type="password" name="cpassword" placeholder="Confirm password" required>
-            <select name="user-type">
+            <!-- If there are any admins, open the code that commented on below  -->
+            <!-- <select name="user-type">
                 <option value="user">User</option>
                 <option value="admin">Admin</option>
-            </select>
+            </select> -->
 
             <input type="submit" name="submit" value="register now" class="form-btn">
             
