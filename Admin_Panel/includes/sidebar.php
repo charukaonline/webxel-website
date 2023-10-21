@@ -9,7 +9,7 @@
     <div class="collapse navbar-collapse  w-auto  max-height-vh-100" id="sidenav-collapse-main">
         <ul class="navbar-nav">
             <li class="nav-item">
-                <a class="nav-link text-white" href="/Admin_Panel/admin_dashboard.php">
+                <a class="nav-link text-white" href="/admin_panel/admin_dashboard.php">
                 
                 <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
                     <i class="material-icons opacity-10">dashboard</i>
@@ -20,7 +20,7 @@
             </li>
 
             <li class="nav-item">
-                <a class="nav-link text-white " href="/Admin_Panel/page_clone.php">
+                <a class="nav-link text-white " href="/admin_panel/page_clone.php">
 
                 <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
                     <i class="material-icons opacity-10">table_view</i>
@@ -31,7 +31,7 @@
             </li>
             
             <li class="nav-item">
-                <a class="nav-link text-white " href="/Admin_Panel/user_manage.php">
+                <a class="nav-link text-white " href="/admin_panel/user_manage.php">
 
                 <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
                     <i class="material-icons opacity-10">boy</i>
@@ -42,7 +42,7 @@
             </li>
 
             <li class="nav-item">
-                <a class="nav-link text-white " href="/Admin_Panel/notification.php">
+                <a class="nav-link text-white " href="/admin_panel/notification.php">
 
                 <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
                     <i class="material-icons opacity-10">notifications</i>
@@ -57,7 +57,7 @@
             </li>
 
             <li class="nav-item">
-                <a class="nav-link text-white " href="/Admin_Panel/admin_profile.php">
+                <a class="nav-link text-white " href="/admin_panel/admin_profile.php">
 
                 <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
                     <i class="material-icons opacity-10">person</i>
@@ -68,7 +68,7 @@
             </li>
 
             <li class="nav-item">
-                <a class="nav-link text-white " href="/Login_User_and_Admin_page/logout.php">
+                <a class="nav-link text-white " href="/login_user_and_admin_page/logout.php">
     
                 <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
                     <i class="material-icons opacity-10">login</i>
