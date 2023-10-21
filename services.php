@@ -23,12 +23,12 @@
     <?php include ('navbar.php'); ?>
 
     <section class="services-top">
-        <div class="services-intro">
+        <div class="intro">
             <h1>Our Services </h1>
             <h3>Where Creativity Meets Technology.</h3>
         </div>
 
-        <div class="services-desc">
+        <div class="desc">
             At W&#x039E;&#x042;X&#x039E;L, We collaborate with companies small to large to solve problems,
             seize opportunities and generate growth.
         </div>

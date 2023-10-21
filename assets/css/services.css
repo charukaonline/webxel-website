@@ -40,13 +40,13 @@ html {
     background: #000;
 }
 
-.services-top .services-intro {
+.services-top .intro {
     /* height: 100vh; */
-    background-image: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url('home-page-cover.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url('assets/images/home-page-cover.jpg');
     background-size: cover;
 }
 
-.services-top .services-intro h1 {
+.services-top .intro h1 {
     position: absolute;
     top: 28%;
     left: 50%;
@@ -57,7 +57,7 @@ html {
 }
 
 
-.services-top .services-intro h3 {
+.services-top .intro h3 {
     position: absolute;
     top: 38%;
     left: 50%;
@@ -66,7 +66,7 @@ html {
     font-size: 30px;
 }
 
-.services-top .services-desc {
+.services-top .desc {
     position: absolute;
     top: 78%;
     left: 50%;
