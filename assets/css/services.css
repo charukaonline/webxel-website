@@ -32,3 +32,50 @@ html {
     background: var(--bg-color);
     background-size: auto;
 }
+
+/* styling for the services-top section */
+.services-top {
+    /* margin-top: 80px; */
+    height: 100vh;
+    background: #000;
+}
+
+.services-top .services-intro {
+    /* height: 100vh; */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url('home-page-cover.jpg');
+    background-size: cover;
+}
+
+.services-top .services-intro h1 {
+    position: absolute;
+    top: 28%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--font-color);
+    font-size: 54px;
+    /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+}
+
+
+.services-top .services-intro h3 {
+    position: absolute;
+    top: 38%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #6e6e73;
+    font-size: 30px;
+}
+
+.services-top .services-desc {
+    position: absolute;
+    top: 78%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--font-color);
+    font-size: 22px;
+    text-align: justify;
+}
+
+.services-top .content {
+    height: 100vh;
+}
