@@ -46,32 +46,6 @@ window.addEventListener('scroll', function () {
     }
 });
 
-// Animation for h1 tag
-window.addEventListener("scroll", function () {
-
-    var h1 = document.querySelector("h1");
-    var popServices = document.getElementById("home");
-    var rect = popServices.getBoundingClientRect();
-    var position = rect.top;
-
-    if (position <= window.innerHeight && position >= 0) {
-        TweenMax.to(h1, 1, { opacity: 1, y: 0, ease: Power2.easeOut });
-    } else {
-        TweenMax.to(h1, 1, { opacity: 0, y: 70, ease: Power2.easeOut });
-    }
-
-    var h1 = document.querySelector("h1.heading");
-    var popServices = document.getElementById("pop-services");
-    var rect = popServices.getBoundingClientRect();
-    var position = rect.top;
-
-    if (position <= window.innerHeight && position >= 0) {
-        TweenMax.to(h1, 1, { opacity: 1, y: 0, ease: Power2.easeOut });
-    } else {
-        TweenMax.to(h1, 1, { opacity: 0, y: 70, ease: Power2.easeOut });
-    }
-});
-
 // Chat Bot section
 var data = {
     chatinit: {
@@ -307,3 +281,29 @@ function handleScroll() {
     var elem = document.getElementById('chat-box');
     elem.scrollTop = elem.scrollHeight;
 }
+
+// Animation 
+function applyAnimation(entries, observer) {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            const element = entry.target;
+            element.classList.add("visible");
+            if (element.classList.contains("heading")) {
+                element.style.animation = "animation 1s ease forwards";
+            }
+        }
+    });
+}
+const options = {
+    root: null,
+    rootMargin: '0px',
+    threshold: 0.5,
+};
+
+const observer = new IntersectionObserver(applyAnimation, options);
+
+const home = document.getElementById("home");
+const heading = document.querySelector(".heading");
+
+observer.observe(home);
+observer.observe(heading);

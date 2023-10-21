@@ -20,13 +20,13 @@
             if($row['user_type'] == 'admin') {
                 
                 $_SESSION['admin_name'] = $row['name'];
-                header('location: /Admin_panel/admin_dashboard.php');    
+                header('location: /admin_panel/admin_dashboard.php');    
             
             }
-            elseif($row['user_type'] == 'user') {
+            elseif($row['user_type'] == '') {
             
                 $_SESSION['user_name'] = $row['name'];
-                header('location: /User_panel/user_page.php');    
+                header('location: /user_panel/user_page.php');    
             
             }
         }
@@ -73,7 +73,7 @@
         <div class="icons">
             <i class="fas fa-bars" id="menu-bars"></i>
             <i class="fas fa-search" id="search-icon"></i>
-            <a href="/Login_User_and_Admin_page/register_form.php"><i class="fas fa-user" id="login-icon"></i></a>
+            <a href="/login_user_and_admin_page/register_form.php"><i class="fas fa-user" id="login-icon"></i></a>
         </div>
 
     </header>
@@ -106,6 +106,13 @@
             <input type="password" name="password" placeholder="Password">
 
             <input type="submit" name="submit" value="Sign in" class="form-btn">
+
+            <div class="method">
+                <a href="#" class="method-action">
+                    <i class='bx bxl-google'></i>
+                    <span>Sign in with Google</span>
+                </a>
+            </div>
 
             <p>Don't have an account? <a href="register_form.php">Create Now</a></p>
 
