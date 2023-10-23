@@ -21,101 +21,153 @@ if (!isset($_SESSION['admin_name'])) {
 
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900|Roboto+Slab:400,700" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
-    <link id="pagestyle" href="../assets/css/material-dashboard.min.css" rel="stylesheet" />
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+
+    <link rel="stylesheet" href="../assets/css/admin.css">
 
     <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
 </head>
 
-<body class="g-sidenav-show  bg-gray-500">
+<body>
+
     <?php include('./includes/sidebar.php'); ?>
+	
+	<!-- CONTENT -->
+	<section id="content">
+		<!-- NAVBAR -->
+		<?php include('./includes/navbar.php'); ?>
 
-    <main class="main-content position-relative max-height-vh-100 h-100 border-radius-lg ">
-        
-    <?php include('./includes/navbar.php'); ?>
+		<!-- MAIN -->
+		<main>
+			<div class="head-title">
+				<div class="left">
+					<h1>Dashboard</h1>
+				</div>
+			</div>
 
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <h2>Hello Admin</h2>
+			<ul class="box-info">
+				<li>
+					<i class='bx bxs-calendar-check' ></i>
+					<span class="text">
+						<h3>1020</h3>
+						<p>Orders</p>
+					</span>
+				</li>
+				<li>
+					<i class='bx bxs-group' ></i>
+					<span class="text">
+						<h3>2834</h3>
+						<p>Visitors</p>
+					</span>
+				</li>
+				<li>
+					<i class='bx bxs-dollar-circle' ></i>
+					<span class="text">
+						<h3>$2543</h3>
+						<p>Total Revenue</p>
+					</span>
+				</li>
+			</ul>
 
-                    <div class="row mt-4">
-                        <div class="col-lg-5 col-sm-5">
-                            <div class="card  mb-2">
-                                <div class="card-header p-3 pt-2">
-                                    <div class="icon icon-lg icon-shape bg-gradient-dark shadow-dark shadow text-center border-radius-xl mt-n4 position-absolute">
-                                        <i class="material-icons opacity-10">weekend</i>
-                                    </div>
-                                    <div class="text-end pt-1">
-                                        <p class="text-sm mb-0 text-capitalize">Sales</p>
-                                        <h4 class="mb-0">281</h4>
-                                    </div>
-                                </div>
 
-                                <hr class="dark horizontal my-0">
-                                <div class="card-footer p-3">
-                                    <p class="mb-0"><span class="text-success text-sm font-weight-bolder">+55% </span>than last week</p>
-                                </div>
-                            </div>
-
-                            <div class="card  mb-2">
-                                <div class="card-header p-3 pt-2">
-                                    <div class="icon icon-lg icon-shape bg-gradient-primary shadow-primary shadow text-center border-radius-xl mt-n4 position-absolute">
-                                        <i class="material-icons opacity-10">leaderboard</i>
-                                    </div>
-                                    <div class="text-end pt-1">
-                                        <p class="text-sm mb-0 text-capitalize">Visitors</p>
-                                        <h4 class="mb-0">2,300</h4>
-                                    </div>
-                                </div>
-
-                                <hr class="dark horizontal my-0">
-                                <div class="card-footer p-3">
-                                    <p class="mb-0"><span class="text-success text-sm font-weight-bolder">+3% </span>than last month</p>
-                                </div>
-                            </div>
-
-                        </div>
-                        <div class="col-lg-5 col-sm-5 mt-sm-0 mt-4">
-                            <div class="card  mb-2">
-                                <div class="card-header p-3 pt-2 bg-transparent">
-                                    <div class="icon icon-lg icon-shape bg-gradient-success shadow-success text-center border-radius-xl mt-n4 position-absolute">
-                                        <i class="material-icons opacity-10">store</i>
-                                    </div>
-                                    <div class="text-end pt-1">
-                                        <p class="text-sm mb-0 text-capitalize ">Revenue</p>
-                                        <h4 class="mb-0 ">34k</h4>
-                                    </div>
-                                </div>
-
-                                <hr class="horizontal my-0 dark">
-                                <div class="card-footer p-3">
-                                    <p class="mb-0 "><span class="text-success text-sm font-weight-bolder">+1% </span>than yesterday</p>
-                                </div>
-                            </div>
-
-                            <div class="card ">
-                                <div class="card-header p-3 pt-2 bg-transparent">
-                                    <div class="icon icon-lg icon-shape bg-gradient-info shadow-info text-center border-radius-xl mt-n4 position-absolute">
-                                        <i class="material-icons opacity-10">person_add</i>
-                                    </div>
-                                    <div class="text-end pt-1">
-                                        <p class="text-sm mb-0 text-capitalize ">Followers</p>
-                                        <h4 class="mb-0 ">+91</h4>
-                                    </div>
-                                </div>
-
-                                <hr class="horizontal my-0 dark">
-                                <div class="card-footer p-3">
-                                    <p class="mb-0 ">Just updated</p>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
+			<div class="table-data">
+				<div class="order">
+					<div class="head">
+						<h3>Recent Orders</h3>
+						<i class='bx bx-search' ></i>
+						<i class='bx bx-filter' ></i>
+					</div>
+					<table>
+						<thead>
+							<tr>
+								<th>User</th>
+								<th>Date Order</th>
+								<th>Status</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>
+									<img src="img/people.png">
+									<p>John Doe</p>
+								</td>
+								<td>01-10-2021</td>
+								<td><span class="status completed">Completed</span></td>
+							</tr>
+							<tr>
+								<td>
+									<img src="img/people.png">
+									<p>John Doe</p>
+								</td>
+								<td>01-10-2021</td>
+								<td><span class="status pending">Pending</span></td>
+							</tr>
+							<tr>
+								<td>
+									<img src="img/people.png">
+									<p>John Doe</p>
+								</td>
+								<td>01-10-2021</td>
+								<td><span class="status process">Process</span></td>
+							</tr>
+							<tr>
+								<td>
+									<img src="img/people.png">
+									<p>John Doe</p>
+								</td>
+								<td>01-10-2021</td>
+								<td><span class="status pending">Pending</span></td>
+							</tr>
+							<tr>
+								<td>
+									<img src="img/people.png">
+									<p>John Doe</p>
+								</td>
+								<td>01-10-2021</td>
+								<td><span class="status completed">Completed</span></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="todo">
+					<div class="head">
+						<h3>Todos</h3>
+						<i class='bx bx-plus' ></i>
+						<i class='bx bx-filter' ></i>
+					</div>
+					<ul class="todo-list">
+						<li class="completed">
+							<p>Todo List</p>
+							<i class='bx bx-dots-vertical-rounded' ></i>
+						</li>
+						<li class="completed">
+							<p>Todo List</p>
+							<i class='bx bx-dots-vertical-rounded' ></i>
+						</li>
+						<li class="not-completed">
+							<p>Todo List</p>
+							<i class='bx bx-dots-vertical-rounded' ></i>
+						</li>
+						<li class="completed">
+							<p>Todo List</p>
+							<i class='bx bx-dots-vertical-rounded' ></i>
+						</li>
+						<li class="not-completed">
+							<p>Todo List</p>
+							<i class='bx bx-dots-vertical-rounded' ></i>
+						</li>
+					</ul>
+				</div>
 
                 <?php include('./includes/footer.php'); ?>
+			</div>
+		</main>
+		<!-- MAIN -->
 
+	</section>
+	<!-- CONTENT -->
+	
+
+	<script src="script.js"></script>
 </body>
-
 </html>
