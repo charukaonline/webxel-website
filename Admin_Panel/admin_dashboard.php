@@ -167,7 +167,7 @@ if (!isset($_SESSION['admin_name'])) {
 	</section>
 	<!-- CONTENT -->
 	
+	<script src="../assets/js/admin.js"></script>
 
-	<script src="script.js"></script>
 </body>
 </html>
