@@ -8,10 +8,6 @@ if (!isset($_SESSION['admin_name'])) {
     header('location: /login_user_and_admin_page/login_form.php');
 }
 
-$adminID = $_SESSION['admin_name'];
-$getData = mysqli_query($conn, "SELECT * FROM login_and_register WHERE id = '$adminID' ");
-$row = mysqli_fetch_assoc($getData);
-
 ?>
 
 <!DOCTYPE html>
@@ -24,14 +20,15 @@ $row = mysqli_fetch_assoc($getData);
 
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900|Roboto+Slab:400,700" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
-    <link id="pagestyle" href="../assets/css/material-dashboard.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
     
+    <link rel="stylesheet" href="../assets/css/admin.css">
 
     <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
 </head>
 
-<body class="g-sidenav-show  bg-gray-500">
+<body>
     <?php include('./includes/sidebar.php'); ?>
 
     <main class="main-content position-relative max-height-vh-100 h-100 border-radius-lg ">
