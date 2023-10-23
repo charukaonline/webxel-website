@@ -38,24 +38,6 @@ if (!isset($_SESSION['admin_name'])) {
 
         <section class="section profile">
             <div class="row">
-                <div class="col-xl-4">
-
-                    <div class="card">
-                        <div class="card-body profile-card pt-4 d-flex flex-column align-items-center">
-
-                            <img src="/assets/images/" alt="Profile" class="rounded-circle">
-                            <h2></h2>
-                            <h3>Web Designer</h3>
-                            <div class="social-links mt-2">
-                                <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
-                                <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-                                <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-                                <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
 
                 <div class="col-xl-8">
 
@@ -86,12 +68,12 @@ if (!isset($_SESSION['admin_name'])) {
                                     <h5 class="card-title">Profile Details</h5>
 
                                     <div class="row">
-                                        <div class="col-lg-3 col-md-4 label ">Full Name</div>
+                                        <div class="infot-title ">Full Name</div>
                                         <div class="col-lg-9 col-md-8"></div>
                                     </div>
 
                                     <div class="row">
-                                        <div class="col-lg-3 col-md-4 label">Company</div>
+                                        <div class="infot-title">Company</div>
                                         <div class="col-lg-9 col-md-8">Lueilwitz, Wisoky and Leuschke</div>
                                     </div>
 
@@ -127,7 +109,7 @@ if (!isset($_SESSION['admin_name'])) {
                                     
                                     <form>
                                         <div class="row mb-3">
-                                            <label for="profileImage" class="col-md-4 col-lg-3 col-form-label">Profile Image</label>
+                                            <label for="profileImage" class="info-social-links">Profile Image</label>
                                             <div class="col-md-8 col-lg-9">
                                                 <img src="assets/img/profile-img.jpg" alt="Profile">
                                                 <div class="pt-2">
@@ -138,84 +120,84 @@ if (!isset($_SESSION['admin_name'])) {
                                         </div>
 
                                         <div class="row mb-3">
-                                            <label for="fullName" class="col-md-4 col-lg-3 col-form-label">Full Name</label>
+                                            <label for="fullName" class="info-social-links">Full Name</label>
                                             <div class="col-md-8 col-lg-9">
                                                 <input name="fullName" type="text" class="form-control" id="fullName" value="<?php echo $row['name']; ?>">
                                             </div>
                                         </div>
 
                                         <div class="row mb-3">
-                                            <label for="about" class="col-md-4 col-lg-3 col-form-label">About</label>
+                                            <label for="about" class="info-social-links">About</label>
                                             <div class="col-md-8 col-lg-9">
                                                 <textarea name="about" class="form-control" id="about" style="height: 100px">Sunt est soluta temporibus accusantium neque nam maiores cumque temporibus. Tempora libero non est unde veniam est qui dolor. Ut sunt iure rerum quae quisquam autem eveniet perspiciatis odit. Fuga sequi sed ea saepe at unde.</textarea>
                                             </div>
                                         </div>
 
                                         <div class="row mb-3">
-                                            <label for="company" class="col-md-4 col-lg-3 col-form-label">Company</label>
+                                            <label for="company" class="info-social-links">Company</label>
                                             <div class="col-md-8 col-lg-9">
                                                 <input name="company" type="text" class="form-control" id="company" value="Lueilwitz, Wisoky and Leuschke">
                                             </div>
                                         </div>
 
                                         <div class="row mb-3">
-                                            <label for="Job" class="col-md-4 col-lg-3 col-form-label">Job</label>
+                                            <label for="Job" class="info-social-links">Job</label>
                                             <div class="col-md-8 col-lg-9">
                                                 <input name="job" type="text" class="form-control" id="Job" value="Web Designer">
                                             </div>
                                         </div>
 
                                         <div class="row mb-3">
-                                            <label for="Country" class="col-md-4 col-lg-3 col-form-label">Country</label>
+                                            <label for="Country" class="info-social-links">Country</label>
                                             <div class="col-md-8 col-lg-9">
                                                 <input name="country" type="text" class="form-control" id="Country" value="USA">
                                             </div>
                                         </div>
 
                                         <div class="row mb-3">
-                                            <label for="Address" class="col-md-4 col-lg-3 col-form-label">Address</label>
+                                            <label for="Address" class="info-social-links">Address</label>
                                             <div class="col-md-8 col-lg-9">
                                                 <input name="address" type="text" class="form-control" id="Address" value="A108 Adam Street, New York, NY 535022">
                                             </div>
                                         </div>
 
                                         <div class="row mb-3">
-                                            <label for="Phone" class="col-md-4 col-lg-3 col-form-label">Phone</label>
+                                            <label for="Phone" class="info-social-links">Phone</label>
                                             <div class="col-md-8 col-lg-9">
                                                 <input name="phone" type="text" class="form-control" id="Phone" value="(436) 486-3538 x29071">
                                             </div>
                                         </div>
 
                                         <div class="row mb-3">
-                                            <label for="Email" class="col-md-4 col-lg-3 col-form-label">Email</label>
+                                            <label for="Email" class="info-social-links">Email</label>
                                             <div class="col-md-8 col-lg-9">
                                                 <input name="email" type="email" class="form-control" id="Email" value="k.anderson@example.com">
                                             </div>
                                         </div>
 
                                         <div class="row mb-3">
-                                            <label for="Twitter" class="col-md-4 col-lg-3 col-form-label">Twitter Profile</label>
+                                            <label for="Twitter" class="info-social-links">Twitter Profile</label>
                                             <div class="col-md-8 col-lg-9">
                                                 <input name="twitter" type="text" class="form-control" id="Twitter" value="https://twitter.com/#">
                                             </div>
                                         </div>
 
                                         <div class="row mb-3">
-                                            <label for="Facebook" class="col-md-4 col-lg-3 col-form-label">Facebook Profile</label>
+                                            <label for="Facebook" class="info-social-links">Facebook Profile</label>
                                             <div class="col-md-8 col-lg-9">
                                                 <input name="facebook" type="text" class="form-control" id="Facebook" value="https://facebook.com/#">
                                             </div>
                                         </div>
 
                                         <div class="row mb-3">
-                                            <label for="Instagram" class="col-md-4 col-lg-3 col-form-label">Instagram Profile</label>
+                                            <label for="Instagram" class="info-social-links">Instagram Profile</label>
                                             <div class="col-md-8 col-lg-9">
                                                 <input name="instagram" type="text" class="form-control" id="Instagram" value="https://instagram.com/#">
                                             </div>
                                         </div>
 
                                         <div class="row mb-3">
-                                            <label for="Linkedin" class="col-md-4 col-lg-3 col-form-label">Linkedin Profile</label>
+                                            <label for="Linkedin" class="info-social-links">Linkedin Profile</label>
                                             <div class="col-md-8 col-lg-9">
                                                 <input name="linkedin" type="text" class="form-control" id="Linkedin" value="https://linkedin.com/#">
                                             </div>
@@ -233,21 +215,21 @@ if (!isset($_SESSION['admin_name'])) {
                                     <form>
 
                                         <div class="row mb-3">
-                                            <label for="currentPassword" class="col-md-4 col-lg-3 col-form-label">Current Password</label>
+                                            <label for="currentPassword" class="info-social-links">Current Password</label>
                                             <div class="col-md-8 col-lg-9">
                                                 <input name="password" type="password" class="form-control" id="currentPassword">
                                             </div>
                                         </div>
 
                                         <div class="row mb-3">
-                                            <label for="newPassword" class="col-md-4 col-lg-3 col-form-label">New Password</label>
+                                            <label for="newPassword" class="info-social-links">New Password</label>
                                             <div class="col-md-8 col-lg-9">
                                                 <input name="newpassword" type="password" class="form-control" id="newPassword">
                                             </div>
                                         </div>
 
                                         <div class="row mb-3">
-                                            <label for="renewPassword" class="col-md-4 col-lg-3 col-form-label">Re-enter New Password</label>
+                                            <label for="renewPassword" class="info-social-links">Re-enter New Password</label>
                                             <div class="col-md-8 col-lg-9">
                                                 <input name="renewpassword" type="password" class="form-control" id="renewPassword">
                                             </div>
@@ -289,7 +271,7 @@ if (!isset($_SESSION['admin_name'])) {
 
                 <div class="profile-card">
 
-                    <img src="/assets/images/" alt="Profile" class="rounded-circle">
+                    <img src="../assets/images/nith-in-w1N1WmLDyHU-unsplash.jpg" alt="Profile" class="rounded-circle">
                     <h2><?php echo $_SESSION['admin_name'] ?></h2>
                     <h3>Font End & Back End Developer</h3>
                     <div class="social-links mt-2">
@@ -299,6 +281,209 @@ if (!isset($_SESSION['admin_name'])) {
                         <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
                     </div>
 
+                </div>
+
+                <div class="admin-info-card">
+
+                        <ul class="info-card-header">
+
+                            <li class="nav-item">
+                                <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#profile-overview">Overview</button>
+                            </li>
+
+                            <li class="nav-item">
+                                <button class="nav-link" data-bs-toggle="tab" data-bs-target="#profile-edit">Edit Profile</button>
+                            </li>
+
+                            <li class="nav-item">
+                                <button class="nav-link" data-bs-toggle="tab" data-bs-target="#profile-change-password">Change Password</button>
+                            </li>
+
+                        </ul>
+                        <div class="info-card-content">
+
+                            <div class="profile-overview" id="profile-overview">
+                                <h5 class="card-title">About</h5>
+                                <p class="small fst-italic">Sunt est soluta temporibus accusantium neque nam maiores cumque temporibus. Tempora libero non est unde veniam est qui dolor. Ut sunt iure rerum quae quisquam autem eveniet perspiciatis odit. Fuga sequi sed ea saepe at unde.</p>
+
+                                <h5 class="card-title">Profile Details</h5>
+
+                                <div class="row">
+                                    <div class="info-title">Full Name</div>
+                                    <div class="info-content">Sanoj Aminda</div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="info-title">Company</div>
+                                    <div class="info-content">Lueilwitz, Wisoky and Leuschke</div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="info-title">Job</div>
+                                    <div class="info-content">Web Designer</div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="info-title">Country</div>
+                                    <div class="info-content">USA</div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="info-title">Address</div>
+                                    <div class="info-content">A108 Adam Street, New York, NY 535022</div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="info-title">Phone</div>
+                                    <div class="info-content">(436) 486-3538 x29071</div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="info-title">Email</div>
+                                    <div class="info-content">sanojaminda@gmail.com</div>
+                                </div>
+
+                            </div>
+
+                            <div class="profile-edit" id="profile-edit">
+
+
+                                <form>
+                                    <div class="upload-profile-img">
+                                        <label for="profileImage" class="profile-img">Profile Image</label>
+                                        <div class="col-md-8 col-lg-9">
+                                            <img src="assets/img/profile-img.jpg" alt="Profile">
+                                            <div class="pt-2">
+                                                <a href="#" class="btn btn-primary btn-sm" title="Upload new profile image"><i class="bi bi-upload"></i></a>
+                                                <a href="#" class="btn btn-danger btn-sm" title="Remove my profile image"><i class="bi bi-trash"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="info-edit">
+                                        <label for="fullName" class="info-social-links">Full Name</label>
+                                        <div class="col-md-8 col-lg-9">
+                                            <input name="fullName" type="text" class="form-control" id="fullName" value="<?php echo $row['name']; ?>">
+                                        </div>
+                                    </div>
+
+                                    <div class="info-edit">
+                                        <label for="about" class="info-social-links">About</label>
+                                        <div class="col-md-8 col-lg-9">
+                                            <textarea name="about" class="form-control" id="about" style="height: 100px">Sunt est soluta temporibus accusantium neque nam maiores cumque temporibus. Tempora libero non est unde veniam est qui dolor. Ut sunt iure rerum quae quisquam autem eveniet perspiciatis odit. Fuga sequi sed ea saepe at unde.</textarea>
+                                        </div>
+                                    </div>
+
+                                    <div class="info-edit">
+                                        <label for="company" class="info-social-links">Company</label>
+                                        <div class="col-md-8 col-lg-9">
+                                            <input name="company" type="text" class="form-control" id="company" value="Lueilwitz, Wisoky and Leuschke">
+                                        </div>
+                                    </div>
+
+                                    <div class="info-edit">
+                                        <label for="Job" class="info-social-links">Job</label>
+                                        <div class="col-md-8 col-lg-9">
+                                            <input name="job" type="text" class="form-control" id="Job" value="Web Designer">
+                                        </div>
+                                    </div>
+
+                                    <div class="info-edit">
+                                        <label for="Country" class="info-social-links">Country</label>
+                                        <div class="col-md-8 col-lg-9">
+                                            <input name="country" type="text" class="form-control" id="Country" value="USA">
+                                        </div>
+                                    </div>
+
+                                    <div class="info-edit">
+                                        <label for="Address" class="info-social-links">Address</label>
+                                        <div class="col-md-8 col-lg-9">
+                                            <input name="address" type="text" class="form-control" id="Address" value="A108 Adam Street, New York, NY 535022">
+                                        </div>
+                                    </div>
+
+                                    <div class="info-edit">
+                                        <label for="Phone" class="info-social-links">Phone</label>
+                                        <div class="col-md-8 col-lg-9">
+                                            <input name="phone" type="text" class="form-control" id="Phone" value="(436) 486-3538 x29071">
+                                        </div>
+                                    </div>
+
+                                    <div class="info-edit">
+                                        <label for="Email" class="info-social-links">Email</label>
+                                        <div class="col-md-8 col-lg-9">
+                                            <input name="email" type="email" class="form-control" id="Email" value="k.anderson@example.com">
+                                        </div>
+                                    </div>
+
+                                    <div class="info-edit">
+                                        <label for="Twitter" class="info-social-links">Twitter Profile</label>
+                                        <div class="col-md-8 col-lg-9">
+                                            <input name="twitter" type="text" class="form-control" id="Twitter" value="https://twitter.com/#">
+                                        </div>
+                                    </div>
+
+                                    <div class="info-edit">
+                                        <label for="Facebook" class="info-social-links">Facebook Profile</label>
+                                        <div class="col-md-8 col-lg-9">
+                                            <input name="facebook" type="text" class="form-control" id="Facebook" value="https://facebook.com/#">
+                                        </div>
+                                    </div>
+
+                                    <div class="info-edit">
+                                        <label for="Instagram" class="info-social-links">Instagram Profile</label>
+                                        <div class="col-md-8 col-lg-9">
+                                            <input name="instagram" type="text" class="form-control" id="Instagram" value="https://instagram.com/#">
+                                        </div>
+                                    </div>
+
+                                    <div class="info-edit">
+                                        <label for="Linkedin" class="info-social-links">Linkedin Profile</label>
+                                        <div class="col-md-8 col-lg-9">
+                                            <input name="linkedin" type="text" class="form-control" id="Linkedin" value="https://linkedin.com/#">
+                                        </div>
+                                    </div>
+
+                                    <div class="submit-btn">
+                                        <button type="submit" class="btn btn-primary">Save Changes</button>
+                                    </div>
+                                </form>
+
+                            </div>
+
+                            <div class="profile-change-password" id="profile-change-password">
+
+                                <form>
+
+                                    <div class="change-password">
+                                        <label for="currentPassword" class="change-password-content">Current Password</label>
+                                        <div class="change-password-content-input">
+                                            <input name="password" type="password" class="form-control" id="currentPassword">
+                                        </div>
+                                    </div>
+
+                                    <div class="change-password">
+                                        <label for="newPassword" class="change-password-content">New Password</label>
+                                        <div class="change-password-content-input">
+                                            <input name="newpassword" type="password" class="form-control" id="newPassword">
+                                        </div>
+                                    </div>
+
+                                    <div class="change-password">
+                                        <label for="renewPassword" class="change-password-content">Re-enter New Password</label>
+                                        <div class="change-password-content-input">
+                                            <input name="renewpassword" type="password" class="form-control" id="renewPassword">
+                                        </div>
+                                    </div>
+
+                                    <div class="change-password-content-submit">
+                                        <button type="submit" class="btn btn-primary">Change Password</button>
+                                    </div>
+                                </form>
+
+                            </div>
+
+                        </div>
                 </div>
 
                 <?php include('./includes/footer.php'); ?>
