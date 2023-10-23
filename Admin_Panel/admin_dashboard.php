@@ -30,12 +30,12 @@ if (!isset($_SESSION['admin_name'])) {
 
 <body>
 
-    <?php include('./includes/sidebar.php'); ?>
+    <?php include('../Admin_Panel/includes/sidebar.php'); ?>
 	
 	<!-- CONTENT -->
 	<section id="content">
 		<!-- NAVBAR -->
-		<?php include('./includes/navbar.php'); ?>
+		<?php include('../Admin_Panel/includes/navbar.php'); ?>
 
 		<!-- MAIN -->
 		<main>
@@ -159,7 +159,7 @@ if (!isset($_SESSION['admin_name'])) {
 					</ul>
 				</div>
 
-                <?php include('./includes/footer.php'); ?>
+                <?php include('../Admin_Panel/includes/footer.php'); ?>
 			</div>
 		</main>
 		<!-- MAIN -->

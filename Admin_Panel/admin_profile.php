@@ -16,28 +16,25 @@ if (!isset($_SESSION['admin_name'])) {
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>WEBXEL - Admin Profile</title>
 
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900|Roboto+Slab:400,700" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
-    
+
     <link rel="stylesheet" href="../assets/css/admin.css">
 
     <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
+
+    <title>WEBXEL - Admin Profile</title>
 </head>
 
 <body>
-    <?php include('./includes/sidebar.php'); ?>
-
-    <main class="main-content position-relative max-height-vh-100 h-100 border-radius-lg ">
-
-        <?php include('./includes/navbar.php'); ?>
+    <!--
+    <main class="admin-profile">
 
         <div class="pagetitle">
             <h1>Admin Profile</h1>
-        </div><!-- End Page Title -->
+        </div> 
 
         <section class="section profile">
             <div class="row">
@@ -47,7 +44,7 @@ if (!isset($_SESSION['admin_name'])) {
                         <div class="card-body profile-card pt-4 d-flex flex-column align-items-center">
 
                             <img src="/assets/images/" alt="Profile" class="rounded-circle">
-                            <h2><?php echo $_SESSION['admin_name'] ?></h2>
+                            <h2></h2>
                             <h3>Web Designer</h3>
                             <div class="social-links mt-2">
                                 <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
@@ -64,7 +61,7 @@ if (!isset($_SESSION['admin_name'])) {
 
                     <div class="card">
                         <div class="card-body pt-3">
-                            <!-- Bordered Tabs -->
+                            
                             <ul class="nav nav-tabs nav-tabs-bordered">
 
                                 <li class="nav-item">
@@ -90,7 +87,7 @@ if (!isset($_SESSION['admin_name'])) {
 
                                     <div class="row">
                                         <div class="col-lg-3 col-md-4 label ">Full Name</div>
-                                        <div class="col-lg-9 col-md-8"><?php echo $row['admin_name'] ?></div>
+                                        <div class="col-lg-9 col-md-8"></div>
                                     </div>
 
                                     <div class="row">
@@ -127,7 +124,7 @@ if (!isset($_SESSION['admin_name'])) {
 
                                 <div class="tab-pane fade profile-edit pt-3" id="profile-edit">
 
-                                    <!-- Profile Edit Form -->
+                                    
                                     <form>
                                         <div class="row mb-3">
                                             <label for="profileImage" class="col-md-4 col-lg-3 col-form-label">Profile Image</label>
@@ -227,12 +224,12 @@ if (!isset($_SESSION['admin_name'])) {
                                         <div class="text-center">
                                             <button type="submit" class="btn btn-primary">Save Changes</button>
                                         </div>
-                                    </form><!-- End Profile Edit Form -->
+                                    </form>
 
                                 </div>
 
                                 <div class="tab-pane fade pt-3" id="profile-change-password">
-                                    <!-- Change Password Form -->
+                                    
                                     <form>
 
                                         <div class="row mb-3">
@@ -259,12 +256,11 @@ if (!isset($_SESSION['admin_name'])) {
                                         <div class="text-center">
                                             <button type="submit" class="btn btn-primary">Change Password</button>
                                         </div>
-                                    </form><!-- End Change Password Form -->
+                                    </form>
 
                                 </div>
 
-                            </div><!-- End Bordered Tabs -->
-
+                            </div>
                         </div>
                     </div>
 
@@ -272,9 +268,47 @@ if (!isset($_SESSION['admin_name'])) {
             </div>
         </section>
 
-    </main><!-- End #main -->
+    </main>-->
 
-    <?php include('./includes/footer.php'); ?>
+    <section class="admin-profile">
+
+        <?php include('./includes/sidebar.php'); ?>
+
+        <!-- CONTENT -->
+        <section id="content">
+            <!-- NAVBAR -->
+            <?php include('./includes/navbar.php'); ?>
+
+            <!-- MAIN -->
+            <main>
+                <div class="head-title">
+                    <div class="left">
+                        <h1>Admin Profile</h1>
+                    </div>
+                </div>
+
+                <div class="profile-card">
+
+                    <img src="/assets/images/" alt="Profile" class="rounded-circle">
+                    <h2><?php echo $_SESSION['admin_name'] ?></h2>
+                    <h3>Font End & Back End Developer</h3>
+                    <div class="social-links mt-2">
+                        <a href="#" class="twitter"><i class='bx bxl-twitter'></i></a>
+                        <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+                        <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+                        <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+                    </div>
+
+                </div>
+
+                <?php include('./includes/footer.php'); ?>
+                </div>
+            </main>
+            <!-- MAIN -->
+
+        </section>
+
+        <script src="../assets/js/admin.js"></script>
 
 </body>
 
