@@ -67,7 +67,7 @@
             <a href="/index.php">Home</a>
             <a href="#" id="service">Services</a>
             <a href="#">Contact Us</a>
-            <a href="#">About Us</a>
+            <a href="/about_us.php">About Us</a>
         </nav>
 
         <div class="icons">
