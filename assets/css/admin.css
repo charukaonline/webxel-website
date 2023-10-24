@@ -75,6 +75,8 @@ body {
 	overflow-x: hidden;
 }
 
+/* Admin Dashboard */
+
 /* SIDEBAR */
 #sidebar {
 	position: fixed;
@@ -571,8 +573,7 @@ footer {
 	line-height: 18px;
 }
 
-/* MAIN */
-/* CONTENT */
+/* Admin Dashboard */
 
 /* Admin profile page */
 .profile-card {
@@ -591,6 +592,7 @@ footer {
 	object-fit: cover;
 	border-radius: 50%;
 	margin-bottom: 15px;
+	box-shadow: var(--box-shadow);
 }
 
 .profile-card h2 {
@@ -621,7 +623,7 @@ footer {
 	width: 75%;
 	margin: 0 auto;
 	padding: 20px;
-	background-color: #f9f9f9;
+	background-color: var(--font-color);
 	border-radius: 15px;
 	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -642,6 +644,11 @@ footer {
 	background-color: #eee;
 	border-radius: 25px;
 	cursor: pointer;
+}
+
+.info-card-header .nav-link:hover {
+	color: var(--font-color);
+	background: var(--btn-color);
 }
 
 .info-card-content {
@@ -699,39 +706,23 @@ footer {
 	margin-bottom: 10px;
 }
 
-.form-btn {
-	/* margin-top: 20px;
+.submit-btn {
+	margin-top: 20px;
 	text-align: center;
 	border: 1px solid #ddd;
 	border-bottom: none;
 	background-color: #eee;
 	border-radius: 25px;
-	cursor: pointer; */
-
-	background: #eee;
-    color: rgba(0, 0, 0, .8);
-    text-transform: capitalize;
-    font-size: 15px;
-    cursor: pointer;
+	cursor: pointer;
+	padding: 10px 30px;
 }
 
-.form .form-btn:hover {
-    background: var(--btn-color);
-    color: var(--font-color);
-}
-
-.submit-btn {
+.submit-btn:hover {
 	color: var(--font-color);
 	background: var(--btn-color);
 }
 
-.submit-btn .btn {
-	padding: 10px 30px;
-}
-
-.submit-btn .btn:hover {
-	background: var(--btn-color);
-}
+/* Admin Profile page */
 
 
 

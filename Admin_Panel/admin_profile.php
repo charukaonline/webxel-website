@@ -441,13 +441,12 @@ if (!isset($_SESSION['admin_name'])) {
                             <div class="info-edit">
                                 <label for="Linkedin" class="info-social-links">Linkedin Profile</label>
                                 <div class="info-description">
-                                    <input name="linkedin" type="text" class="form-control" id="Linkedin" value="https://linkedin.com/#">
+                                    <input name="linkedin" type="text" class="form-control" id="Linkedin" value="">
                                 </div>
                             </div>
 
-                            <div class="submit-btn">
-                                <button type="submit" class="btn btn-primary">Save Changes</button>
-                            </div>
+                            <input type="submit" value="Save Changes" name="submit" class="submit-btn btn-primary">
+
                         </form>
 
                     </div>
@@ -477,9 +476,8 @@ if (!isset($_SESSION['admin_name'])) {
                                 </div>
                             </div>
 
-                            <div class="change-password-content-submit">
-                                <button type="submit" class="btn btn-primary">Change Password</button>
-                            </div>
+                            <input type="submit" value="Change Password" name="submit" class="submit-btn btn-primary">
+
                         </form>
 
                     </div>
