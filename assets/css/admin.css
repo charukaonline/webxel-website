@@ -638,6 +638,7 @@ footer {
 	padding: 10px 40px;
 	border: 1px solid #ddd;
 	border-bottom: none;
+	gap: 20px;
 	background-color: #eee;
 	border-radius: 25px;
 	cursor: pointer;
@@ -698,13 +699,38 @@ footer {
 	margin-bottom: 10px;
 }
 
-.submit-btn {
-	margin-top: 20px;
+.form-btn {
+	/* margin-top: 20px;
 	text-align: center;
+	border: 1px solid #ddd;
+	border-bottom: none;
+	background-color: #eee;
+	border-radius: 25px;
+	cursor: pointer; */
+
+	background: #eee;
+    color: rgba(0, 0, 0, .8);
+    text-transform: capitalize;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.form .form-btn:hover {
+    background: var(--btn-color);
+    color: var(--font-color);
+}
+
+.submit-btn {
+	color: var(--font-color);
+	background: var(--btn-color);
 }
 
 .submit-btn .btn {
 	padding: 10px 30px;
+}
+
+.submit-btn .btn:hover {
+	background: var(--btn-color);
 }
 
 
