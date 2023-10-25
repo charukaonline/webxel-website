@@ -283,27 +283,43 @@ function handleScroll() {
 }
 
 // Animation 
-function applyAnimation(entries, observer) {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            const element = entry.target;
-            element.classList.add("visible");
-            if (element.classList.contains("heading")) {
-                element.style.animation = "animation 1s ease forwards";
-            }
-        }
-    });
-}
-const options = {
-    root: null,
-    rootMargin: '0px',
-    threshold: 0.5,
-};
+// function applyAnimation(entries, observer) {
+//     entries.forEach(entry => {
+//         if (entry.isIntersecting) {
+//             const element = entry.target;
+//             element.classList.add("visible");
+//             if (element.classList.contains("heading")) {
+//                 element.style.animation = "animation 1s ease forwards";
+//             }
+//         }
+//     });
+// }
+// const options = {
+//     root: null,
+//     rootMargin: '0px',
+//     threshold: 0.5,
+// };
 
-const observer = new IntersectionObserver(applyAnimation, options);
+// const observer = new IntersectionObserver(applyAnimation, options);
 
-const home = document.getElementById("home");
-const heading = document.querySelector(".heading");
+// const home = document.getElementById("home");
+// const heading = document.querySelector(".heading");
 
-observer.observe(home);
-observer.observe(heading);
+// observer.observe(home);
+// observer.observe(heading);
+
+const sr = ScrollReveal({
+    origin: 'top',
+    distance: '30px',
+    duration: 2000,
+    reset: true
+});
+
+sr.reveal(`intro, h1, .heading,
+            .about__img,
+            .services__content, .menu__content,
+            .app__data, .app__img,
+            .contact__data, .contact__button,
+            .footer__content`, {
+    interval: 200
+})
