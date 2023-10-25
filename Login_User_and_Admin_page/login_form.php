@@ -10,23 +10,24 @@
         $cpass = md5($_POST['cpassword']);
         $user_type = $_POST['user-type'];
 
-        $select = "SELECT * FROM login_and_register WHERE email = '$email' && password = '$pass' ";
+        $select_from_register = "SELECT * FROM login_and_register WHERE email = '$email' && password = '$pass' ";
 
-        $result = mysqli_query($conn, $select);
+        $result_for_register = mysqli_query($conn, $select_from_register);
 
-        if(mysqli_num_rows($result) > 0){
-            $row = mysqli_fetch_array($result);
+        if(mysqli_num_rows($result_for_register) > 0){
+            $row = mysqli_fetch_array($result_for_register);
 
             if($row['user_type'] == 'admin') {
                 
                 $_SESSION['admin_name'] = $row['name'];
+                $_SESSION['admin_email'] = $row['email'];
                 header('location: /admin_panel/admin_dashboard.php');    
             
             }
-            elseif($row['user_type'] == '') {
+            elseif($row['user_type'] == 'user') {
             
                 $_SESSION['user_name'] = $row['name'];
-                header('location: /user_panel/user_page.php');    
+                header('location: /User_Panel/user_page.php');    
             
             }
         }

@@ -4,7 +4,30 @@
 
 session_start();
 
-if (!isset($_SESSION['admin_name'])) {
+if (isset($_POST['submit'])) {
+    $name = mysqli_real_escape_string($conn, $_POST['fullname']);
+    $secondary_email = mysqli_real_escape_string($conn, $_POST['secondary-email']);
+    $about = mysqli_real_escape_string($conn, $_POST['about']);
+    $company = mysqli_real_escape_string($conn, $_POST['company']);
+    $job = mysqli_real_escape_string($conn, $_POST['job']);
+    $country = mysqli_real_escape_string($conn, $_POST['country']);
+    $address = mysqli_real_escape_string($conn, $_POST['address']);
+    $phone = mysqli_real_escape_string($conn, $_POST['phone']);
+
+    $select_from_info = "SELECT * FROM profile_details WHERE name = '$name' && secondary_email = '$secondary_email' ";
+
+    $result_for_info = mysqli_query($conn, $select_from_info);
+
+    if (mysqli_num_rows($result_for_info) > 0) {
+        $error[] = 'Can not update database';
+    }
+    else {
+        $insert_to_info = "INSERT INTO profile_details (name, secondary_email, about, company, job, country, address, phone_number) VALUES ('$name', '$secondary_email', '$company', '$job', '$country', '$address', '$phone')";
+        mysqli_query($conn, $insert_to_info);
+    }
+}
+
+if (!isset($_SESSION['admin_name']) && ($_SESSION['admin_email'])) {
     header('location: /login_user_and_admin_page/login_form.php');
 }
 
@@ -67,15 +90,15 @@ if (!isset($_SESSION['admin_name'])) {
                 <ul class="info-card-header">
 
                     <li class="nav-item">
-                        <button class="nav-link" data-bs-toggle="tab" data-bs-target="#profile-overview">Overview</button>
+                        <button class="nav-link" data-bs-toggle="tab">Overview</button>
                     </li>
 
                     <li class="nav-item">
-                        <button class="nav-link" data-bs-toggle="tab" data-bs-target="#profile-edit">Edit Profile</button>
+                        <button class="nav-link" data-bs-toggle="tab">Edit Profile</button>
                     </li>
 
                     <li class="nav-item">
-                        <button class="nav-link" data-bs-toggle="tab" data-bs-target="#profile-change-password">Change Password</button>
+                        <button class="nav-link" data-bs-toggle="tab">Change Password</button>
                     </li>
 
                 </ul>
@@ -119,6 +142,11 @@ if (!isset($_SESSION['admin_name'])) {
 
                         <div class="row">
                             <div class="info-title">Email:</div>
+                            <div class="info-content"><?php echo $_SESSION['admin_email'] ?></div>
+                        </div>
+
+                        <div class="row">
+                            <div class="info-title">Secondary Email:</div>
                             <div class="info-content">sanojaminda@gmail.com</div>
                         </div>
 
@@ -156,70 +184,70 @@ if (!isset($_SESSION['admin_name'])) {
                             <div class="info-edit">
                                 <label for="company" class="info-social-links">Company</label>
                                 <div class="info-description">
-                                    <input name="company" type="text" class="form-control" id="company" value="">
+                                    <input name="company" type="text" class="form-control" id="company">
                                 </div>
                             </div>
 
                             <div class="info-edit">
                                 <label for="Job" class="info-social-links">Job</label>
                                 <div class="info-description">
-                                    <input name="job" type="text" class="form-control" id="Job" value="">
+                                    <input name="job" type="text" class="form-control" id="Job">
                                 </div>
                             </div>
 
                             <div class="info-edit">
                                 <label for="Country" class="info-social-links">Country</label>
                                 <div class="info-description">
-                                    <input name="country" type="text" class="form-control" id="Country" value="">
+                                    <input name="country" type="text" class="form-control" id="Country">
                                 </div>
                             </div>
 
                             <div class="info-edit">
                                 <label for="Address" class="info-social-links">Address</label>
                                 <div class="info-description">
-                                    <input name="address" type="text" class="form-control" id="Address" value="">
+                                    <input name="address" type="text" class="form-control" id="Address">
                                 </div>
                             </div>
 
                             <div class="info-edit">
                                 <label for="Phone" class="info-social-links">Contact Number</label>
                                 <div class="info-description">
-                                    <input name="phone" type="text" class="form-control" id="Phone" value="">
+                                    <input name="phone" type="text" class="form-control" id="Phone">
                                 </div>
                             </div>
 
                             <div class="info-edit">
                                 <label for="Email" class="info-social-links">Secondary Email</label>
                                 <div class="info-description">
-                                    <input name="email" type="email" class="form-control" id="Email" value="">
+                                    <input name="secondary-email" type="secondary-email" class="form-control" id="Email">
                                 </div>
                             </div>
 
                             <div class="info-edit">
                                 <label for="Twitter" class="info-social-links">Twitter Profile</label>
                                 <div class="info-description">
-                                    <input name="twitter" type="text" class="form-control" id="Twitter" value="">
+                                    <input name="twitter" type="text" class="form-control" id="Twitter">
                                 </div>
                             </div>
 
                             <div class="info-edit">
                                 <label for="Facebook" class="info-social-links">Facebook Profile</label>
                                 <div class="info-description">
-                                    <input name="facebook" type="text" class="form-control" id="Facebook" value="">
+                                    <input name="facebook" type="text" class="form-control" id="Facebook">
                                 </div>
                             </div>
 
                             <div class="info-edit">
                                 <label for="Instagram" class="info-social-links">Instagram Profile</label>
                                 <div class="info-description">
-                                    <input name="instagram" type="text" class="form-control" id="Instagram" value="">
+                                    <input name="instagram" type="text" class="form-control" id="Instagram">
                                 </div>
                             </div>
 
                             <div class="info-edit">
                                 <label for="Linkedin" class="info-social-links">Linkedin Profile</label>
                                 <div class="info-description">
-                                    <input name="linkedin" type="text" class="form-control" id="Linkedin" value="">
+                                    <input name="linkedin" type="text" class="form-control" id="Linkedin">
                                 </div>
                             </div>
 
