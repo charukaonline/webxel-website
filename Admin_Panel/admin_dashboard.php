@@ -34,7 +34,7 @@ if (!isset($_SESSION['admin_name'])) {
 	
 	<!-- CONTENT -->
 	<section id="content">
-		<!-- NAVBAR -->
+
 		<?php include('../Admin_Panel/includes/navbar.php'); ?>
 
 		<!-- MAIN -->

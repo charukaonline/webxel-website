@@ -75,6 +75,8 @@ body {
 	overflow-x: hidden;
 }
 
+/* Admin Dashboard */
+
 /* SIDEBAR */
 #sidebar {
 	position: fixed;
@@ -571,8 +573,7 @@ footer {
 	line-height: 18px;
 }
 
-/* MAIN */
-/* CONTENT */
+/* Admin Dashboard */
 
 /* Admin profile page */
 .profile-card {
@@ -591,6 +592,7 @@ footer {
 	object-fit: cover;
 	border-radius: 50%;
 	margin-bottom: 15px;
+	box-shadow: var(--box-shadow);
 }
 
 .profile-card h2 {
@@ -621,7 +623,7 @@ footer {
 	width: 75%;
 	margin: 0 auto;
 	padding: 20px;
-	background-color: #f9f9f9;
+	background-color: var(--font-color);
 	border-radius: 15px;
 	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -638,9 +640,15 @@ footer {
 	padding: 10px 40px;
 	border: 1px solid #ddd;
 	border-bottom: none;
+	gap: 20px;
 	background-color: #eee;
 	border-radius: 25px;
 	cursor: pointer;
+}
+
+.info-card-header .nav-link:hover {
+	color: var(--font-color);
+	background: var(--btn-color);
 }
 
 .info-card-content {
@@ -701,11 +709,24 @@ footer {
 .submit-btn {
 	margin-top: 20px;
 	text-align: center;
-}
-
-.submit-btn .btn {
+	border: 1px solid #ddd;
+	border-bottom: none;
+	background-color: #eee;
+	border-radius: 25px;
+	cursor: pointer;
 	padding: 10px 30px;
 }
+
+.submit-btn:hover {
+	color: var(--font-color);
+	background: var(--btn-color);
+}
+
+/* Admin Profile page */
+
+/* Admin Notification page */
+
+/* Admin Notification page */
 
 
 

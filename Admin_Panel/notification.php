@@ -20,17 +20,17 @@ if (!isset($_SESSION['admin_name'])) {
 
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900|Roboto+Slab:400,700" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
-    <link id="pagestyle" href="../assets/css/material-dashboard.min.css" rel="stylesheet" />
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+
+    <link id="stylesheet" href="../assets/css/admin.css" rel="stylesheet" />
 
     <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
 </head>
 
-<body class="g-sidenav-show  bg-gray-500">
-    <?php include('./includes/sidebar.php'); ?>
+<!-- <body class="g-sidenav-show  bg-gray-500">
 
     <main class="main-content position-relative max-height-vh-100 h-100 border-radius-lg ">
 
-        <?php include('./includes/navbar.php'); ?>
 
         <div class="container-fluid py-4">
             <div class="row">
@@ -175,7 +175,37 @@ if (!isset($_SESSION['admin_name'])) {
                 </div>
             </div>
         </div>
-    </main>
+    </main> -->
 
+<body>
 
-    <?php include('./includes/footer.php'); ?>
+    <section class="admin-notification">
+
+        <?php include('./includes/sidebar.php'); ?>
+
+        <!-- CONTENT -->
+        <section id="content">
+
+            <?php include('./includes/navbar.php'); ?>
+
+            <!-- MAIN -->
+            <main>
+                <div class="head-title">
+                    <div class="left">
+                        <h1>Notification</h1>
+                    </div>
+                </div>
+
+                <?php include('./includes/footer.php'); ?>
+
+            </main>
+
+        </section>
+
+    </section>
+
+    <script src="../assets/js/admin.js"></script>
+
+</body>
+
+</html>
