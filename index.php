@@ -27,9 +27,9 @@
     <section class="home" id="home">
 
         <div class="intro">
-            <h1>Discover the difference.</h1>
-            <h3>Always ahead. Always in style.</h3>
-            <a href="#">Learn more <i class=" fas fa-regular fa-chevron-right"></i></a>
+            <h1 class="animation">Discover the difference.</h1>
+            <h3 class="animation">Always ahead. Always in style.</h3>
+            <a href="#" class="animation">Learn more <i class=" fas fa-regular fa-chevron-right"></i></a>
         </div>
 
         <!-- Chat Bot section start -->
@@ -73,15 +73,15 @@
         <div class="flex-container">
 
             <div class="flex-box1">
-                <h3>Web Developing</h3>
-                <p>Mastering Responsive Design, Creating Dynamic Websites for Every Device</p>
-                <a href="#" class="btn">Learn more <i class=" fas fa-regular fa-chevron-right"></i></a>
+                <h3 class="animation">Web Developing</h3>
+                <p class="animation">Mastering Responsive Design, Creating Dynamic Websites for Every Device</p>
+                <a href="#" class="btn animation">Learn more <i class=" fas fa-regular fa-chevron-right"></i></a>
             </div>
 
             <div class="flex-box2">
-                <h3>Video and Animation</h3>
-                <p>Engage and captivate with dynamic videos and animations for storytelling.</p>
-                <a href="#" class="btn">Learn more <i class=" fas fa-regular fa-chevron-right"></i></a>
+                <h3 class="animation">Video and Animation</h3>
+                <p class="animation">Engage and captivate with dynamic videos and animations for storytelling.</p>
+                <a href="#" class="btn animation">Learn more <i class=" fas fa-regular fa-chevron-right"></i></a>
             </div>
 
         </div>
@@ -89,15 +89,15 @@
         <div class="flex-container">
 
             <div class="flex-box3">
-                <h3>Application Development</h3>
-                <p>Elevate Your Development Skills, Mastering Programming and Innovation in 2023</p>
-                <a href="#" class="btn">Learn more <i class=" fas fa-regular fa-chevron-right"></i></a>
+                <h3 class="animation">Application Development</h3>
+                <p class="animation">Elevate Your Development Skills, Mastering Programming and Innovation in 2023</p>
+                <a href="#" class="btn animation">Learn more <i class=" fas fa-regular fa-chevron-right"></i></a>
             </div>
 
             <div class="flex-box4">
-                <h3>Graphics & Design</h3>
-                <p>Unlocking Creativity, Transforming Ideas into Visual Masterpieces with Graphic Design</p>
-                <a href="#" class="btn">Learn more <i class=" fas fa-regular fa-chevron-right"></i></a>
+                <h3 class="animation">Graphics & Design</h3>
+                <p class="animation">Unlocking Creativity, Transforming Ideas into Visual Masterpieces with Graphic Design</p>
+                <a href="#" class="btn animation">Learn more <i class=" fas fa-regular fa-chevron-right"></i></a>
             </div>
 
         </div>
@@ -109,14 +109,14 @@
     <section class="about" id="about">
 
         <h1 class="heading">About Us</h1>
-        <h3>Why choose us?</h3>
+        <h3 class="animation">Why choose us?</h3>
 
         <div class="content">
 
-            <p>Welcome to W&#x039E;&#x042;X&#x039E;L, where innovation meets excellence. <br>
+            <p class="animation">Welcome to W&#x039E;&#x042;X&#x039E;L, where innovation meets excellence. <br>
                 We have been dedicated to providing top-notch services to our valued customers.</p>
 
-            <a href="#">Learn more <i class=" fas fa-regular fa-chevron-right"></i></a>
+            <a href="about_us.php" class="animation">Learn more <i class=" fas fa-regular fa-chevron-right"></i></a>
 
         </div>
 
@@ -205,6 +205,7 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TimelineMax.min.js" integrity="sha512-0xrMWUXzEAc+VY7k48pWd5YT6ig03p4KARKxs4Bqxb9atrcn2fV41fWs+YXTKb8lD2sbPAmZMjKENiyzM/Gagw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js" integrity="sha512-DkPsH9LzNzZaZjCszwKrooKwgjArJDiEjA5tTgr3YX4E6TYv93ICS8T41yFHJnnSmGpnf0Mvb5NhScYbwvhn2w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
     <script src="/assets/js/index.js"></script>
 
 
