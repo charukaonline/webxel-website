@@ -9,11 +9,11 @@
         $cpass = md5($_POST['cpassword']);
         $user_type = $_POST['user-type'];
 
-        $select = "SELECT * FROM login_and_register WHERE email = '$email' && password = '$pass' ";
+        $select_from_register = "SELECT * FROM login_and_register WHERE email = '$email' && password = '$pass' ";
 
-        $result = mysqli_query($conn, $select);
+        $result_for_register = mysqli_query($conn, $select_from_register);
 
-        if(mysqli_num_rows($result) > 0){
+        if(mysqli_num_rows($result_for_register) > 0){
             $error[] = 'User already exists!';
         }
         else {
@@ -21,8 +21,10 @@
                 $error[] = 'Password not matched!';
             }
             else {
-                $insert = "INSERT INTO login_and_register (name, email, password, user_type) VALUES ('$name', '$email', '$pass', '$user_type')";
-                mysqli_query($conn, $insert);
+                $insert_to_register = "INSERT INTO login_and_register (name, email, password, user_type) VALUES ('$name', '$email', '$pass', '$user_type')";
+                $insert_to_info = "INSERT INTO profile_details (name, email) VALUES ('$name', '$email')";
+                mysqli_query($conn, $insert_to_register);
+                mysqli_query($conn, $insert_to_info);
                 header('location:login_form.php');
             }
         }
@@ -99,10 +101,10 @@
             <input type="password" name="password" placeholder="Password" required>
             <input type="password" name="cpassword" placeholder="Confirm password" required>
             <!-- If there are any admins, open the code that commented on below  -->
-            <!-- <select name="user-type">
+            <select name="user-type">
                 <option value="user">User</option>
                 <option value="admin">Admin</option>
-            </select> -->
+            </select>
 
             <input type="submit" name="submit" value="register now" class="form-btn">
             
