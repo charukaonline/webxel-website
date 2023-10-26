@@ -17,7 +17,7 @@
         </li>
         <li>
             <a href="/Admin_Panel/user_manage.php">
-                <i class='bx bx-group'></i>
+                <i class='bx bxs-group'></i>
                 <span class="text">User Management</span>
             </a>
         </li>
@@ -30,8 +30,14 @@
     </ul>
     <ul class="side-menu">
         <li>
+            <a href="../index.php">
+                <i class='bx bxs-home'></i>
+                <span class="text">W&#x039E;&#x042;X&#x039E;L</span>
+            </a>
+        </li>
+        <li>
             <a href="/Admin_Panel/admin_profile.php">
-                <i class='bx bx-user'></i>
+                <i class='bx bxs-user'></i>
                 <span class="text">Profile</span>
             </a>
         </li>
