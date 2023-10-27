@@ -40,7 +40,7 @@
 		{
 			width: 100%;
 			height: auto;
-			background: linear-gradient(to left, rgba(0,0,0,0.5)50%, rgba(0,0,0,0.5)50%), url(https://images.pexels.com/photos/4439901/pexels-photo-4439901.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+			background: linear-gradient(to left, rgba(0,0,0,0.5)50%, rgba(0,0,0,0.5)50%), url(/assets/images/services-cover.webp);
 			background-position-y: 72%;
 			background-repeat: no-repeat;
 			background-size: cover;
@@ -194,7 +194,7 @@
 		{
 			width: 100%;
 			height: auto;
-			background: linear-gradient(rgba(0, 0, 0, 0.50), rgba(0, 0, 0, 0.70)) ,url(https://images.pexels.com/photos/50614/pexels-photo-50614.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+			background: linear-gradient(rgba(0, 0, 0, 0.50), rgba(0, 0, 0, 0.70)) ,url(/assets/images/services-appdev-cover.webp);
             background-repeat: no-repeat;
             background-size: cover;
             background-position-y: 50%;
@@ -333,7 +333,7 @@
 		{
 			width: 100%;
 			height: auto;
-			background: linear-gradient(rgba(0, 0, 0, 0.50), rgba(0, 0, 0, 0.70)) ,url(https://images.pexels.com/photos/1438409/pexels-photo-1438409.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+			background: linear-gradient(rgba(0, 0, 0, 0.50), rgba(0, 0, 0, 0.70)) ,url(/assets/images/services-vision-cover.webp);
             background-repeat: no-repeat;
 
 			background-size: cover;
