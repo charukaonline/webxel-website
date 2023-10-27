@@ -29,7 +29,7 @@
         <div class="intro">
             <h1 class="animation">Discover the difference.</h1>
             <h3 class="animation">Always ahead. Always in style.</h3>
-            <a href="#" class="animation">Learn more <i class=" fas fa-regular fa-chevron-right"></i></a>
+            <a href="services.php" class="animation">Learn more <i class=" fas fa-regular fa-chevron-right"></i></a>
         </div>
 
         <!-- Chat Bot section start -->
