@@ -39,7 +39,7 @@
 <div class="div2">
 
 	
-		<img src="https://thimirathenuwara.com/assets/images/responsive-design.webp">
+		<img src="/assets/images/services-webdesign.webp">
 		<div>
 			<h2>Web design & development</h2>
 		    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br> Nam pulvinar luctus sem, eget porta orci. Maecenas<br> molestie dui id diam feugiat, eu tincidunt mauris<br> aliquam. Duis commodo vitae ligula et interdum.<br> Maecenas faucibus mattis imperdiet. In rhoncus ac<br> ligula id ultricies.</p>
@@ -55,7 +55,7 @@
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br> Nam pulvinar luctus sem, eget porta orci. Maecenas<br> molestie dui id diam feugiat, eu tincidunt mauris<br> aliquam. Duis commodo vitae ligula et interdum.</p>
     	<button>See It In Action</button>
     </div>
-    	<img src="https://test.charukak.com/assets/flexible-portfolio.png">
+    	<img src="/assets/images/services-marketing-graphics.png">
 	
 </div>
 
@@ -75,7 +75,7 @@
 <p>Phasellus sed nisi ac dui interdum semper. Etiam consequat fermentum sollicitudin. Fusce vulputate porta faucibus. Vivamus nulla tellus,<br> accumsan non efficitur id, pretium quis ante</p>
 <button> WHO WE ARE </button>	
 
-<img src="https://images.pexels.com/photos/106344/pexels-photo-106344.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+<img src="/assets/images/services-custom-integrations.webp">
 
 </div>
 
