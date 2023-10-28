@@ -1,6 +1,6 @@
 <?php
 
-    @include 'config.php';
+    @include '../config.php';
 
     session_start();
 
@@ -21,6 +21,8 @@
 
 </head>
 <body>
+
+    <?php include('../Admin_Panel/includes/sidebar.php'); ?>
 
     <div class="container">
 
