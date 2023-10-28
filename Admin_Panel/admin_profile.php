@@ -1,11 +1,15 @@
 <?php
 
-@include 'config.php';
+@include '../config.php';
 
 session_start();
 
+if (!isset($_SESSION['admin_name']) && ($_SESSION['admin_email'])) {
+    header('location: /login_user_and_admin_page/login_form.php');
+}
+
 if (isset($_POST['submit'])) {
-    $name = mysqli_real_escape_string($conn, $_POST['fullname']);
+    $name = mysqli_real_escape_string($conn, $_POST['fullName']);
     $secondary_email = mysqli_real_escape_string($conn, $_POST['secondary-email']);
     $about = mysqli_real_escape_string($conn, $_POST['about']);
     $company = mysqli_real_escape_string($conn, $_POST['company']);
@@ -14,21 +18,18 @@ if (isset($_POST['submit'])) {
     $address = mysqli_real_escape_string($conn, $_POST['address']);
     $phone = mysqli_real_escape_string($conn, $_POST['phone']);
 
-    $select_from_info = "SELECT * FROM profile_details WHERE name = '$name' && secondary_email = '$secondary_email' ";
+    $select_from_info = "SELECT * FROM profile_details WHERE name = '$name'";
 
     $result_for_info = mysqli_query($conn, $select_from_info);
 
     if (mysqli_num_rows($result_for_info) > 0) {
-        $error[] = 'Can not update database';
-    }
-    else {
+        
         $insert_to_info = "INSERT INTO profile_details (name, secondary_email, about, company, job, country, address, phone_number) VALUES ('$name', '$secondary_email', '$company', '$job', '$country', '$address', '$phone')";
         mysqli_query($conn, $insert_to_info);
     }
-}
-
-if (!isset($_SESSION['admin_name']) && ($_SESSION['admin_email'])) {
-    header('location: /login_user_and_admin_page/login_form.php');
+    else {
+        $error[] = 'Can not update database';
+    }
 }
 
 ?>
@@ -155,15 +156,12 @@ if (!isset($_SESSION['admin_name']) && ($_SESSION['admin_email'])) {
                     <div class="profile-edit" id="profile-edit">
 
 
-                        <form>
-                            <div class="upload-profile-img">
-                                <label for="profileImage" class="profile-img">Profile Image</label>
+                        <form action="" method="POST">
+
+                            <div class="info-edit">
+                                <label for="about" class="info-social-links">Profile Image</label>
                                 <div class="info-description">
-                                    <img src="../assets/images/" alt="Profile">
-                                    <div class="pt-2">
-                                        <a href="#" class="btn btn-primary btn-sm" title="Upload new profile image"><i class="bx bx-upload"></i></a>
-                                        <a href="#" class="btn btn-danger btn-sm" title="Remove my profile image"><i class="bx bx-trash"></i></a>
-                                    </div>
+                                    <input name="profile-img" type="file" class="form-control" id="about" style="height: 50px">
                                 </div>
                             </div>
 

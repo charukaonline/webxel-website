@@ -1,6 +1,6 @@
 <?php
     
-    @include 'config.php';
+    @include '../config.php';
 
     if(isset($_POST['submit'])){
         $name = mysqli_real_escape_string($conn, $_POST['name']);
@@ -25,7 +25,15 @@
                 $insert_to_info = "INSERT INTO profile_details (name, email) VALUES ('$name', '$email')";
                 mysqli_query($conn, $insert_to_register);
                 mysqli_query($conn, $insert_to_info);
-                header('location:login_form.php');
+
+                if ($insert_to_info && $insert_to_register) {
+                    $error[] = 'Register successfully!';
+                    header('location:login_form.php');
+                }
+                else {
+                    $error[] = 'Something went wrong!';
+                    header('location:login_form.php');
+                }
             }
         }
     };
@@ -101,10 +109,10 @@
             <input type="password" name="password" placeholder="Password" required>
             <input type="password" name="cpassword" placeholder="Confirm password" required>
             <!-- If there are any admins, open the code that commented on below  -->
-            <select name="user-type">
+            <!-- <select name="user-type">
                 <option value="user">User</option>
                 <option value="admin">Admin</option>
-            </select>
+            </select> -->
 
             <input type="submit" name="submit" value="register now" class="form-btn">
             
