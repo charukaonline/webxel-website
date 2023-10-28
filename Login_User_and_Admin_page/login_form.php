@@ -27,7 +27,7 @@
             elseif($row['user_type'] == '') {
             
                 $_SESSION['user_name'] = $row['name'];
-                header('location: /User_Panel/user_page.php');    
+                header('location: /User_Panel/user_dashboard.php');    
             
             }
         }
