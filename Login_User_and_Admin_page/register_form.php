@@ -25,7 +25,15 @@
                 $insert_to_info = "INSERT INTO profile_details (name, email) VALUES ('$name', '$email')";
                 mysqli_query($conn, $insert_to_register);
                 mysqli_query($conn, $insert_to_info);
-                header('location:login_form.php');
+
+                if ($insert_to_info && $insert_to_register) {
+                    $error[] = 'Register successfully!';
+                    header('location:login_form.php');
+                }
+                else {
+                    $error[] = 'Something went wrong!';
+                    header('location:login_form.php');
+                }
             }
         }
     };

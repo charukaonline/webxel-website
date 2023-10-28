@@ -24,7 +24,7 @@
                 header('location: /admin_panel/admin_dashboard.php');    
             
             }
-            elseif($row['user_type'] == 'user') {
+            elseif($row['user_type'] == '') {
             
                 $_SESSION['user_name'] = $row['name'];
                 header('location: /User_Panel/user_page.php');    
