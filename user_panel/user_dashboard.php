@@ -1,41 +1,38 @@
 <?php
 
-    @include '../config.php';
+@include('../config.php');
 
-    session_start();
+session_start();
 
-    if(!isset($_SESSION['user_name'])) {
-        header('location:login_form.php');
-    }
+if (!isset($_SESSION['user_name'])) {
+    header('location: ../Login_User_and_Admin_page/login_form.php');
+}
 
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>User Page</title>
+<meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>WEBXEL - User</title>
 
-    <link rel="stylesheet" href="/assets/css/register_and_login.css">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900|Roboto+Slab:400,700" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+
+    <link rel="stylesheet" href="../assets/css/admin_and_user.css">
+
+    <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
 
 </head>
 <body>
 
-    <?php include('../Admin_Panel/includes/sidebar.php'); ?>
+    <?php include('../user_panel/includes/sidebar.php'); ?>
 
-    <div class="container">
+    <?php include('../user_panel/includes/navbar.php'); ?>
 
-        <div class="content">
-            <h3>Hi, <span>user</span></h3>
-            <h1>Welcome <span><?php echo $_SESSION['user_name'] ?></span></h1>
-            <p>this is user page</p>
-            <a href="/login_user_and_admin_page/login_form.php" class="btn">Login</a>
-            <a href="register_form.php" class="btn">Register</a>
-            <a href="/login_user_and_admin_page/logout.php" class="btn">Logout</a>
-        </div>
-
-    </div>
+    <?php include('../user_panel/includes/footer.php'); ?>
 
 </body>
 </html>
