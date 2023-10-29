@@ -208,6 +208,18 @@
     <script src="https://unpkg.com/scrollreveal"></script>
     <script src="/assets/js/index.js"></script>
 
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-H6KFMBG8J1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'G-H6KFMBG8J1');
+    </script>
 
 </body>
 

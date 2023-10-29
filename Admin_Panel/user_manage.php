@@ -46,6 +46,9 @@ if (!isset($_SESSION['admin_name'])) {
                     </div>
                 </div>
 
+                <a href="https://analytics.google.com/analytics/web/?authuser=0#/p413781736/reports/intelligenthome?params=_u..nav%3Dmaui">
+                    Click here to Track visitors from Google Analytics</a>
+
                 <?php include('./includes/footer.php'); ?>
 
             </main>
