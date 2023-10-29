@@ -29,7 +29,7 @@
             
             <div class="contact-info-content">
               <h4>Address</h4>
-              <p>4671 Sugar Camp Road,<br/> Owatonna, Minnesota, <br/>55060</p>
+              <p>Negombo Road,<br/> Pannala, Kurunegala, <br/>60160</p>
             </div>
           </div>
           
@@ -40,7 +40,7 @@
             
             <div class="contact-info-content">
               <h4>Phone</h4>
-              <p>561-456-2321</p>
+              <p>123456789</p>
             </div>
           </div>
           
@@ -51,14 +51,14 @@
             
             <div class="contact-info-content">
               <h4>Email</h4>
-             <p>example@email.com</p>
+             <p>info@webxel.xyz</p>
             </div>
           </div>
         </div>
         
         <div class="contact-form">
           <form action="" id="contact-form">
-            <h2>Send Message</h2>
+            <h2>Let's talk</h2>
             <div class="input-box">
               <input type="text" required="true" name="">
               <span>Full Name</span>
