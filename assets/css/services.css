@@ -1,7 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900@display=swap');
 
-/* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;700;900&display=swap'); */
-
 :root {
 	/* --bg-color: #0B0C10; */
 	/* --blue: #66FCF1; */
@@ -38,7 +36,7 @@ html {
 
 .div1 {
 	width: 100%;
-	height: auto;
+	height: 100vh;
 	background: linear-gradient(to left, rgba(0, 0, 0, 0.5)50%, rgba(0, 0, 0, 0.5)50%), url(/assets/images/services-cover.webp);
 	background-position-y: 72%;
 	background-repeat: no-repeat;
@@ -57,47 +55,36 @@ html {
 }
 
 .div1 h1 {
-
-	font-size: 54px;
+	font-size: 60px;
 	color: #fff;
 	text-align: center;
 }
 
 .div1 h4 {
-
 	color: #fff;
 	font-size: 30px;
 	color: #6e6e73;
 	line-height: 80px;
 }
 
-button {
+.div1 a {
 	width: 220px;
 	height: 55px;
-	background: #ffffff;
 	border: none;
-	color: #000000;
-	font-size: 14px;
+	color: var(--btn-color);
+	font-size: 24px;
 	font-weight: 550;
 	border-radius: 25px;
 }
 
-button:hover {
-	border: #fff solid 2px;
-	background: transparent;
-	color: #fff;
-	transition: .5s;
+.div1 .fa-chevron-right {
+    color: var(--btn-color);
+    font-size: 22px;
 }
 
-button+button {
-	border: 2px solid white;
-	color: #fff;
-	background: transparent;
-}
-
-button+button:hover {
-	color: var(--font-color);
-	background: whitesmoke;
+.div1 .fa-chevron-right:hover,
+.div1 a:hover {
+	letter-spacing: 1.5px;
 	transition: .5s;
 }
 
@@ -115,25 +102,6 @@ button+button:hover {
 	height: 50%;
 }
 
-.div2 button {
-	width: 200px;
-	height: 50px;
-	background: #000000;
-	border: none;
-	color: #fff;
-	font-size: 14px;
-	font-weight: 550;
-	margin-top: 30px;
-}
-
-.div2 button:hover {
-	background: #fff;
-	color: #000;
-	border: #000 solid 2px;
-	transition: .5s;
-
-}
-
 .div2 h2 {
 	font-size: 34px;
 	color: #000;
@@ -145,6 +113,33 @@ button+button:hover {
 	color: gray;
 	line-height: 25px;
 	font-size: 20px;
+}
+
+.div2 a,
+.div3 a,
+.div4 a,
+.div5 a,
+.div8 a {
+	margin-top: 1rem;
+    display: inline-block;
+    font-size: 15px;
+    color: var(--font-color);
+    background: var(--bg-color);
+    border-radius: .5rem;
+    cursor: pointer;
+    padding: 1.2rem 3rem;
+}
+
+.div2 a:hover,
+.div3 a:hover,
+.div4 a:hover,
+.div5 a:hover,
+.div8 a:hover {
+	background: var(--font-color);
+	color: var(--bg-color);
+	border: var(--bg-color) solid 2px;
+	transition: .5s;
+	letter-spacing: 1.5px;
 }
 
 .div3 {
@@ -174,24 +169,6 @@ button+button:hover {
 	font-size: 20px;
 }
 
-.div3 button {
-	width: 200px;
-	height: 50px;
-	background: #000000;
-	border: none;
-	color: #fff;
-	font-size: 14px;
-	font-weight: 550;
-	margin-top: 30px;
-}
-
-.div3 button:hover {
-	background: #fff;
-	color: #000;
-	border: #000 solid 2px;
-	transition: .5s;
-}
-
 .div4 {
 	width: 100%;
 	height: auto;
@@ -204,25 +181,6 @@ button+button:hover {
 	align-items: center;
 	justify-content: center;
 	text-align: center;
-}
-
-.div4 button {
-	width: 200px;
-	height: 50px;
-	background: #ffffff;
-	border: none;
-	color: #000000;
-	font-size: 14px;
-	font-weight: 550;
-	margin-top: 30px;
-	transition: .5s;
-}
-
-.div4 button:hover {
-	background: transparent;
-	color: #ffffff;
-	border: #ffffff solid 2px;
-	transition: .5s;
 }
 
 .div4 h1 {
@@ -241,6 +199,110 @@ button+button:hover {
 .div5 {
 	width: 100%;
 	height: auto;
+	padding: 80px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding-left: 100px;
+}
+
+.div5 img {
+	width: 55%;
+	height: 55%;
+}
+
+.div5 h2 {
+	font-size: 34px;
+	color: #000;
+	line-height: 80px;
+}
+
+.div5 p {
+	color: gray;
+	line-height: 25px;
+	font-size: 20px;
+}
+
+.div6 {
+	width: 100%;
+	height: auto;
+	padding: 80px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding-left: 100px;
+	background: var(--bg-color);
+}
+
+.div6 img {
+	width: 55%;
+	height: 55%;
+}
+
+.div6 h2 {
+	font-size: 34px;
+	color: var(--font-color);
+	line-height: 80px;
+}
+
+.div6 p {
+	color: var(--font-color);
+	line-height: 25px;
+	font-size: 20px;
+}
+
+.div6 a,
+.div7 a {
+	margin-top: 1rem;
+    display: inline-block;
+    font-size: 15px;
+    color: var(--bg-color);
+    background:var(--font-color);
+    border-radius: .5rem;
+    cursor: pointer;
+    padding: 1.2rem 3rem;
+}
+
+.div6 a:hover,
+.div7 a:hover {
+	background: var(--bg-color);
+	color: var(--font-color);
+	border: var(--font-color) solid 2px;
+	transition: .5s;
+	letter-spacing: 1.5px;
+}
+
+.div7 {
+	width: 100%;
+	height: auto;
+	padding: 80px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding-left: 100px;
+	background: var(--bg-color);
+}
+
+.div7 img {
+	width: 55%;
+	height: 55%;
+}
+
+.div7 h2 {
+	font-size: 34px;
+	color: var(--font-color);
+	line-height: 80px;
+}
+
+.div7 p {
+	color: var(--font-color);
+	line-height: 25px;
+	font-size: 20px;
+}
+
+.div8 {
+	width: 100%;
+	height: auto;
 	background: whitesmoke;
 	align-items: center;
 	justify-content: center;
@@ -248,38 +310,19 @@ button+button:hover {
 	padding: 80px;
 }
 
-.div5 h2 {
+.div8 h2 {
 	font-size: 34px;
 	color: #1e1e1e;
 	line-height: 80px;
 }
 
-.div5 p {
+.div8 p {
 	color: gray;
 	font-size: 18px;
 	line-height: 25px;
 }
 
-.div5 button {
-	width: 200px;
-	height: 50px;
-	background: #000000;
-	border: none;
-	color: #fff;
-	font-size: 14px;
-	font-weight: 550;
-	margin-top: 30px;
-	transition: .5s;
-}
-
-.div5 button:hover {
-	background: #fff;
-	color: #000;
-	border: #000 solid 2px;
-	transition: .5s;
-}
-
-.div5 img {
+.div8 img {
 	width: 100%;
 	border-radius: 5%;
 	height: 100%;
@@ -287,7 +330,7 @@ button+button:hover {
 	margin-top: 30px;
 }
 
-.div6 {
+.div9 {
 	width: 100%;
 	height: auto;
 	background: #151515;
@@ -297,71 +340,32 @@ button+button:hover {
 	padding: 80px;
 }
 
-.div6 h3 {
+.div9 h3 {
 	color: #fff;
 	font-size: 34px;
 }
 
-.div6 p {
+.div9 p {
 	color: whitesmoke;
 	padding-top: 30px;
 	font-size: 18px;
 }
 
-.div7 {
+.div10 {
 	width: 100%;
 	height: auto;
 	background: #141414;
 	display: flex;
 }
 
-.div7 div {
+.div10 div {
 	width: 25%;
 	height: auto;
 }
 
-.div7 div img {
+.div10 div img {
 	width: 100%;
 	height: 100%;
-}
-
-.div8 {
-	width: 100%;
-	height: auto;
-	background: linear-gradient(rgba(0, 0, 0, 0.50), rgba(0, 0, 0, 0.70)), url(/assets/images/services-vision-cover.webp);
-	background-repeat: no-repeat;
-
-	background-size: cover;
-	background-position-y: 60%;
-	padding: 100px;
-}
-
-.div8 h2 {
-	color: #fff;
-	text-align: center;
-	font-size: 34px;
-}
-
-.div8 h3 {
-	color: #fff;
-	text-align: center;
-	padding-top: 20px;
-	font-size: 28px;
-}
-
-.div8 p {
-	color: whitesmoke;
-	font-size: 18px;
-	padding-top: 30px;
-	text-align: center;
-	line-height: 20px;
-}
-
-.div8 img {
-	width: 8%;
-	height: 8%;
-	border-radius: 100%;
-	margin-top: 30px;
 }
 
 .div9 {
@@ -397,25 +401,92 @@ button+button:hover {
 
 .div10 {
 	width: 100%;
-	height: 100px;
+	height: auto;
+	background: #141414;
+	display: flex;
+}
+
+.div10 div {
+	width: 25%;
+	height: auto;
+}
+
+.div10 div img {
+	width: 100%;
+	height: 100%;
+}
+
+.div11 {
+	width: 100%;
+	height: auto;
+	background: linear-gradient(rgba(0, 0, 0, 0.50), rgba(0, 0, 0, 0.70)), url(/assets/images/services-vision-cover.webp);
+	background-repeat: no-repeat;
+
+	background-size: cover;
+	background-position-y: 60%;
+	padding: 100px;
+}
+
+.div11 h2 {
+	color: #fff;
+	text-align: center;
+	font-size: 34px;
+}
+
+.div11 h3 {
+	color: #fff;
+	text-align: center;
+	padding-top: 20px;
+	font-size: 28px;
+	letter-spacing: 1.5px;
+}
+
+.div11 p {
+	color: whitesmoke;
+	font-size: 18px;
+	padding-top: 30px;
+	text-align: center;
+	line-height: 20px;
+}
+
+.div11 img {
+	width: 8%;
+	height: 8%;
+	border-radius: 100%;
+	margin-top: 30px;
+}
+
+.div12 {
+	width: 100%;
+	height: auto;
 	align-items: center;
-	padding-left: 80px;
-	padding-right: 80px;
+	padding: 80px;
 	display: flex;
 	justify-content: space-between;
 }
 
-.div10 h4 {
-	color: #222;
+.div12 h1 {
+	font-size: 18px;
 }
 
-.div10 ion-icon {
-	color: #222;
-	font-size: 22px;
-
+.div12 a {
+	margin-top: 1rem;
+    display: inline-block;
+    font-size: 15px;
+    color: var(--font-color);
+    background: var(--bg-color);
+    border-radius: .5rem;
+    cursor: pointer;
+    padding: 1.2rem 3rem;
 }
 
-
+.div12 a:hover {
+	background: var(--font-color);
+	color: var(--bg-color);
+	border: var(--bg-color) solid 2px;
+	transition: .5s;
+	letter-spacing: 1.5px;
+}
 
 /*		media query*/
 
@@ -460,11 +531,11 @@ button+button:hover {
 		font-size: 50px;
 	}
 
-	.div5 {
+	.div6 {
 		padding: 10px;
 	}
 
-	.div5 h2 {
+	.div6 h2 {
 		font-size: 35px;
 		color: #1e1e1e;
 		line-height: 45px;
