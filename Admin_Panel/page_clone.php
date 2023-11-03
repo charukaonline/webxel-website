@@ -22,7 +22,7 @@ if (!isset($_SESSION['admin_name'])) {
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
     <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
 
-    <link id="stylesheet" href="../assets/css/admin.css" rel="stylesheet" />
+    <link id="stylesheet" href="../assets/css/admin_and_user.css" rel="stylesheet" />
 
     <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
 </head>

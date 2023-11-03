@@ -22,7 +22,7 @@ if (!isset($_SESSION['admin_name'])) {
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
     <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
 
-    <link id="stylesheet" href="../assets/css/admin.css" rel="stylesheet" />
+    <link id="stylesheet" href="../assets/css/admin_and_user.css" rel="stylesheet" />
 
     <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
 </head>
@@ -45,6 +45,9 @@ if (!isset($_SESSION['admin_name'])) {
                         <h1>User Management</h1>
                     </div>
                 </div>
+
+                <a href="https://analytics.google.com/analytics/web/?authuser=0#/p413781736/reports/intelligenthome?params=_u..nav%3Dmaui">
+                    Click here to Track visitors from Google Analytics</a>
 
                 <?php include('./includes/footer.php'); ?>
 

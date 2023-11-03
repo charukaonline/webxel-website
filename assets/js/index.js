@@ -293,3 +293,13 @@ const sr = ScrollReveal({
 sr.reveal(`.animation, .heading`, {
     interval: 100
 })
+
+// Google Analytics
+window.dataLayer = window.dataLayer || [];
+
+function gtag() {
+    dataLayer.push(arguments);
+}
+gtag('js', new Date());
+
+gtag('config', 'G-H6KFMBG8J1');
