@@ -1,10 +1,37 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900@display=swap');
+
+:root {
+  /* --bg-color: #0B0C10; */
+  /* --blue: #66FCF1; */
+  --bg-color: #000;
+  --header-background-color: rgba(251, 251, 253, .8);
+  --hover-color: rgba(0, 0, 0, 1);
+  --btn-color: rgb(41, 99, 215);
+  --font-color: #fff;
+  --box-shadow: 0 5px 10px rgba(0, 0, 0, .4);
+  --form-box-shadow: 0 10px 10px 10px rgb(40, 40, 40, 40);
+  --h2-font: 3rem;
+}
 
 * {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  outline: none;
+  border: none;
+  transition: all .2s linear;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-padding-top: 5.5rem;
+  scroll-behavior: smooth;
+  background-size: auto;
 }
 
 body {
@@ -26,7 +53,7 @@ body::after {
   left: 0;
   height: 100%;
   width: 100%;
-  background-color: rgba(0,0,0,0.8);
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 section {
@@ -37,30 +64,15 @@ section {
 }
 
 .container {
-  max-width: 1080px;
+  max-width: 100%;
   margin-left: auto;
   margin-right: auto;
   padding-left: 20px;
   padding-right: 20px;
+  padding-top: 30px;
 }
 
-.section-header {
-  margin-bottom: 50px;
-  text-align: center;
-}
-
-.section-header h2 {
-  color: #FFF;
-  font-weight: bold;
-  font-size: 3em;
-  margin-bottom: 20px;
-}
-
-.section-header p {
-  color: #FFF;
-}
-
-.row  {
+.row {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -76,10 +88,12 @@ section {
   margin-bottom: 30px;
 }
 
-.contact-info-icon {
+.contact-info-icon,
+.contact-info-icon a {
   height: 70px;
   width: 70px;
-  background-color: #fff;
+  background-color: var(--font-color);
+  color: var(--bg-color);
   text-align: center;
   border-radius: 50%;
 }
@@ -94,28 +108,28 @@ section {
 }
 
 .contact-info-content h4 {
-  color: #ffffff;
-  font-size: 1.4em;
+  color: var(--font-color);
+  font-size: 22px;
   margin-bottom: 5px;
 }
 
 .contact-info-content p {
-  color: #FFF;
-  font-size: 1em;
+  color: var(--font-color);
+  font-size: 15px;
 }
 
 .contact-form {
-  background-color: #fff;
+  background-color: var(--font-color);
   border-radius: 20px;
   padding: 40px;
-  width: 45%;
+  width: 50%;
   padding-bottom: 20px;
-  padding-top: 20px;
+  padding-top: 30px;
 }
 
 .contact-form h2 {
   font-weight: bold;
-  font-size: 2em;
+  font-size: 34px;
   margin-bottom: 10px;
   color: #333;
 }
@@ -127,7 +141,7 @@ section {
 }
 
 .contact-form .input-box input,
-.contact-form .input-box textarea{
+.contact-form .input-box textarea {
   width: 100%;
   padding: 5px 0;
   font-size: 16px;
@@ -149,30 +163,29 @@ section {
   color: #666;
 }
 
-.contact-form .input-box input:focus ~ span,
-.contact-form .input-box textarea:focus ~ span{
-  color: #000000;
+.contact-form .input-box input:focus~span,
+.contact-form .input-box textarea:focus~span {
+  color: var(--bg-color);
   font-size: 12px;
   transform: translateY(-20px);
 }
 
-.contact-form .input-box input[type="submit"]
-{
+.contact-form .input-box input[type="submit"] {
   width: 100%;
-  background: #000000;
-  color: #FFF;
+  background: var(--bg-color);
+  color: var(--font-color);
   border: none;
   cursor: pointer;
   padding: 10px;
   font-size: 18px;
-  border: 1px solid #000000;
+  border: 1px solid var(--bg-color);
   transition: 0.5s;
+  border-radius: 25px;
 }
 
-.contact-form .input-box input[type="submit"]:hover
-{
-  background: #FFF;
-  color: #000000;
+.contact-form .input-box input[type="submit"]:hover {
+  background: var(--font-color);
+  color: var(--bg-color);
 }
 
 @media (max-width: 991px) {
@@ -180,16 +193,16 @@ section {
     padding-top: 50px;
     padding-bottom: 50px;
   }
-  
+
   .row {
     flex-direction: column;
   }
-  
+
   .contact-info {
     margin-bottom: 40px;
     width: 100%;
   }
-  
+
   .contact-form {
     width: 100%;
   }
