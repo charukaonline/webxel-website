@@ -34,7 +34,7 @@
 			<h1>Our Services</h1>
 			<h4>We are unique and always ahead.</h4>
 
-			<button>CONTACT US</button>
+			<a href="/contact.php">CONTACT US <i class=" fas fa-regular fa-chevron-right"></i></a>
 
 		</div>
 	</div>
@@ -45,48 +45,80 @@
 		<div>
 			<h2>Web design & development</h2>
 			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br> Nam pulvinar luctus sem, eget porta orci. Maecenas<br> molestie dui id diam feugiat, eu tincidunt mauris<br> aliquam. Duis commodo vitae ligula et interdum.<br> Maecenas faucibus mattis imperdiet. In rhoncus ac<br> ligula id ultricies.</p>
-			<button> MORE INFO</button>
+			<a href="/sub_pages/web_develop.php">MORE INFO</a>
 		</div>
 
 	</div>
 
 	<div class="div3">
-		<div>
-			<h2>Marketing & graphics</h2>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br> Nam pulvinar luctus sem, eget porta orci. Maecenas<br> molestie dui id diam feugiat, eu tincidunt mauris<br> aliquam. Duis commodo vitae ligula et interdum.</p>
-			<button>See It In Action</button>
-		</div>
-		<img src="/assets/images/services-marketing-graphics.png">
 
+		<div>
+			<h2>Marketing & advertising</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br> Nam pulvinar luctus sem, eget porta orci. Maecenas<br> molestie dui id diam feugiat, eu tincidunt mauris<br> aliquam. Duis commodo vitae ligula et interdum.</p>
+			<a href="">See It In Action</a>
+		</div>
+
+		<img src="/assets/images/services-marketing-graphics.png">
 	</div>
 
 
 	<div class="div4">
 		<h1>Mobile app development</h1>
-
 		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus imperdiet rhoncus porta. Ut quis sem quis purus lobortis dictum. Aliquam<br>nec dignissim nisl. Vivamus cursus feugiat sapien, eget tincidunt leo ornare quis.</p>
-
-		<button>READ MORE</button>
+		<a href="">READ MORE</a>
 	</div>
 
-
-
 	<div class="div5">
+
+		<img src="/assets/images/services-marketing-graphics.png">
+
+		<div>
+			<h2>Graphic Design</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus imperdiet rhoncus porta. Ut quis sem quis purus lobortis dictum. Aliquam<br>nec dignissim nisl. Vivamus cursus feugiat sapien, eget tincidunt leo ornare quis.</p>
+			<a href="">READ MORE</a>
+		</div>
+
+	</div>
+
+	<div class="div6">
+
+		<div>
+			<h2>Video and Animation</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus imperdiet rhoncus porta. Ut quis sem quis purus lobortis dictum. Aliquam<br>nec dignissim nisl. Vivamus cursus feugiat sapien, eget tincidunt leo ornare quis.</p>
+			<a href="">READ MORE</a>
+		</div>
+
+		<img src="/assets/images/services-marketing-graphics.png">
+
+	</div>
+
+	<div class="div7">
+
+		<img src="/assets/images/services-marketing-graphics.png">
+
+		<div>
+			<h2>Content writing & Translation</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus imperdiet rhoncus porta. Ut quis sem quis purus lobortis dictum. Aliquam<br>nec dignissim nisl. Vivamus cursus feugiat sapien, eget tincidunt leo ornare quis.</p>
+			<a href="">READ MORE</a>
+		</div>
+
+	</div>
+
+	<div class="div8">
 		<h2>Custom Integrations</h2>
 		<p>Phasellus sed nisi ac dui interdum semper. Etiam consequat fermentum sollicitudin. Fusce vulputate porta faucibus. Vivamus nulla tellus,<br> accumsan non efficitur id, pretium quis ante</p>
-		<button> WHO WE ARE </button>
+		<a href="/about_us.php">WHO WE ARE</a>
 
 		<img src="/assets/images/services-custom-integrations.webp">
 
 	</div>
 
-
-	<div class="div6">
+	<div class="div9">
 		<h3>Our Latest Projects</h3>
 		<p>Here is our latest projects. You'll love them!</p>
 	</div>
 
-	<div class="div7">
+	<div class="div10">
 		<div>
 			<img src="">
 		</div>
@@ -101,7 +133,7 @@
 		</div>
 	</div>
 
-	<div class="div7">
+	<div class="div10">
 		<div>
 			<img src="">
 		</div>
@@ -117,7 +149,7 @@
 	</div>
 
 
-	<div class="div7">
+	<div class="div10">
 		<div>
 			<img src="">
 		</div>
@@ -126,20 +158,17 @@
 		</div>
 	</div>
 
-	<div class="div8">
+	<div class="div11">
 		<h2>Our Vision & Mission</h2>
 		<p>Nunc sit amet lobortis nulla. Nunc ullamcorper, mi id luctus dictum, augue tortor dictum ipsum, nec congue arcu <br>lorem in nisl. Duis neque lacus, viverra non mauris ac, pharetra rhoncus libero. Aliquam varius viverra ex, in venenatis<br> magna ornare sit amet. Integer varius sit amet turpis eu ullamcorper.</p>
 		<div>
 			<h3>W&#x039E;&#x042;X&#x039E;L</h3>
 		</div>
-
-
 	</div>
 
-	<div class="div9">
+	<div class="div12">
 		<h1>Want to work with us?</h1>
-		<button> Contact Us </button>
-
+		<a href="/contact.php">Contact Us</a>
 	</div>
 
 	<?php include('./includes/footer.php'); ?>
