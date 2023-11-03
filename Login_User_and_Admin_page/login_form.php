@@ -1,40 +1,48 @@
 <?php
-    
-    @include '../config.php';
 
     session_start();
 
-    if(isset($_POST['submit'])){
-        $email = mysqli_real_escape_string($conn, $_POST['email']);
-        $pass = md5($_POST['password']);
-        $cpass = md5($_POST['cpassword']);
-        $user_type = $_POST['user-type'];
+    if(isset($_SESSION['admin_name']) || isset($_SESSION['user_name'])) {
+        if(isset($_SESSION['admin_name'])) {
+            header('location: /admin_panel/admin_dashboard.php');
+        } elseif(isset($_SESSION['user_name'])) {
+            header('location: /User_Panel/user_dashboard.php');
+        }
+    } else {
+        include '../config.php';
 
-        $select_from_register = "SELECT * FROM login_and_register WHERE email = '$email' && password = '$pass' ";
+        if(isset($_POST['submit'])){
+            $email = mysqli_real_escape_string($conn, $_POST['email']);
+            $pass = md5($_POST['password']);
+            $cpass = md5($_POST['cpassword']);
+            $user_type = $_POST['user-type'];
 
-        $result_for_register = mysqli_query($conn, $select_from_register);
+            $select_from_register = "SELECT * FROM login_and_register WHERE email = '$email' && password = '$pass' ";
 
-        if(mysqli_num_rows($result_for_register) > 0){
-            $row = mysqli_fetch_array($result_for_register);
+            $result_for_register = mysqli_query($conn, $select_from_register);
 
-            if($row['user_type'] == 'admin') {
+            if(mysqli_num_rows($result_for_register) > 0){
+                $row = mysqli_fetch_array($result_for_register);
+
+                if($row['user_type'] == 'admin') {
+                    
+                    $_SESSION['admin_name'] = $row['name'];
+                    $_SESSION['admin_email'] = $row['email'];
+                    header('location: /admin_panel/admin_dashboard.php');    
                 
-                $_SESSION['admin_name'] = $row['name'];
-                $_SESSION['admin_email'] = $row['email'];
-                header('location: /admin_panel/admin_dashboard.php');    
-            
+                }
+                elseif($row['user_type'] == '') {
+                
+                    $_SESSION['user_name'] = $row['name'];
+                    header('location: /User_Panel/user_dashboard.php');    
+                
+                }
             }
-            elseif($row['user_type'] == '') {
-            
-                $_SESSION['user_name'] = $row['name'];
-                header('location: /User_Panel/user_dashboard.php');    
-            
+            else {
+                $error[] = 'incorrect email or password!';
             }
         }
-        else {
-            $error[] = 'incorrect email or password!';
-        }
-    };
+    }
 
 ?>
 

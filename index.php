@@ -77,7 +77,7 @@
             <div class="flex-box1">
                 <h3 class="animation">Web Developing</h3>
                 <p class="animation">Mastering Responsive Design, Creating Dynamic Websites for Every Device</p>
-                <a href="#" class="btn animation">Learn more <i class=" fas fa-regular fa-chevron-right"></i></a>
+                <a href="/sub_pages/web_develop.php" class="btn animation">Learn more <i class=" fas fa-regular fa-chevron-right"></i></a>
             </div>
 
             <div class="flex-box2">
@@ -99,7 +99,7 @@
             <div class="flex-box4">
                 <h3 class="animation">Graphics & Design</h3>
                 <p class="animation">Unlocking Creativity, Transforming Ideas into Visual Masterpieces with Graphic Design</p>
-                <a href="#" class="btn animation">Learn more <i class=" fas fa-regular fa-chevron-right"></i></a>
+                <a href="/sub_pages/graphic_design.php" class="btn animation">Learn more <i class=" fas fa-regular fa-chevron-right"></i></a>
             </div>
 
         </div>
