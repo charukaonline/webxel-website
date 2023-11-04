@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="description" content="WEBXEL, webxel, Technology Service, Technical Support, IT Service, web developing">
+    <meta name="description" content="WEBXEL, webxel, IT Service">
     <meta name="keywords" content="HTML,CSS,JavaScript,PHP">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 

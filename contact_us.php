@@ -1,9 +1,58 @@
+<?php
+
+// use PHPMailer\PHPMailer\PHPMailer;
+// use PHPMailer\PHPMailer\SMTP;
+
+// if (isset($_POST['contact-btn'])) {
+//   $name = $_POST['contact-form-name'];
+//   $email = $_POST['contact-form-email'];
+//   $subject = $_POST['contact-form-subject'];
+//   $msg = $_POST['contact-form-msg'];
+
+//   require "vendor/autoload.php";
+
+//   $mail = new PHPMailer(true);
+
+//   $mail->isSMTP();
+//   $mail->SMTPAuth = true;
+
+//   $mail->SMTPDebug = SMTP::DEBUG_SERVER; // Enable verbose debug output
+//   $mail->Debugoutput = function ($str, $level) {
+//     echo "debug level $level; message: $str";
+//   };
+
+
+//   $mail->Host = "smtp.example.com";
+//   $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
+//   $mail->Port = 587;
+
+//   $mail->Username = "you@example.com";
+//   $mail->Password = "password";
+
+//   $mail->setFrom($email, $name);
+//   $mail->addAddress("sanojaminda@gmail.com", "Sanoj");
+
+//   $mail->Subject = $subject;
+//   $mail->Body = $msg;
+
+//   $mail->send();
+
+//   try {
+//     $mail->send();
+//     echo 'Message has been sent';
+//   } catch (Exception $e) {
+//     echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
+//   }
+// }
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
   <meta charset="UTF-8">
-  <meta name="description" content="WEBXEL, webxel, Technology Service, Technical Support, IT Service, web developing">
+  <meta name="description" content="WEBXEL, webxel, IT Service">
   <meta name="keywords" content="HTML,CSS,JavaScript,PHP">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -54,7 +103,7 @@
 
             <div class="contact-info-content">
               <h4>Phone</h4>
-              <p>123456789</p>
+              <p>+94</p>
             </div>
           </div>
 
@@ -92,6 +141,7 @@
             <div class="input-box">
               <input type="submit" value="Send" name="contact-btn">
             </div>
+
           </form>
         </div>
 
