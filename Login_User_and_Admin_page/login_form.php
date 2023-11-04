@@ -5,8 +5,9 @@
     if(isset($_SESSION['admin_name']) || isset($_SESSION['user_name'])) {
         if(isset($_SESSION['admin_name'])) {
             header('location: /admin_panel/admin_dashboard.php');
-        } elseif(isset($_SESSION['user_name'])) {
-            header('location: /User_Panel/user_dashboard.php');
+        } 
+        elseif(isset($_SESSION['user_name'])) {
+                header('location: /User_Panel/user_dashboard.php');
         }
     } else {
         include '../config.php';
@@ -67,34 +68,7 @@
 </head>
 <body>
 
-    <!-- Header section start -->
-    <header>
-
-        <a href="/index.php" class="logo">W&#x039E;&#x042;X&#x039E;L</a>
-
-        <nav class="navbar">
-            <a href="/index.php">Home</a>
-            <a href="#" id="service">Services</a>
-            <a href="#">Contact Us</a>
-            <a href="/about_us.php">About Us</a>
-        </nav>
-
-        <div class="icons">
-            <i class="fas fa-bars" id="menu-bars"></i>
-            <i class="fas fa-search" id="search-icon"></i>
-            <a href="/login_user_and_admin_page/register_form.php"><i class="fas fa-user" id="login-icon"></i></a>
-        </div>
-
-    </header>
-    <!-- Header section end -->
-
-    <!--Search form start-->
-    <form action="" id="search-form">
-        <input type="search" placeholder="Search here..." name="" id="search-box">
-        <button type="submit"><label for="search-box" class="fas fa-search"></label></button>
-        <i class="fas fa-times" id="search-form-close"></i>
-    </form>
-    <!-- Search form end -->
+    <?php include('../includes/navbar.php'); ?>
     
     <!-- Sign in form section start -->
     <section class="signin-form-container">

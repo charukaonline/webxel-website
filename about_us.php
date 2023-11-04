@@ -239,7 +239,8 @@
     </footer>
     <!-- Footer section end -->
 
-    <script src="../assets/js/about.js"></script>
+    <script src="./assets/js/about.js"></script>
+    <script src="./assets/js/index.js"></script>
 
 </body>
 

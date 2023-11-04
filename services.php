@@ -20,8 +20,7 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 	<script src="https://kit.fontawesome.com/c4254e24a8.js"></script>
 
-
-
+	<title>WEBXEL - Service</title>
 
 </head>
 
@@ -34,7 +33,7 @@
 			<h1>Our Services</h1>
 			<h4>We are unique and always ahead.</h4>
 
-			<a href="/contact.php">CONTACT US <i class=" fas fa-regular fa-chevron-right"></i></a>
+			<a href="./contact_us.php">CONTACT US <i class=" fas fa-regular fa-chevron-right"></i></a>
 
 		</div>
 	</div>
@@ -45,7 +44,7 @@
 		<div>
 			<h2>Web design & development</h2>
 			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br> Nam pulvinar luctus sem, eget porta orci. Maecenas<br> molestie dui id diam feugiat, eu tincidunt mauris<br> aliquam. Duis commodo vitae ligula et interdum.<br> Maecenas faucibus mattis imperdiet. In rhoncus ac<br> ligula id ultricies.</p>
-			<a href="/sub_pages/web_develop.php">MORE INFO</a>
+			<a href="./sub_pages/web_develop.php">MORE INFO</a>
 		</div>
 
 	</div>
@@ -177,6 +176,7 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js" integrity="sha512-DkPsH9LzNzZaZjCszwKrooKwgjArJDiEjA5tTgr3YX4E6TYv93ICS8T41yFHJnnSmGpnf0Mvb5NhScYbwvhn2w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 	<script src="https://unpkg.com/scrollreveal"></script>
 	<script src="/assets/js/services.js"></script>
+	<script src="./assets/js/index.js"></script>
 
 </body>
 
