@@ -21,6 +21,7 @@
 	<script src="https://kit.fontawesome.com/c4254e24a8.js"></script>
 
 	<title>WEBXEL - Service</title>
+	<link rel="icon" type="image/png" href="./assets/images/logo2.jpg">
 
 </head>
 

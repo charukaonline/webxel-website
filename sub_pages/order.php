@@ -11,7 +11,7 @@ if (!isset($_SESSION['user_name'])) {
 if (isset($_POST['order-btn'])) {
     $name = mysqli_real_escape_string($conn, $_POST['name']);
     $email = mysqli_real_escape_string($conn, $_POST['email']);
-    $contact_number = isset($_POST['phone_number']) ? $_POST['phone_number'] : '';
+    $contact_number = $_POST['phone_number'];
     $service_type = $_POST['service_type'];
 
     // $file = isset($_POST['service-file-upload']) ? $_POST['service-file-upload'] : '';

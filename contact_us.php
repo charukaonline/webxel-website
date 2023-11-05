@@ -66,6 +66,7 @@
   <script src="https://kit.fontawesome.com/c32adfdcda.js" crossorigin="anonymous"></script>
 
   <title>WEBXEL - Contact Us</title>
+  <link rel="icon" type="image/png" href="./assets/images/logo2.jpg">
 </head>
 
 <body>
