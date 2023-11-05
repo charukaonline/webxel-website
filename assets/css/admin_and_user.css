@@ -725,11 +725,14 @@ footer {
 	margin-bottom: 40px;
 }
 
+.orders h1,
 .admin-notification .orders h1 {
+	padding-top: 20px;
 	font-size: 28px;
 	color: #2c2b2b;
 }
 
+.orders .order-card .order,
 .admin-notification .order-card .order {
 	margin-top: 50px;
 	border-collapse: collapse;
@@ -737,6 +740,7 @@ footer {
 	border: 1;
 }
 
+.orders .order-card .order tr th,
 .admin-notification .order-card .order tr th {
 	border: 1px solid var(--bg-color);
 	padding: 8px;
@@ -746,6 +750,7 @@ footer {
 	color: var(--bg-color);
 }
 
+.orders .order-card .order tr td,
 .admin-notification .order-card .order tr td {
 	border: 1px solid var(--bg-color);
 	padding: 8px;
