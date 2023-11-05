@@ -22,9 +22,7 @@
             }
             else {
                 $insert_to_register = "INSERT INTO login_and_register (name, email, password, user_type) VALUES ('$name', '$email', '$pass', '$user_type')";
-                $insert_to_info = "INSERT INTO profile_details (name, email) VALUES ('$name', '$email')";
                 mysqli_query($conn, $insert_to_register);
-                mysqli_query($conn, $insert_to_info);
 
                 if ($insert_to_info && $insert_to_register) {
                     $error[] = 'Register successfully!';

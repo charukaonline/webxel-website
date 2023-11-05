@@ -4,6 +4,12 @@
 
 session_start();
 
+function alert($message)
+{
+    $_SESSION['message'] = $message;
+    exit();
+}
+
 if (!isset($_SESSION['user_name'])) {
     header('location: ../Login_User_and_Admin_page/login_form.php');
 }
@@ -14,21 +20,24 @@ if (isset($_POST['order-btn'])) {
     $contact_number = isset($_POST['phone_number']) ? $_POST['phone_number'] : '';
     $service_type = $_POST['service_type'];
 
-    // $pdfContent = file_get_contents('service-upload-file');
-    // $escapedPdfContent = $conn->real_escape_string($pdfContent);
+    // $file = isset($_POST['service-file-upload']) ? $_POST['service-file-upload'] : '';
+    // $file = $_FILES['service-file-upload'];
+    // $path = "./uploads";
+    // $file_ext = pathinfo($file, PATHINFO_EXTENSION);
+    // $file_name = time() . '.' . $file_ext;
 
     $order_description = mysqli_real_escape_string($conn, $_POST['order-description']);
 
-    $select_from_order = "SELECT * FROM orders WHERE email = '$email' ";
+    $insert_to_order = "INSERT INTO orders (name, email, number, service_type, description) VALUES ('$name', '$email', '$contact_number', '$service_type', '$order_description')";
+    $insert_to_order_run = mysqli_query($conn, $insert_to_order);
 
-    $result_for_order = mysqli_query($conn, $select_from_order);
-
-    if (mysqli_num_rows($result_for_order) > 0) {
-        $error[] = 'Order not place successfully';
+    if ($insert_to_order_run) {
+        // move_uploaded_file($_FILES['file']['tmp_name'], $path.'/'.$file_name);
+        alert("Order sent Successfully.");
+        header('location: /web_develop.php');
     } else {
-
-        $insert_to_order = "INSERT INTO orders (name, email, contact_number, service_type, description) VALUES ('$name', '$email', '$contact_number', '$service_type', '$order_description)";
-        mysqli_query($conn, $insert_to_order);
+        alert("Something Went Wrong.");
+        header('location: /web_develop.php');
     }
 }
 
@@ -39,11 +48,27 @@ if (isset($_POST['order-btn'])) {
 
 <head>
     <meta charset="UTF-8">
+    <meta name="description" content="WEBXEL, webxel, IT Service">
+    <meta name="keywords" content="HTML,CSS,JavaScript,PHP">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.min.css" />
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/semantic.min.css" />
+
+    <!-- <link rel="stylesheet" href="/assets/css/index.css"> -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/c4254e24a8.js"></script>
+
     <title>WEBXEL - Order</title>
 </head>
 
 <body>
+
+    <?php include('../includes/navbar.php'); ?>
 
     <form action="" method="POST">
         <input type="text" name="name" placeholder="Enter your name" required>
@@ -61,13 +86,26 @@ if (isset($_POST['order-btn'])) {
         </select>
 
         <textarea name="order-description" placeholder="Describe the Service that you want..." required></textarea>
-        <div>
+        <!-- <div>
             <input type="file" name="service-file-upload" placeholder="Upload file">
             <span>If you have to upload any files to related order Upload here... (ex:- photos, pdf)</span>
-        </div>
+        </div> -->
 
         <input type="submit" value="Place Order" name="order-btn">
     </form>
+
+    <script src="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"></script>
+    <script>
+        <?php
+            if (isset($_SESSION['message'])) {
+                ?>
+                alertify.set('notifier', 'position', 'top-center');
+                alertify.success('<?= $_SESSION['message'] ?>');
+                <?php
+                    unset($_SESSION['message']);
+            }
+                ?>
+    </script>
 
 </body>
 
