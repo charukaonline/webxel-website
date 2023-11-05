@@ -54,7 +54,7 @@
 		<div>
 			<h2>Marketing & advertising</h2>
 			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br> Nam pulvinar luctus sem, eget porta orci. Maecenas<br> molestie dui id diam feugiat, eu tincidunt mauris<br> aliquam. Duis commodo vitae ligula et interdum.</p>
-			<a href="">See It In Action</a>
+			<a href="./sub_pages/marketing_advertising.php">See It In Action</a>
 		</div>
 
 		<img src="/assets/images/services-marketing-graphics.png">
@@ -64,7 +64,7 @@
 	<div class="div4">
 		<h1>Mobile app development</h1>
 		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus imperdiet rhoncus porta. Ut quis sem quis purus lobortis dictum. Aliquam<br>nec dignissim nisl. Vivamus cursus feugiat sapien, eget tincidunt leo ornare quis.</p>
-		<a href="">READ MORE</a>
+		<a href="./sub_pages/app_development.php">READ MORE</a>
 	</div>
 
 	<div class="div5">
@@ -74,7 +74,7 @@
 		<div>
 			<h2>Graphic Design</h2>
 			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus imperdiet rhoncus porta. Ut quis sem quis purus lobortis dictum. Aliquam<br>nec dignissim nisl. Vivamus cursus feugiat sapien, eget tincidunt leo ornare quis.</p>
-			<a href="">READ MORE</a>
+			<a href="./sub_pages/graphic_design.php">READ MORE</a>
 		</div>
 
 	</div>
@@ -84,7 +84,7 @@
 		<div>
 			<h2>Video and Animation</h2>
 			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus imperdiet rhoncus porta. Ut quis sem quis purus lobortis dictum. Aliquam<br>nec dignissim nisl. Vivamus cursus feugiat sapien, eget tincidunt leo ornare quis.</p>
-			<a href="">READ MORE</a>
+			<a href="./sub_pages/video_animation.php">READ MORE</a>
 		</div>
 
 		<img src="/assets/images/services-marketing-graphics.png">
@@ -98,7 +98,7 @@
 		<div>
 			<h2>Content writing & Translation</h2>
 			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus imperdiet rhoncus porta. Ut quis sem quis purus lobortis dictum. Aliquam<br>nec dignissim nisl. Vivamus cursus feugiat sapien, eget tincidunt leo ornare quis.</p>
-			<a href="">READ MORE</a>
+			<a href="./sub_pages/writing_&_translation.php">READ MORE</a>
 		</div>
 
 	</div>
