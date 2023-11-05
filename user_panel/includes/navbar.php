@@ -9,7 +9,7 @@
     </form>
     <input type="checkbox" id="switch-mode" hidden>
     <label for="switch-mode" class="switch-mode"></label>
-    <a href="/Admin_Panel/notification.php" class="notification">
+    <a href="#notification" class="notification">
         <i class='bx bxs-bell'></i>
         <span class="num">8</span>
     </a>

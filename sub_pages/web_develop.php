@@ -54,7 +54,7 @@
                     <div class="firstlook-text">
                         <h1><span class="firstlook-header">Create your</span><br>Dream Website</h1>
                     </div>
-                    <div class="firstlook-button"><a href="#" class="firstBtn">Get Started ></a></div>
+                    <div class="firstlook-button"><a href="../sub_pages/order.php" class="firstBtn">Get Started ></a></div>
                 </div>
                 <div class="firstlook-right"><img src="WallpaperImage.png"></div>
             </div>

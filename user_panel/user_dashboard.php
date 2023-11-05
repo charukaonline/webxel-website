@@ -12,8 +12,9 @@ if (!isset($_SESSION['user_name'])) {
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="utf-8" />
+    <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>WEBXEL - User</title>
 
@@ -26,13 +27,33 @@ if (!isset($_SESSION['user_name'])) {
     <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
 
 </head>
+
 <body>
 
     <?php include('../user_panel/includes/sidebar.php'); ?>
 
-    <?php include('../user_panel/includes/navbar.php'); ?>
+    <!-- CONTENT -->
+    <section id="content">
 
-    <?php include('../user_panel/includes/footer.php'); ?>
+        <?php include('../user_panel/includes/navbar.php'); ?>
 
+        <main>
+
+        <section class="profile" id="profile">
+
+        </section>
+
+        <section class="notification" id="notification">
+            
+        </section>
+
+            <?php include('../user_panel/includes/footer.php'); ?>
+
+        </main>
+        <!-- MAIN -->
+
+    </section>
+    <!-- CONTENT -->
 </body>
+
 </html>

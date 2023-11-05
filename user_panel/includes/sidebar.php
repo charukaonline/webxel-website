@@ -10,18 +10,15 @@
             </a>
         </li>
         <li>
-            <a href="/Admin_Panel/notification.php">
-                <i class='bx bxs-bell'></i>
-                <span class="text">Notification</span>
-            </a>
-        </li>
-    </ul>
-    <ul class="side-menu">
-
-        <li>
-            <a href="/user_panel/user_dashboard.php">
+            <a href="#profile">
                 <i class='bx bxs-user'></i>
                 <span class="text">Profile</span>
+            </a>
+        </li>
+        <li>
+            <a href="#notification">
+                <i class='bx bxs-bell'></i>
+                <span class="text">Notification</span>
             </a>
         </li>
         <li>
