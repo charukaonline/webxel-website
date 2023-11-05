@@ -1,12 +1,31 @@
 <?php
 
-@include('./config.php');
+@include '../config.php';
 
 session_start();
 
 if (isset($_POST['order-btn'])) {
     $name = mysqli_real_escape_string($conn, $_POST['name']);
     $email = mysqli_real_escape_string($conn, $_POST['email']);
+    $contact_number = isset($_POST['phone_number']) ? $_POST['phone_number'] : '';
+    $service_type = $_POST['service_type'];
+
+    // $pdfContent = file_get_contents('service-upload-file');
+    // $escapedPdfContent = $conn->real_escape_string($pdfContent);
+
+    $order_description = mysqli_real_escape_string($conn, $_POST['order-description']);
+
+    $select_from_order = "SELECT * FROM orders WHERE email = '$email' ";
+
+    $result_for_order = mysqli_query($conn, $select_from_order);
+
+    if (mysqli_num_rows($result_for_order) > 0) {
+        $error[] = 'Order not place successfully';
+    } else {
+
+        $insert_to_order = "INSERT INTO orders (name, email, contact_number, service_type, description) VALUES ('$name', '$email', '$contact_number', '$service_type', '$order_description)";
+        mysqli_query($conn, $insert_to_order);
+    }
 }
 
 ?>
@@ -28,7 +47,7 @@ if (isset($_POST['order-btn'])) {
         <input type="text" name="phone-number" placeholder="Enter contact number" required>
 
         <label for="services">Choose a Service Type:</label>
-        <select name="services" id="services">
+        <select name="service_type" id="services">
             <option value="web design & development">Web design & development</option>
             <option value="marketing & advertising">Marketing & advertising</option>
             <option value="mobile app development">Mobile app development</option>
@@ -36,6 +55,7 @@ if (isset($_POST['order-btn'])) {
             <option value="video and animation">Video and Animation</option>
             <option value="content writing & translation">Content writing & Translation</option>
         </select>
+
         <textarea name="order-description" placeholder="Describe the Service that you want..." required></textarea>
         <div>
             <input type="file" name="service-file-upload" placeholder="Upload file">
