@@ -87,7 +87,7 @@ if (!isset($_SESSION['user_name'])) {
 
                             <div class="row">
                                 <div class="info-title">Full Name:</div>
-                                <div class="info-content"><?php echo $_SESSION['admin_name'] ?></div>
+                                <div class="info-content"><?php echo $_SESSION['user_name'] ?></div>
                             </div>
 
                             <div class="row">
@@ -117,7 +117,7 @@ if (!isset($_SESSION['user_name'])) {
 
                             <div class="row">
                                 <div class="info-title">Email:</div>
-                                <div class="info-content"><?php echo $_SESSION['admin_email'] ?></div>
+                                <div class="info-content"><?php echo $_SESSION['user_email'] ?></div>
                             </div>
 
                             <div class="row">
@@ -243,14 +243,14 @@ if (!isset($_SESSION['user_name'])) {
                                 <div class="change-password">
                                     <label for="newPassword" class="change-password-content">New Password</label>
                                     <div class="change-password-content-input">
-                                        <input name="newpassword" type="password" class="form-control" id="newPassword">
+                                        <input name="new_password" type="password" class="form-control" id="newPassword">
                                     </div>
                                 </div>
 
                                 <div class="change-password">
                                     <label for="renewPassword" class="change-password-content">Re-enter New Password</label>
                                     <div class="change-password-content-input">
-                                        <input name="renewpassword" type="password" class="form-control" id="renewPassword">
+                                        <input name="renew_password" type="password" class="form-control" id="renewPassword">
                                     </div>
                                 </div>
 

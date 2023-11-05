@@ -4,12 +4,6 @@
 
 session_start();
 
-function alert($message)
-{
-    $_SESSION['message'] = $message;
-    exit();
-}
-
 if (!isset($_SESSION['user_name'])) {
     header('location: ../Login_User_and_Admin_page/login_form.php');
 }
@@ -33,12 +27,20 @@ if (isset($_POST['order-btn'])) {
 
     if ($insert_to_order_run) {
         // move_uploaded_file($_FILES['file']['tmp_name'], $path.'/'.$file_name);
+        header('location: ./order.php');
         alert("Order sent Successfully.");
-        header('location: /web_develop.php');
+        exit();
     } else {
+        header('location: ./web_develop.php');
         alert("Something Went Wrong.");
-        header('location: /web_develop.php');
     }
+    
+}
+
+function alert($message)
+{
+    $_SESSION['message'] = $message;
+    exit();
 }
 
 ?>
