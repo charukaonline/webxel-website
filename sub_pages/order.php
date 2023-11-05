@@ -4,6 +4,10 @@
 
 session_start();
 
+if (!isset($_SESSION['user_name'])) {
+    header('location: ../Login_User_and_Admin_page/login_form.php');
+}
+
 if (isset($_POST['order-btn'])) {
     $name = mysqli_real_escape_string($conn, $_POST['name']);
     $email = mysqli_real_escape_string($conn, $_POST['email']);
