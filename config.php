@@ -3,9 +3,9 @@
     $conn = mysqli_connect('localhost', 'root', '', 'webxel');
 
     // $host = "localhost";
-    // $dbname = "user_db";
     // $username = "root";
     // $password = "";
+    // $dbname = "webxel";
 
     // $conn = new mysqli($host, $username, $password, $dbname);
 

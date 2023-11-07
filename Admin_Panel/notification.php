@@ -4,8 +4,30 @@
 
 session_start();
 
+function alert($message)
+{
+    $_SESSION['message'] = $message;
+    exit();
+}
+
 if (!isset($_SESSION['admin_name'])) {
     header('location: /login_user_and_admin_page/login_form.php');
+}
+
+if (isset($_POST['delete-order'])) {
+    $order_id = mysqli_real_escape_string($conn, $_POST['order_id']);
+
+    $delete_order = "DELETE FROM orders WHERE order_id = '$order_id'";
+    $delete_order_run = mysqli_query($conn, $delete_order);
+
+    if ($delete_order_run) {
+        header('location: ./notification.php');
+        alert("Order deleted Successfully.");
+    }
+    else {
+        header('location: ./notification.php');
+        alert("Something went wrong.");
+    }
 }
 
 ?>
@@ -21,161 +43,13 @@ if (!isset($_SESSION['admin_name'])) {
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900|Roboto+Slab:400,700" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
     <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.min.css" />
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/semantic.min.css" />
 
     <link id="stylesheet" href="../assets/css/admin_and_user.css" rel="stylesheet" />
 
     <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
 </head>
-
-<!-- <body class="g-sidenav-show  bg-gray-500">
-
-    <main class="main-content position-relative max-height-vh-100 h-100 border-radius-lg ">
-
-
-        <div class="container-fluid py-4">
-            <div class="row">
-                <div class="col-lg-8 col-md-10 mx-auto">
-                    <div class="card mt-4">
-                        <div class="card-header p-3">
-                            <h5 class="mb-0">Alerts</h5>
-                        </div>
-                        <div class="card-body p-3 pb-0">
-                            <div class="alert alert-primary alert-dismissible text-white" role="alert">
-                                <span class="text-sm">A simple primary alert with <a href="javascript:;" class="alert-link text-white">an example link</a>. Give it a click if you like.</span>
-                                <button type="button" class="btn-close text-lg py-3 opacity-10" data-bs-dismiss="alert" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
-                            </div>
-                            <div class="alert alert-secondary alert-dismissible text-white" role="alert">
-                                <span class="text-sm">A simple secondary alert with <a href="javascript:;" class="alert-link text-white">an example link</a>. Give it a click if you like.</span>
-                                <button type="button" class="btn-close text-lg py-3 opacity-10" data-bs-dismiss="alert" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
-                            </div>
-                            <div class="alert alert-success alert-dismissible text-white" role="alert">
-                                <span class="text-sm">A simple success alert with <a href="javascript:;" class="alert-link text-white">an example link</a>. Give it a click if you like.</span>
-                                <button type="button" class="btn-close text-lg py-3 opacity-10" data-bs-dismiss="alert" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
-                            </div>
-                            <div class="alert alert-danger alert-dismissible text-white" role="alert">
-                                <span class="text-sm">A simple danger alert with <a href="javascript:;" class="alert-link text-white">an example link</a>. Give it a click if you like.</span>
-                                <button type="button" class="btn-close text-lg py-3 opacity-10" data-bs-dismiss="alert" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
-                            </div>
-                            <div class="alert alert-warning alert-dismissible text-white" role="alert">
-                                <span class="text-sm">A simple warning alert with <a href="javascript:;" class="alert-link text-white">an example link</a>. Give it a click if you like.</span>
-                                <button type="button" class="btn-close text-lg py-3 opacity-10" data-bs-dismiss="alert" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
-                            </div>
-                            <div class="alert alert-info alert-dismissible text-white" role="alert">
-                                <span class="text-sm">A simple info alert with <a href="javascript:;" class="alert-link text-white">an example link</a>. Give it a click if you like.</span>
-                                <button type="button" class="btn-close text-lg py-3 opacity-10" data-bs-dismiss="alert" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
-                            </div>
-                            <div class="alert alert-light alert-dismissible text-white" role="alert">
-                                <span class="text-sm">A simple light alert with <a href="javascript:;" class="alert-link text-white">an example link</a>. Give it a click if you like.</span>
-                                <button type="button" class="btn-close text-lg py-3 opacity-10" data-bs-dismiss="alert" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
-                            </div>
-                            <div class="alert alert-dark alert-dismissible text-white" role="alert">
-                                <span class="text-sm">A simple dark alert with <a href="javascript:;" class="alert-link text-white">an example link</a>. Give it a click if you like.</span>
-                                <button type="button" class="btn-close text-lg py-3 opacity-10" data-bs-dismiss="alert" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card mt-4">
-                        <div class="card-header p-3">
-                            <h5 class="mb-0">Notifications</h5>
-                            <p class="text-sm mb-0">
-                                Notifications on this page use Toasts from Bootstrap. Read more details <a href="https://getbootstrap.com/docs/5.0/components/toasts/" target="">here</a>.
-                            </p>
-                        </div>
-                        <div class="card-body p-3">
-                            <div class="row">
-                                <div class="col-lg-3 col-sm-6 col-12">
-                                    <button class="btn bg-gradient-success w-100 mb-0 toast-btn" type="button" data-target="successToast">Success</button>
-                                </div>
-                                <div class="col-lg-3 col-sm-6 col-12 mt-sm-0 mt-2">
-                                    <button class="btn bg-gradient-info w-100 mb-0 toast-btn" type="button" data-target="infoToast">Info</button>
-                                </div>
-                                <div class="col-lg-3 col-sm-6 col-12 mt-lg-0 mt-2">
-                                    <button class="btn bg-gradient-warning w-100 mb-0 toast-btn" type="button" data-target="warningToast">Warning</button>
-                                </div>
-                                <div class="col-lg-3 col-sm-6 col-12 mt-lg-0 mt-2">
-                                    <button class="btn bg-gradient-danger w-100 mb-0 toast-btn" type="button" data-target="dangerToast">Danger</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="position-fixed bottom-1 end-1 z-index-2">
-                <div class="toast fade hide p-2 bg-white" role="alert" aria-live="assertive" id="successToast" aria-atomic="true">
-                    <div class="toast-header border-0">
-                        <i class="material-icons text-success me-2">
-                            check
-                        </i>
-                        <span class="me-auto font-weight-bold">Material Dashboard </span>
-                        <small class="text-body">11 mins ago</small>
-                        <i class="fas fa-times text-md ms-3 cursor-pointer" data-bs-dismiss="toast" aria-label="Close"></i>
-                    </div>
-                    <hr class="horizontal dark m-0">
-                    <div class="toast-body">
-                        Hello, world! This is a notification message.
-                    </div>
-                </div>
-                <div class="toast fade hide p-2 mt-2 bg-gradient-info" role="alert" aria-live="assertive" id="infoToast" aria-atomic="true">
-                    <div class="toast-header bg-transparent border-0">
-                        <i class="material-icons text-white me-2">
-                            notifications
-                        </i>
-                        <span class="me-auto text-white font-weight-bold">Material Dashboard </span>
-                        <small class="text-white">11 mins ago</small>
-                        <i class="fas fa-times text-md text-white ms-3 cursor-pointer" data-bs-dismiss="toast" aria-label="Close"></i>
-                    </div>
-                    <hr class="horizontal light m-0">
-                    <div class="toast-body text-white">
-                        Hello, world! This is a notification message.
-                    </div>
-                </div>
-                <div class="toast fade hide p-2 mt-2 bg-white" role="alert" aria-live="assertive" id="warningToast" aria-atomic="true">
-                    <div class="toast-header border-0">
-                        <i class="material-icons text-warning me-2">
-                            travel_explore
-                        </i>
-                        <span class="me-auto font-weight-bold">Material Dashboard </span>
-                        <small class="text-body">11 mins ago</small>
-                        <i class="fas fa-times text-md ms-3 cursor-pointer" data-bs-dismiss="toast" aria-label="Close"></i>
-                    </div>
-                    <hr class="horizontal dark m-0">
-                    <div class="toast-body">
-                        Hello, world! This is a notification message.
-                    </div>
-                </div>
-                <div class="toast fade hide p-2 mt-2 bg-white" role="alert" aria-live="assertive" id="dangerToast" aria-atomic="true">
-                    <div class="toast-header border-0">
-                        <i class="material-icons text-danger me-2">
-                            campaign
-                        </i>
-                        <span class="me-auto text-gradient text-danger font-weight-bold">Material Dashboard </span>
-                        <small class="text-body">11 mins ago</small>
-                        <i class="fas fa-times text-md ms-3 cursor-pointer" data-bs-dismiss="toast" aria-label="Close"></i>
-                    </div>
-                    <hr class="horizontal dark m-0">
-                    <div class="toast-body">
-                        Hello, world! This is a notification message.
-                    </div>
-                </div>
-            </div>
-        </div>
-    </main> -->
 
 <body>
 
@@ -196,6 +70,76 @@ if (!isset($_SESSION['admin_name'])) {
                     </div>
                 </div>
 
+                <!-- <section class="message" id="message">
+                    <h1>Message</h1>
+
+                    <div class="message-card">
+
+                    </div>
+                </section> -->
+
+                <section class="orders" id="orders">
+                    <h1>Orders</h1>
+
+                    <div class="order-card">
+                        <table class="order">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Name</th>
+                                    <th>Email</th>
+                                    <th>Service Type</th>
+                                    <th>Service Description</th>
+                                    <th>Contact Number</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <?php
+
+                                function getAll($table)
+                                {
+                                    global $conn;
+                                    $query = "SELECT * FROM $table";
+                                    return mysqli_query($conn, $query);
+                                }
+
+                                $orders = getAll("orders");
+
+                                if ($orders) {
+                                    if (mysqli_num_rows($orders) > 0) {
+                                        while ($record = mysqli_fetch_assoc($orders)) {
+                                ?>
+                                            <tr>
+                                                <td><?= $record['order_id'] ?></td>
+                                                <td><?= $record['name'] ?></td>
+                                                <td><?= $record['email'] ?></td>
+                                                <td><?= $record['service_type'] ?></td>
+                                                <td><?= $record['description'] ?></td>
+                                                <td><?= $record['number'] ?></td>
+                                                <td>
+                                                    <form action="" method="POST">
+                                                        <input type="hidden" name="order_id" value="<?= $record['order_id'] ?>">
+                                                        <button class="btn-chat" type="submit" name="chat-btn">Chat Now</button>
+                                                        <button class="btn-accept" type="submit" name="accept-order">Accept Order</button>
+                                                        <button class="btn-delete" type="submit" name="delete-order">Delete</button>
+                                                    </form>
+                                                </td>
+                                            </tr>
+                                <?php
+                                        }
+                                    } else {
+                                        echo "No records found";
+                                    }
+                                } else {
+                                    echo "Error in retrieving records: " . mysqli_error($conn);
+                                }
+                                ?>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+
                 <?php include('./includes/footer.php'); ?>
 
             </main>
@@ -205,6 +149,18 @@ if (!isset($_SESSION['admin_name'])) {
     </section>
 
     <script src="../assets/js/admin.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"></script>
+    <script>
+        <?php
+            if (isset($_SESSION['message'])) {
+                ?>
+                alertify.set('notifier', 'position', 'top-center');
+                alertify.success('<?= $_SESSION['message'] ?>');
+                <?php
+                    unset($_SESSION['message']);
+            }
+                ?>
+    </script>
 
 </body>
 

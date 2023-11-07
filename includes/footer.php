@@ -36,7 +36,7 @@
 
             <div class="footer_links_column">
                 <div class="footer_links_column_title">Social Media</div>
-                <a href="#"><i class='bx bxl-github'></i></a>
+                <a href="https://github.com/charukaonline/webxel-website"><i class='bx bxl-github'></i></a>
                 <a href="#"><i class='bx bxl-linkedin'></i></a>
                 <a href="#"><i class='bx bxl-facebook'></i></a>
                 <a href="#"><i class='bx bxl-twitter'></i></a>

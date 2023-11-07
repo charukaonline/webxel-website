@@ -1,40 +1,49 @@
 <?php
-    
-    @include '../config.php';
 
     session_start();
 
-    if(isset($_POST['submit'])){
-        $email = mysqli_real_escape_string($conn, $_POST['email']);
-        $pass = md5($_POST['password']);
-        $cpass = md5($_POST['cpassword']);
-        $user_type = $_POST['user-type'];
+    if(isset($_SESSION['admin_name']) || isset($_SESSION['user_name'])) {
+        if(isset($_SESSION['admin_name'])) {
+            header('location: /admin_panel/admin_dashboard.php');
+        } 
+        elseif(isset($_SESSION['user_name'])) {
+                header('location: /User_Panel/user_dashboard.php');
+        }
+    } else {
+        include '../config.php';
 
-        $select_from_register = "SELECT * FROM login_and_register WHERE email = '$email' && password = '$pass' ";
+        if(isset($_POST['submit'])){
+            $email = mysqli_real_escape_string($conn, $_POST['email']);
+            $pass = md5($_POST['password']);
+            $cpass = md5($_POST['cpassword']);
+            $user_type = $_POST['user-type'];
 
-        $result_for_register = mysqli_query($conn, $select_from_register);
+            $select_from_register = "SELECT * FROM login_and_register WHERE email = '$email' && password = '$pass' ";
 
-        if(mysqli_num_rows($result_for_register) > 0){
-            $row = mysqli_fetch_array($result_for_register);
+            $result_for_register = mysqli_query($conn, $select_from_register);
 
-            if($row['user_type'] == 'admin') {
+            if(mysqli_num_rows($result_for_register) > 0){
+                $row = mysqli_fetch_array($result_for_register);
+
+                if($row['user_type'] == 'admin') {
+                    
+                    $_SESSION['admin_name'] = $row['name'];
+                    $_SESSION['admin_email'] = $row['email'];
+                    header('location: /admin_panel/admin_dashboard.php');    
                 
-                $_SESSION['admin_name'] = $row['name'];
-                $_SESSION['admin_email'] = $row['email'];
-                header('location: /admin_panel/admin_dashboard.php');    
-            
+                }
+                elseif($row['user_type'] == '') {
+                
+                    $_SESSION['user_name'] = $row['name'];
+                    header('location: /User_Panel/user_dashboard.php');    
+                
+                }
             }
-            elseif($row['user_type'] == '') {
-            
-                $_SESSION['user_name'] = $row['name'];
-                header('location: /User_Panel/user_dashboard.php');    
-            
+            else {
+                $error[] = 'incorrect email or password!';
             }
         }
-        else {
-            $error[] = 'incorrect email or password!';
-        }
-    };
+    }
 
 ?>
 
@@ -59,34 +68,7 @@
 </head>
 <body>
 
-    <!-- Header section start -->
-    <header>
-
-        <a href="/index.php" class="logo">W&#x039E;&#x042;X&#x039E;L</a>
-
-        <nav class="navbar">
-            <a href="/index.php">Home</a>
-            <a href="#" id="service">Services</a>
-            <a href="#">Contact Us</a>
-            <a href="/about_us.php">About Us</a>
-        </nav>
-
-        <div class="icons">
-            <i class="fas fa-bars" id="menu-bars"></i>
-            <i class="fas fa-search" id="search-icon"></i>
-            <a href="/login_user_and_admin_page/register_form.php"><i class="fas fa-user" id="login-icon"></i></a>
-        </div>
-
-    </header>
-    <!-- Header section end -->
-
-    <!--Search form start-->
-    <form action="" id="search-form">
-        <input type="search" placeholder="Search here..." name="" id="search-box">
-        <button type="submit"><label for="search-box" class="fas fa-search"></label></button>
-        <i class="fas fa-times" id="search-form-close"></i>
-    </form>
-    <!-- Search form end -->
+    <?php include('../includes/navbar.php'); ?>
     
     <!-- Sign in form section start -->
     <section class="signin-form-container">

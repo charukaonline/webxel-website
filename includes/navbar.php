@@ -1,13 +1,13 @@
 <!--Header section start-->
 <header>
 
-    <a href="index.php" class="logo">W&#x039E;&#x042;X&#x039E;L</a>
+    <a href="/index.php" class="logo">W&#x039E;&#x042;X&#x039E;L</a>
 
     <nav class="navbar">
-        <a href="index.php">Home</a>
-        <a href="services.php">Services</a>
-        <a href="#">Contact Us</a>
-        <a href="about_us.php">About Us</a>
+        <a href="/index.php">Home</a>
+        <a href="/services.php">Services</a>
+        <a href="/contact_us.php">Contact Us</a>
+        <a href="/about_us.php">About Us</a>
     </nav>
 
     <div class="icons">

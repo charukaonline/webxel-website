@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="description" content="WEBXEL, webxel, Technology Service, Technical Support, IT Service, web developing">
+    <meta name="description" content="WEBXEL, webxel, IT Service">
     <meta name="keywords" content="HTML,CSS,JavaScript,PHP">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -19,6 +19,7 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-H6KFMBG8J1"></script>
 
     <title>WEBXEL</title>
+    <link rel="icon" type="image/png" href="./assets/images/logo2.jpg">
 </head>
 
 <body>
@@ -77,7 +78,7 @@
             <div class="flex-box1">
                 <h3 class="animation">Web Developing</h3>
                 <p class="animation">Mastering Responsive Design, Creating Dynamic Websites for Every Device</p>
-                <a href="#" class="btn animation">Learn more <i class=" fas fa-regular fa-chevron-right"></i></a>
+                <a href="/sub_pages/web_develop.php" class="btn animation">Learn more <i class=" fas fa-regular fa-chevron-right"></i></a>
             </div>
 
             <div class="flex-box2">
@@ -99,7 +100,7 @@
             <div class="flex-box4">
                 <h3 class="animation">Graphics & Design</h3>
                 <p class="animation">Unlocking Creativity, Transforming Ideas into Visual Masterpieces with Graphic Design</p>
-                <a href="#" class="btn animation">Learn more <i class=" fas fa-regular fa-chevron-right"></i></a>
+                <a href="/sub_pages/graphic_design.php" class="btn animation">Learn more <i class=" fas fa-regular fa-chevron-right"></i></a>
             </div>
 
         </div>

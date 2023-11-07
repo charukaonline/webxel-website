@@ -10,12 +10,8 @@ if (!isset($_SESSION['admin_name']) && ($_SESSION['admin_email'])) {
 
 if (isset($_POST['submit'])) {
     $name = mysqli_real_escape_string($conn, $_POST['fullName']);
-    $secondary_email = mysqli_real_escape_string($conn, $_POST['secondary-email']);
     $about = mysqli_real_escape_string($conn, $_POST['about']);
-    $company = mysqli_real_escape_string($conn, $_POST['company']);
-    $job = mysqli_real_escape_string($conn, $_POST['job']);
     $country = mysqli_real_escape_string($conn, $_POST['country']);
-    $address = mysqli_real_escape_string($conn, $_POST['address']);
     $phone = mysqli_real_escape_string($conn, $_POST['phone']);
 
     $select_from_info = "SELECT * FROM profile_details WHERE name = '$name'";
@@ -117,23 +113,8 @@ if (isset($_POST['submit'])) {
                         </div>
 
                         <div class="row">
-                            <div class="info-title">Company:</div>
-                            <div class="info-content">Lueilwitz, Wisoky and Leuschke</div>
-                        </div>
-
-                        <div class="row">
-                            <div class="info-title">Job:</div>
-                            <div class="info-content">Web Designer</div>
-                        </div>
-
-                        <div class="row">
                             <div class="info-title">Country:</div>
                             <div class="info-content">USA</div>
-                        </div>
-
-                        <div class="row">
-                            <div class="info-title">Address:</div>
-                            <div class="info-content">A108 Adam Street, New York, NY 535022</div>
                         </div>
 
                         <div class="row">
@@ -144,11 +125,6 @@ if (isset($_POST['submit'])) {
                         <div class="row">
                             <div class="info-title">Email:</div>
                             <div class="info-content"><?php echo $_SESSION['admin_email'] ?></div>
-                        </div>
-
-                        <div class="row">
-                            <div class="info-title">Secondary Email:</div>
-                            <div class="info-content">sanojaminda@gmail.com</div>
                         </div>
 
                     </div>
@@ -180,20 +156,6 @@ if (isset($_POST['submit'])) {
                             </div>
 
                             <div class="info-edit">
-                                <label for="company" class="info-social-links">Company</label>
-                                <div class="info-description">
-                                    <input name="company" type="text" class="form-control" id="company">
-                                </div>
-                            </div>
-
-                            <div class="info-edit">
-                                <label for="Job" class="info-social-links">Job</label>
-                                <div class="info-description">
-                                    <input name="job" type="text" class="form-control" id="Job">
-                                </div>
-                            </div>
-
-                            <div class="info-edit">
                                 <label for="Country" class="info-social-links">Country</label>
                                 <div class="info-description">
                                     <input name="country" type="text" class="form-control" id="Country">
@@ -201,51 +163,9 @@ if (isset($_POST['submit'])) {
                             </div>
 
                             <div class="info-edit">
-                                <label for="Address" class="info-social-links">Address</label>
-                                <div class="info-description">
-                                    <input name="address" type="text" class="form-control" id="Address">
-                                </div>
-                            </div>
-
-                            <div class="info-edit">
                                 <label for="Phone" class="info-social-links">Contact Number</label>
                                 <div class="info-description">
                                     <input name="phone" type="text" class="form-control" id="Phone">
-                                </div>
-                            </div>
-
-                            <div class="info-edit">
-                                <label for="Email" class="info-social-links">Secondary Email</label>
-                                <div class="info-description">
-                                    <input name="secondary-email" type="secondary-email" class="form-control" id="Email">
-                                </div>
-                            </div>
-
-                            <div class="info-edit">
-                                <label for="Twitter" class="info-social-links">Twitter Profile</label>
-                                <div class="info-description">
-                                    <input name="twitter" type="text" class="form-control" id="Twitter">
-                                </div>
-                            </div>
-
-                            <div class="info-edit">
-                                <label for="Facebook" class="info-social-links">Facebook Profile</label>
-                                <div class="info-description">
-                                    <input name="facebook" type="text" class="form-control" id="Facebook">
-                                </div>
-                            </div>
-
-                            <div class="info-edit">
-                                <label for="Instagram" class="info-social-links">Instagram Profile</label>
-                                <div class="info-description">
-                                    <input name="instagram" type="text" class="form-control" id="Instagram">
-                                </div>
-                            </div>
-
-                            <div class="info-edit">
-                                <label for="Linkedin" class="info-social-links">Linkedin Profile</label>
-                                <div class="info-description">
-                                    <input name="linkedin" type="text" class="form-control" id="Linkedin">
                                 </div>
                             </div>
 

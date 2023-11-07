@@ -13,6 +13,7 @@
 	transition: all .2s linear;
 	background-attachment: fixed;
 	background-repeat: no-repeat;
+	scroll-behavior: smooth;
 }
 
 :root {
@@ -37,19 +38,6 @@
 	--light-yellow: #FFF2C6;
 	--orange: #FD7238;
 	--light-orange: #FFE0D3;
-}
-
-* {
-	font-family: 'Poppins', sans-serif;
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-	text-decoration: none;
-	outline: none;
-	border: none;
-	transition: all .2s linear;
-	background-attachment: fixed;
-	background-repeat: no-repeat;
 }
 
 a {
@@ -725,6 +713,49 @@ footer {
 /* Admin Profile page */
 
 /* Admin Notification page */
+
+.admin-notification .message h1 {
+	padding-top: 50px;
+	font-size: 28px;
+	color: #2c2b2b;
+}
+
+.admin-notification .message .message-card {
+	margin-top: 50px;
+	margin-bottom: 40px;
+}
+
+.orders h1,
+.admin-notification .orders h1 {
+	padding-top: 20px;
+	font-size: 28px;
+	color: #2c2b2b;
+}
+
+.orders .order-card .order,
+.admin-notification .order-card .order {
+	margin-top: 50px;
+	border-collapse: collapse;
+	width: 100%;
+	border: 1;
+}
+
+.orders .order-card .order tr th,
+.admin-notification .order-card .order tr th {
+	border: 1px solid var(--bg-color);
+	padding: 8px;
+	padding-top: 12px;
+	padding-bottom: 12px;
+	background-color: var(--dark-grey);
+	color: var(--bg-color);
+}
+
+.orders .order-card .order tr td,
+.admin-notification .order-card .order tr td {
+	border: 1px solid var(--bg-color);
+	padding: 8px;
+	text-align: center;
+}
 
 /* Admin Notification page */
 
