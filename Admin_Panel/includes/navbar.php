@@ -14,6 +14,6 @@
 		<span class="num">8</span>
 	</a>
 	<a href="/Admin_Panel/admin_profile.php" class="profile">
-		<img src="../assets/images/nith-in-w1N1WmLDyHU-unsplash.jpg">
+		<i class="fas fa-user" id="login-icon"></i>
 	</a>
 </nav>

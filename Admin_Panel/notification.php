@@ -22,7 +22,7 @@ if (isset($_POST['delete-order'])) {
 
     if ($delete_order_run) {
         header('location: ./notification.php');
-        alert("Order deleted Successfully.");
+        alert("Order deleted.");
     }
     else {
         header('location: ./notification.php');
