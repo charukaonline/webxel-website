@@ -8,6 +8,49 @@ if (!isset($_SESSION['admin_name'])) {
     header('location: /login_user_and_admin_page/login_form.php');
 }
 
+if (isset($_POST['add-new-admin'])) {
+
+    $name = mysqli_real_escape_string($conn, $_POST['name']);
+    $email = mysqli_real_escape_string($conn, $_POST['email']);
+    $password = md5($_POST['password']);
+    $user_type = $_POST['user-type'];
+
+    $select_from_register = "SELECT * FROM login_and_register WHERE email = '$email' && password = '$password' ";
+
+    $result_for_register = mysqli_query($conn, $select_from_register);
+
+    if (mysqli_num_rows($result_for_register) > 0) {
+        alert("User already exists!");
+    } else {
+
+        $insert_to_register = "INSERT INTO login_and_register (name, email, password, user_type) VALUES ('$name', '$email', '$password', '$user_type')";
+        mysqli_query($conn, $insert_to_register);
+        header('location: ./user_manage.php');
+        alert("Admin Account Added Successfully.");
+    }
+}
+
+if (isset($_POST['delete-user'])) {
+    $id = mysqli_real_escape_string($conn, $_POST['id']);
+
+    $delete_user = "DELETE FROM login_and_register WHERE id = '$id'";
+    $delete_user_run = mysqli_query($conn, $delete_user);
+
+    if ($delete_user_run) {
+        header('location: ./user_manage.php');
+        alert("User Account deleted.");
+    } else {
+        header('location: ./user_manage.php');
+        alert("Something went wrong.");
+    }
+}
+
+function alert($message)
+{
+    $_SESSION['message'] = $message;
+    exit();
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -21,6 +64,8 @@ if (!isset($_SESSION['admin_name'])) {
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900|Roboto+Slab:400,700" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
     <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.min.css" />
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/semantic.min.css" />
 
     <link id="stylesheet" href="../assets/css/admin_and_user.css" rel="stylesheet" />
 
@@ -29,7 +74,7 @@ if (!isset($_SESSION['admin_name'])) {
 
 <body>
 
-    <section class="admin-page-clone">
+    <section class="admin-page-user-manage">
 
         <?php include('./includes/sidebar.php'); ?>
 
@@ -46,8 +91,142 @@ if (!isset($_SESSION['admin_name'])) {
                     </div>
                 </div>
 
-                <a href="https://analytics.google.com/analytics/web/?authuser=0#/p413781736/reports/intelligenthome?params=_u..nav%3Dmaui">
-                    Click here to Track visitors from Google Analytics</a>
+                <section class="user-section">
+
+                    <h1>Users</h1>
+
+                    <h3>Active Users</h3>
+
+                    <div class="users">
+                        <table class="active-users">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Name</th>
+                                    <th>Email</th>
+                                    <th>Status</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <?php
+
+                                function getAllUsers()
+                                {
+                                    global $conn;
+                                    $query = "SELECT * FROM login_and_register WHERE user_type = '' ";
+                                    return mysqli_query($conn, $query);
+                                }
+
+                                $users = getAllUsers();
+
+                                if ($users) {
+                                    if (mysqli_num_rows($users) > 0) {
+                                        while ($record = mysqli_fetch_assoc($users)) {
+                                ?>
+                                            <tr>
+                                                <td><?= $record['id'] ?></td>
+                                                <td><?= $record['name'] ?></td>
+                                                <td><?= $record['email'] ?></td>
+                                                <td><span>Active</span></td>
+                                                <td>
+                                                    <form action="" method="POST">
+                                                        <input type="hidden" name="id" value="<?= $record['id'] ?>">
+                                                        <button class="btn-chat" type="submit" name="chat-btn">Chat Now</button>
+                                                        <button class="btn-delete" type="submit" name="delete-user">Delete</button>
+                                                    </form>
+                                                </td>
+                                            </tr>
+                                <?php
+                                        }
+                                    } else {
+                                        echo "No records found";
+                                    }
+                                } else {
+                                    echo "Error in retrieving records: " . mysqli_error($conn);
+                                }
+                                ?>
+                            </tbody>
+                        </table>
+                    </div>
+
+                </section>
+
+                <section class="admin-section">
+
+                    <h1>Admins</h1>
+
+                    <div class="add-new-admin">
+                        <div class="register-form-container">
+                            <form action="" method="POST">
+
+                                <h3>Add New Admin</h3>
+
+                                <input type="text" name="name" placeholder="Name" required>
+                                <input type="email" name="email" placeholder="Email" required>
+                                <input type="password" name="password" placeholder="Password" required>
+                                <select name="user-type">
+                                    <option value="admin">Admin</option>
+                                </select>
+
+                                <input type="submit" name="add-new-admin" value="Add New Admin" class="form-btn">
+                            </form>
+                        </div>
+                    </div>
+
+                    <h3>Active Admins</h3>
+
+                    <div class="admins">
+                        <table class="active-admins">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Name</th>
+                                    <th>Email</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <?php
+
+                                function getAllAdmins()
+                                {
+                                    global $conn;
+                                    $query = "SELECT * FROM login_and_register WHERE user_type = 'admin' ";
+                                    return mysqli_query($conn, $query);
+                                }
+
+                                $admins = getAllAdmins();
+
+                                if ($admins) {
+                                    if (mysqli_num_rows($admins) > 0) {
+                                        while ($record = mysqli_fetch_assoc($admins)) {
+                                ?>
+                                            <tr>
+                                                <td><?= $record['id'] ?></td>
+                                                <td><?= $record['name'] ?></td>
+                                                <td><?= $record['email'] ?></td>
+                                                <td><span>Active</span></td>
+                                            </tr>
+                                <?php
+                                        }
+                                    } else {
+                                        echo "No records found";
+                                    }
+                                } else {
+                                    echo "Error in retrieving records: " . mysqli_error($conn);
+                                }
+                                ?>
+                            </tbody>
+                        </table>
+                    </div>
+
+                </section>
+
+                <div class="google-analytics">
+                    <a href="https://analytics.google.com/analytics/web/?authuser=0#/p413781736/reports/intelligenthome?params=_u..nav%3Dmaui">
+                        Click here to Track visitors from Google Analytics</a>
+                </div>
 
                 <?php include('./includes/footer.php'); ?>
 
@@ -60,5 +239,18 @@ if (!isset($_SESSION['admin_name'])) {
     <script src="../assets/js/admin.js"></script>
 
 </body>
+
+<script src="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"></script>
+<script>
+    <?php
+    if (isset($_SESSION['message'])) {
+    ?>
+        alertify.set('notifier', 'position', 'top-center');
+        alertify.success('<?= $_SESSION['message'] ?>');
+    <?php
+        unset($_SESSION['message']);
+    }
+    ?>
+</script>
 
 </html>

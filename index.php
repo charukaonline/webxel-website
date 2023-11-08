@@ -84,7 +84,7 @@
             <div class="flex-box2">
                 <h3 class="animation">Video and Animation</h3>
                 <p class="animation">Engage and captivate with dynamic videos and animations for storytelling.</p>
-                <a href="#" class="btn animation">Learn more <i class=" fas fa-regular fa-chevron-right"></i></a>
+                <a href="/sub_pages/video_animation.php" class="btn animation">Learn more <i class=" fas fa-regular fa-chevron-right"></i></a>
             </div>
 
         </div>
@@ -94,7 +94,7 @@
             <div class="flex-box3">
                 <h3 class="animation">Application Development</h3>
                 <p class="animation">Elevate Your Development Skills, Mastering Programming and Innovation in 2023</p>
-                <a href="#" class="btn animation">Learn more <i class=" fas fa-regular fa-chevron-right"></i></a>
+                <a href="/sub_pages/app_development.php" class="btn animation">Learn more <i class=" fas fa-regular fa-chevron-right"></i></a>
             </div>
 
             <div class="flex-box4">

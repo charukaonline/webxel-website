@@ -93,8 +93,9 @@
                 <div class="team-member-info">
                     <h2>Charuka Karunarathna</h2>
                     <p>Front End & Back End Developer</p>
-                    <p>Charuk@gmail.com</p>
-                    <button class="button">Contact</button>
+                    <a href="#"><i class='bx bxl-github'></i></a>
+                    <a href="#"><i class='bx bxl-linkedin'></i></a>
+                    <a href="#"><i class='bx bxl-twitter'></i></a>
                 </div>
             </div>
 
@@ -103,8 +104,9 @@
                 <div class="team-member-info">
                     <h2>Thanuka Rathnayake</h2>
                     <p>Front End Developer</p>
-                    <p>ThanukaR@gmail.com</p>
-                    <button class="button">Contact</button>
+                    <a href="#"><i class='bx bxl-github'></i></a>
+                    <a href="#"><i class='bx bxl-linkedin'></i></a>
+                    <a href="#"><i class='bx bxl-twitter'></i></a>
                 </div>
             </div>
 
@@ -113,8 +115,9 @@
                 <div class="team-member-info">
                     <h2>Shayan Hennedige</h2>
                     <p>Front End Developer</p>
-                    <p>shayanH@gmail.com</p>
-                    <button class="button">Contact</button>
+                    <a href="#"><i class='bx bxl-github'></i></a>
+                    <a href="#"><i class='bx bxl-linkedin'></i></a>
+                    <a href="#"><i class='bx bxl-twitter'></i></a>
                 </div>
             </div>
 
@@ -123,8 +126,9 @@
                 <div class="team-member-info">
                     <h2>Mateesha </h2>
                     <p>Front End Developer</p>
-                    <p>Teesha@gmail.com</p>
-                    <button class="button">Contact</button>
+                    <a href="#"><i class='bx bxl-github'></i></a>
+                    <a href="#"><i class='bx bxl-linkedin'></i></a>
+                    <a href="#"><i class='bx bxl-twitter'></i></a>
                 </div>
             </div>
 
@@ -133,8 +137,9 @@
                 <div class="team-member-info">
                     <h2>Dulvanya</h2>
                     <p>Front End Developer</p>
-                    <p>DulvanyaM@gmail.com</p>
-                    <button class="button">Contact</button>
+                    <a href="#"><i class='bx bxl-github'></i></a>
+                    <a href="#"><i class='bx bxl-linkedin'></i></a>
+                    <a href="#"><i class='bx bxl-twitter'></i></a>
                 </div>
             </div>
 
@@ -143,8 +148,9 @@
                 <div class="team-member-info">
                     <h2>Hasini Gunatilaka</h2>
                     <p>Front End Developer</p>
-                    <p>HasiniG@gmail.com</p>
-                    <button class="button">Contact</button>
+                    <a href="#"><i class='bx bxl-github'></i></a>
+                    <a href="#"><i class='bx bxl-linkedin'></i></a>
+                    <a href="#"><i class='bx bxl-twitter'></i></a>
                 </div>
             </div>
 
@@ -153,9 +159,9 @@
                 <div class="team-member-info">
                     <h2>Tharushi Perera</h2>
                     <p>Front End Developer</p>
-                    <p>Perera@gmail.com</p>
-
-                    <button class="button">Contact</button>
+                    <a href="#"><i class='bx bxl-github'></i></a>
+                    <a href="#"><i class='bx bxl-linkedin'></i></a>
+                    <a href="#"><i class='bx bxl-twitter'></i></a>
                 </div>
             </div>
 
@@ -164,8 +170,9 @@
                 <div class="team-member-info">
                     <h2>Samudi Ganawardana</h2>
                     <p>Front End Developer</p>
-                    <p>Rosi@gmail.com</p>
-                    <button class="button">Contact</button>
+                    <a href="#"><i class='bx bxl-github'></i></a>
+                    <a href="#"><i class='bx bxl-linkedin'></i></a>
+                    <a href="#"><i class='bx bxl-twitter'></i></a>
                 </div>
             </div>
 
@@ -174,10 +181,34 @@
                 <div class="team-member-info">
                     <h2>Sanoj Aminda</h2>
                     <p>Front End & Back End Developer</p>
-                    <p>sanojaminda@gmail.com</p>
-                    <button class="button">Contact</button>
+                    <a href="https://github.com/DonSanoj"><i class='bx bxl-github'></i></a>
+                    <a href="https://www.linkedin.com/in/sanoj-aminda-b10a42279/"><i class='bx bxl-linkedin'></i></a>
+                    <a href="https://twitter.com/Sanoj1128"><i class='bx bxl-twitter'></i></a>
                 </div>
             </div>
+
+        </div>
+
+    </section>
+
+    <section class="university">
+
+        <div>
+
+            <h1>We are from NSBM Green University</h1>
+
+            <p>NSBM Green University, the nation’s premier degree-awarding institute, is the first of its kind in South Asia. It is a government-owned self-financed institute that operates under the purview of the Ministry of Education. As a leading educational centre in the country,
+                NSBM has evolved into becoming a highly responsible higher education institute that offers unique opportunities and holistic education on par with international standards while promoting sustainable living.
+                NSBM offers a plethora of undergraduate and postgraduate degree programmes under five faculties: Business, Computing, Engineering, Science and Postgraduate & Professional Advancement. These study programmes at NSBM are either its own programmes recognied by the University Grants Commission and the Ministry of Higher Education or
+                world-class international programmes conducted in affiliation with top-ranked foreign universities such as University of Plymouth, UK, and Victoria University, Australia.
+                Focused on producing competent professionals and innovative entrepreneurs for the increasingly globalising world, NSBM nurtures its graduates to become productive citizens of society with their specialisation ranging in study fields such as
+                Business, Management, Computing, IT, Engineering, Science, Psychology, Nursing, Interior design, Quantity Surveying, Law and Multimedia.
+                Inspired by the vision of being Sri Lanka’s best-performing graduate school and being recognised internationally, NSBM currently achieves approximately 3000 new enrollments per year and houses above 11,000 students reading over 50 degree programmes under 4 faculties. Moreover, over the years,
+                NSBM Green University has gifted the nation with 14,000+ graduates and has proved its global presence with an alumni network spread all across the world.
+                Nestling on a 40-acre land amidst the greenery and serenity in Pitipana, Homagama, NSBM Green University, is an ultra-modern university complex constructed with state-of-the-art facilities and amenities that provides the perfect setting for high-quality teaching, learning and research.
+            </p>
+
+            <img src="/assets/images/home-page-cover.jpg" alt="">
 
         </div>
 
@@ -224,7 +255,7 @@
 
                 <div class="footer_links_column">
                     <div class="footer_links_column_title">Social Media</div>
-                    <a href="#"><i class='bx bxl-github'></i></a>
+                    <a href="https://github.com/charukaonline/webxel-website"><i class='bx bxl-github'></i></a>
                     <a href="#"><i class='bx bxl-linkedin'></i></a>
                     <a href="#"><i class='bx bxl-facebook'></i></a>
                     <a href="#"><i class='bx bxl-twitter'></i></a>

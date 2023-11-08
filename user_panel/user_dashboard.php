@@ -8,6 +8,36 @@ if (!isset($_SESSION['user_name']) && ($_SESSION['user_email'])) {
     header('location: ../Login_User_and_Admin_page/login_form.php');
 }
 
+if (isset($_POST['submit-info'])) {
+
+    $name = mysqli_real_escape_string($conn, $_POST['fullName']);
+    $about = mysqli_real_escape_string($conn, $_POST['about']);
+    $country = mysqli_real_escape_string($conn, $_POST['country']);
+    $address = mysqli_real_escape_string($conn, $_POST['address']);
+    $contact_number = $_POST['contact_number'];
+    $user_email = $_SESSION['user_email'];
+
+    $stmt = $conn->prepare("UPDATE login_and_register SET name=?, country=?, address=?, contact_number=?, about=? WHERE email=?");
+    $stmt->bind_param("ssssss", $name, $country, $address, $contact_number, $about, $user_email);
+    $stmt->execute();
+
+    if ($stmt) {
+        header('location: ./user_dashboard.php');
+        alert("Profile Update Successfully.");
+        exit();
+    } else {
+        header('location: ./user_dashboard.php');
+        alert("Something Went Wrong.");
+        exit();
+    }
+}
+
+function alert($message)
+{
+    $_SESSION['message'] = $message;
+    exit();
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -21,6 +51,8 @@ if (!isset($_SESSION['user_name']) && ($_SESSION['user_email'])) {
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900|Roboto+Slab:400,700" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
     <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.min.css" />
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/semantic.min.css" />
 
     <link rel="stylesheet" href="../assets/css/admin_and_user.css">
 
@@ -53,13 +85,7 @@ if (!isset($_SESSION['user_name']) && ($_SESSION['user_email'])) {
 
                     <img src="../assets/images/nith-in-w1N1WmLDyHU-unsplash.jpg" alt="Profile" class="rounded-circle">
                     <h2><?php echo $_SESSION['user_name'] ?></h2>
-                    <h3>Font End & Back End Developer</h3>
-                    <div class="social-links mt-2">
-                        <a href="#" class="twitter"><i class='bx bxl-twitter'></i></a>
-                        <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
-                        <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-                        <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
-                    </div>
+                    <h3>W&#x039E;&#x042;X&#x039E;L User</h3>
 
                 </div>
             </main>
@@ -83,50 +109,56 @@ if (!isset($_SESSION['user_name']) && ($_SESSION['user_email'])) {
                 </ul>
                 <div class="info-card-content">
 
-                    <div class="profile-overview" id="profile-overview">
-                        <h5 class="card-title">About</h5>
-                        <p class="small fst-italic">Sunt est soluta temporibus accusantium neque nam maiores cumque temporibus. Tempora libero non est unde veniam est qui dolor. Ut sunt iure rerum quae quisquam autem eveniet perspiciatis odit. Fuga sequi sed ea saepe at unde.</p>
+                    <?php
+                    $user_email = $_SESSION['user_email'];
+                    $query = "SELECT * FROM login_and_register WHERE email='$user_email'";
+                    $result = mysqli_query($conn, $query);
+                    if ($result && mysqli_num_rows($result) > 0) {
+                        $row = mysqli_fetch_assoc($result);
+                    ?>
 
-                        <h5 class="card-title">Profile Details</h5>
+                        <div class="profile-overview" id="profile-overview">
+                            <h5 class="card-title">About</h5>
+                            <p class="small fst-italic"><?php echo $row['about']; ?></p>
 
-                        <div class="row">
-                            <div class="info-title">Full Name:</div>
-                            <div class="info-content"><?php echo $_SESSION['user_name'] ?></div>
+                            <h5 class="card-title">Profile Details</h5>
+
+                            <div class="row">
+                                <div class="info-title">Full Name:</div>
+                                <div class="info-content"><?php echo $row['name']; ?></div>
+                            </div>
+
+                            <div class="row">
+                                <div class="info-title">Email:</div>
+                                <div class="info-content"><?php echo $row['email']; ?></div>
+                            </div>
+
+                            <div class="row">
+                                <div class="info-title">Country:</div>
+                                <div class="info-content"><?php echo $row['country']; ?></div>
+                            </div>
+
+                            <div class="row">
+                                <div class="info-title">Address:</div>
+                                <div class="info-content"><?php echo $row['address']; ?></div>
+                            </div>
+
+                            <div class="row">
+                                <div class="info-title">Phone:</div>
+                                <div class="info-content"><?php echo $row['contact_number']; ?></div>
+                            </div>
+
                         </div>
 
-                        <div class="row">
-                            <div class="info-title">Email:</div>
-                            <div class="info-content"><?php echo $_SESSION['user_email'] ?></div>
-                        </div>
-
-                        <div class="row">
-                            <div class="info-title">Country:</div>
-                            <div class="info-content">USA</div>
-                        </div>
-
-                        <div class="row">
-                            <div class="info-title">Address:</div>
-                            <div class="info-content">A108 Adam Street, New York, NY 535022</div>
-                        </div>
-
-                        <div class="row">
-                            <div class="info-title">Phone:</div>
-                            <div class="info-content">(436) 486-3538 x29071</div>
-                        </div>
-
-                    </div>
+                    <?php
+                    } else {
+                        echo "No user found.";
+                    }
+                    ?>
 
                     <div class="profile-edit" id="profile-edit">
 
-
                         <form action="" method="POST">
-
-                            <div class="info-edit">
-                                <label for="about" class="info-social-links">Profile Image</label>
-                                <div class="info-description">
-                                    <input name="profile-img" type="file" class="form-control" id="about" style="height: 50px">
-                                </div>
-                            </div>
 
                             <div class="info-edit">
                                 <label for="fullName" class="info-social-links">Full Name</label>
@@ -159,11 +191,11 @@ if (!isset($_SESSION['user_name']) && ($_SESSION['user_email'])) {
                             <div class="info-edit">
                                 <label for="Phone" class="info-social-links">Contact Number</label>
                                 <div class="info-description">
-                                    <input name="phone" type="text" class="form-control" id="Phone">
+                                    <input name="contact_number" type="text" class="form-control" id="Phone">
                                 </div>
                             </div>
 
-                            <input type="submit" value="Save Changes" name="submit" class="submit-btn btn-primary">
+                            <input type="submit" value="Save Changes" name="submit-info" class="submit-btn btn-primary">
 
                         </form>
 
@@ -237,11 +269,11 @@ if (!isset($_SESSION['user_name']) && ($_SESSION['user_email'])) {
 
                                 $orders = getAll("orders");
 
-                                if ($_SESSION['user_name']) {
+                                if ($_SESSION['user_email']) {
                                     if ($orders) {
                                         if (mysqli_num_rows($orders) > 0) {
                                             while ($record = mysqli_fetch_assoc($orders)) {
-                                    ?>
+                                ?>
                                                 <tr>
                                                     <td><?= $record['order_id'] ?></td>
                                                     <td><?= $record['name'] ?></td>
@@ -250,7 +282,7 @@ if (!isset($_SESSION['user_name']) && ($_SESSION['user_email'])) {
                                                     <td><?= $record['description'] ?></td>
                                                     <td><?= $record['number'] ?></td>
                                                 </tr>
-                                    <?php
+                                <?php
                                             }
                                         } else {
                                             echo "No records found";
@@ -272,8 +304,20 @@ if (!isset($_SESSION['user_name']) && ($_SESSION['user_email'])) {
         </section>
     </section>
 
-
     <script src="../assets/js/admin.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"></script>
+    <script>
+        <?php
+        if (isset($_SESSION['message'])) {
+        ?>
+            alertify.set('notifier', 'position', 'top-center');
+            alertify.success('<?= $_SESSION['message'] ?>');
+        <?php
+            unset($_SESSION['message']);
+        }
+        ?>
+    </script>
+
 </body>
 
 </html>
