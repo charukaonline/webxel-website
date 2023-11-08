@@ -8,26 +8,6 @@ if (!isset($_SESSION['admin_name']) && ($_SESSION['admin_email'])) {
     header('location: /login_user_and_admin_page/login_form.php');
 }
 
-if (isset($_POST['submit'])) {
-    $name = mysqli_real_escape_string($conn, $_POST['fullName']);
-    $about = mysqli_real_escape_string($conn, $_POST['about']);
-    $country = mysqli_real_escape_string($conn, $_POST['country']);
-    $phone = mysqli_real_escape_string($conn, $_POST['phone']);
-
-    $select_from_info = "SELECT * FROM profile_details WHERE name = '$name'";
-
-    $result_for_info = mysqli_query($conn, $select_from_info);
-
-    if (mysqli_num_rows($result_for_info) > 0) {
-        
-        $insert_to_info = "INSERT INTO profile_details (name, secondary_email, about, company, job, country, address, phone_number) VALUES ('$name', '$secondary_email', '$company', '$job', '$country', '$address', '$phone')";
-        mysqli_query($conn, $insert_to_info);
-    }
-    else {
-        $error[] = 'Can not update database';
-    }
-}
-
 ?>
 
 <!DOCTYPE html>
