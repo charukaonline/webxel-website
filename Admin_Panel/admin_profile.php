@@ -8,6 +8,36 @@ if (!isset($_SESSION['admin_name']) && ($_SESSION['admin_email'])) {
     header('location: /login_user_and_admin_page/login_form.php');
 }
 
+if (isset($_POST['submit-info'])) {
+
+    $admin_name = mysqli_real_escape_string($conn, $_POST['fullName']);
+    $admin_about = mysqli_real_escape_string($conn, $_POST['about']);
+    $admin_country = mysqli_real_escape_string($conn, $_POST['country']);
+    $admin_address = mysqli_real_escape_string($conn, $_POST['address']);
+    $admin_contact_number = $_POST['contact_number'];
+    $admin_email = $_SESSION['admin_email'];
+
+    $admin_profile_update = $conn->prepare("UPDATE login_and_register SET name=?, country=?, address=?, contact_number=?, about=? WHERE email=?");
+    $admin_profile_update->bind_param("ssssss", $admin_name, $admin_country, $admin_address, $admin_contact_number, $admin_about, $admin_email);
+    $admin_profile_update->execute();
+
+    if ($admin_profile_update) {
+        header('location: ./admin_profile.php');
+        alert("Profile Update Successfully.");
+        exit();
+    } else {
+        header('location: ./admin_profile.php');
+        alert("Something Went Wrong.");
+        exit();
+    }
+}
+
+function alert($message)
+{
+    $_SESSION['message'] = $message;
+    exit();
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -20,6 +50,8 @@ if (!isset($_SESSION['admin_name']) && ($_SESSION['admin_email'])) {
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900|Roboto+Slab:400,700" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
     <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.min.css" />
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/semantic.min.css" />
 
     <link rel="stylesheet" href="../assets/css/admin_and_user.css">
 
@@ -81,45 +113,57 @@ if (!isset($_SESSION['admin_name']) && ($_SESSION['admin_email'])) {
                 </ul>
                 <div class="info-card-content">
 
-                    <div class="profile-overview" id="profile-overview">
-                        <h5 class="card-title">About</h5>
-                        <p class="small fst-italic">Sunt est soluta temporibus accusantium neque nam maiores cumque temporibus. Tempora libero non est unde veniam est qui dolor. Ut sunt iure rerum quae quisquam autem eveniet perspiciatis odit. Fuga sequi sed ea saepe at unde.</p>
+                <?php
+                    $admin_email = $_SESSION['admin_email'];
+                    $query = "SELECT * FROM login_and_register WHERE email='$admin_email'";
+                    $result = mysqli_query($conn, $query);
+                    if ($result && mysqli_num_rows($result) > 0) {
+                        $row = mysqli_fetch_assoc($result);
+                    ?>
 
-                        <h5 class="card-title">Profile Details</h5>
+                        <div class="profile-overview" id="profile-overview">
+                            <h5 class="card-title">About</h5>
+                            <p class="small fst-italic"><?php echo $row['about']; ?></p>
 
-                        <div class="row">
-                            <div class="info-title">Full Name:</div>
-                            <div class="info-content"><?php echo $_SESSION['admin_name'] ?></div>
+                            <h5 class="card-title">Profile Details</h5>
+
+                            <div class="row">
+                                <div class="info-title">Full Name:</div>
+                                <div class="info-content"><?php echo $row['name']; ?></div>
+                            </div>
+
+                            <div class="row">
+                                <div class="info-title">Email:</div>
+                                <div class="info-content"><?php echo $row['email']; ?></div>
+                            </div>
+
+                            <div class="row">
+                                <div class="info-title">Country:</div>
+                                <div class="info-content"><?php echo $row['country']; ?></div>
+                            </div>
+
+                            <div class="row">
+                                <div class="info-title">Address:</div>
+                                <div class="info-content"><?php echo $row['address']; ?></div>
+                            </div>
+
+                            <div class="row">
+                                <div class="info-title">Phone:</div>
+                                <div class="info-content"><?php echo $row['contact_number']; ?></div>
+                            </div>
+
                         </div>
 
-                        <div class="row">
-                            <div class="info-title">Country:</div>
-                            <div class="info-content">USA</div>
-                        </div>
-
-                        <div class="row">
-                            <div class="info-title">Phone:</div>
-                            <div class="info-content">(436) 486-3538 x29071</div>
-                        </div>
-
-                        <div class="row">
-                            <div class="info-title">Email:</div>
-                            <div class="info-content"><?php echo $_SESSION['admin_email'] ?></div>
-                        </div>
-
-                    </div>
+                    <?php
+                    } else {
+                        echo "No user found.";
+                    }
+                    ?>
 
                     <div class="profile-edit" id="profile-edit">
 
 
                         <form action="" method="POST">
-
-                            <div class="info-edit">
-                                <label for="about" class="info-social-links">Profile Image</label>
-                                <div class="info-description">
-                                    <input name="profile-img" type="file" class="form-control" id="about" style="height: 50px">
-                                </div>
-                            </div>
 
                             <div class="info-edit">
                                 <label for="fullName" class="info-social-links">Full Name</label>
@@ -143,13 +187,20 @@ if (!isset($_SESSION['admin_name']) && ($_SESSION['admin_email'])) {
                             </div>
 
                             <div class="info-edit">
-                                <label for="Phone" class="info-social-links">Contact Number</label>
+                                <label for="Address" class="info-social-links">Address</label>
                                 <div class="info-description">
-                                    <input name="phone" type="text" class="form-control" id="Phone">
+                                    <input name="address" type="text" class="form-control" id="Address">
                                 </div>
                             </div>
 
-                            <input type="submit" value="Save Changes" name="submit" class="submit-btn btn-primary">
+                            <div class="info-edit">
+                                <label for="Phone" class="info-social-links">Contact Number</label>
+                                <div class="info-description">
+                                    <input name="contact_number" type="text" class="form-control" id="Phone">
+                                </div>
+                            </div>
+
+                            <input type="submit" value="Save Changes" name="submit-info" class="submit-btn btn-primary">
 
                         </form>
 
@@ -198,6 +249,18 @@ if (!isset($_SESSION['admin_name']) && ($_SESSION['admin_email'])) {
     </section>
 
     <script src="../assets/js/admin.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"></script>
+    <script>
+        <?php
+        if (isset($_SESSION['message'])) {
+        ?>
+            alertify.set('notifier', 'position', 'top-center');
+            alertify.success('<?= $_SESSION['message'] ?>');
+        <?php
+            unset($_SESSION['message']);
+        }
+        ?>
+    </script>
 
 </body>
 
