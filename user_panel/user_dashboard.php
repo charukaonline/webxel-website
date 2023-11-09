@@ -10,18 +10,18 @@ if (!isset($_SESSION['user_name']) && ($_SESSION['user_email'])) {
 
 if (isset($_POST['submit-info'])) {
 
-    $name = mysqli_real_escape_string($conn, $_POST['fullName']);
-    $about = mysqli_real_escape_string($conn, $_POST['about']);
-    $country = mysqli_real_escape_string($conn, $_POST['country']);
-    $address = mysqli_real_escape_string($conn, $_POST['address']);
-    $contact_number = $_POST['contact_number'];
+    $user_name = mysqli_real_escape_string($conn, $_POST['fullName']);
+    $user_about = mysqli_real_escape_string($conn, $_POST['about']);
+    $user_country = mysqli_real_escape_string($conn, $_POST['country']);
+    $user_address = mysqli_real_escape_string($conn, $_POST['address']);
+    $user_contact_number = $_POST['contact_number'];
     $user_email = $_SESSION['user_email'];
 
-    $stmt = $conn->prepare("UPDATE login_and_register SET name=?, country=?, address=?, contact_number=?, about=? WHERE email=?");
-    $stmt->bind_param("ssssss", $name, $country, $address, $contact_number, $about, $user_email);
-    $stmt->execute();
+    $user_profile_update = $conn->prepare("UPDATE login_and_register SET name=?, country=?, address=?, contact_number=?, about=? WHERE email=?");
+    $user_profile_update->bind_param("ssssss", $user_name, $user_country, $user_address, $user_contact_number, $user_about, $user_email);
+    $user_profile_update->execute();
 
-    if ($stmt) {
+    if ($user_profile_update) {
         header('location: ./user_dashboard.php');
         alert("Profile Update Successfully.");
         exit();
