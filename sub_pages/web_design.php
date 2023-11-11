@@ -60,12 +60,12 @@
             <h2 id="vp" class="vp name">Business</h2>
             <p class="description">
             <ul>
-              <li>-Design customization</li>
-              <li>-Responsive design</li>
-              <li>-Content upload</li>
-              <li>-Admin features</li>
-              <li>-Search engine optimization </li>
-              <li>-Analytics integration </li>
+              <li>Design customization</li>
+              <li>Responsive design</li>
+              <li>Content upload</li>
+              <li>Admin features</li>
+              <li>Search engine optimization </li>
+              <li>Analytics integration </li>
             </ul>
             </p>
           </div>
@@ -77,12 +77,12 @@
             <h2 class="name">Ecommerce</h2>
             <p class="description">
             <ul>
-              <li>-Single product page </li>
-              <li>-Cart page </li>
-              <li>-Checkout & My Account page </li>
-              <li>-Order tracking system </li>
-              <li>-Payment gateway </li>
-              <li>-Tax, shipping & email integration </li>
+              <li>Single product page </li>
+              <li>Cart page </li>
+              <li>Checkout & My Account page </li>
+              <li>Order tracking system </li>
+              <li>Payment gateway </li>
+              <li>Tax, shipping & email integration </li>
             </ul>
             </p>
           </div>
@@ -93,12 +93,12 @@
             <h2 class="name">LMS</h2>
             <p class="description">
             <ul>
-              <li>-Course content management</li>
-              <li>-Instructor management</li>
-              <li>-Student management</li>
-              <li>-Turnitin integrated</li>
-              <li>-Payment gateway</li>
-              <li>-Zoom / Recording support</li>
+              <li>Course content management</li>
+              <li>Instructor management</li>
+              <li>Student management</li>
+              <li>Turnitin integrated</li>
+              <li>Payment gateway</li>
+              <li>Zoom / Recording support</li>
             </ul>
             </p>
 
@@ -112,11 +112,11 @@
             <h2 class="name">WordPress</h2>
             <p class="description">
             <ul>
-              <li>-Easy maintenance</li>
-              <li>-Responsive design</li>
-              <li>-Rich admin features</li>
-              <li>-Plugin support</li>
-              <li>-Regular updates</li>
+              <li>Easy maintenance</li>
+              <li>Responsive design</li>
+              <li>Rich admin features</li>
+              <li>Plugin support</li>
+              <li>Regular updates</li>
               <li>SEO friendly</li>
             </ul>
             </p>
@@ -130,12 +130,12 @@
             <h2 class="name">POS</h2>
             <p class="description">
             <ul>
-              <li>-Sales management</li>
-              <li>-Product management</li>
-              <li>-Payment gateway</li>
-              <li>-Inventory management</li>
-              <li>-Easy maintenance</li>
-              <li>-Customer preferences tracking</li>
+              <li>Sales management</li>
+              <li>Product management</li>
+              <li>Payment gateway</li>
+              <li>Inventory management</li>
+              <li>Easy maintenance</li>
+              <li>Customer preferences tracking</li>
             </ul>
             </p>
 
