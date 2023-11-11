@@ -152,10 +152,10 @@
   </div>
 
   <!-- Swiper JS -->
-  <script src="/assets/js/web-design/swiper-bundle.min.js"></script>
+  <script src="../assets/js/web-design/swiper-bundle.min.js"></script>
 
   <!-- JavaScript -->
-  <script src="/assets/js/web-design/web-design.js"></script>
+  <script src="../assets/js/web-design/web-design.js"></script>
 
 
 
