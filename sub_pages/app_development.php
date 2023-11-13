@@ -1,19 +1,12 @@
 <html>
 
 <head>
+<meta charset="UTF-8">
+    <meta name="description" content="WEBXEL, webxel, IT Service">
+    <meta name="keywords" content="HTML,CSS,JavaScript,PHP">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <style>
-
-
-    </style>
-
-
-
-    <meta name="viewport" content="with=devide-width, initial scale=1.0">
-
-    <title>App Development Services</title>
-
-    <link rel="stylesheet" href="deve.css">
+    <link rel="stylesheet" href="../assets/css/app_development.css">
 
     <link rel="preconnect" href="<link rel=" preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,6 +16,8 @@
         integrity="sha384-QYIZto+st3yW+o8+5OHfT6S482Zsvz2WfOzpFSXMF9zqeLcFV0/wlZpMtyFcZALm" crossorigin="anonymous">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <title>WEBXEL - App Development Services</title>
 </head>
 
 <body>
