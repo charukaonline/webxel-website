@@ -17,13 +17,13 @@ if (isset($_POST['submit-info'])) {
     $user_contact_number = $_POST['contact_number'];
     $user_email = $_SESSION['user_email'];
 
-    $user_profile_update = $conn->prepare("UPDATE login_and_register SET name=?, country=?, address=?, contact_number=?, about=? WHERE email=?");
+    $user_profile_update = $conn -> prepare("UPDATE login_and_register SET name = ?, country = ?, address = ?, contact_number = ?, about = ? WHERE email = ?");
     $user_profile_update->bind_param("ssssss", $user_name, $user_country, $user_address, $user_contact_number, $user_about, $user_email);
     $user_profile_update->execute();
 
     if ($user_profile_update) {
         header('location: ./user_dashboard.php');
-        alert("Profile Update Successfully.");
+        alert("User Profile Update Successfully.");
         exit();
     } else {
         header('location: ./user_dashboard.php');
@@ -46,7 +46,6 @@ function alert($message)
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>WEBXEL - User</title>
 
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900|Roboto+Slab:400,700" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
@@ -57,6 +56,9 @@ function alert($message)
     <link rel="stylesheet" href="../assets/css/admin_and_user.css">
 
     <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
+
+    <title>WEBXEL - User</title>
+    <link rel="icon" type="image/png" href="../assets/images/logo2.jpg">
 
 </head>
 
@@ -208,25 +210,25 @@ function alert($message)
                             <div class="change-password">
                                 <label for="currentPassword" class="change-password-content">Current Password</label>
                                 <div class="change-password-content-input">
-                                    <input name="password" type="password" class="form-control" id="currentPassword">
+                                    <input name="current-password" type="password" class="form-control" id="currentPassword">
                                 </div>
                             </div>
 
                             <div class="change-password">
                                 <label for="newPassword" class="change-password-content">New Password</label>
                                 <div class="change-password-content-input">
-                                    <input name="newpassword" type="password" class="form-control" id="newPassword">
+                                    <input name="new-password" type="password" class="form-control" id="newPassword">
                                 </div>
                             </div>
 
                             <div class="change-password">
                                 <label for="renewPassword" class="change-password-content">Re-enter New Password</label>
                                 <div class="change-password-content-input">
-                                    <input name="renewpassword" type="password" class="form-control" id="renewPassword">
+                                    <input name="confirm-new-password" type="password" class="form-control" id="renewPassword">
                                 </div>
                             </div>
 
-                            <input type="submit" value="Change Password" name="submit" class="submit-btn btn-primary">
+                            <input type="submit" value="Change Password" name="change-password" class="submit-btn btn-primary">
 
                         </form>
 

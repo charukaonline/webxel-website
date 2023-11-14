@@ -59,7 +59,6 @@ function alert($message)
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>WEBXEL - User Management</title>
 
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900|Roboto+Slab:400,700" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
@@ -70,6 +69,9 @@ function alert($message)
     <link id="stylesheet" href="../assets/css/admin_and_user.css" rel="stylesheet" />
 
     <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
+
+    <title>WEBXEL - User Management</title>
+    <link rel="icon" type="image/png" href="../assets/images/logo2.jpg">
 </head>
 
 <body>
@@ -104,6 +106,7 @@ function alert($message)
                                     <th>ID</th>
                                     <th>Name</th>
                                     <th>Email</th>
+                                    <th>Contact Number</th>
                                     <th>Status</th>
                                     <th>Action</th>
                                 </tr>
@@ -128,6 +131,7 @@ function alert($message)
                                                 <td><?= $record['id'] ?></td>
                                                 <td><?= $record['name'] ?></td>
                                                 <td><?= $record['email'] ?></td>
+                                                <td><?= $record['contact_number'] ?></td>
                                                 <td><span>Active</span></td>
                                                 <td>
                                                     <form action="" method="POST">

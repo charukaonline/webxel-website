@@ -17,7 +17,6 @@ if (!isset($_SESSION['admin_name'])) {
 <head>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<title>WEBXEL - Admin</title>
 
 	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900|Roboto+Slab:400,700" />
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
@@ -26,6 +25,9 @@ if (!isset($_SESSION['admin_name'])) {
 	<link rel="stylesheet" href="../assets/css/admin_and_user.css">
 
 	<script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
+
+	<title>WEBXEL - Admin</title>
+	<link rel="icon" type="image/png" href="../assets/images/logo2.jpg">
 </head>
 
 <body>

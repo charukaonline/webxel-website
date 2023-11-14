@@ -1,11 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-<!DOCTYPE html>
-<html lang="en">
 
 <head>
     <meta charset="UTF-8">
-    <meta name="description" content="WEBXEL, webxel, Technology Service, Technical Support, IT Service, web developing">
+    <meta name="description" content="WEBXEL, webxel, IT Service">
     <meta name="keywords" content="HTML,CSS,JavaScript,PHP">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -182,7 +180,7 @@
                     <h2>Sanoj Aminda</h2>
                     <p>Front End & Back End Developer</p>
                     <a href="https://github.com/DonSanoj"><i class='bx bxl-github'></i></a>
-                    <a href="https://www.linkedin.com/in/sanoj-aminda-b10a42279/"><i class='bx bxl-linkedin'></i></a>
+                    <a href="https://www.linkedin.com/in/sanoj-aminda/"><i class='bx bxl-linkedin'></i></a>
                     <a href="https://twitter.com/Sanoj1128"><i class='bx bxl-twitter'></i></a>
                 </div>
             </div>
