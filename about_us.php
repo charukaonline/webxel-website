@@ -182,7 +182,7 @@
                     <h2>Sanoj Aminda</h2>
                     <p>Front End & Back End Developer</p>
                     <a href="https://github.com/DonSanoj"><i class='bx bxl-github'></i></a>
-                    <a href="https://www.linkedin.com/in/sanoj-aminda-b10a42279/"><i class='bx bxl-linkedin'></i></a>
+                    <a href="https://www.linkedin.com/in/sanoj-aminda/"><i class='bx bxl-linkedin'></i></a>
                     <a href="https://twitter.com/Sanoj1128"><i class='bx bxl-twitter'></i></a>
                 </div>
             </div>

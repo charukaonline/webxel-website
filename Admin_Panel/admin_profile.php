@@ -23,7 +23,7 @@ if (isset($_POST['submit-info'])) {
 
     if ($admin_profile_update) {
         header('location: ./admin_profile.php');
-        alert("Profile Update Successfully.");
+        alert("Admin Profile Update Successfully.");
         exit();
     } else {
         header('location: ./admin_profile.php');
@@ -58,6 +58,7 @@ function alert($message)
     <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
 
     <title>WEBXEL - Admin Profile</title>
+    <link rel="icon" type="image/png" href="../assets/images/logo2.jpg">
 </head>
 
 <body>
@@ -113,7 +114,7 @@ function alert($message)
                 </ul>
                 <div class="info-card-content">
 
-                <?php
+                    <?php
                     $admin_email = $_SESSION['admin_email'];
                     $query = "SELECT * FROM login_and_register WHERE email='$admin_email'";
                     $result = mysqli_query($conn, $query);

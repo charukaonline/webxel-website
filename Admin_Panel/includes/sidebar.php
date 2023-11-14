@@ -10,12 +10,6 @@
             </a>
         </li>
         <li>
-            <a href="/Admin_Panel/page_clone.php">
-                <i class='bx bxs-copy-alt'></i>
-                <span class="text">Page Clone</span>
-            </a>
-        </li>
-        <li>
             <a href="/Admin_Panel/user_manage.php">
                 <i class='bx bxs-group'></i>
                 <span class="text">User Management</span>

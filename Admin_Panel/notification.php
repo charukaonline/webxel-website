@@ -38,7 +38,6 @@ if (isset($_POST['delete-order'])) {
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>WEBXEL - Admin Notification</title>
 
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900|Roboto+Slab:400,700" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
@@ -49,6 +48,9 @@ if (isset($_POST['delete-order'])) {
     <link id="stylesheet" href="../assets/css/admin_and_user.css" rel="stylesheet" />
 
     <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
+
+    <title>WEBXEL - Admin Notification</title>
+    <link rel="icon" type="image/png" href="../assets/images/logo2.jpg">
 </head>
 
 <body>
@@ -69,14 +71,6 @@ if (isset($_POST['delete-order'])) {
                         <h1>Notification</h1>
                     </div>
                 </div>
-
-                <!-- <section class="message" id="message">
-                    <h1>Message</h1>
-
-                    <div class="message-card">
-
-                    </div>
-                </section> -->
 
                 <section class="orders" id="orders">
                     <h1>Orders</h1>
@@ -120,8 +114,8 @@ if (isset($_POST['delete-order'])) {
                                                 <td>
                                                     <form action="" method="POST">
                                                         <input type="hidden" name="order_id" value="<?= $record['order_id'] ?>">
-                                                        <button class="btn-chat" type="submit" name="chat-btn">Chat Now</button>
-                                                        <button class="btn-accept" type="submit" name="accept-order">Accept Order</button>
+                                                        <button class="btn-chat" type="submit" name="chat-btn"><a href="mailto:<?php $_SESSION['admin_email'] ?>">Chat Now</a></button> <br>
+                                                        <button class="btn-accept" type="submit" name="accept-order">Accept Order</button> <br>
                                                         <button class="btn-delete" type="submit" name="delete-order">Delete</button>
                                                     </form>
                                                 </td>
