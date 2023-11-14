@@ -61,7 +61,8 @@
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
   <link rel="stylesheet" href="./assets/css/contact.css">
-  <link rel="stylesheet" href="./assets/css/index.css">
+  <link rel="stylesheet" href="./assets/css/header.css">
+  <link rel="stylesheet" href="./assets/css/footer.css">
 
   <script src="https://kit.fontawesome.com/c32adfdcda.js" crossorigin="anonymous"></script>
 
