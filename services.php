@@ -41,7 +41,7 @@
 	</div>
 	<div class="div2">
 
-		<img src="/assets/images/services-webdesign.webp">
+		<img src="/assets/images/services/services-webdesign.webp">
 
 		<div>
 			<h2>Web design & development</h2>
@@ -59,7 +59,7 @@
 			<a href="./sub_pages/marketing_advertising.php">See It In Action</a>
 		</div>
 
-		<img src="/assets/images/services-marketing-graphics.png">
+		<img src="/assets/images/services/services-marketing-graphics.png">
 	</div>
 
 
@@ -71,7 +71,7 @@
 
 	<div class="div5">
 
-		<img src="/assets/images/services-marketing-graphics.png">
+		<img src="/assets/images/services/services-marketing-graphics.png">
 
 		<div>
 			<h2>Graphic Design</h2>
@@ -89,13 +89,13 @@
 			<a href="./sub_pages/video_animation.php">READ MORE</a>
 		</div>
 
-		<img src="/assets/images/services-marketing-graphics.png">
+		<img src="/assets/images/services/services-marketing-graphics.png">
 
 	</div>
 
 	<div class="div7">
 
-		<img src="/assets/images/services-marketing-graphics.png">
+		<img src="/assets/images/services/services-marketing-graphics.png">
 
 		<div>
 			<h2>Content writing & Translation</h2>
@@ -110,7 +110,7 @@
 		<p>Phasellus sed nisi ac dui interdum semper. Etiam consequat fermentum sollicitudin. Fusce vulputate porta faucibus. Vivamus nulla tellus,<br> accumsan non efficitur id, pretium quis ante</p>
 		<a href="/about_us.php">WHO WE ARE</a>
 
-		<img src="/assets/images/services-custom-integrations.webp">
+		<img src="/assets/images/services/services-custom-integrations.webp">
 
 	</div>
 

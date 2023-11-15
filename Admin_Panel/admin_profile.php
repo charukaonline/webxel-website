@@ -82,7 +82,7 @@ function alert($message)
 
                 <div class="profile-card">
 
-                    <img src="../assets/images/nith-in-w1N1WmLDyHU-unsplash.jpg" alt="Profile" class="rounded-circle">
+                    <img src="../assets/images/profile.png" alt="Profile" class="rounded-circle">
                     <h2><?php echo $_SESSION['admin_name'] ?></h2>
                     <h3>Font End & Back End Developer</h3>
                     <div class="social-links mt-2">

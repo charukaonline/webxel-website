@@ -39,7 +39,7 @@ html {
     margin-top: 70px;
     height: 100vh;
     background: #000;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url('/assets/images/home-page-cover.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url('/assets/images/index/home-page-cover.jpg');
     background-size: cover;
 }
 
@@ -293,19 +293,19 @@ html {
 }
 
 .pop-services .flex-container .flex-box1 {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url('/assets/images/web-development-service-home.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url('/assets/images/index/web-development-service-home.jpg');
 }
 
 .pop-services .flex-container .flex-box2 {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url('/assets/images/video-animation-service-home.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url('/assets/images/index/video-animation-service-home.jpg');
 }
 
 .pop-services .flex-container .flex-box3 {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url('/assets/images/app-development-service-home.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url('/assets/images/index/app-development-service-home.jpg');
 }
 
 .pop-services .flex-container .flex-box4 {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url('/assets/images/graphic-design-service-home.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url('/assets/images/index/graphic-design-service-home.jpg');
 }
 
 .pop-services .flex-container .flex-box1 h3,
@@ -350,7 +350,7 @@ html {
     color: var(--font-color);
     background: var(--bg-color);
     padding-top: 70px;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url('/assets/images/home-page-cover.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url('/assets/images/index/home-page-cover.jpg');
     background-size: cover;
 }
 

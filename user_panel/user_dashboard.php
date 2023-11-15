@@ -85,7 +85,7 @@ function alert($message)
 
                 <div class="profile-card">
 
-                    <img src="../assets/images/nith-in-w1N1WmLDyHU-unsplash.jpg" alt="Profile" class="rounded-circle">
+                    <img src="../assets/images/profile.png" alt="Profile" class="rounded-circle">
                     <h2><?php echo $_SESSION['user_name'] ?></h2>
                     <h3>W&#x039E;&#x042;X&#x039E;L User</h3>
 

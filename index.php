@@ -21,7 +21,8 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-H6KFMBG8J1"></script>
 
     <title>WEBXEL</title>
-    <link rel="icon" type="image/png" href="./assets/images/logo2.jpg">
+    <link rel="icon" href="/assets/images/logo2.jpg" type="image/jpg">
+
 </head>
 
 <body>
