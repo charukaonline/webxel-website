@@ -17,7 +17,7 @@ if (isset($_POST['submit-info'])) {
     $user_contact_number = $_POST['contact_number'];
     $user_email = $_SESSION['user_email'];
 
-    $user_profile_update = $conn -> prepare("UPDATE login_and_register SET name = ?, country = ?, address = ?, contact_number = ?, about = ? WHERE email = ?");
+    $user_profile_update = $conn->prepare("UPDATE login_and_register SET name = ?, country = ?, address = ?, contact_number = ?, about = ? WHERE email = ?");
     $user_profile_update->bind_param("ssssss", $user_name, $user_country, $user_address, $user_contact_number, $user_about, $user_email);
     $user_profile_update->execute();
 
@@ -31,6 +31,28 @@ if (isset($_POST['submit-info'])) {
         exit();
     }
 }
+
+// if (isset($_POST['change-password'])) {
+//     $current_password = $_POST['current-password'];
+//     $new_password = $_POST['new-password'];
+//     $confirm_password = $_POST['confirm-new-password'];
+
+//     $user_email = $_SESSION['user_email'];
+
+//     $user_password_update = $conn->prepare("UPDATE login_and_register SET password = ? WHERE email = ?");
+//     $user_password_update->bind_param("ss", $new_password, $user_email);
+//     $user_password_update->execute();
+
+//     if ($user_password_update) {
+//         header('location: ./user_dashboard.php');
+//         alert("Password Update Successfully.");
+//         exit();
+//     } else {
+//         header('location: ./user_dashboard.php');
+//         alert("Something Went Wrong.");
+//         exit();
+//     }
+// }
 
 function alert($message)
 {
@@ -205,7 +227,7 @@ function alert($message)
 
                     <div class="profile-change-password" id="profile-change-password">
 
-                        <form>
+                        <form method="POST" action="">
 
                             <div class="change-password">
                                 <label for="currentPassword" class="change-password-content">Current Password</label>
@@ -260,18 +282,19 @@ function alert($message)
                                 </tr>
                             </thead>
                             <tbody>
-                                <?php
 
-                                function getAll($table)
+                                <?php
+                                function getAllOrders($table, $user_email)
                                 {
                                     global $conn;
-                                    $query = "SELECT * FROM $table";
+                                    $query = "SELECT * FROM $table WHERE email = '$user_email' ";
                                     return mysqli_query($conn, $query);
                                 }
 
-                                $orders = getAll("orders");
-
                                 if ($_SESSION['user_email']) {
+                                    $user_email = $_SESSION['user_email'];
+                                    $orders = getAllOrders("orders", $user_email);
+
                                     if ($orders) {
                                         if (mysqli_num_rows($orders) > 0) {
                                             while ($record = mysqli_fetch_assoc($orders)) {
@@ -294,6 +317,7 @@ function alert($message)
                                     }
                                 }
                                 ?>
+
                             </tbody>
                         </table>
                     </div>
