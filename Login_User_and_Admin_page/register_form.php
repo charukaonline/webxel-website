@@ -47,7 +47,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
-    <link rel="stylesheet" href="/assets/css/index.css">
+    <link rel="stylesheet" href="/assets/css/header.css">
+    <link rel="stylesheet" href="/assets/css/footer.css">
     <link rel="stylesheet" href="/assets/css/register_and_login.css">
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
@@ -59,34 +60,7 @@
 </head>
 <body>
 
-    <!-- Header section start -->
-    <header>
-
-        <a href="/index.php" class="logo">W&#x039E;&#x042;X&#x039E;L</a>
-
-        <nav class="navbar">
-            <a href="/index.php">Home</a>
-            <a href="#" id="service">Services</a>
-            <a href="#">Contact Us</a>
-            <a href="/about_us.php">About Us</a>
-        </nav>
-
-        <div class="icons">
-            <i class="fas fa-bars" id="menu-bars"></i>
-            <i class="fas fa-search" id="search-icon"></i>
-            <a href="/login_user_and_admin_page/login_form.php"><i class="fas fa-user" id="login-icon"></i></a>
-        </div>
-
-    </header>
-    <!-- Header section end -->
-
-    <!--Search form start-->
-    <form action="" id="search-form">
-        <input type="search" placeholder="Search here..." name="" id="search-box">
-        <button type="submit"><label for="search-box" class="fas fa-search"></label></button>
-        <i class="fas fa-times" id="search-form-close"></i>
-    </form>
-    <!-- Search form end -->
+    <?php include('../includes/navbar.php'); ?>
     
     <!-- Register form section start -->
     <section class="register-form-container">

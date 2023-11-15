@@ -40,7 +40,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url('../images/home-page-cover.jpg');
+  background-image: url('../images/index/home-page-cover.jpg');
   background-size: cover;
   background-position: center;
   position: relative;

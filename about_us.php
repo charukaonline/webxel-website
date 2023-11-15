@@ -44,7 +44,7 @@
     <!--Header section end-->
 
     <!--Search form start-->
-    <form action="" id="search-form" method="GET">
+    <form action="/search_result.php" id="search-form" method="GET">
         <input type="search" placeholder="Search here..." name="" id="search-box">
         <button type="submit"><label for="search-box" class="fas fa-search"></label></button>
         <i class="fas fa-times" id="search-form-close"></i>
@@ -87,7 +87,7 @@
         <div class="team-container">
 
             <div class="team-member">
-                <img src="assets/images/c.jpg" alt="Charuka Karunarathna">
+                <img src="assets/images/about_us/c.jpg" alt="Charuka Karunarathna">
                 <div class="team-member-info">
                     <h2>Charuka Karunarathna</h2>
                     <p>Front End & Back End Developer</p>
@@ -98,7 +98,7 @@
             </div>
 
             <div class="team-member">
-                <img src="assets/images/oliver-ragfelt-khV4fTy6-D8-unsplash.jpg" alt="Thanuka Rathnayake">
+                <img src="assets/images/about_us/oliver-ragfelt-khV4fTy6-D8-unsplash.jpg" alt="Thanuka Rathnayake">
                 <div class="team-member-info">
                     <h2>Thanuka Rathnayake</h2>
                     <p>Front End Developer</p>
@@ -109,7 +109,7 @@
             </div>
 
             <div class="team-member">
-                <img src="/assets/images/albert-dera-ILip77SbmOE-unsplash.jpg" alt="Shayan Hennedige">
+                <img src="/assets/images/about_us/albert-dera-ILip77SbmOE-unsplash.jpg" alt="Shayan Hennedige">
                 <div class="team-member-info">
                     <h2>Shayan Hennedige</h2>
                     <p>Front End Developer</p>
@@ -120,7 +120,7 @@
             </div>
 
             <div class="team-member">
-                <img src="/assets/images/joseph-gonzalez-iFgRcqHznqg-unsplash.jpg" alt="Mhateesha NSBM">
+                <img src="/assets/images/about_us/joseph-gonzalez-iFgRcqHznqg-unsplash.jpg" alt="Mhateesha NSBM">
                 <div class="team-member-info">
                     <h2>Mateesha </h2>
                     <p>Front End Developer</p>
@@ -131,7 +131,7 @@
             </div>
 
             <div class="team-member">
-                <img src="/assets/images/clarisse-meyer-x9cXI2eQLBw-unsplash.jpg" alt="Dulvanya">
+                <img src="/assets/images/about_us/clarisse-meyer-x9cXI2eQLBw-unsplash.jpg" alt="Dulvanya">
                 <div class="team-member-info">
                     <h2>Dulvanya</h2>
                     <p>Front End Developer</p>
@@ -142,7 +142,7 @@
             </div>
 
             <div class="team-member">
-                <img src="/assets/images/jim-flores-dE6c9RZoyL8-unsplash.jpg" alt="Hasini">
+                <img src="/assets/images/about_us/jim-flores-dE6c9RZoyL8-unsplash.jpg" alt="Hasini">
                 <div class="team-member-info">
                     <h2>Hasini Gunatilaka</h2>
                     <p>Front End Developer</p>
@@ -153,7 +153,7 @@
             </div>
 
             <div class="team-member">
-                <img src="/assets/images/pj-go-arPZr6tqsoA-unsplash.jpg" alt="Tharushi Perera">
+                <img src="/assets/images/about_us/pj-go-arPZr6tqsoA-unsplash.jpg" alt="Tharushi Perera">
                 <div class="team-member-info">
                     <h2>Tharushi Perera</h2>
                     <p>Front End Developer</p>
@@ -164,7 +164,7 @@
             </div>
 
             <div class="team-member">
-                <img src="/assets/images/slav-romanov-BrEAp01_m5w-unsplash.jpg" alt="Rosi">
+                <img src="/assets/images/about_us/slav-romanov-BrEAp01_m5w-unsplash.jpg" alt="Rosi">
                 <div class="team-member-info">
                     <h2>Samudi Ganawardana</h2>
                     <p>Front End Developer</p>
@@ -175,7 +175,7 @@
             </div>
 
             <div class="team-member">
-                <img src="/assets/images/nith-in-w1N1WmLDyHU-unsplash.jpg" alt="Don Sanoj">
+                <img src="/assets/images/about_us/nith-in-w1N1WmLDyHU-unsplash.jpg" alt="Don Sanoj">
                 <div class="team-member-info">
                     <h2>Sanoj Aminda</h2>
                     <p>Front End & Back End Developer</p>
@@ -191,22 +191,32 @@
 
     <section class="university">
 
-        <div>
+        <div class="university-content">
 
             <h1>We are from NSBM Green University</h1>
 
-            <p>NSBM Green University, the nation’s premier degree-awarding institute, is the first of its kind in South Asia. It is a government-owned self-financed institute that operates under the purview of the Ministry of Education. As a leading educational centre in the country,
-                NSBM has evolved into becoming a highly responsible higher education institute that offers unique opportunities and holistic education on par with international standards while promoting sustainable living.
-                NSBM offers a plethora of undergraduate and postgraduate degree programmes under five faculties: Business, Computing, Engineering, Science and Postgraduate & Professional Advancement. These study programmes at NSBM are either its own programmes recognied by the University Grants Commission and the Ministry of Higher Education or
-                world-class international programmes conducted in affiliation with top-ranked foreign universities such as University of Plymouth, UK, and Victoria University, Australia.
-                Focused on producing competent professionals and innovative entrepreneurs for the increasingly globalising world, NSBM nurtures its graduates to become productive citizens of society with their specialisation ranging in study fields such as
-                Business, Management, Computing, IT, Engineering, Science, Psychology, Nursing, Interior design, Quantity Surveying, Law and Multimedia.
-                Inspired by the vision of being Sri Lanka’s best-performing graduate school and being recognised internationally, NSBM currently achieves approximately 3000 new enrollments per year and houses above 11,000 students reading over 50 degree programmes under 4 faculties. Moreover, over the years,
-                NSBM Green University has gifted the nation with 14,000+ graduates and has proved its global presence with an alumni network spread all across the world.
-                Nestling on a 40-acre land amidst the greenery and serenity in Pitipana, Homagama, NSBM Green University, is an ultra-modern university complex constructed with state-of-the-art facilities and amenities that provides the perfect setting for high-quality teaching, learning and research.
-            </p>
+            <div class="main-content">
 
-            <img src="/assets/images/home-page-cover.jpg" alt="">
+                <div class="nsbm-image"><img src="/assets/images/NSBM.jpg" alt=""></div>
+
+                <div class="description">
+
+                    <p>NSBM Green University, the nation’s premier degree-awarding institute, is the first of its kind in South Asia. It is a government-owned self-financed institute that operates under the purview of the Ministry of Education. As a leading educational centre in the country,
+                        NSBM has evolved into becoming a highly responsible higher education institute that offers unique opportunities and holistic education on par with international standards while promoting sustainable living.
+                        NSBM offers a plethora of undergraduate and postgraduate degree programmes under five faculties: Business, Computing, Engineering, Science and Postgraduate & Professional Advancement. These study programmes at NSBM are either its own programmes recognied by the University Grants Commission and the Ministry of Higher Education or
+                        world-class international programmes conducted in affiliation with top-ranked foreign universities such as University of Plymouth, UK, and Victoria University, Australia.
+                        Focused on producing competent professionals and innovative entrepreneurs for the increasingly globalising world, NSBM nurtures its graduates to become productive citizens of society with their specialisation ranging in study fields such as
+                        Business, Management, Computing, IT, Engineering, Science, Psychology, Nursing, Interior design, Quantity Surveying, Law and Multimedia.
+                        Inspired by the vision of being Sri Lanka’s best-performing graduate school and being recognised internationally, NSBM currently achieves approximately 3000 new enrollments per year and houses above 11,000 students reading over 50 degree programmes under 4 faculties. Moreover, over the years,
+                        NSBM Green University has gifted the nation with 14,000+ graduates and has proved its global presence with an alumni network spread all across the world.
+                        Nestling on a 40-acre land amidst the greenery and serenity in Pitipana, Homagama, NSBM Green University, is an ultra-modern university complex constructed with state-of-the-art facilities and amenities that provides the perfect setting for high-quality teaching, learning and research.
+                    </p>
+
+                    <a href="https://www.nsbm.ac.lk/">Visit NSBM</a>
+
+                </div>
+
+            </div>
 
         </div>
 

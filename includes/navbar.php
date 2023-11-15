@@ -20,7 +20,7 @@
 <!--Header section end-->
 
 <!--Search form start-->
-<form action="" id="search-form" method="GET">
+<form action="/search_result.php" id="search-form" method="GET">
     <input type="search" placeholder="Search here..." name="" id="search-box">
     <button type="submit"><label for="search-box" class="fas fa-search"></label></button>
     <i class="fas fa-times" id="search-form-close"></i>
