@@ -46,7 +46,7 @@
 		<div>
 			<h2>Web design & development</h2>
 			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br> Nam pulvinar luctus sem, eget porta orci. Maecenas<br> molestie dui id diam feugiat, eu tincidunt mauris<br> aliquam. Duis commodo vitae ligula et interdum.<br> Maecenas faucibus mattis imperdiet. In rhoncus ac<br> ligula id ultricies.</p>
-			<a href="./sub_pages/web_develop.php">MORE INFO</a>
+			<a href="./sub_pages/order.php">MORE INFO</a>
 		</div>
 
 	</div>
