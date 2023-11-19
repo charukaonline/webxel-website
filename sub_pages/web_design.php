@@ -7,7 +7,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>WEBXEL - Web Development</title>
   <link rel="stylesheet" href="../assets/css/web-design/web-design.css">
-  <link rel="stylesheet" href="../assets/css/web-design/carousel.css">
   <link rel="stylesheet" href="../assets/css/web-design/swiper-bundle.min.css">
 
   <link rel="icon" type="image/png" href="../assets/images/logo2.jpg">
