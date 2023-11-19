@@ -5,8 +5,15 @@
 if (isset($_GET['search'])) {
     $search = mysqli_real_escape_string($conn, $_GET['search']);
 
-    $search_result = "SELECT * FROM services WHERE service_name LIKE '%$search%' ";
-    $result = mysqli_query($conn, $search_result);
+    $search_service = "SELECT * FROM services WHERE service_name LIKE '%$search%' ";
+    $search_service_result = mysqli_query($conn, $search_service);
+}
+
+if (isset($_GET['search'])) {
+    $search = mysqli_real_escape_string($conn, $_GET['search']);
+
+    $search_admins = "SELECT * FROM login_and_register WHERE name LIKE '%$search%' && user_type = 'admin' ";
+    $search_admins_result = mysqli_query($conn, $search_admins);
 }
 ?>
 
@@ -47,10 +54,87 @@ if (isset($_GET['search'])) {
         <div class="search-result">
             <div class="search-results">
                 <?php
-                if (isset($result) && mysqli_num_rows($result) > 0) {
-                    while ($row = mysqli_fetch_assoc($result)) {
-                        echo "<a href='services.php?id={$row['id']}'>";
+                if (isset($search_service_result) && mysqli_num_rows($search_service_result) > 0) {
+                    while ($row = mysqli_fetch_assoc($search_service_result)) {
+                        $path = '';
+                        switch ($row['service_name']) {
+
+                            case 'Web Designing':
+                                $path = './sub_pages/web_design.php';
+                                break;
+
+                            case 'Marketing & advertising':
+                                $path = './sub_pages/marketing_advertising.php';
+                                break;
+
+                            case 'App Development':
+                                $path = './sub_pages/app_development.php';
+                                break;
+
+                            case 'Graphic Design':
+                                $path = './sub_pages/graphic_design.php';
+                                break;
+
+                            case 'Video and Animation':
+                                $path = './sub_pages/video_animation.php';
+                                break;
+
+                            case 'Content writing & Translation':
+                                $path = './sub_pages/writing_&_translation.php';
+                                break;
+
+                            default:
+                                $path = './services.php';
+                                break;
+                        }
+                        echo "<a href='{$path}'>";
                         echo "<h2>{$row['service_name']}</h2>";
+                        echo "</a>";
+                    }
+                } elseif (isset($search_admins_result) && mysqli_num_rows($search_admins_result) > 0) {
+                    while ($row = mysqli_fetch_assoc($search_admins_result)) {
+                        $path = '';
+                        switch ($row['name']) {
+
+                            case 'Sanoj Aminda':
+                                $path = './about_us.php';
+                                break;
+
+                            case 'Charuka Karunarathna':
+                                $path = './about_us.php';
+                                break;
+
+                            case 'Thanuka Rathnayake':
+                                $path = './about_us.php';
+                                break;
+
+                            case 'Shayan Hennedige':
+                                $path = './about_us.php';
+                                break;
+
+                            case 'Mateesha':
+                                $path = './about_us.php';
+                                break;
+
+                            case 'Dulvanya':
+                                $path = './about_us.php';
+                                break;
+
+                            case 'Hasini Gunatilaka':
+                                $path = './about_us.php';
+                                break;
+
+                            case 'Tharushi Perera':
+                                $path = './about_us.php';
+                                break;
+
+                            case 'Samudi Gunawardana':
+                                $path = './about_us.php';
+                                break;
+                        }
+                        echo "<a href='{$path}'>";
+                        echo "<h2>{$row['name']}</h2>";
+                        echo "<h3>{$row['about']}</h3>";
                         echo "</a>";
                     }
                 } else {
@@ -63,6 +147,8 @@ if (isset($_GET['search'])) {
     </div>
 
     <?php include('./includes/footer.php'); ?>
+
+    <script src="./assets/js/index.js"></script>
 
 </body>
 
