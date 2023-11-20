@@ -116,7 +116,7 @@ if (isset($_GET['search'])) {
                                 $path = './about_us.php';
                                 break;
 
-                            case 'Dulvanya':
+                            case 'Nethma Dulvanya':
                                 $path = './about_us.php';
                                 break;
 
@@ -124,7 +124,7 @@ if (isset($_GET['search'])) {
                                 $path = './about_us.php';
                                 break;
 
-                            case 'Tharushi Perera':
+                            case 'Nethmi Pitawala':
                                 $path = './about_us.php';
                                 break;
 
