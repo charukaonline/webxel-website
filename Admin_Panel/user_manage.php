@@ -136,7 +136,7 @@ function alert($message)
                                                 <td>
                                                     <form action="" method="POST">
                                                         <input type="hidden" name="id" value="<?= $record['id'] ?>">
-                                                        <button class="btn-chat" type="submit" name="chat-btn">Chat Now</button>
+                                                        <button class="btn-chat" type="submit" name="chat-btn"><a href="mailto:<?php $_SESSION['admin_email'] ?>">Chat Now</a></button>
                                                         <button class="btn-delete" type="submit" name="delete-user">Delete</button>
                                                     </form>
                                                 </td>

@@ -134,14 +134,19 @@ section {
   color: #333;
 }
 
-.contact-form .input-box {
+.contact-form .field input {
   position: relative;
   width: 100%;
   margin-top: 10px;
 }
 
-.contact-form .input-box input,
-.contact-form .input-box textarea {
+.contact-form .field label {
+  top: 50px;
+  font-size: 16px;
+}
+
+.contact-form .field input,
+.contact-form .field textarea {
   width: 100%;
   padding: 5px 0;
   font-size: 16px;
@@ -152,40 +157,20 @@ section {
   resize: none;
 }
 
-.contact-form .input-box span {
-  position: absolute;
-  left: 0;
-  padding: 5px 0;
-  font-size: 16px;
-  margin: 10px 0;
-  pointer-events: none;
-  transition: 0.5s;
-  color: #666;
-}
-
-.contact-form .input-box input:focus~span,
-.contact-form .input-box textarea:focus~span {
-  color: var(--bg-color);
-  font-size: 12px;
-  transform: translateY(-20px);
-}
-
-.contact-form .input-box input[type="submit"] {
-  width: 100%;
-  background: var(--bg-color);
+#button {
+  background-color: var(--bg-color);
   color: var(--font-color);
+  padding: 10px 20px;
   border: none;
+  border-radius: 15px;
   cursor: pointer;
-  padding: 10px;
-  font-size: 18px;
-  border: 1px solid var(--bg-color);
-  transition: 0.5s;
-  border-radius: 25px;
+  font-size: 16px;
+  width: 100%;
 }
 
-.contact-form .input-box input[type="submit"]:hover {
-  background: var(--font-color);
-  color: var(--bg-color);
+#button:hover {
+  background-color: var(--btn-color);
+  color: var(--font-color);
 }
 
 @media (max-width: 991px) {

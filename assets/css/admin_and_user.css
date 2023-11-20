@@ -764,12 +764,19 @@ footer {
 	display: flex;
 }
 
-.admin-notification .orders .order tr td .btn-chat{
+.admin-notification .orders .order tr td .btn-chat {
 	background: var(--font-color);
+}
+
+.admin-notification .orders .order tr td .btn-chat a {
+	color: var(--bg-color);
 }
 
 .admin-notification .orders .order tr td .btn-chat:hover {
 	background: var(--btn-color);
+}
+
+.admin-notification .orders .order tr td .btn-chat a:hover {
 	color: var(--font-color);
 }
 

@@ -20,6 +20,20 @@
     <link rel="icon" type="image/png" href="./assets/images/logo2.jpg">
 </head>
 
+    <!--Start of Tawk.to Script-->
+    <script type="text/javascript">
+    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+    (function(){
+    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+    s1.async=true;
+    s1.src='https://embed.tawk.to/655b9f0991e5c13bb5b1f4be/1hfmuafig';
+    s1.charset='UTF-8';
+    s1.setAttribute('crossorigin','*');
+    s0.parentNode.insertBefore(s1,s0);
+    })();
+    </script>
+    <!--End of Tawk.to Script-->
+
 <body>
 
     <!--Header section start-->
@@ -155,7 +169,7 @@
             <div class="team-member">
                 <img src="assets/images/about_us/profiles/mathisha.jpg" alt="Mathisha">
                 <div class="team-member-info">
-                    <h2>Mathisha</h2>
+                    <h2>Dasun Mathisha</h2>
                     <p>Front End Developer</p>
                     <a href="#"><i class='bx bxl-github'></i></a>
                     <a href="#"><i class='bx bxl-linkedin'></i></a>

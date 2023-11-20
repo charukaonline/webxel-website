@@ -25,6 +25,20 @@
 
 </head>
 
+    <!--Start of Tawk.to Script-->
+    <script type="text/javascript">
+    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+    (function(){
+    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+    s1.async=true;
+    s1.src='https://embed.tawk.to/655b9f0991e5c13bb5b1f4be/1hfmuafig';
+    s1.charset='UTF-8';
+    s1.setAttribute('crossorigin','*');
+    s0.parentNode.insertBefore(s1,s0);
+    })();
+    </script>
+    <!--End of Tawk.to Script-->
+
 <body>
 
     <?php include('./includes/navbar.php'); ?>
@@ -37,36 +51,6 @@
             <h3 class="animation">Always ahead. Always in style.</h3>
             <a href="services.php" class="animation">Learn more <i class=" fas fa-regular fa-chevron-right"></i></a>
         </div>
-
-        <!-- Chat Bot section start -->
-        <div class="chat-btn">
-            <button id="init">START CHAT</button>
-        </div>
-        <div id="chat-section">
-            <div class="child" id="chatbot">
-                <div class="header">
-                    <div class="h-child">
-                        <img src="/assets/images/chatbot (1).png" alt="avatar" id="avatar">
-                        <div>
-                            <span class="name">Chatbot</span>
-                            <br>
-                            <span style="color:lawngreen">online</span>
-                        </div>
-                    </div>
-                    <div>
-                        <button class="refBtn"><i class="fa fa-refresh" onclick="initChat()"></i></button>
-                    </div>
-                </div>
-
-                <div id="chat-box">
-
-                </div>
-                <div class="chat-footer">
-                    <span>powered by @W&#x039E;&#x042;X&#x039E;L</span>
-                </div>
-            </div>
-        </div>
-        <!-- Chat Bot section end -->
 
     </section>
     <!-- Home section end -->
