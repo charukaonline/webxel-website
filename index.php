@@ -38,36 +38,6 @@
             <a href="services.php" class="animation">Learn more <i class=" fas fa-regular fa-chevron-right"></i></a>
         </div>
 
-        <!-- Chat Bot section start -->
-        <div class="chat-btn">
-            <button id="init">START CHAT</button>
-        </div>
-        <div id="chat-section">
-            <div class="child" id="chatbot">
-                <div class="header">
-                    <div class="h-child">
-                        <img src="/assets/images/chatbot (1).png" alt="avatar" id="avatar">
-                        <div>
-                            <span class="name">Chatbot</span>
-                            <br>
-                            <span style="color:lawngreen">online</span>
-                        </div>
-                    </div>
-                    <div>
-                        <button class="refBtn"><i class="fa fa-refresh" onclick="initChat()"></i></button>
-                    </div>
-                </div>
-
-                <div id="chat-box">
-
-                </div>
-                <div class="chat-footer">
-                    <span>powered by @W&#x039E;&#x042;X&#x039E;L</span>
-                </div>
-            </div>
-        </div>
-        <!-- Chat Bot section end -->
-
     </section>
     <!-- Home section end -->
 

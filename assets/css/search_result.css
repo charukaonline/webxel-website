@@ -60,11 +60,12 @@ html {
 }
 
 .search-results a {
+    margin-top: 50px;
     text-decoration: none;
     color: var(--bg-color);
     display: block;
     border: 1px solid var(--bg-color);
-    padding: 20px 50px;
+    padding: 80px 100px;
     border-radius: 15px;
     width: 100%;
     transition: background-color 0.3s ease;

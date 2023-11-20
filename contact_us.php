@@ -1,52 +1,3 @@
-<?php
-
-// use PHPMailer\PHPMailer\PHPMailer;
-// use PHPMailer\PHPMailer\SMTP;
-
-// if (isset($_POST['contact-btn'])) {
-//   $name = $_POST['contact-form-name'];
-//   $email = $_POST['contact-form-email'];
-//   $subject = $_POST['contact-form-subject'];
-//   $msg = $_POST['contact-form-msg'];
-
-//   require "vendor/autoload.php";
-
-//   $mail = new PHPMailer(true);
-
-//   $mail->isSMTP();
-//   $mail->SMTPAuth = true;
-
-//   $mail->SMTPDebug = SMTP::DEBUG_SERVER; // Enable verbose debug output
-//   $mail->Debugoutput = function ($str, $level) {
-//     echo "debug level $level; message: $str";
-//   };
-
-
-//   $mail->Host = "smtp.example.com";
-//   $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
-//   $mail->Port = 587;
-
-//   $mail->Username = "you@example.com";
-//   $mail->Password = "password";
-
-//   $mail->setFrom($email, $name);
-//   $mail->addAddress("sanojaminda@gmail.com", "Sanoj");
-
-//   $mail->Subject = $subject;
-//   $mail->Body = $msg;
-
-//   $mail->send();
-
-//   try {
-//     $mail->send();
-//     echo 'Message has been sent';
-//   } catch (Exception $e) {
-//     echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
-//   }
-// }
-
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -100,7 +51,7 @@
 
           <div class="contact-info-item">
             <div class="contact-info-icon">
-            <a href="tel:+94712345678"><i class="fas fa-phone"></i></a>
+              <a href="tel:+94712345678"><i class="fas fa-phone"></i></a>
             </div>
 
             <div class="contact-info-content">
@@ -122,27 +73,37 @@
         </div>
 
         <div class="contact-form">
-          <form action="" id="contact-form" method="POST">
+
+          <form id="form">
+
             <h2>Leave us a message.</h2>
-            <div class="input-box">
-              <input type="text" required="true" name="contact-form-name" placeholder="Full Name">
+
+            <div class="field">
+              <label for="subject">Subject:</label>
+              <input type="text" name="subject" id="subject">
             </div>
 
-            <div class="input-box">
-              <input type="email" required="true" name="contact-form-email" placeholder="Email">
+            <div class="field">
+              <label for="message">Message:</label>
+              <input type="text" name="message" id="message">
             </div>
 
-            <div class="input-box">
-              <input type="text" required="true" name="contact-form-subject" placeholder="Subject">
+            <div class="field">
+              <label for="to">To:</label>
+              <input type="text" name="to" id="to">
             </div>
 
-            <div class="input-box">
-              <textarea required="true" name="contact-form-msg" placeholder="Type your Message..."></textarea>
+            <div class="field">
+              <label for="sendername">Name:</label>
+              <input type="text" name="sendername" id="sendername">
             </div>
 
-            <div class="input-box">
-              <input type="submit" value="Send" name="contact-btn">
+            <div class="field">
+              <label for="replyto">From:</label>
+              <input type="text" name="replyto" id="replyto">
             </div>
+
+            <input type="submit" id="button" value="Send Email">
 
           </form>
         </div>
@@ -153,6 +114,12 @@
   </section>
 
   <script src="./assets/js/index.js"></script>
+  <script src="/assets/js/contact.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+  <script type="text/javascript">
+    emailjs.init('IgUc1ffbkghFmeCOK')
+  </script>
 
 </body>
 

@@ -115,3 +115,31 @@ hr {
     border-bottom: 1px solid #707793;
     margin: 20px auto;
 }
+
+/* Media queries */
+
+@media (max-width: 991px) {
+    html {
+        font-size: 55%;
+    }
+
+    section {
+        padding: 2rem;
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    .footer_wrapper {
+        width: 100%;
+    }
+
+}
+
+@media (max-width: 991px) {
+
+    html {
+        font-size: 50%;
+    }
+}

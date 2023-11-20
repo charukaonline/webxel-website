@@ -155,7 +155,7 @@
             <div class="team-member">
                 <img src="assets/images/about_us/profiles/mathisha.jpg" alt="Mathisha">
                 <div class="team-member-info">
-                    <h2>Mathisha</h2>
+                    <h2>Dasun Mathisha</h2>
                     <p>Front End Developer</p>
                     <a href="#"><i class='bx bxl-github'></i></a>
                     <a href="#"><i class='bx bxl-linkedin'></i></a>
