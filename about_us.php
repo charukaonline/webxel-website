@@ -87,29 +87,29 @@
         <div class="team-container">
 
             <div class="team-member">
-                <img src="assets/images/about_us/c.jpg" alt="Charuka Karunarathna">
+                <img src="assets/images/about_us/profiles/charuka.jpg" alt="Charuka">
                 <div class="team-member-info">
                     <h2>Charuka Karunarathna</h2>
-                    <p>Front End & Back End Developer</p>
-                    <a href="#"><i class='bx bxl-github'></i></a>
-                    <a href="#"><i class='bx bxl-linkedin'></i></a>
-                    <a href="#"><i class='bx bxl-twitter'></i></a>
+                    <p>Full Stack Developer</p>
+                    <a href="https://github.com/charukaonline"><i class='bx bxl-github'></i></a>
+                    <a href="https://linkedin.com/in/charukaonline"><i class='bx bxl-linkedin'></i></a>
+                    <a href="https://x.com/CharukaOnline"><i class='bx bxl-twitter'></i></a>
                 </div>
             </div>
 
             <div class="team-member">
-                <img src="assets/images/about_us/oliver-ragfelt-khV4fTy6-D8-unsplash.jpg" alt="Thanuka Rathnayake">
+                <img src="assets/images/about_us/profiles/sanoj.jpg" alt="Sanoj">
                 <div class="team-member-info">
-                    <h2>Thanuka Rathnayake</h2>
-                    <p>Front End Developer</p>
-                    <a href="#"><i class='bx bxl-github'></i></a>
-                    <a href="#"><i class='bx bxl-linkedin'></i></a>
-                    <a href="#"><i class='bx bxl-twitter'></i></a>
+                    <h2>Sanoj Aminda</h2>
+                    <p>Full Stack Developer</p>
+                    <a href="https://github.com/DonSanoj"><i class='bx bxl-github'></i></a>
+                    <a href="https://www.linkedin.com/in/sanoj-aminda/"><i class='bx bxl-linkedin'></i></a>
+                    <a href="https://twitter.com/Sanoj1128"><i class='bx bxl-twitter'></i></a>
                 </div>
             </div>
 
             <div class="team-member">
-                <img src="/assets/images/about_us/albert-dera-ILip77SbmOE-unsplash.jpg" alt="Shayan Hennedige">
+                <img src="assets/images/about_us/profiles/shayan.jpg" alt="Shayan">
                 <div class="team-member-info">
                     <h2>Shayan Hennedige</h2>
                     <p>Front End Developer</p>
@@ -120,9 +120,9 @@
             </div>
 
             <div class="team-member">
-                <img src="/assets/images/about_us/joseph-gonzalez-iFgRcqHznqg-unsplash.jpg" alt="Mhateesha NSBM">
+                <img src="assets/images/about_us/profiles/thanuka.jpg" alt="Thanuka">
                 <div class="team-member-info">
-                    <h2>Mateesha </h2>
+                    <h2>Thanuka Rathnayake</h2>
                     <p>Front End Developer</p>
                     <a href="#"><i class='bx bxl-github'></i></a>
                     <a href="#"><i class='bx bxl-linkedin'></i></a>
@@ -131,9 +131,20 @@
             </div>
 
             <div class="team-member">
-                <img src="/assets/images/about_us/clarisse-meyer-x9cXI2eQLBw-unsplash.jpg" alt="Dulvanya">
+                <img src="assets/images/about_us/profiles/dulvanya.jpg" alt="Dulvanya">
                 <div class="team-member-info">
-                    <h2>Dulvanya</h2>
+                    <h2>Nethma Dulvanya</h2>
+                    <p>Front End Developer</p>
+                    <a href="https://github.com/Dulvanya"><i class='bx bxl-github'></i></a>
+                    <a href="https://www.linkedin.com/in/nethma-dulvanya-26b198270/"><i class='bx bxl-linkedin'></i></a>
+                    <a href="#"><i class='bx bxl-twitter'></i></a>
+                </div>
+            </div>
+
+            <div class="team-member">
+                <img src="assets/images/about_us/profiles/hasini.jpg" alt="Hasini">
+                <div class="team-member-info">
+                    <h2>Hasini Gunathilake</h2>
                     <p>Front End Developer</p>
                     <a href="#"><i class='bx bxl-github'></i></a>
                     <a href="#"><i class='bx bxl-linkedin'></i></a>
@@ -142,9 +153,9 @@
             </div>
 
             <div class="team-member">
-                <img src="/assets/images/about_us/jim-flores-dE6c9RZoyL8-unsplash.jpg" alt="Hasini">
+                <img src="assets/images/about_us/profiles/mathisha.jpg" alt="Mathisha">
                 <div class="team-member-info">
-                    <h2>Hasini Gunatilaka</h2>
+                    <h2>Mathisha</h2>
                     <p>Front End Developer</p>
                     <a href="#"><i class='bx bxl-github'></i></a>
                     <a href="#"><i class='bx bxl-linkedin'></i></a>
@@ -153,9 +164,9 @@
             </div>
 
             <div class="team-member">
-                <img src="/assets/images/about_us/pj-go-arPZr6tqsoA-unsplash.jpg" alt="Tharushi Perera">
+                <img src="assets/images/about_us/profiles/nethmi.jpg" alt="Nethmi">
                 <div class="team-member-info">
-                    <h2>Tharushi Perera</h2>
+                    <h2>Nethmi Pitawala</h2>
                     <p>Front End Developer</p>
                     <a href="#"><i class='bx bxl-github'></i></a>
                     <a href="#"><i class='bx bxl-linkedin'></i></a>
@@ -164,24 +175,13 @@
             </div>
 
             <div class="team-member">
-                <img src="/assets/images/about_us/slav-romanov-BrEAp01_m5w-unsplash.jpg" alt="Rosi">
+                <img src="assets/images/about_us/profiles/samudi.jpg" alt="Samudi">
                 <div class="team-member-info">
                     <h2>Samudi Gunawardana</h2>
                     <p>Front End Developer</p>
                     <a href="#"><i class='bx bxl-github'></i></a>
                     <a href="#"><i class='bx bxl-linkedin'></i></a>
                     <a href="#"><i class='bx bxl-twitter'></i></a>
-                </div>
-            </div>
-
-            <div class="team-member">
-                <img src="/assets/images/about_us/nith-in-w1N1WmLDyHU-unsplash.jpg" alt="Don Sanoj">
-                <div class="team-member-info">
-                    <h2>Sanoj Aminda</h2>
-                    <p>Front End & Back End Developer</p>
-                    <a href="https://github.com/DonSanoj"><i class='bx bxl-github'></i></a>
-                    <a href="https://www.linkedin.com/in/sanoj-aminda/"><i class='bx bxl-linkedin'></i></a>
-                    <a href="https://twitter.com/Sanoj1128"><i class='bx bxl-twitter'></i></a>
                 </div>
             </div>
 
