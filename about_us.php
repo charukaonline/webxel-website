@@ -166,7 +166,7 @@
             <div class="team-member">
                 <img src="/assets/images/about_us/slav-romanov-BrEAp01_m5w-unsplash.jpg" alt="Rosi">
                 <div class="team-member-info">
-                    <h2>Samudi Ganawardana</h2>
+                    <h2>Samudi Gunawardana</h2>
                     <p>Front End Developer</p>
                     <a href="#"><i class='bx bxl-github'></i></a>
                     <a href="#"><i class='bx bxl-linkedin'></i></a>
