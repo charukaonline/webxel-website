@@ -53,6 +53,36 @@ html {
     color: var(--bg-color);
 }
 
-.search-result {
-    /* Add styles for search results if needed */
+.search-results {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
 }
+
+.search-results a {
+    text-decoration: none;
+    color: var(--bg-color);
+    display: block;
+    border: 1px solid var(--bg-color);
+    padding: 20px 50px;
+    border-radius: 15px;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+.search-results a:hover {
+    background-color: var(--header-background-color);
+}
+
+.search-results h2 {
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+}
+
+.search-results h3 {
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+}
+

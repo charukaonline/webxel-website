@@ -8,7 +8,7 @@
 		</div>
 	</form>
 	<input type="checkbox" id="switch-mode" hidden>
-	<label for="switch-mode" class="switch-mode"></label>
+	<!-- <label for="switch-mode" class="switch-mode"></label> -->
 	<a href="/Admin_Panel/notification.php" class="notification">
 		<i class='bx bxs-bell'></i>
 		<span class="num">8</span>
