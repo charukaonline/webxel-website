@@ -170,7 +170,7 @@ header .icons #menu-bars {
     /* margin-top: 80px; */
     height: 100vh;
     background: #000;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.88), rgba(0, 0, 0, 0.88)), url('../images/index/home-page-cover.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../images/index/home-page-cover.jpg');
     background-size: cover;
 }
 
