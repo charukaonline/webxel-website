@@ -100,18 +100,18 @@
 
           <div class="contact-info-item">
             <div class="contact-info-icon">
-              <i class="fas fa-phone"></i>
+            <a href="tel:+94712345678"><i class="fas fa-phone"></i></a>
             </div>
 
             <div class="contact-info-content">
               <h4>Phone</h4>
-              <p>+94</p>
+              <p>+94712345678</p>
             </div>
           </div>
 
           <div class="contact-info-item">
             <div class="contact-info-icon">
-              <a href="mailto:sanojaminda@gmail.com"><i class="fas fa-envelope"></i></a>
+              <a href="mailto:info@webxel.xyz"><i class="fas fa-envelope"></i></a>
             </div>
 
             <div class="contact-info-content">
@@ -123,7 +123,7 @@
 
         <div class="contact-form">
           <form action="" id="contact-form" method="POST">
-            <h2>Let's talk</h2>
+            <h2>Leave us a message.</h2>
             <div class="input-box">
               <input type="text" required="true" name="contact-form-name" placeholder="Full Name">
             </div>
