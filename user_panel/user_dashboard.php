@@ -8,6 +8,7 @@ if (!isset($_SESSION['user_name']) && ($_SESSION['user_email'])) {
     header('location: ../login_user_and_admin_page/login_form.php');
 }
 
+// Update User Profile
 if (isset($_POST['submit-info'])) {
 
     $user_name = mysqli_real_escape_string($conn, $_POST['fullName']);
@@ -32,27 +33,66 @@ if (isset($_POST['submit-info'])) {
     }
 }
 
-// if (isset($_POST['change-password'])) {
-//     $current_password = $_POST['current-password'];
-//     $new_password = $_POST['new-password'];
-//     $confirm_password = $_POST['confirm-new-password'];
+// Change User Password
+if (isset($_POST['user-current-password']) && isset($_POST['user-new-password']) && isset($_POST['user-confirm-new-password'])) {
 
-//     $user_email = $_SESSION['user_email'];
+    function validate($data)
+    {
+        $data = trim($data);
+        $data = stripslashes($data);
+        $data = htmlspecialchars($data);
+        return $data;
+    }
 
-//     $user_password_update = $conn->prepare("UPDATE login_and_register SET password = ? WHERE email = ?");
-//     $user_password_update->bind_param("ss", $new_password, $user_email);
-//     $user_password_update->execute();
+    $user_current_password = validate($_POST['user-current-password']);
+    $user_new_password = validate($_POST['user-new-password']);
+    $user_confirm_password = validate($_POST['user-confirm-new-password']);
 
-//     if ($user_password_update) {
-//         header('location: ./user_dashboard.php');
-//         alert("Password Update Successfully.");
-//         exit();
-//     } else {
-//         header('location: ./user_dashboard.php');
-//         alert("Something Went Wrong.");
-//         exit();
-//     }
-// }
+    if (empty($user_current_password)) {
+
+        header('location: ./user_dashboard.php');
+        alert("Current password is required");
+        exit();
+    } elseif (empty($user_new_password)) {
+
+        header('location: ./user_dashboard.php');
+        alert("New password is required");
+        exit();
+    } elseif ($user_new_password !== $user_confirm_password) {
+
+        header('location: ./user_dashboard.php');
+        alert("Password does not match.");
+        exit();
+    } else {
+
+        $user_current_password = md5($user_current_password);
+        $user_new_password = md5($user_new_password);
+        $user_email = $_SESSION['user_email'];
+
+        $user_check_password = "SELECT password FROM login_and_register WHERE email = '$user_email' && password = '$user_current_password' ";
+
+        $user_check_password_result = mysqli_query($conn, $user_check_password);
+
+        if (mysqli_num_rows($user_check_password_result) === 1) {
+
+            $user_change_password = "UPDATE login_and_register SET password = '$user_new_password' WHERE email = '$user_email' ";
+
+            $user_change_password_result = mysqli_query($conn, $user_change_password);
+
+            if ($user_change_password_result) {
+
+                header('location: ./user_dashboard.php');
+                alert("Password changed successfully.");
+                exit();
+            } else {
+
+                header('location: ./user_dashboard.php');
+                alert("Something went wrong.");
+                exit();
+            }
+        } 
+    }
+}
 
 function alert($message)
 {
@@ -84,19 +124,21 @@ function alert($message)
 
 </head>
 
-    <!--Start of Tawk.to Script-->
-    <script type="text/javascript">
-    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-    (function(){
-    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-    s1.async=true;
-    s1.src='https://embed.tawk.to/655b9f0991e5c13bb5b1f4be/1hfmuafig';
-    s1.charset='UTF-8';
-    s1.setAttribute('crossorigin','*');
-    s0.parentNode.insertBefore(s1,s0);
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+    var Tawk_API = Tawk_API || {},
+        Tawk_LoadStart = new Date();
+    (function() {
+        var s1 = document.createElement("script"),
+            s0 = document.getElementsByTagName("script")[0];
+        s1.async = true;
+        s1.src = 'https://embed.tawk.to/655b9f0991e5c13bb5b1f4be/1hfmuafig';
+        s1.charset = 'UTF-8';
+        s1.setAttribute('crossorigin', '*');
+        s0.parentNode.insertBefore(s1, s0);
     })();
-    </script>
-    <!--End of Tawk.to Script-->
+</script>
+<!--End of Tawk.to Script-->
 
 <body>
 
@@ -246,21 +288,21 @@ function alert($message)
                             <div class="change-password">
                                 <label for="currentPassword" class="change-password-content">Current Password</label>
                                 <div class="change-password-content-input">
-                                    <input name="current-password" type="password" class="form-control" id="currentPassword">
+                                    <input name="user-current-password" type="password" class="form-control" id="currentPassword">
                                 </div>
                             </div>
 
                             <div class="change-password">
                                 <label for="newPassword" class="change-password-content">New Password</label>
                                 <div class="change-password-content-input">
-                                    <input name="new-password" type="password" class="form-control" id="newPassword">
+                                    <input name="user-new-password" type="password" class="form-control" id="newPassword">
                                 </div>
                             </div>
 
                             <div class="change-password">
                                 <label for="renewPassword" class="change-password-content">Re-enter New Password</label>
                                 <div class="change-password-content-input">
-                                    <input name="confirm-new-password" type="password" class="form-control" id="renewPassword">
+                                    <input name="user-confirm-new-password" type="password" class="form-control" id="renewPassword">
                                 </div>
                             </div>
 
@@ -292,7 +334,6 @@ function alert($message)
                                     <th>Email</th>
                                     <th>Service Type</th>
                                     <th>Service Description</th>
-                                    <th>Contact Number</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -319,7 +360,6 @@ function alert($message)
                                                     <td><?= $record['email'] ?></td>
                                                     <td><?= $record['service_type'] ?></td>
                                                     <td><?= $record['description'] ?></td>
-                                                    <td><?= $record['number'] ?></td>
                                                 </tr>
                                 <?php
                                             }
