@@ -76,12 +76,12 @@
 
           <div class="contact-info-item">
             <div class="contact-info-icon">
-              <a href="mailto:info@webxel.xyz"><i class="fas fa-envelope"></i></a>
+              <a href="mailto:services@webxel.xyz"><i class="fas fa-envelope"></i></a>
             </div>
 
             <div class="contact-info-content">
               <h4>Email</h4>
-              <p>info@webxel.xyz</p>
+              <p>services@webxel.xyz</p>
             </div>
           </div>
         </div>
