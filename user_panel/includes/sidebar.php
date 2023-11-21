@@ -1,5 +1,5 @@
 <section id="sidebar">
-    <a href="/Admin_Panel/admin_dashboard.php" class="brand">
+    <a href="/admin_panel/admin_dashboard.php" class="brand">
         <span class="text">Welcome <?php echo ($_SESSION['user_name']); ?></span>
     </a>
     <ul class="side-menu top">
@@ -22,7 +22,7 @@
             </a>
         </li>
         <li>
-            <a href="/Login_User_and_Admin_page/logout.php" class="logout">
+            <a href="/login_user_and_admin_page/logout.php" class="logout">
                 <i class='bx bx-log-out'></i>
                 <span class="text">Log Out</span>
             </a>

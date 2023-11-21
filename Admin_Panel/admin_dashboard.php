@@ -5,7 +5,7 @@
 session_start();
 
 if (!isset($_SESSION['admin_name'])) {
-	header('location: /Login_User_and_Admin_page/login_form.php');
+	header('location: /login_user_and_admin_page/login_form.php');
 }
 
 ?>
@@ -32,12 +32,12 @@ if (!isset($_SESSION['admin_name'])) {
 
 <body>
 
-	<?php include('../Admin_Panel/includes/sidebar.php'); ?>
+	<?php include('../admin_panel/includes/sidebar.php'); ?>
 
 	<!-- CONTENT -->
 	<section id="content">
 
-		<?php include('../Admin_Panel/includes/navbar.php'); ?>
+		<?php include('../admin_panel/includes/navbar.php'); ?>
 
 		<!-- MAIN -->
 		<main>
@@ -145,7 +145,7 @@ if (!isset($_SESSION['admin_name'])) {
 					</ul>
 				</div>
 
-				<?php include('../Admin_Panel/includes/footer.php'); ?>
+				<?php include('../admin_panel/includes/footer.php'); ?>
 			</div>
 		</main>
 		<!-- MAIN -->
