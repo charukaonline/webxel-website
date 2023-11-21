@@ -36,7 +36,7 @@
                 
                     $_SESSION['user_name'] = $row['name'];
                     $_SESSION['user_email'] = $row['email'];
-                    header('location: /User_Panel/user_dashboard.php');    
+                    header('location: /user_panel/user_dashboard.php');    
                 
                 }
             }

@@ -5,7 +5,7 @@
 session_start();
 
 if (!isset($_SESSION['user_name']) && ($_SESSION['user_email'])) {
-    header('location: ../Login_User_and_Admin_page/login_form.php');
+    header('location: ../login_user_and_admin_page/login_form.php');
 }
 
 if (isset($_POST['submit-info'])) {
