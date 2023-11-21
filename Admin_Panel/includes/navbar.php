@@ -9,11 +9,11 @@
 	</form>
 	<input type="checkbox" id="switch-mode" hidden>
 	<!-- <label for="switch-mode" class="switch-mode"></label> -->
-	<a href="/Admin_Panel/notification.php" class="notification">
+	<a href="/admin_panel/notification.php" class="notification">
 		<i class='bx bxs-bell'></i>
 		<span class="num">8</span>
 	</a>
-	<a href="/Admin_Panel/admin_profile.php" class="profile">
+	<a href="/admin_panel/admin_profile.php" class="profile">
 		<i class="fas fa-user" id="login-icon"></i>
 	</a>
 </nav>
