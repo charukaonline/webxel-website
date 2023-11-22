@@ -714,20 +714,9 @@ footer {
 
 /* Admin Notification page */
 
-.admin-notification .message h1 {
-	padding-top: 50px;
-	font-size: 28px;
-	color: #2c2b2b;
-}
-
-.admin-notification .message .message-card {
-	margin-top: 50px;
-	margin-bottom: 40px;
-}
-
 .orders h1,
 .admin-notification .orders h1 {
-	padding-top: 20px;
+	padding-top: 40px;
 	font-size: 28px;
 	color: #2c2b2b;
 }
