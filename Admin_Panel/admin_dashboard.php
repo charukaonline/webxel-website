@@ -51,24 +51,24 @@ if (!isset($_SESSION['admin_name'])) {
 				<li>
 					<i class='bx bxs-calendar-check'></i>
 					<span class="text">
-						<h3>1020</h3>
-						<p>Orders</p>
+						<h3>11</h3>
+						<p>Complete Orders</p>
 					</span>
 				</li>
 				<li>
 					<i class='bx bxs-group'></i>
 					<span class="text">
-						<h3>2834</h3>
-						<p>Visitors</p>
+						<h3>9</h3>
+						<p>Active Clients</p>
 					</span>
 				</li>
-				<li>
+				<!-- <li>
 					<i class='bx bxs-dollar-circle'></i>
 					<span class="text">
 						<h3>$2543</h3>
 						<p>Total Revenue</p>
 					</span>
-				</li>
+				</li> -->
 			</ul>
 
 

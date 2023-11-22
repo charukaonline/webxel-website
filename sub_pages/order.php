@@ -75,7 +75,7 @@ function alert($message)
     <form action="" method="POST">
         <input type="text" name="name" placeholder="Enter your name" required>
         <input type="email" name="email" placeholder="Enter Email" required>
-        <input type="text" name="phone-number" placeholder="Enter contact number" required>
+        <input type="text" name="number" placeholder="Enter contact number" required>
 
         <label for="services">Choose a Service Type:</label>
         <select name="service_type" id="services">
