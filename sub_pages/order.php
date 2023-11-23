@@ -22,7 +22,7 @@ if (isset($_POST['order-btn'])) {
 
     $order_description = mysqli_real_escape_string($conn, $_POST['order-description']);
 
-    $insert_to_order = "INSERT INTO orders (name, email, number, service_type, description, order_status) VALUES ('$name', '$email', '$contact_number', '$service_type', '$order_description', 'pending')";
+    $insert_to_order = "INSERT INTO orders (name, email, number, service_type, description, order_status) VALUES ('$name', '$email', '$contact_number', '$service_type', '$order_description', 'Pending...')";
     $insert_to_order_run = mysqli_query($conn, $insert_to_order);
 
     if ($insert_to_order_run) {

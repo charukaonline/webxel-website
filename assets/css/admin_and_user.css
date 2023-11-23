@@ -459,6 +459,11 @@ body {
 	flex-basis: 500px;
 }
 
+#content main .table-data .order h2 {
+	font-size: 28px;
+	margin-bottom: 20px;
+}
+
 #content main .table-data .order table {
 	width: 100%;
 	border-collapse: collapse;
@@ -466,13 +471,14 @@ body {
 
 #content main .table-data .order table th {
 	padding-bottom: 12px;
-	font-size: 13px;
+	font-size: 16px;
 	text-align: left;
 	border-bottom: 1px solid var(--grey);
 }
 
 #content main .table-data .order table td {
 	padding: 16px 0;
+	font-size: 16px;
 }
 
 #content main .table-data .order table tr td:first-child {
@@ -561,9 +567,9 @@ footer {
 	line-height: 18px;
 }
 
-/* Admin Dashboard */
+/* Admin and User Dashboard */
 
-/* Admin profile page */
+/* Admin and User profile page */
 .profile-card {
 	width: 80%;
 	margin: 0 auto;
@@ -710,9 +716,9 @@ footer {
 	background: var(--btn-color);
 }
 
-/* Admin Profile page */
+/* Admin and User Profile page */
 
-/* Admin Notification page */
+/* Admin and User Notification page */
 
 .orders h1,
 .admin-notification .orders h1 {
@@ -731,7 +737,7 @@ footer {
 
 .orders .order-card .order tr th,
 .admin-notification .order-card .order tr th {
-	border: 1px solid var(--bg-color);
+	border: 1px solid var(--dark);
 	padding: 8px;
 	padding-top: 12px;
 	padding-bottom: 12px;
@@ -741,7 +747,7 @@ footer {
 
 .orders .order-card .order tr td,
 .admin-notification .order-card .order tr td {
-	border: 1px solid var(--bg-color);
+	border: 1px solid var(--dark-grey);
 	padding: 8px;
 	text-align: center;
 }
@@ -919,6 +925,37 @@ footer {
 .admin-page-user-manage .google-analytics a {
 	color: var(--btn-color);
 	font-size: 20px;
+}
+
+/* User Panel */
+
+.order-overview {
+    padding: 20px;
+	margin-top: 50px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+	width: 70%;
+	align-items: center;
+	justify-content: center;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.order-title {
+    font-weight: bold;
+	font-size: 16px;
+
+	flex: 1;
+	font-weight: 600;
+}
+
+.order-content {
+    margin-left: 10px;
+	font-size: 16px;
+	flex: 3;
+}
+
+.row {
+    margin-bottom: 10px;
 }
 
 

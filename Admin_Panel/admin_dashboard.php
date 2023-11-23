@@ -63,24 +63,19 @@ if (!isset($_SESSION['admin_name'])) {
 						<p>Active Clients</p>
 					</span>
 				</li>
-				<!-- <li>
-					<i class='bx bxs-dollar-circle'></i>
-					<span class="text">
-						<h3>$2543</h3>
-						<p>Total Revenue</p>
-					</span>
-				</li> -->
 			</ul>
 
 
 			<div class="table-data">
 				<div class="order">
+					<h2>Orders</h2><br>
 					<table>
 						<thead>
 							<tr>
 								<th>ID</th>
 								<th>User</th>
 								<th>Service Type</th>
+								<th>Accepted Admin Email</th>
 							</tr>
 						</thead>
 						<tbody>
@@ -93,16 +88,17 @@ if (!isset($_SESSION['admin_name'])) {
 								return mysqli_query($conn, $query);
 							}
 
-							$orders = getAll("orders");
+							$orders = getAll("confirmed_orders");
 
 							if ($orders) {
 								if (mysqli_num_rows($orders) > 0) {
 									while ($record = mysqli_fetch_assoc($orders)) {
 							?>
 										<tr>
-											<td><?= $record['order_id'] ?></td>
+											<td><?= $record['confirmed_order_id'] ?></td>
 											<td><?= $record['name'] ?></td>
 											<td><?= $record['service_type'] ?></td>
+											<td><?= $record['admin_email'] ?></td>
 										</tr>
 							<?php
 									}
@@ -115,35 +111,6 @@ if (!isset($_SESSION['admin_name'])) {
 							?>
 						</tbody>
 					</table>
-				</div>
-				<div class="todo">
-					<div class="head">
-						<h3>Todos</h3>
-						<i class='bx bx-plus'></i>
-						<i class='bx bx-filter'></i>
-					</div>
-					<ul class="todo-list">
-						<li class="completed">
-							<p>Todo List</p>
-							<i class='bx bx-dots-vertical-rounded'></i>
-						</li>
-						<li class="completed">
-							<p>Todo List</p>
-							<i class='bx bx-dots-vertical-rounded'></i>
-						</li>
-						<li class="not-completed">
-							<p>Todo List</p>
-							<i class='bx bx-dots-vertical-rounded'></i>
-						</li>
-						<li class="completed">
-							<p>Todo List</p>
-							<i class='bx bx-dots-vertical-rounded'></i>
-						</li>
-						<li class="not-completed">
-							<p>Todo List</p>
-							<i class='bx bx-dots-vertical-rounded'></i>
-						</li>
-					</ul>
 				</div>
 
 				<?php include('../admin_panel/includes/footer.php'); ?>
