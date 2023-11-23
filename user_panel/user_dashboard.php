@@ -90,7 +90,7 @@ if (isset($_POST['user-current-password']) && isset($_POST['user-new-password'])
                 alert("Something went wrong.");
                 exit();
             }
-        } 
+        }
     }
 }
 
@@ -326,56 +326,68 @@ function alert($message)
                     <h1>Orders</h1>
 
                     <div class="order-card">
-                        <table class="order">
-                            <thead>
-                                <tr>
-                                    <th>ID</th>
-                                    <th>Name</th>
-                                    <th>Email</th>
-                                    <th>Service Type</th>
-                                    <th>Service Description</th>
-                                    <th>Status</th>
-                                </tr>
-                            </thead>
-                            <tbody>
 
-                                <?php
-                                function getAllOrders($table, $user_email)
-                                {
-                                    global $conn;
-                                    $query = "SELECT * FROM $table WHERE email = '$user_email' ";
-                                    return mysqli_query($conn, $query);
-                                }
+                        <?php
+                        function getAllOrders($table, $user_email)
+                        {
+                            global $conn;
+                            $query = "SELECT * FROM $table WHERE email = '$user_email' ";
+                            return mysqli_query($conn, $query);
+                        }
 
-                                if ($_SESSION['user_email']) {
-                                    $user_email = $_SESSION['user_email'];
-                                    $orders = getAllOrders("orders", $user_email);
+                        if ($_SESSION['user_email']) {
+                            $user_email = $_SESSION['user_email'];
+                            $orders = getAllOrders("orders", $user_email);
 
-                                    if ($orders) {
-                                        if (mysqli_num_rows($orders) > 0) {
-                                            while ($record = mysqli_fetch_assoc($orders)) {
-                                ?>
-                                                <tr>
-                                                    <td><?= $record['order_id'] ?></td>
-                                                    <td><?= $record['name'] ?></td>
-                                                    <td><?= $record['email'] ?></td>
-                                                    <td><?= $record['service_type'] ?></td>
-                                                    <td><?= $record['description'] ?></td>
-                                                    <td><?= $record['order_status'] ?></td>
-                                                </tr>
-                                <?php
-                                            }
-                                        } else {
-                                            echo "No records found";
-                                        }
-                                    } else {
-                                        echo "Error in retrieving records: " . mysqli_error($conn); // Display any potential errors
+                            if ($orders) {
+                                if (mysqli_num_rows($orders) > 0) {
+                                    while ($record = mysqli_fetch_assoc($orders)) {
+                        ?>
+
+                                        <div class="order-overview" id="order-overview" style="background-color: <?php echo ($record['order_status'] === 'Accepted!') ? '#06c258' : (($record['order_status'] === 'Pending...') ? '#F58216' : 'inherit'); ?>">
+
+                                            <div class="row">
+                                                <div class="order-title">Order ID:</div>
+                                                <div class="order-content"><?= $record['order_id'] ?></div>
+                                            </div>
+
+                                            <div class="row">
+                                                <div class="order-title">Name:</div>
+                                                <div class="order-content"><?= $record['name'] ?></div>
+                                            </div>
+
+                                            <div class="row">
+                                                <div class="order-title">Email:</div>
+                                                <div class="order-content"><?= $record['email'] ?></div>
+                                            </div>
+
+                                            <div class="row">
+                                                <div class="order-title">Service Type:</div>
+                                                <div class="order-content"><?= $record['service_type'] ?></div>
+                                            </div>
+
+                                            <div class="row">
+                                                <div class="order-title">Description:</div>
+                                                <div class="order-content"><?= $record['description'] ?></div>
+                                            </div>
+
+                                            <div class="row">
+                                                <div class="order-title">Order Status:</div>
+                                                <div class="order-content"><?= $record['order_status'] ?></div>
+                                            </div>
+
+                                        </div>
+                        <?php
                                     }
+                                } else {
+                                    echo "No records found";
                                 }
-                                ?>
+                            } else {
+                                echo "Error in retrieving records: " . mysqli_error($conn);
+                            }
+                        }
+                        ?>
 
-                            </tbody>
-                        </table>
                     </div>
                 </section>
             </main>

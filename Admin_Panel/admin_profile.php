@@ -146,7 +146,7 @@ function alert($message)
 
                     <img src="../assets/images/profile.png" alt="Profile" class="rounded-circle">
                     <h2><?php echo $_SESSION['admin_name'] ?></h2>
-                    <h3>Font End & Back End Developer</h3>
+                    <h3>Full Stack Developer</h3>
                     <div class="social-links mt-2">
                         <a href="#" class="twitter"><i class='bx bxl-twitter'></i></a>
                         <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
