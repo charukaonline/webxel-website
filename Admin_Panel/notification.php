@@ -36,7 +36,7 @@ if (isset($_POST['accept-order'])) {
     $move_order_query = "INSERT INTO confirmed_orders (confirmed_order_id, admin_email, name, email, service_type, description, number)
                         SELECT order_id, ?, name, email, service_type, description, number FROM orders WHERE order_id = ? ";
 
-    $update_order_status_query = "UPDATE orders SET order_status = 'accepted' WHERE order_id = ?";
+    $update_order_status_query = "UPDATE orders SET order_status = 'Accepted!' WHERE order_id = ?";
     $stmt_update_status = mysqli_prepare($conn, $update_order_status_query);
     mysqli_stmt_bind_param($stmt_update_status, 'i', $order_id);
     mysqli_stmt_execute($stmt_update_status);
@@ -121,7 +121,7 @@ if (isset($_POST['accept-order'])) {
                                 function getAll($table)
                                 {
                                     global $conn;
-                                    $query = "SELECT * FROM $table  WHERE order_status = 'pending'";
+                                    $query = "SELECT * FROM $table  WHERE order_status = 'Pending...'";
                                     return mysqli_query($conn, $query);
                                 }
 
