@@ -8,6 +8,7 @@ if (!isset($_SESSION['admin_name']) && ($_SESSION['admin_email'])) {
     header('location: /login_user_and_admin_page/login_form.php');
 }
 
+// Update admin profile
 if (isset($_POST['submit-info'])) {
 
     $admin_name = mysqli_real_escape_string($conn, $_POST['fullName']);
@@ -29,6 +30,67 @@ if (isset($_POST['submit-info'])) {
         header('location: ./admin_profile.php');
         alert("Something Went Wrong.");
         exit();
+    }
+}
+
+// Change admin password
+if (isset($_POST['admin-current-password']) && isset($_POST['admin-new-password']) && isset($_POST['admin-confirm-new-password'])) {
+
+    function validate($data)
+    {
+        $data = trim($data);
+        $data = stripslashes($data);
+        $data = htmlspecialchars($data);
+        return $data;
+    }
+
+    $admin_current_password = validate($_POST['admin-current-password']);
+    $admin_new_password = validate($_POST['admin-new-password']);
+    $admin_confirm_password = validate($_POST['admin-confirm-new-password']);
+
+    if (empty($admin_current_password)) {
+
+        header('location: ./admin_profile.php');
+        alert("Current password is required");
+        exit();
+    } elseif (empty($admin_new_password)) {
+
+        header('location: ./admin_profile.php');
+        alert("New password is required");
+        exit();
+    } elseif ($admin_new_password !== $admin_confirm_password) {
+
+        header('location: ./admin_profile.php');
+        alert("Password does not match.");
+        exit();
+    } else {
+
+        $admin_current_password = md5($admin_current_password);
+        $admin_new_password = md5($admin_new_password);
+        $admin_email = $_SESSION['admin_email'];
+
+        $check_admin_password = "SELECT password FROM login_and_register WHERE email = '$admin_email' && password = '$admin_current_password' ";
+
+        $check_admin_password_result = mysqli_query($conn, $check_admin_password);
+
+        if (mysqli_num_rows($check_admin_password_result) === 1) {
+
+            $change_admin_password = "UPDATE login_and_register SET password = '$admin_new_password' WHERE email = '$admin_email' ";
+
+            $change_admin_password_result = mysqli_query($conn, $change_admin_password);
+
+            if ($change_admin_password_result) {
+
+                header('location: ./admin_profile.php');
+                alert("Password changed successfully.");
+                exit();
+            } else {
+
+                header('location: ./admin_profile.php');
+                alert("Something went wrong.");
+                exit();
+            }
+        } 
     }
 }
 
@@ -209,30 +271,30 @@ function alert($message)
 
                     <div class="profile-change-password" id="profile-change-password">
 
-                        <form>
+                        <form method="POST">
 
                             <div class="change-password">
                                 <label for="currentPassword" class="change-password-content">Current Password</label>
                                 <div class="change-password-content-input">
-                                    <input name="password" type="password" class="form-control" id="currentPassword">
+                                    <input name="admin-current-password" type="password" class="form-control" id="currentPassword">
                                 </div>
                             </div>
 
                             <div class="change-password">
                                 <label for="newPassword" class="change-password-content">New Password</label>
                                 <div class="change-password-content-input">
-                                    <input name="newpassword" type="password" class="form-control" id="newPassword">
+                                    <input name="admin-new-password" type="password" class="form-control" id="newPassword">
                                 </div>
                             </div>
 
                             <div class="change-password">
                                 <label for="renewPassword" class="change-password-content">Re-enter New Password</label>
                                 <div class="change-password-content-input">
-                                    <input name="renewpassword" type="password" class="form-control" id="renewPassword">
+                                    <input name="admin-confirm-new-password" type="password" class="form-control" id="renewPassword">
                                 </div>
                             </div>
 
-                            <input type="submit" value="Change Password" name="submit" class="submit-btn btn-primary">
+                            <input type="submit" value="Change Password" name="change-password" class="submit-btn btn-primary">
 
                         </form>
 

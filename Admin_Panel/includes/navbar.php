@@ -11,7 +11,7 @@
 	<!-- <label for="switch-mode" class="switch-mode"></label> -->
 	<a href="/admin_panel/notification.php" class="notification">
 		<i class='bx bxs-bell'></i>
-		<span class="num">8</span>
+		<span id="unreadMessages" class="num"></span>
 	</a>
 	<a href="/admin_panel/admin_profile.php" class="profile">
 		<i class="fas fa-user" id="login-icon"></i>

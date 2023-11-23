@@ -11,7 +11,7 @@
     <!-- <label for="switch-mode" class="switch-mode"></label> -->
     <a href="#notification" class="notification">
         <i class='bx bxs-bell'></i>
-        <span class="num">8</span>
+        <span class="num"></span>
     </a>
     <a href="#profile" class="profile">
         <img src="/assets/images/profile.png">
