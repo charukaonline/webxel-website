@@ -26,6 +26,7 @@ if (!isset($_SESSION['admin_name'])) {
 
 	<script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
 
+
 	<title>WEBXEL - Admin</title>
 	<link rel="icon" type="image/png" href="../assets/images/logo2.jpg">
 </head>

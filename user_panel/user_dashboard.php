@@ -334,6 +334,7 @@ function alert($message)
                                     <th>Email</th>
                                     <th>Service Type</th>
                                     <th>Service Description</th>
+                                    <th>Status</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -360,6 +361,7 @@ function alert($message)
                                                     <td><?= $record['email'] ?></td>
                                                     <td><?= $record['service_type'] ?></td>
                                                     <td><?= $record['description'] ?></td>
+                                                    <td><?= $record['order_status'] ?></td>
                                                 </tr>
                                 <?php
                                             }
