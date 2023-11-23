@@ -902,13 +902,17 @@ footer {
 	cursor: pointer;
 }
 
-.admin-page-user-manage .user-section .active-users tr td .btn-chat{
+.admin-page-user-manage .user-section .active-users tr td .btn-active{
 	background: var(--font-color);
 }
 
-.admin-page-user-manage .user-section .active-users tr td .btn-chat:hover {
-	background: var(--btn-color);
-	color: var(--font-color);
+.admin-page-user-manage .user-section .active-users tr td .btn-active:hover {
+	background: #06c258;
+	color: var(--bg-color);
+}
+
+.admin-page-user-manage .user-section .active-users tr td .btn-hold{
+	background: var(--orange);
 }
 
 .admin-page-user-manage .user-section .active-users tr td .btn-delete{

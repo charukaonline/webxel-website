@@ -1,58 +1,60 @@
 <?php
 
-    session_start();
+session_start();
 
-    if(isset($_SESSION['admin_name']) || isset($_SESSION['user_name'])) {
-        if(isset($_SESSION['admin_name'])) {
-            header('location: /admin_panel/admin_dashboard.php');
-        } 
-        elseif(isset($_SESSION['user_name'])) {
+if (isset($_SESSION['admin_name']) || isset($_SESSION['user_name'])) {
+    if (isset($_SESSION['admin_name'])) {
+        header('location: /admin_panel/admin_dashboard.php');
+    } elseif (isset($_SESSION['user_name'])) {
+        header('location: /user_panel/user_dashboard.php');
+    }
+} else {
+    include '../config.php';
+
+    if (isset($_POST['submit'])) {
+        $email = mysqli_real_escape_string($conn, $_POST['email']);
+        $pass = md5($_POST['password']);
+        $cpass = md5($_POST['cpassword']);
+        $user_type = $_POST['user-type'];
+
+        $select_from_register = "SELECT * FROM login_and_register WHERE email = '$email' && password = '$pass' && account_status = 'Active' ";
+
+        $result_for_register = mysqli_query($conn, $select_from_register);
+
+        if (mysqli_num_rows($result_for_register) > 0) {
+            $row = mysqli_fetch_array($result_for_register);
+
+            if ($row['user_type'] == 'admin') {
+
+                $_SESSION['admin_name'] = $row['name'];
+                $_SESSION['admin_email'] = $row['email'];
+                header('location: /admin_panel/admin_dashboard.php');
+            } elseif ($row['user_type'] == '') {
+
+                $_SESSION['user_name'] = $row['name'];
+                $_SESSION['user_email'] = $row['email'];
                 header('location: /user_panel/user_dashboard.php');
-        }
-    } else {
-        include '../config.php';
-
-        if(isset($_POST['submit'])){
-            $email = mysqli_real_escape_string($conn, $_POST['email']);
-            $pass = md5($_POST['password']);
-            $cpass = md5($_POST['cpassword']);
-            $user_type = $_POST['user-type'];
-
-            $select_from_register = "SELECT * FROM login_and_register WHERE email = '$email' && password = '$pass' ";
-
-            $result_for_register = mysqli_query($conn, $select_from_register);
-
-            if(mysqli_num_rows($result_for_register) > 0){
-                $row = mysqli_fetch_array($result_for_register);
-
-                if($row['user_type'] == 'admin') {
-                    
-                    $_SESSION['admin_name'] = $row['name'];
-                    $_SESSION['admin_email'] = $row['email'];
-                    header('location: /admin_panel/admin_dashboard.php');    
-                
-                }
-                elseif($row['user_type'] == '') {
-                
-                    $_SESSION['user_name'] = $row['name'];
-                    $_SESSION['user_email'] = $row['email'];
-                    header('location: /user_panel/user_dashboard.php');    
-                
-                }
             }
-            else {
-                $error[] = 'incorrect email or password!';
-            }
+        } else {
+            $error[] = 'Incorrect email or password.';
         }
     }
+}
+
+function alert($message)
+{
+    $_SESSION['message'] = $message;
+    exit();
+}
 
 ?>
 
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
@@ -70,24 +72,26 @@
 
 </head>
 
-    <!--Start of Tawk.to Script-->
-    <script type="text/javascript">
-    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-    (function(){
-    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-    s1.async=true;
-    s1.src='https://embed.tawk.to/655b9f0991e5c13bb5b1f4be/1hfmuafig';
-    s1.charset='UTF-8';
-    s1.setAttribute('crossorigin','*');
-    s0.parentNode.insertBefore(s1,s0);
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+    var Tawk_API = Tawk_API || {},
+        Tawk_LoadStart = new Date();
+    (function() {
+        var s1 = document.createElement("script"),
+            s0 = document.getElementsByTagName("script")[0];
+        s1.async = true;
+        s1.src = 'https://embed.tawk.to/655b9f0991e5c13bb5b1f4be/1hfmuafig';
+        s1.charset = 'UTF-8';
+        s1.setAttribute('crossorigin', '*');
+        s0.parentNode.insertBefore(s1, s0);
     })();
-    </script>
-    <!--End of Tawk.to Script-->
+</script>
+<!--End of Tawk.to Script-->
 
 <body>
 
     <?php include('../includes/navbar.php'); ?>
-    
+
     <!-- Sign in form section start -->
     <section class="signin-form-container">
 
@@ -96,11 +100,11 @@
             <h3>Sign in to W&#x039E;&#x042;X&#x039E;L</h3>
 
             <?php
-                if(isset($error)) {
-                    foreach($error as $error) {
-                        echo '<span class="error-msg">'.$error.'</span>';
-                    };
+            if (isset($error)) {
+                foreach ($error as $error) {
+                    echo '<span class="error-msg">' . $error . '</span>';
                 };
+            };
             ?>
 
             <input type="email" name="email" placeholder="Email" required>
@@ -130,7 +134,7 @@
                 <li>2. We've squashed some pesky bugs to ensure a smoother and more reliable experience for all users.</li>
                 <li>3. Our team has worked on optimizing various aspects of W&#x039E;&#x042;X&#x039E;L, resulting in faster load times and improved efficiency.</li>
             </ul>
-            
+
             <div class="footer-copyright">
                 <p>Copyright © W&#x039E;&#x042;X&#x039E;L 2023</p>
             </div>
@@ -140,6 +144,29 @@
     <!-- Footer section end -->
 
     <script src="/assets/js/index.js"></script>
+    <script>
+        <?php
+        if (isset($_SESSION['message'])) {
+        ?>
+            alertify.set('notifier', 'position', 'top-center');
+            alertify.success('<?= $_SESSION['message'] ?>');
+        <?php
+            unset($_SESSION['message']);
+        }
+        ?>
+    </script>
+
+    <script>
+        function togglePasswordVisibility() {
+            var passwordInput = document.getElementById("password");
+            if (passwordInput.type === "password") {
+                passwordInput.type = "text";
+            } else {
+                passwordInput.type = "password";
+            }
+        }
+    </script>
 
 </body>
+
 </html>
