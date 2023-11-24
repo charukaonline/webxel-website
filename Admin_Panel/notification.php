@@ -23,8 +23,35 @@ if (isset($_POST['delete-order'])) {
     if ($delete_order_run) {
         header('location: ./notification.php');
         alert("Order deleted.");
+    } else {
+        header('location: ./notification.php');
+        alert("Something went wrong.");
     }
-    else {
+}
+
+if (isset($_POST['accept-order'])) {
+    $order_id = mysqli_real_escape_string($conn, $_POST['order_id']);
+    $admin_email = $_SESSION['admin_email'];
+
+    $move_order_query = "INSERT INTO confirmed_orders (confirmed_order_id, admin_email, name, email, service_type, description, number)
+                        SELECT order_id, ?, name, email, service_type, description, number FROM orders WHERE order_id = ? ";
+
+    $update_order_status_query = "UPDATE orders SET order_status = 'Accepted!' WHERE order_id = ?";
+    $stmt_update_status = mysqli_prepare($conn, $update_order_status_query);
+    mysqli_stmt_bind_param($stmt_update_status, 'i', $order_id);
+    mysqli_stmt_execute($stmt_update_status);
+
+    $stmt = mysqli_prepare($conn, $move_order_query);
+
+    mysqli_stmt_bind_param($stmt, 'si', $admin_email, $order_id);
+
+    $move_order_result = mysqli_stmt_execute($stmt);
+
+    if ($move_order_result) {
+
+        header('location: ./notification.php');
+        alert("Order accepted!");
+    } else {
         header('location: ./notification.php');
         alert("Something went wrong.");
     }
@@ -73,7 +100,7 @@ if (isset($_POST['delete-order'])) {
                 </div>
 
                 <section class="orders" id="orders">
-                    <h1>Orders</h1>
+                    <h1>Pending Orders</h1>
 
                     <div class="order-card">
                         <table class="order">
@@ -94,7 +121,7 @@ if (isset($_POST['delete-order'])) {
                                 function getAll($table)
                                 {
                                     global $conn;
-                                    $query = "SELECT * FROM $table";
+                                    $query = "SELECT * FROM $table  WHERE order_status = 'Pending...'";
                                     return mysqli_query($conn, $query);
                                 }
 
@@ -134,6 +161,61 @@ if (isset($_POST['delete-order'])) {
                     </div>
                 </section>
 
+                <section class="orders" id="orders">
+                    <h1><?php echo $_SESSION['admin_name'] ?>'s Confirmed Orders</h1>
+
+                    <div class="order-card">
+                        <table class="order">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Name</th>
+                                    <th>Email</th>
+                                    <th>Service Type</th>
+                                    <th>Service Description</th>
+                                    <th>Contact Number</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <?php
+                                function getAllConfirmedOrders($table, $admin_email)
+                                {
+                                    global $conn;
+                                    $query = "SELECT * FROM $table WHERE admin_email = '$admin_email' ";
+                                    return mysqli_query($conn, $query);
+                                }
+
+                                if ($_SESSION['admin_email']) {
+                                    $admin_email = $_SESSION['admin_email'];
+                                    $confirmed_orders = getAllConfirmedOrders("confirmed_orders", $admin_email);
+
+                                    if ($confirmed_orders) {
+                                        if (mysqli_num_rows($confirmed_orders) > 0) {
+                                            while ($record = mysqli_fetch_assoc($confirmed_orders)) {
+                                ?>
+                                                <tr>
+                                                    <td><?= $record['confirmed_order_id'] ?></td>
+                                                    <td><?= $record['name'] ?></td>
+                                                    <td><?= $record['email'] ?></td>
+                                                    <td><?= $record['service_type'] ?></td>
+                                                    <td><?= $record['description'] ?></td>
+                                                    <td><?= $record['number'] ?></td>
+                                                </tr>
+                                <?php
+                                            }
+                                        } else {
+                                            echo "No records found";
+                                        }
+                                    } else {
+                                        echo "Error in retrieving records: " . mysqli_error($conn);
+                                    }
+                                }
+                                ?>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+
                 <?php include('./includes/footer.php'); ?>
 
             </main>
@@ -146,14 +228,14 @@ if (isset($_POST['delete-order'])) {
     <script src="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"></script>
     <script>
         <?php
-            if (isset($_SESSION['message'])) {
-                ?>
-                alertify.set('notifier', 'position', 'top-center');
-                alertify.success('<?= $_SESSION['message'] ?>');
-                <?php
-                    unset($_SESSION['message']);
-            }
-                ?>
+        if (isset($_SESSION['message'])) {
+        ?>
+            alertify.set('notifier', 'position', 'top-center');
+            alertify.success('<?= $_SESSION['message'] ?>');
+        <?php
+            unset($_SESSION['message']);
+        }
+        ?>
     </script>
 
 </body>

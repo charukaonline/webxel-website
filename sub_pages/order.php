@@ -11,7 +11,7 @@ if (!isset($_SESSION['user_name'])) {
 if (isset($_POST['order-btn'])) {
     $name = mysqli_real_escape_string($conn, $_POST['name']);
     $email = mysqli_real_escape_string($conn, $_POST['email']);
-    $contact_number = $_POST['phone_number'];
+    $contact_number = $_POST['number'];
     $service_type = $_POST['service_type'];
 
     // $file = isset($_POST['service-file-upload']) ? $_POST['service-file-upload'] : '';
@@ -22,7 +22,7 @@ if (isset($_POST['order-btn'])) {
 
     $order_description = mysqli_real_escape_string($conn, $_POST['order-description']);
 
-    $insert_to_order = "INSERT INTO orders (name, email, number, service_type, description) VALUES ('$name', '$email', '$contact_number', '$service_type', '$order_description')";
+    $insert_to_order = "INSERT INTO orders (name, email, number, service_type, description, order_status) VALUES ('$name', '$email', '$contact_number', '$service_type', '$order_description', 'Pending...')";
     $insert_to_order_run = mysqli_query($conn, $insert_to_order);
 
     if ($insert_to_order_run) {
@@ -75,7 +75,7 @@ function alert($message)
     <form action="" method="POST">
         <input type="text" name="name" placeholder="Enter your name" required>
         <input type="email" name="email" placeholder="Enter Email" required>
-        <input type="text" name="phone-number" placeholder="Enter contact number" required>
+        <input type="text" name="number" placeholder="Enter contact number" required>
 
         <label for="services">Choose a Service Type:</label>
         <select name="service_type" id="services">

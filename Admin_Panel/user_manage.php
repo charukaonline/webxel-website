@@ -45,6 +45,38 @@ if (isset($_POST['delete-user'])) {
     }
 }
 
+if (isset($_POST['account-active'])) {
+    $id = mysqli_real_escape_string($conn, $_POST['id']);
+
+    $account_status_active_query = "UPDATE login_and_register SET account_status = 'Active' WHERE id = '$id' ";
+
+    $account_status_active_query_run = mysqli_query($conn, $account_status_active_query);
+
+    if ($account_status_active_query_run) {
+        header('location: ./user_manage.php');
+        alert("User Account Active!");
+    } else {
+        header('location: ./user_manage.php');
+        alert("Something went wrong.");
+    }
+}
+
+if (isset($_POST['account-hold'])) {
+    $id = mysqli_real_escape_string($conn, $_POST['id']);
+
+    $account_status_hold_query = "UPDATE login_and_register SET account_status = 'Hold' WHERE id = '$id' ";
+
+    $account_status_hold_query_run = mysqli_query($conn, $account_status_hold_query);
+
+    if ($account_status_hold_query_run) {
+        header('location: ./user_manage.php');
+        alert("User Account Hold.");
+    } else {
+        header('location: ./user_manage.php');
+        alert("Something went wrong.");
+    }
+}
+
 function alert($message)
 {
     $_SESSION['message'] = $message;
@@ -132,11 +164,14 @@ function alert($message)
                                                 <td><?= $record['name'] ?></td>
                                                 <td><?= $record['email'] ?></td>
                                                 <td><?= $record['contact_number'] ?></td>
-                                                <td><span>Active</span></td>
+                                                <td style="background-color: <?php echo ($record['account_status'] === 'Active') ? '#06c258' : (($record['account_status'] === 'Hold') ? '#FD7238' : 'inherit'); ?>">
+                                                    <?= $record['account_status'] ?>
+                                                </td>
                                                 <td>
                                                     <form action="" method="POST">
                                                         <input type="hidden" name="id" value="<?= $record['id'] ?>">
-                                                        <button class="btn-chat" type="submit" name="chat-btn"><a href="mailto:<?php $_SESSION['admin_email'] ?>">Chat Now</a></button>
+                                                        <button class="btn-active" type="submit" name="account-active">Active Account</button>
+                                                        <button class="btn-hold" type="submit" name="account-hold">Hold Account</button>
                                                         <button class="btn-delete" type="submit" name="delete-user">Delete</button>
                                                     </form>
                                                 </td>
@@ -210,7 +245,7 @@ function alert($message)
                                                 <td><?= $record['id'] ?></td>
                                                 <td><?= $record['name'] ?></td>
                                                 <td><?= $record['email'] ?></td>
-                                                <td><span>Active</span></td>
+                                                <td style="background-color: #06c258;"><?= $record['account_status'] ?></td>
                                             </tr>
                                 <?php
                                         }
