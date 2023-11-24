@@ -187,6 +187,32 @@ function alert($message)
                                 ?>
                             </tbody>
                         </table>
+                        <form id="form">
+                            <div class="field">
+                                <label for="to_name">to_name</label>
+                                <input type="text" name="to_name" id="to_name">
+                            </div>
+                            <div class="field">
+                                <label for="from_name">from_name</label>
+                                <input type="text" name="from_name" id="from_name">
+                            </div>
+                            <div class="field">
+                                <label for="to">to</label>
+                                <input type="text" name="to" id="to">
+                            </div>
+                            <div class="field">
+                                <label for="reply_to">reply_to</label>
+                                <input type="text" name="reply_to" id="reply_to">
+                            </div>
+
+                            <input type="submit" id="button" value="Send Email">
+                        </form>
+
+                        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+                        <script type="text/javascript">
+                            emailjs.init('sB6Xsn2XV0uE9guSx')
+                        </script>
                     </div>
 
                 </section>
@@ -276,6 +302,7 @@ function alert($message)
     </section>
 
     <script src="../assets/js/admin.js"></script>
+    <script src="../assets/js/user_acc_hold.js"></script>
 
 </body>
 
