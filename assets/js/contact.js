@@ -6,13 +6,13 @@ document.getElementById('form')
 
         btn.value = 'Sending...';
 
-        const serviceID = 'default_service';
+        const serviceID = 'service_x039u3d';
         const templateID = 'template_ht78jr8';
 
         emailjs.sendForm(serviceID, templateID, this)
             .then(() => {
                 btn.value = 'Send Email';
-                alert('Email Send Successfully!');
+                alert('Email Sent Successfully!');
             }, (err) => {
                 btn.value = 'Send Email';
                 alert(JSON.stringify(err));
