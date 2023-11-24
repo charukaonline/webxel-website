@@ -21,19 +21,21 @@
   <link rel="icon" type="image/png" href="./assets/images/logo2.jpg">
 </head>
 
-  <!--Start of Tawk.to Script-->
-  <script type="text/javascript">
-  var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-  (function(){
-  var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-  s1.async=true;
-  s1.src='https://embed.tawk.to/655b9f0991e5c13bb5b1f4be/1hfmuafig';
-  s1.charset='UTF-8';
-  s1.setAttribute('crossorigin','*');
-  s0.parentNode.insertBefore(s1,s0);
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+  var Tawk_API = Tawk_API || {},
+    Tawk_LoadStart = new Date();
+  (function() {
+    var s1 = document.createElement("script"),
+      s0 = document.getElementsByTagName("script")[0];
+    s1.async = true;
+    s1.src = 'https://embed.tawk.to/655b9f0991e5c13bb5b1f4be/1hfmuafig';
+    s1.charset = 'UTF-8';
+    s1.setAttribute('crossorigin', '*');
+    s0.parentNode.insertBefore(s1, s0);
   })();
-  </script>
-  <!--End of Tawk.to Script-->
+</script>
+<!--End of Tawk.to Script-->
 
 <body>
 
@@ -98,13 +100,13 @@
             </div>
 
             <div class="field">
-              <label for="message">Message:</label>
-              <input type="text" name="message" id="message">
+              <label for="from">From:</label>
+              <input type="text" name="from" id="from">
             </div>
 
             <div class="field">
-              <label for="to">To:</label>
-              <input type="text" name="to" id="to">
+              <label for="message">Message:</label>
+              <input type="text" name="message" id="message">
             </div>
 
             <div class="field">
@@ -112,13 +114,7 @@
               <input type="text" name="sendername" id="sendername">
             </div>
 
-            <div class="field">
-              <label for="replyto">From:</label>
-              <input type="text" name="replyto" id="replyto">
-            </div>
-
             <input type="submit" id="button" value="Send Email">
-
           </form>
         </div>
 
