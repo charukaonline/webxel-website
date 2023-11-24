@@ -187,22 +187,28 @@ function alert($message)
                                 ?>
                             </tbody>
                         </table>
+
                         <form id="form">
+
+                            <h3>User account Blocking email</h3>
+
                             <div class="field">
-                                <label for="to_name">to_name</label>
-                                <input type="text" name="to_name" id="to_name">
+                                <label for="to_name">Account Holder Name:</label>
+                                <input type="text" name="to_name" id="to_name" required>
                             </div>
                             <div class="field">
-                                <label for="from_name">from_name</label>
-                                <input type="text" name="from_name" id="from_name">
+                                <label for="from_name">Sender Name:</label>
+                                <label for=""><span>*</span>Use WEBXEL name for this field</label>
+                                <input type="text" name="from_name" id="from_name" required>
                             </div>
                             <div class="field">
-                                <label for="to">to</label>
-                                <input type="text" name="to" id="to">
+                                <label for="to">To:</label>
+                                <input type="text" name="to" id="to" required>
                             </div>
                             <div class="field">
-                                <label for="reply_to">reply_to</label>
-                                <input type="text" name="reply_to" id="reply_to">
+                                <label for="reply_to">Reply To:</label>
+                                <label for=""><span>*</span>Use admin@webxel.xyz email address for this field</label>
+                                <input type="text" name="reply_to" id="reply_to" required>
                             </div>
 
                             <input type="submit" id="button" value="Send Email">

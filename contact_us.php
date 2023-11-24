@@ -96,22 +96,22 @@
 
             <div class="field">
               <label for="subject">Subject:</label>
-              <input type="text" name="subject" id="subject">
+              <input type="text" name="subject" id="subject" required>
             </div>
 
             <div class="field">
               <label for="from">From:</label>
-              <input type="text" name="from" id="from">
+              <input type="text" name="from" id="from" required>
             </div>
 
             <div class="field">
               <label for="message">Message:</label>
-              <input type="text" name="message" id="message">
+              <input type="text" name="message" id="message" required>
             </div>
 
             <div class="field">
               <label for="sendername">Name:</label>
-              <input type="text" name="sendername" id="sendername">
+              <input type="text" name="sendername" id="sendername" required>
             </div>
 
             <input type="submit" id="button" value="Send Email">
