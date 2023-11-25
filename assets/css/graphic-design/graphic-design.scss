@@ -1,0 +1,120 @@
+
+
+.graphic-main-section{
+    background-image: url(../../images/graphic-design/graphic-cover.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 800px;
+    padding-left: 8.33%;
+    padding-right: 8.33%;
+    
+    .graphic-heading-section{
+        width: 100%;
+        height: 500px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        font-size: 4rem;
+
+        h2{
+            font-weight: 400;
+        }
+    }
+}
+
+.graphic-content-section{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: minmax(600px, auto);
+    margin-left: 8.33%;
+    margin-right: 8.33%;
+    margin-top: 8rem;
+    margin-bottom: 8rem;
+    gap: 4rem;
+
+    .graphic-content-1{
+        display: flex;
+        flex-direction: column;
+
+        h2{
+            font-size: 4rem;
+            font-weight: 300;
+            margin-bottom: 2rem;
+
+            span{
+                font-weight: 500;
+            }
+        }
+    }
+
+    .graphic-content-2{
+        background-image: url(../../images/graphic-design/graphic-1.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    
+    .graphic-content-3{
+        background-image: url(../../images/graphic-design/graphic-2.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .graphic-content-5{
+        height: 400px;
+        background-image: url(../../images/graphic-design/graphic-3.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .graphic-content-6{
+        background-image: url(../../images/graphic-design/graphic-4.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        
+    }
+    
+}
+
+@media screen and (max-width:800px){
+    .graphic-content-section{
+        grid-template-columns: 1fr;
+
+        .img{
+            height: 400px;
+        }
+    }
+    
+}
+
+@media screen and (max-width:600px){
+    .graphic-main-section{
+        height: 500px;
+        
+        .graphic-heading-section{
+            height: 350px;
+
+            h2{
+                font-size: 3.5rem;
+            }
+        }
+
+    }
+
+    .graphic-content-section{
+        margin-top: 4rem;
+
+        .graphic-content-1{
+            h2{
+                font-size: 3rem;
+            }
+        }
+    }
+
+}
