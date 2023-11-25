@@ -73,7 +73,7 @@
 
 
           <div class="card-content">
-            <h2 class="name">Ecommerce</h2>
+            <h2 class="name">E-commerce</h2>
             <p class="description">
             <ul>
               <li>Single product page </li>
