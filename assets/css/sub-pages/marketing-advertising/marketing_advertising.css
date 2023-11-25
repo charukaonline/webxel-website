@@ -38,7 +38,7 @@ html {
     margin-top: 60px;
     height: 100vh;
     background: #000;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.80), rgba(0, 0, 0, 0.80)), url('/assets/images/app-development/image01.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.80), rgba(0, 0, 0, 0.80)), url('/assets/images/marketing_advertising/marketing_cover_image.jpg');
     background-size: cover;
 }
 

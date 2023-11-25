@@ -70,12 +70,12 @@
 	<div class="div3">
 
 		<div>
-			<h2>Marketing & advertising</h2>
+			<h2>Marketing & Advertising</h2>
 			<p>Ignite your brand with our dynamic marketing and advertising solutions. We strategize, create, and deliver impactful campaigns that resonate with your audience. From digital platforms to traditional media, our expertise ensures your message cuts through the noise, driving visibility, engagement, and ultimately, business growth. Elevate your brand with us.</p>
 			<a href="./sub_pages/marketing_advertising.php">See It In Action</a>
 		</div>
 
-		<img src="/assets/images/services/services-marketing-graphics.png">
+		<img src="/assets/images/services/marketing.jpg" style="border-radius: 15px;">
 	</div>
 
 
@@ -105,7 +105,7 @@
 			<a href="./sub_pages/video_animation.php">READ MORE</a>
 		</div>
 
-		<img src="/assets/images/services/services-marketing-graphics.png">
+		<img src="/assets/images/services/sanjeev-nagaraj-u4bvBOOpZB4-unsplash.jpg" style="border-radius: 25px;">
 
 	</div>
 

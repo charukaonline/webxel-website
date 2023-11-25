@@ -43,7 +43,7 @@
 
         <section class="course">
             <h1>Packages We Offer</h1>
-            <h2>Thank you for considering our services for your app design needs. </h2>
+            <h2>Thank you for considering our services for your Marketing and Advertising needs. </h2>
 
             <div class="row">
                 <div class="course-col">
