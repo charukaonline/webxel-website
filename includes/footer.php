@@ -29,7 +29,7 @@
 
             <div class="footer_links_column">
                 <div class="footer_links_column_title">About</div>
-                <a href="#">Our Team</a>
+                <a href="../about_us.php">Our Team</a>
                 <a href="#">Privacy Policy</a>
                 <a href="#">Terms of Use</a>
             </div>
