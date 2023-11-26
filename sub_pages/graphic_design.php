@@ -57,6 +57,11 @@
     <div class="img graphic-content-6"></div>
   </div>
 
+  <div class="order-now">
+    <h1>Want to work with us?</h1>
+    <a href="/sub_pages/order.php">Place Order Now</a>
+  </div>
+
   <?php include('../includes/footer.php'); ?>
 
 </body>
