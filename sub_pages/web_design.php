@@ -154,6 +154,11 @@
     <div class="swiper-pagination"></div>
   </div>
 
+  <div class="order-now">
+		<h1>Want to work with us?</h1>
+		<a href="/sub_pages/order.php">Place Order Now</a>
+	</div>
+
   <!-- Swiper JS -->
   <script src="../assets/js/web-design/swiper-bundle.min.js"></script>
 

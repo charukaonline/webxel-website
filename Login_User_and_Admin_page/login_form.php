@@ -151,6 +151,7 @@ function alert($message)
     <!-- Footer section end -->
 
     <script src="/assets/js/index.js"></script>
+    <script src="/assets/js/register_and_login.js"></script>
     <script>
         <?php
         if (isset($_SESSION['message'])) {
@@ -161,21 +162,6 @@ function alert($message)
             unset($_SESSION['message']);
         }
         ?>
-    </script>
-
-    <script>
-        function togglePassword() {
-            const passwordInput = document.getElementById('password-input');
-            const togglePassword = document.getElementById('toggle-password');
-
-            if (passwordInput.type === 'password') {
-                passwordInput.type = 'text';
-                togglePassword.innerHTML = '<i class="fas fa-eye-slash"></i>';
-            } else {
-                passwordInput.type = 'password';
-                togglePassword.innerHTML = '<i class="fas fa-eye"></i>';
-            }
-        }
     </script>
 
 </body>

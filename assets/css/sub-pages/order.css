@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900@display=swap');
+
+:root {
+    /* --bg-color: #0B0C10; */
+    /* --blue: #66FCF1; */
+    --bg-color: #000;
+    --header-background-color: rgba(251, 251, 253, .8);
+    --hover-color: rgba(0, 0, 0, 1);
+    --btn-color: rgb(41, 99, 215);
+    --font-color: #fff;
+    --box-shadow: 0 5px 10px rgba(0, 0, 0, .4);
+    --form-box-shadow: 0 10px 10px 10px rgb(40, 40, 40, 40);
+    --h2-font: 3rem;
+}
+
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    transition: all .2s linear;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 5.5rem;
+    scroll-behavior: smooth;
+    background-size: auto;
+}
+
+/* order form */
+.order-form-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 100px;
+    padding-top: 100px;
+    background: var(--header-background-color);
+}
+
+.order-form-container form {
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .4);
+    background: #fff;
+    text-align: center;
+    width: 500px;
+}
+
+.order-form-container form h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.order-form-container form input,
+.order-form-container form select {
+    width: 80%;
+    padding: 10px 15px;
+    font-size: 15px;
+    margin: 8px 0;
+    background: #eee;
+    border-radius: 8px;
+}
+
+.order-form-container form select option {
+    background: var(--font-color);
+}
+
+.order-form-container form .form-btn {
+    background: #eee;
+    color: rgba(0, 0, 0, .8);
+    text-transform: capitalize;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.order-form-container form .form-btn:hover {
+    background: var(--btn-color);
+    color: var(--font-color);
+}
+
+.order-form-container form .method {
+    margin: 0 1rem 0 1rem;
+}
+
+.order-form-container form .method-action {
+    margin-top: 1.5rem;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    color: var(--btn-color);
+    text-rendering: optimizeLegibility;
+}
+
+.order-form-container form .method-action i {
+    color: var(--bg-color);
+    font-size: 22px;
+}
+
+.order-form-container form p {
+    margin-top: 18px;
+    font-size: 16px;
+    color: rgba(0, 0, 0, .8);
+}
+
+.order-form-container form p a {
+    color: var(--btn-color);
+}
+
+.order-form-container form .error-msg {
+    margin: 10px 0;
+    display: block;
+    background: var(--header-background-color);
+    color: crimson;
+    border-radius: 5px;
+    font-size: 18px;
+    padding: 10px;
+}
+
+.desc {
+    margin-bottom: 20px;
+}
+
+.desc textarea {
+    width: 80%;
+    padding: 12px;
+    font-size: 16px;
+    margin: 10px 0;
+    background: #eee;
+    border-radius: 8px;
+    resize: vertical;
+}
+
+.option {
+    margin-top: 10px;
+}
+
+.option label {
+    font-size: 16px;
+}
