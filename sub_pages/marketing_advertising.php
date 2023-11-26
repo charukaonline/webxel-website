@@ -12,6 +12,7 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
     <link rel="stylesheet" href="../assets/css/sub-pages/marketing-advertising/marketing_advertising.css">
+    <link rel="stylesheet" href="../assets/css/sub-pages/web-design/swiper-bundle.min.css">
     <link rel="stylesheet" href="../assets/css/header.css">
     <link rel="stylesheet" href="../assets/css/footer.css">
 
@@ -38,109 +39,118 @@
 
     </section>
 
+    <section>
+        <div class="explore">
+            <h3> <span>W&#x039E;&#x042;X&#x039E;L Unleashed:</span> Elevating Brands through Digital Symphonies</h3>
+            <p> At our Web Design Studio, we're passionate about crafting digital experiences that not only captivate but also convert. Our team of talented designers and developers works tirelessly to bring your vision to life, creating stunning, user-friendly websites that leave a lasting impression. <br><br>
+                Whether you're starting from scratch or looking to revamp your existing site, we're here to make your online presence shine. We specialize in responsive designs, ensuring your website looks and performs flawlessly across all devices. From sleek and modern aesthetics to intuitive navigation and seamless functionality, we've got it all covered. <br><br>
+                Our process is collaborative and transparent. We'll work closely with you to understand your unique needs and goals, translating them into a web design that not only looks fantastic but also functions seamlessly. Our attention to detail is unmatched, and we're committed to delivering results that exceed your expectations. When you choose our Web Design Studio, you're choosing a partner in your online success journey. Let's embark on this creative adventure together and turn your digital dreams into reality. Get in touch with us today, and let's make your website stand out in the digital landscape!"</p>
+        </div>
+    </section>
 
     <div class="grad">
 
         <section class="course">
             <h1>Packages We Offer</h1>
-            <h2>Thank you for considering our services for your Marketing and Advertising needs. </h2>
+            <h3>Thank you for considering our services for your Marketing and Advertising needs. </h3>
 
-            <div class="row">
-                <div class="course-col">
-                    <h3>Silver</h3>
-                    <h5>Starting at $5,880</h5>
-                    <p>
-                        Landing Page<br>
-                        UI/UX Design Stage<br>
-                        iOS Development<br>
-                        Android Development<br>
-                        Custom Server Development<br>
-                    </p>
-                </div>
-                <div class="course-col">
-                    <h3>Gold</h3>
-                    <h5>Starting at $34,100</h5>
-                    <p>
-                        Market Demand Verification<br>
-                        Vision & Strategy Workshops<br>
-                        Wire-frames & Clickable Prototype<br>
-                        User Interviews Report<br>
-                        Cost Estimation<br>
-                    </p>
-                </div>
-                <div class="course-col">
-                    <h3>Platinum </h3>
-                    <h5> Starting at $ 50,000 </h5>
-                    <p> Native App<br>
-                        Product Definition<br>
-                        Product Design (UX & UI)<br>
-                        Figma Prototype<br>
-                        Delivery Time - Phase 1
-                        6 to 8 weeks
-                    </p>
-                </div>
-            </div>
+            <div class="slide-container swiper">
+                <div class="slide-content">
+                    <div class="card-wrapper swiper-wrapper">
+                        <div class="card swiper-slide">
 
-        </section>
+                            <div class="card-content">
+                                <h2 id="vp" class="vp name">Social Media</h2>
+                                <p class="description">
+                                <ul>
+                                    <li>Social-media account optimization</li>
+                                    <li>Content creation and posting schedule</li>
+                                    <li>Social media advertising campaigns</li>
+                                    <li>Analytics and performance reporting</li>
+                                </ul>
+                                </p>
+                            </div>
+                        </div>
 
-        <section class="work">
+                        <div class="card swiper-slide">
+                            <div class="card-content">
+                                <h2 class="name">SEO </h2>
+                                <p class="description">
+                                <ul>
+                                    <li>Website audit and optimization</li>
+                                    <li>Keyword research and strategy</li>
+                                    <li>On-page and off-page SEO</li>
+                                    <li>Monthly performance reports</li>
+                                </ul>
+                                </p>
+                            </div>
+                        </div>
 
-            <h1>Work we have done</h1>
-            <h2>We are pleased to provide you an idea about our work with the following.</h2>
+                        <div class="card swiper-slide">
+                            <div class="card-content">
+                                <h2 class="name">Pay-Per-Click</h2>
+                                <p class="description">
+                                <ul>
+                                    <li>Ad campaign management</li>
+                                    <li>Keyword research and targeting</li>
+                                    <li>Ad copywriting, design</li>
+                                    <li>Regular performance analysis</li>
+                                </ul>
+                                </p>
+                            </div>
+                        </div>
 
-            <div class="row">
-                <div class="work-col">
-                    <img src="../assets/images/app-development/image09.jpg">
-                    <div class="layer">
-                        <h3>Desktop Apps</h3>
+                        <div class="card swiper-slide">
+                            <div class="card-content">
+                                <h2 class="name">Video</h2>
+                                <p class="description">
+                                <ul>
+                                    <li>Video content creation and editing</li>
+                                    <li>YouTube channel management</li>
+                                    <li>Video SEO optimization</li>
+                                    <li>Video advertising campaigns</li>
+                                </ul>
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="card swiper-slide">
+                            <div class="card-content">
+                                <h2 class="name">Analytics</h2>
+                                <p class="description">
+                                <ul>
+                                    <li>Regular performance reports</li>
+                                    <li>Data analysis and insights</li>
+                                    <li>Recommendations for improvement</li>
+                                    <li>Goal tracking and ROI assessment</li>
+                                </ul>
+                                </p>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
-                <div class="work-col">
-                    <img src="../assets/images/app-development/image03.jpg">
-                    <div class="layer">
-                        <h3>Native Mobile Apps</h3>
-                    </div>
-                </div>
-                <div class="work-col">
-                    <img src="../assets/images/app-development/image07.jpg">
-                    <div class="layer">
-                        <h3>Legacy Apps</h3>
-                    </div>
-                </div>
-            </div>
-        </section>
 
-        <section class="moreOp">
-            <h1>Explore More</h1>
-            <h2>Unlocking possibilities in the digital realm, where innovation meets creativity.</h2>
-
-            <div class="line">
-                <div class="moreOp-col">
-                    <img src="../assets/images/app-development/image12.jpg">
-                    <h3>Developer Guides</h3>
-
-                    <p>Find training classes that describe how to accomplish a specific task with code samples you can
-                        re-use in your app</p>
-
-                </div>
-                <div class="moreOp-col">
-                    <img src="../assets/images/app-development/image13.jpg">
-                    <h3>Sample Code</h3>
-                    <p>Jump-start your development using these sample projects</p>
-                </div>
-                <div class="moreOp-col">
-                    <img src="../assets/images/app-development/image14.jpg">
-                    <h3>Quality guide lines</h3>
-                    <p>Build a high quality app with these design and behavior successfully</p>
-                </div>
-
+                <div class="swiper-button-next swiper-navBtn"></div>
+                <div class="swiper-button-prev swiper-navBtn"></div>
+                <div class="swiper-pagination"></div>
             </div>
 
         </section>
 
     </div>
 
+    <div class="order-now">
+		<h1>Want to work with us?</h1>
+		<a href="/sub_pages/order.php">Place Order Now</a>
+	</div>
+
     <?php include('../includes/footer.php') ?>
+
+    <!-- Swiper JS -->
+    <script src="../assets/js/web-design/swiper-bundle.min.js"></script>
+
+    <script src="../assets/js/marketing_advertising.js"></script>
 
 </body>
 
