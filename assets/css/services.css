@@ -103,6 +103,7 @@ html {
 }
 
 .div2 h2 {
+	margin-left: 50px;
 	font-size: 34px;
 	color: #000;
 	line-height: 80px;
@@ -110,9 +111,14 @@ html {
 }
 
 .div2 p {
+	margin-left: 50px;
 	color: gray;
 	line-height: 25px;
-	font-size: 20px;
+	font-size: 18px;
+}
+
+.div2 a {
+	margin-left: 50px;
 }
 
 .div2 a,
@@ -166,7 +172,7 @@ html {
 .div3 p {
 	color: gray;
 	line-height: 25px;
-	font-size: 20px;
+	font-size: 18px;
 }
 
 .div4 {
@@ -220,7 +226,7 @@ html {
 .div5 p {
 	color: gray;
 	line-height: 25px;
-	font-size: 20px;
+	font-size: 18px;
 }
 
 .div6 {
@@ -248,7 +254,7 @@ html {
 .div6 p {
 	color: var(--font-color);
 	line-height: 25px;
-	font-size: 20px;
+	font-size: 18px;
 }
 
 .div6 a,
@@ -297,7 +303,7 @@ html {
 .div7 p {
 	color: var(--font-color);
 	line-height: 25px;
-	font-size: 20px;
+	font-size: 18px;
 }
 
 .div8 {
