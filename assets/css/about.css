@@ -170,7 +170,7 @@ header .icons #menu-bars {
     /* margin-top: 80px; */
     height: 100vh;
     background: #000;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url('../images/index/home-page-cover.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url('../images/about.jpg');
     background-size: cover;
 }
 
@@ -182,7 +182,6 @@ header .icons #menu-bars {
     color: var(--font-color);
     font-size: 54px;
 }
-
 
 .about-section-1 .intro h3 {
     position: absolute;
