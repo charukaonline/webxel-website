@@ -126,6 +126,22 @@ html {
     padding: 10px;
 }
 
+.signin-form-container .email,
+.signin-form-container .password {
+    position: relative;
+}
+
+.signin-form-container .email i,
+.signin-form-container .password i {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    user-select: none;
+    font-size: 14px;
+}
+
 /* Register form */
 .register-form-container {
     min-height: 100vh;
@@ -196,6 +212,26 @@ html {
     border-radius: 5px;
     font-size: 18px;
     padding: 10px;
+}
+
+.register-form-container .name,
+.register-form-container .email,
+.register-form-container .password,
+.register-form-container .confirm-password {
+    position: relative;
+}
+
+.register-form-container .name i,
+.register-form-container .email i,
+.register-form-container .password i,
+.register-form-container .confirm-password i {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    user-select: none;
+    font-size: 14px;
 }
 
 /* Footer For Sign in and register forms*/

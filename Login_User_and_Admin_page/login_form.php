@@ -107,8 +107,15 @@ function alert($message)
             };
             ?>
 
-            <input type="email" name="email" placeholder="Email" required>
-            <input type="password" name="password" placeholder="Password">
+            <div class="email">
+                <input type="email" name="email" placeholder="Email" required>
+                <span><i class='bx bxs-envelope'></i></span>
+            </div>
+
+            <div class="password">
+                <input type="password" name="password" id="password-input" placeholder="Password">
+                <span id="toggle-password" onclick="togglePassword()"><i class="fas fa-eye"></i></span>
+            </div>
 
             <input type="submit" name="submit" value="Sign in" class="form-btn">
 
@@ -157,12 +164,16 @@ function alert($message)
     </script>
 
     <script>
-        function togglePasswordVisibility() {
-            var passwordInput = document.getElementById("password");
-            if (passwordInput.type === "password") {
-                passwordInput.type = "text";
+        function togglePassword() {
+            const passwordInput = document.getElementById('password-input');
+            const togglePassword = document.getElementById('toggle-password');
+
+            if (passwordInput.type === 'password') {
+                passwordInput.type = 'text';
+                togglePassword.innerHTML = '<i class="fas fa-eye-slash"></i>';
             } else {
-                passwordInput.type = "password";
+                passwordInput.type = 'password';
+                togglePassword.innerHTML = '<i class="fas fa-eye"></i>';
             }
         }
     </script>
