@@ -1,159 +1,67 @@
-<?php
-
-	
-
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="../assets/css/logo_design.css">
+  <meta charset="UTF-8">
+  <meta name="description" content="WEBXEL, webxel, IT Service">
+  <meta name="keywords" content="HTML,CSS,JavaScript,PHP">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+  <link rel="stylesheet" href="../assets/css/sub-pages/video-animation/video-animation.css">
+  <link rel="stylesheet" href="../assets/css/header.css">
+  <link rel="stylesheet" href="../assets/css/footer.css">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <script src="https://kit.fontawesome.com/c4254e24a8.js"></script>
+
+  <title>WEBXEL - Video & Animation</title>
+  <link rel="icon" href="/assets/images/logo2.jpg" type="image/jpg">">
 </head>
 
 <body>
 
-    <?php include('../includes/navbar.php'); ?>
+  <?php include('../includes/navbar.php'); ?>
 
-    <div class="Video">
-        <div class="content-some">
-            We design the <br>
-            picture perfect logs
-        </div>
-        <div class="video-section">
-            <video src="image /  Circle Round Minimal Initials Photography Logo Video.mov" style="border-radius: 15%;" controls>
+  <div class="video-animation-main-section top-section">
 
-            </video>
-        </div>
+    <div class="video-animation-heading-section">
+      <h1>Video & Animation</h1>
+      <h3>Designing the Future: Where Creativity Meets Innovation.</h3>
+      <a href="../sub_pages/order.php">Place Order Now</a>
     </div>
-    <div class=content>
-        <p> Certainly, here is the revised paragraph with the inclusion of "WEBXEL" in the content:
+  </div>
 
-            "In today’s competitive landscape, every company requires a compelling visual identity to stand out from the crowd. A distinctive logo, captivating colors, unique wordmark, carefully selected typography, and thoughtful integration of visual elements such as images and iconography collectively contribute to a powerful and lasting first impression. At WEBXEL, we simplify the process of collaborating with experienced and imaginative specialists from around the globe to craft and cultivate your brand through creative and distinctive logo design services in Sri Lanka.
-
-            A logo is not only a piece of art but also serves as the cornerstone on which your business can establish a memorable brand identity. Consistently employing a unique logo across various company platforms, including your website, packaging, labels, social media, and printed materials, can significantly enhance your brand's visibility. When your logo sets you apart from the competition, it becomes timeless. A well-crafted logo encapsulates the essence of the company it represents in a single glance. Every firm has distinct needs, and at WEBXEL, we offer you an unparalleled logo design experience at the most competitive pricing in the industry.
-
-            Your brandmark not only captures the attention of your target audience but also fosters brand loyalty among consumers. With affordable creative services at WEBXEL, developing your brand identity is now within your budget. As the leading logo design service provider in Sri Lanka, we encourage you to acquaint yourself with the history of logo design and stay updated with the latest logo design trends before embarking on your logo creation journey.
-
-            Familiarizing yourself with various logotypes, their purposes, and the related industries in which they are used will enhance your understanding of effective branding. Whether you opt for our custom logo design services or choose to work with a logo designer even on a tight budget, WEBXEL ensures that you receive the exceptional service you need for your brand."</p>
+  <div class="video-animation-content-section">
+    <div class="video-animation-content-1">
+      <h2> See your dream <span> within </span> pixels. </h2>
+      <p>Video and animation form a dynamic and versatile realm within the creative sphere, fusing artistic expression with technological innovation to convey messages in a visually captivating manner. Grounded in the fusion of creativity and digital advancements, this discipline serves as a potent medium for storytelling and conveying intricate ideas. 
+      In the realm of branding, videography plays a pivotal role in creating a distinctive visual identity. A well-executed video can encapsulate a brand's personality, values, and story. This includes considerations of cinematography style, color grading, and overall visual consistency. By maintaining coherence in videography across different contexts and channels, brands can establish recognition and foster trust with their audiences. <br><br>
+        From promotional videos and advertisements to immersive animations and interactive content, the video and animation domain plays a pivotal role in shaping the visual narrative for individuals, businesses, and organizations. It is a transformative tool that engages audiences and leaves a lasting impact by bringing ideas to life through the seamless integration of motion, visual effects, and sound. In a world driven by visual experiences, video and animation are indispensable elements in crafting compelling and memorable visual identities across various platforms and mediums. </p> <br><br>
     </div>
-    <div class="logo-projects">
-        <div class="row1">
-            <div class="column1">
-                <div class="image-container" id="image-01" onmouseover="showText('text-01')" onmouseleave="hideText('text-01')">
-                    <img class="image01" id="image01" src="image /Black &  Blue Simple Company Logo .png" width="400" height="400" alt="" style="border-radius: 15%; box-shadow: 0px 4px 4px 4px rgba(0, 0, 0, 0.444);">
-
-                </div>
-                <div class="text-01" id="text-01">
-                    Company Logos
-                </div>
-            </div>
-            <div class="column2">
-                <div class="image-container" id="image-02" onmouseover="showText('text-02')" onmouseleave="hideText('text-02')">
-                    <img src="image /fashion logo.png" width="400" height="400" alt="" style="border-radius: 15%;box-shadow: 0px 4px 4px 4px rgba(0, 0, 0, 0.444);">
-                </div>
-                <div class="text-02" id="text-02">
-                    Fashion Logos
-                </div>
-            </div>
-
-            <div class="column3">
-                <div class="image-container" id="image-03" onmouseover="showText('text-03')" onmouseleave="hideText('text-03')">
-                    <img src="image /Gold Luxury  Circle Logo.png" width="400" height="400" alt="" style="border-radius: 15%; box-shadow: 0px 4px 4px 4px rgba(0, 0, 0, 0.444);">
-                </div>
-                <div class="text-03" id="text-03">
-                    Black and Gold Logos
-                </div>
-            </div>
-        </div>
-
-        <div class="row2">
-            <div class="column4">
-                <div class="image-container" id="image-04" onmouseover="showText('text-04')" onmouseleave="hideText('text-04')">
-                    <img src="image /logos for pubs Neon.png" width="400" height="400" alt="" style="border-radius: 15%; box-shadow: 0px 4px 4px 4px rgba(0, 0, 0, 0.444);">
-                </div>
-                <div class="text-04" id="text-04">
-                    Neon logos
-
-                </div>
-            </div>
-
-
-            <div class="column5">
-                <div class="image-container" id="image-05" onmouseover="showText('text-05')" onmouseleave="hideText('text-05')">
-                    <img src="image /Neon Blue and Black Gamer Badge Logo.png" width="400" height="400" alt="" style="border-radius: 15%;box-shadow: 0px 4px 4px 4px rgba(0, 0, 0, 0.444);">
-                </div>
-                <div class="text-05" id="text-05">
-                    Gaming logos
-                </div>
-            </div>
-
-
-
-            <div class="column6">
-                <div class="image-container" id="image-06" onmouseover="showText('text-06')" onmouseleave="hideText('text-06')">
-                    <img src="image /Screenshot 2023-10-30 at 12.28.28.jpeg" width="400" height="400" alt="" style="border-radius: 15%; box-shadow: 0px 4px 4px 4px rgba(0, 0, 0, 0.444);">
-
-                </div>
-                <div class="text-06" id="text-06">
-                    Royal logos
-                </div>
-            </div>
-        </div>
-
-        <div topic>
-            <h1> WHAT IS CUSTOM LOGO DESING </h1>
-            <div class="content">
-                <p>
-
-                    Discover:
-
-                    Creating a logo demands more than just an artistic touch. It requires a strategic approach that transcends mere aesthetic preferences. A logo acts as the focal point of all brand communication, permeating every aspect of its identity. It must be built to endure, avoiding the need for frequent redesigns. Therefore, thorough research is vital to ensure the development of a logo that can withstand the test of time.<br>
-
-                    <br>Sketch:
-
-                    Determining whether a symbol or a distinctive typographic treatment of the brand name is necessary forms a crucial step. We recognize the significance of a symbol that can serve as a compact visual representation, especially when the full name might be illegible at smaller sizes. While the process of sketching logos can be time-consuming, taking breaks and allowing ideas to germinate and evolve in the mind is imperative for a refined outcome. <br>
-
-                    <br>Design:
-
-                    At WEBXEL, we pride ourselves on being a team of adept logo designers in Sri Lanka, boasting a wealth of experience in the art of crafting remarkable logos by hand. Our portfolio boasts successful collaborations with numerous businesses, both small and large, across the globe. We understand the significance of creating a logo that sets you apart from the competition, and we are dedicated to assisting you in the creation of a logo that will elevate your business to new heights. Count on us to deliver exceptional service for your project.
-                </p>
-            </div>
-
-        </div>
-        <div topic>
-            <h1> GET Started </h1>
-        </div>
-
-        <form action="/submit_form" method="post">
-            <label for="name">Your Name:</label><br>
-            <input type="text" id="name" name="name" required><br><br>
-
-            <label for="email">Your Email:</label><br>
-            <input type="email" id="email" name="email" required><br><br>
-
-            <label for="message">Message:</label><br>
-            <textarea id="message" name="message" rows="4" cols="50" required></textarea><br><br>
-
-            <input type="submit" value="Submit"> <br><br>
-        </form>
-
-        <script>
-            function showText(textId) {
-                document.getElementById(textId).style.opacity = 1;
-            }
-
-            function hideText(textId) {
-                document.getElementById(textId).style.opacity = 0;
-            }
-        </script>
+    <div class="img video-animation-content-2"></div>
+    <div class="img video-animation-content-3"></div>
+    <div class="video-animation-content-4">
+      <p>Videography is a critical element in visual storytelling, offering a dynamic and immersive way to convey narratives. Cinematographers and videographers carefully select shots, framing, and camera movements to enhance the storytelling experience. 
+        The choice of camera angles, lighting, and composition contributes significantly to the visual appeal of a video production. In the realm of videography, professionals explore various techniques to find the perfect balance that aligns with the overall narrative and effectively communicates the intended message. 
+        As technology advances, videographers must consider factors like resolution, aspect ratio, and frame rate to ensure their videos are optimized for different viewing platforms. <br><br>
+        Responsive videography has become essential in the contemporary digital landscape, considering the diverse range of devices and screen sizes. Videographers strive to create content that looks and performs seamlessly across various platforms, enhancing the viewer's experience. This adaptability not only reflects the versatility of modern videography practices but also ensures that audiences can engage with the content effortlessly.
+        Similar to video-animation design, the field of videography is in a constant state of evolution, influenced by technological advancements and evolving trends. Videographers leverage a variety of tools and software, such as professional cameras, editing suites like Adobe Premiere Pro, and color grading applications, to bring their creative visions to life. This experimentation and adaptation to new technologies contribute to the production of innovative and visually compelling video content.
+      </p> <br><br>
     </div>
+    <div class="img video-animation-content-5"></div>
+    <div class="img video-animation-content-6"></div>
+  </div>
 
-    <?php include('../includes/footer.php'); ?>
+  <div class="order-now">
+    <h1>Want to work with us?</h1>
+    <a href="/sub_pages/order.php">Place Order Now</a>
+  </div>
+
+  <?php include('../includes/footer.php'); ?>
 
 </body>
 
