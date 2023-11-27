@@ -17,8 +17,6 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <script src="https://kit.fontawesome.com/c4254e24a8.js"></script>
-    <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-H6KFMBG8J1"></script>
 
     <title>WEBXEL</title>
     <link rel="icon" href="/assets/images/logo2.jpg" type="image/jpg">
@@ -38,6 +36,16 @@
     })();
     </script>
     <!--End of Tawk.to Script-->
+
+        <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6JKJ2Y1W5K"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-6JKJ2Y1W5K');
+    </script>
 
 <body>
 
