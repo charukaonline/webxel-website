@@ -105,7 +105,7 @@
 			<a href="./sub_pages/video_animation.php">READ MORE</a>
 		</div>
 
-		<img src="/assets/images/services/sanjeev-nagaraj-u4bvBOOpZB4-unsplash.jpg" style="border-radius: 25px;">
+		<img src="/assets/images/services/video-animation.jpg" style="border-radius: 25px;">
 
 	</div>
 
