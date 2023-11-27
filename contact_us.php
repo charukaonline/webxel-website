@@ -100,7 +100,7 @@
             </div>
 
             <div class="field">
-              <label for="from">From:</label>
+              <label for="from">Email Address:</label>
               <input type="text" name="from" id="from" required>
             </div>
 
