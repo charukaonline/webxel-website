@@ -30,14 +30,14 @@
 
     <div class="video-animation-heading-section">
       <h1>Video & Animation</h1>
-      <h3>Designing the Future: Where Creativity Meets Innovation.</h3>
+      <h3>See Your Own Vision in a Digital Eye</h3>
       <a href="../sub_pages/order.php">Place Order Now</a>
     </div>
   </div>
 
   <div class="video-animation-content-section">
     <div class="video-animation-content-1">
-      <h2> See your dream <span> within </span> pixels. </h2>
+      <h2> Importance <span> of </span> Videography. </h2>
       <p>Video and animation form a dynamic and versatile realm within the creative sphere, fusing artistic expression with technological innovation to convey messages in a visually captivating manner. Grounded in the fusion of creativity and digital advancements, this discipline serves as a potent medium for storytelling and conveying intricate ideas. 
       In the realm of branding, videography plays a pivotal role in creating a distinctive visual identity. A well-executed video can encapsulate a brand's personality, values, and story. This includes considerations of cinematography style, color grading, and overall visual consistency. By maintaining coherence in videography across different contexts and channels, brands can establish recognition and foster trust with their audiences. <br><br>
         From promotional videos and advertisements to immersive animations and interactive content, the video and animation domain plays a pivotal role in shaping the visual narrative for individuals, businesses, and organizations. It is a transformative tool that engages audiences and leaves a lasting impact by bringing ideas to life through the seamless integration of motion, visual effects, and sound. In a world driven by visual experiences, video and animation are indispensable elements in crafting compelling and memorable visual identities across various platforms and mediums. </p> <br><br>
