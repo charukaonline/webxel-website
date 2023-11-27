@@ -17,8 +17,6 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <script src="https://kit.fontawesome.com/c4254e24a8.js"></script>
-    <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-H6KFMBG8J1"></script>
 
     <title>WEBXEL</title>
     <link rel="icon" href="/assets/images/logo2.jpg" type="image/jpg">
@@ -38,6 +36,16 @@
     })();
     </script>
     <!--End of Tawk.to Script-->
+
+        <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6JKJ2Y1W5K"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-6JKJ2Y1W5K');
+    </script>
 
 <body>
 
@@ -65,7 +73,7 @@
             <div class="flex-box1">
                 <h3 class="animation">Web Developing</h3>
                 <p class="animation">Mastering Responsive Design, Creating Dynamic Websites for Every Device</p>
-                <a href="/sub_pages/web_develop.php" class="btn animation">Learn more <i class=" fas fa-regular fa-chevron-right"></i></a>
+                <a href="/sub_pages/web_design.php" class="btn animation">Learn more <i class=" fas fa-regular fa-chevron-right"></i></a>
             </div>
 
             <div class="flex-box2">
