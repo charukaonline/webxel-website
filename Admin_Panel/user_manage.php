@@ -187,6 +187,38 @@ function alert($message)
                                 ?>
                             </tbody>
                         </table>
+
+                        <form id="form">
+
+                            <h3>User account Blocking email</h3>
+
+                            <div class="field">
+                                <label for="to_name">Account Holder Name:</label>
+                                <input type="text" name="to_name" id="to_name" required>
+                            </div>
+                            <div class="field">
+                                <label for="from_name">Sender Name:</label>
+                                <label for=""><span>*</span>Use WEBXEL name for this field</label>
+                                <input type="text" name="from_name" id="from_name" required>
+                            </div>
+                            <div class="field">
+                                <label for="to">To:</label>
+                                <input type="text" name="to" id="to" required>
+                            </div>
+                            <div class="field">
+                                <label for="reply_to">Reply To:</label>
+                                <label for=""><span>*</span>Use admin@webxel.xyz email address for this field</label>
+                                <input type="text" name="reply_to" id="reply_to" required>
+                            </div>
+
+                            <input type="submit" id="button" value="Send Email">
+                        </form>
+
+                        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+                        <script type="text/javascript">
+                            emailjs.init('sB6Xsn2XV0uE9guSx')
+                        </script>
                     </div>
 
                 </section>
@@ -276,6 +308,7 @@ function alert($message)
     </section>
 
     <script src="../assets/js/admin.js"></script>
+    <script src="../assets/js/user_acc_hold.js"></script>
 
 </body>
 

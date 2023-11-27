@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900@display=swap');
+
+:root {
+  /* --bg-color: #0B0C10; */
+  /* --blue: #66FCF1; */
+  --bg-color: #000;
+  --header-background-color: rgba(251, 251, 253, .8);
+  --hover-color: rgba(0, 0, 0, 1);
+  --btn-color: rgb(41, 99, 215);
+  --font-color: #fff;
+  --box-shadow: 0 5px 10px rgba(0, 0, 0, .4);
+  --form-box-shadow: 0 10px 10px 10px rgb(40, 40, 40, 40);
+  --h2-font: 3rem;
+}
+
+* {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  outline: none;
+  border: none;
+  transition: all .2s linear;
+  /* background-attachment: fixed; */
+  /* background-repeat: no-repeat; */
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-padding-top: 5.5rem;
+  scroll-behavior: smooth;
+  background-size: auto;
+}
+
+button:hover {
+  box-shadow: var(--shadow);
+  cursor: pointer;
+  box-shadow: 0px 7px 10px rgba(80, 80, 80, 0.4);
+  color: #fff;
+  transform: translatex(7px);
+  transition: all 0.3s ease 0s;
+}
+
+button {
+  transition: all 0.3s ease 0s;
+}
+
+.graphic-main-section {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.50), rgba(0, 0, 0, 0.50)), url('/assets/images/graphic-design/graphic-cover.jpg');
+  margin-top: 50px;
+  height: 100vh;
+  background-size: cover;
+}
+
+.graphic-main-section .graphic-heading-section h1 {
+  position: relative;
+  padding-top: 150px;
+  text-align: center;
+  color: var(--font-color);
+  font-size: 54px;
+}
+
+.graphic-main-section .graphic-heading-section h3 {
+  position: relative;
+  padding-top: 30px;
+  text-align: center;
+  color: #6e6e73;
+  font-size: 30px;
+}
+
+.graphic-main-section .graphic-heading-section a {
+  margin-top: 1rem;
+  display: inline-block;
+  font-size: 15px;
+  color: var(--bg-color);
+  background: var(--font-color);
+  border-radius: 10px;
+  cursor: pointer;
+  padding: 1.2rem 3rem;
+
+  position: absolute;
+  margin-top: 50px;
+  text-align: center;
+  font-size: 25px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.graphic-main-section .graphic-heading-section a:hover {
+  background: var(--btn-color);
+  color: var(--font-color);
+  border: var(--bg-color) solid 2px;
+  transition: .5s;
+}
+
+.graphic-content-section {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: minmax(60px, auto);
+  margin-left: 8.33%;
+  margin-right: 8.33%;
+  margin-top: 8rem;
+  margin-bottom: 8rem;
+  gap: 4rem;
+}
+
+.graphic-content-section .graphic-content-1 {
+  display: flex;
+  flex-direction: column;
+}
+
+.graphic-content-section .graphic-content-1 h2 {
+  font-size: 4rem;
+  font-weight: 300;
+  margin-bottom: 2rem;
+}
+
+.graphic-content-section .graphic-content-1 h2 span {
+  font-weight: 500;
+}
+
+.graphic-content-section .graphic-content-4 p,
+.graphic-content-section .graphic-content-1 p {
+  font-size: 18px;
+}
+
+.graphic-content-section .graphic-content-2 {
+  background-image: url("/assets/images/graphic-design/graphic-1.jpg");
+  background-position: center;
+  background-size: cover;
+  border-radius: 15px;
+}
+
+.graphic-content-section .graphic-content-3 {
+  background-image: url("/assets/images/graphic-design/graphic-2.jpg");
+  background-position: center;
+  background-size: cover;
+  border-radius: 15px;
+}
+
+.graphic-content-section .graphic-content-5 {
+  height: 400px;
+  background-image: url("/assets/images/graphic-design/graphic-3.jpg");
+  background-position: center;
+  background-size: cover;
+  border-radius: 15px;
+}
+
+.graphic-content-section .graphic-content-6 {
+  background-image: url("/assets/images/graphic-design/graphic-4.jpg");
+  background-position: center;
+  background-size: cover;
+  border-radius: 15px;
+}
+
+@media screen and (max-width: 800px) {
+  .graphic-content-section {
+    grid-template-columns: 1fr;
+  }
+
+  .graphic-content-section .img {
+    height: 400px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .graphic-main-section {
+    height: 500px;
+  }
+
+  .graphic-main-section .graphic-heading-section {
+    height: 350px;
+  }
+
+  .graphic-main-section .graphic-heading-section h2 {
+    font-size: 3.5rem;
+  }
+
+  .graphic-content-section {
+    margin-top: 4rem;
+  }
+
+  .graphic-content-section .graphic-content-1 h2 {
+    font-size: 3rem;
+  }
+}
+
+.order-now {
+  width: 100%;
+  height: auto;
+  align-items: center;
+  padding: 50px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.order-now h1 {
+  font-size: 25px;
+}
+
+.order-now a {
+  margin-top: 1rem;
+  display: inline-block;
+  font-size: 15px;
+  color: var(--font-color);
+  background: var(--bg-color);
+  border-radius: .5rem;
+  cursor: pointer;
+  padding: 1.2rem 3rem;
+}
+
+.order-now a:hover {
+  background: var(--font-color);
+  color: var(--bg-color);
+  border: var(--bg-color) solid 2px;
+  transition: .5s;
+  letter-spacing: 1.5px;
+}

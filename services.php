@@ -26,19 +26,21 @@
 
 </head>
 
-	<!--Start of Tawk.to Script-->
-	<script type="text/javascript">
-	var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-	(function(){
-	var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-	s1.async=true;
-	s1.src='https://embed.tawk.to/655b9f0991e5c13bb5b1f4be/1hfmuafig';
-	s1.charset='UTF-8';
-	s1.setAttribute('crossorigin','*');
-	s0.parentNode.insertBefore(s1,s0);
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+	var Tawk_API = Tawk_API || {},
+		Tawk_LoadStart = new Date();
+	(function() {
+		var s1 = document.createElement("script"),
+			s0 = document.getElementsByTagName("script")[0];
+		s1.async = true;
+		s1.src = 'https://embed.tawk.to/655b9f0991e5c13bb5b1f4be/1hfmuafig';
+		s1.charset = 'UTF-8';
+		s1.setAttribute('crossorigin', '*');
+		s0.parentNode.insertBefore(s1, s0);
 	})();
-	</script>
-	<!--End of Tawk.to Script-->
+</script>
+<!--End of Tawk.to Script-->
 
 <body>
 
@@ -58,9 +60,9 @@
 		<img src="/assets/images/services/services-webdesign.webp">
 
 		<div>
-			<h2>Web design & development</h2>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br> Nam pulvinar luctus sem, eget porta orci. Maecenas<br> molestie dui id diam feugiat, eu tincidunt mauris<br> aliquam. Duis commodo vitae ligula et interdum.<br> Maecenas faucibus mattis imperdiet. In rhoncus ac<br> ligula id ultricies.</p>
-			<a href="./sub_pages/order.php">MORE INFO</a>
+			<h2>Web design & Development</h2>
+			<p>When it comes to creating engaging online experiences, web design and development combine creativity <br> with technological know-how. Our team builds user-friendly websites customised to your business, <br> from fluid navigation to responsive design. For an engaging and captivating digital area, boost your online presence <br> with our professional web design and development services.</p>
+			<a href="./sub_pages/web_design.php">MORE INFO</a>
 		</div>
 
 	</div>
@@ -68,18 +70,18 @@
 	<div class="div3">
 
 		<div>
-			<h2>Marketing & advertising</h2>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br> Nam pulvinar luctus sem, eget porta orci. Maecenas<br> molestie dui id diam feugiat, eu tincidunt mauris<br> aliquam. Duis commodo vitae ligula et interdum.</p>
+			<h2>Marketing & Advertising</h2>
+			<p>Ignite your brand with our dynamic marketing and advertising solutions. We strategize, create, and deliver impactful campaigns that resonate with your audience. From digital platforms to traditional media, our expertise ensures your message cuts through the noise, driving visibility, engagement, and ultimately, business growth. Elevate your brand with us.</p>
 			<a href="./sub_pages/marketing_advertising.php">See It In Action</a>
 		</div>
 
-		<img src="/assets/images/services/services-marketing-graphics.png">
+		<img src="/assets/images/services/marketing.jpg" style="border-radius: 15px;">
 	</div>
 
 
 	<div class="div4">
-		<h1>Mobile app development</h1>
-		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus imperdiet rhoncus porta. Ut quis sem quis purus lobortis dictum. Aliquam<br>nec dignissim nisl. Vivamus cursus feugiat sapien, eget tincidunt leo ornare quis.</p>
+		<h1>Mobile app Development</h1>
+		<p>Revolutionize your business with our cutting-edge mobile app development. We design and build custom apps tailored to your needs, ensuring a seamless user experience across iOS and Android platforms. From concept to launch, our team transforms ideas into intuitive, high-performance mobile solutions that elevate your brand in the digital realm.</p>
 		<a href="./sub_pages/app_development.php">READ MORE</a>
 	</div>
 
@@ -89,7 +91,7 @@
 
 		<div>
 			<h2>Graphic Design</h2>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus imperdiet rhoncus porta. Ut quis sem quis purus lobortis dictum. Aliquam<br>nec dignissim nisl. Vivamus cursus feugiat sapien, eget tincidunt leo ornare quis.</p>
+			<p>Transform your vision into visual brilliance with our graphic design expertise. We craft stunning visuals that captivate and communicate. From logos to marketing collateral, our creative team blends artistry with strategy, ensuring your brand stands out. Elevate your visual identity with our innovative and impactful graphic design solutions.</p>
 			<a href="./sub_pages/graphic_design.php">READ MORE</a>
 		</div>
 
@@ -99,15 +101,15 @@
 
 		<div>
 			<h2>Video and Animation</h2>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus imperdiet rhoncus porta. Ut quis sem quis purus lobortis dictum. Aliquam<br>nec dignissim nisl. Vivamus cursus feugiat sapien, eget tincidunt leo ornare quis.</p>
+			<p>Captivate your audience with our compelling video and animation services. We bring ideas to life through dynamic visuals and engaging storytelling. Whether it's promotional videos, explainer animations, or immersive content, our team combines creativity with technical skill to deliver captivating experiences that leave a lasting impression. Elevate your brand through mesmerizing visuals.</p>
 			<a href="./sub_pages/video_animation.php">READ MORE</a>
 		</div>
 
-		<img src="/assets/images/services/services-marketing-graphics.png">
+		<img src="/assets/images/services/video-animation.jpg" style="border-radius: 25px;">
 
 	</div>
 
-	<div class="div7">
+	<!-- <div class="div7">
 
 		<img src="/assets/images/services/services-marketing-graphics.png">
 
@@ -117,11 +119,11 @@
 			<a href="./sub_pages/writing_&_translation.php">READ MORE</a>
 		</div>
 
-	</div>
+	</div> -->
 
 	<div class="div8">
 		<h2>Custom Integrations</h2>
-		<p>Phasellus sed nisi ac dui interdum semper. Etiam consequat fermentum sollicitudin. Fusce vulputate porta faucibus. Vivamus nulla tellus,<br> accumsan non efficitur id, pretium quis ante</p>
+		<p>Seamlessly integrate and optimize your processes with our custom integration solutions. Tailored to your needs, we create cohesive systems that enhance efficiency and connectivity, ensuring a streamlined and interconnected workflow.</p>
 		<a href="/about_us.php">WHO WE ARE</a>
 
 		<img src="/assets/images/services/services-custom-integrations.webp">
@@ -175,7 +177,8 @@
 
 	<div class="div11">
 		<h2>Our Vision & Mission</h2>
-		<p>Nunc sit amet lobortis nulla. Nunc ullamcorper, mi id luctus dictum, augue tortor dictum ipsum, nec congue arcu <br>lorem in nisl. Duis neque lacus, viverra non mauris ac, pharetra rhoncus libero. Aliquam varius viverra ex, in venenatis<br> magna ornare sit amet. Integer varius sit amet turpis eu ullamcorper.</p>
+		<p>Vision: To innovate and inspire, creating transformable solutions that propel businesses and individuals toward success. <br>
+			Mission: We are dedicated to delivering exceptional services, fostering creativity, and embracing technology to empower our clients and communities.</p>
 		<div>
 			<h3>W&#x039E;&#x042;X&#x039E;L</h3>
 		</div>

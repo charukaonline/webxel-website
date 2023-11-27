@@ -34,7 +34,6 @@ if (isset($_POST['order-btn'])) {
         header('location: ./web_develop.php');
         alert("Something Went Wrong.");
     }
-    
 }
 
 function alert($message)
@@ -60,53 +59,98 @@ function alert($message)
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.min.css" />
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/semantic.min.css" />
 
+    <link rel="stylesheet" href="../assets/css/sub-pages/order.css">
+    <link rel="stylesheet" href="../assets/css/header.css">
+    <link rel="stylesheet" href="../assets/css/footer.css">
+
     <!-- <link rel="stylesheet" href="/assets/css/index.css"> -->
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <script src="https://kit.fontawesome.com/c4254e24a8.js"></script>
 
     <title>WEBXEL - Order</title>
+    <link rel="icon" href="/assets/images/logo2.jpg" type="image/jpg">
 </head>
+
+    <!--Start of Tawk.to Script-->
+    <script type="text/javascript">
+    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+    (function(){
+    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+    s1.async=true;
+    s1.src='https://embed.tawk.to/655b9f0991e5c13bb5b1f4be/1hfmuafig';
+    s1.charset='UTF-8';
+    s1.setAttribute('crossorigin','*');
+    s0.parentNode.insertBefore(s1,s0);
+    })();
+    </script>
+    <!--End of Tawk.to Script-->
 
 <body>
 
     <?php include('../includes/navbar.php'); ?>
 
-    <form action="" method="POST">
-        <input type="text" name="name" placeholder="Enter your name" required>
-        <input type="email" name="email" placeholder="Enter Email" required>
-        <input type="text" name="number" placeholder="Enter contact number" required>
+    <section class="order-form-container">
 
-        <label for="services">Choose a Service Type:</label>
-        <select name="service_type" id="services">
-            <option value="web design & development">Web design & development</option>
-            <option value="marketing & advertising">Marketing & advertising</option>
-            <option value="mobile app development">Mobile app development</option>
-            <option value="graphic Design">Graphic Design</option>
-            <option value="video and animation">Video and Animation</option>
-            <option value="content writing & translation">Content writing & Translation</option>
-        </select>
+        <form action="" method="POST">
 
-        <textarea name="order-description" placeholder="Describe the Service that you want..." required></textarea>
-        <!-- <div>
-            <input type="file" name="service-file-upload" placeholder="Upload file">
-            <span>If you have to upload any files to related order Upload here... (ex:- photos, pdf)</span>
-        </div> -->
+            <h3>Place Order Now</h3>
 
-        <input type="submit" value="Place Order" name="order-btn">
-    </form>
+            <div class="name">
+                <input type="text" name="name" placeholder="Enter your name" required>
+                <!-- <span><i class='bx bxs-user'></i></span> -->
+            </div>
+
+            <div class="email">
+                <input type="email" name="email" placeholder="Enter Email" required>
+                <!-- <span><i class='bx bxs-envelope'></i></span> -->
+            </div>
+
+            <div class="number">
+                <input type="text" name="phone-number" placeholder="Enter contact number" required>
+                <!-- <i class='bx bxs-phone'></i> -->
+            </div>
+
+            <div class="option">
+                <label for="services">Choose a Service Type: </label>
+                <select name="service_type" id="services">
+                    <option value="web design & development">Web design & Development</option>
+                    <option value="marketing & advertising">Marketing & Advertising</option>
+                    <option value="mobile app development">Mobile app Development</option>
+                    <option value="graphic Design">Graphic Design</option>
+                    <option value="video and animation">Video and Animation</option>
+                    <option value="content writing & translation">Content writing & Translation</option>
+                </select>
+                <!-- <i class='bx bx-menu'></i> -->
+            </div>
+
+            <div class="desc">
+                <textarea name="order-description" placeholder="Describe the Service that you want..." required></textarea>
+            </div>
+
+            <!-- <div>
+                <input type="file" name="service-file-upload" placeholder="Upload file">
+                <span>If you have to upload any files to related order Upload here... (ex:- photos, pdf)</span>
+            </div> -->
+
+            <input type="submit" value="Place Order" name="order-btn" class="form-btn">
+        </form>
+
+    </section>
+
+    <?php include('../includes/footer.php'); ?>
 
     <script src="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"></script>
     <script>
         <?php
-            if (isset($_SESSION['message'])) {
-                ?>
-                alertify.set('notifier', 'position', 'top-center');
-                alertify.success('<?= $_SESSION['message'] ?>');
-                <?php
-                    unset($_SESSION['message']);
-            }
-                ?>
+        if (isset($_SESSION['message'])) {
+        ?>
+            alertify.set('notifier', 'position', 'top-center');
+            alertify.success('<?= $_SESSION['message'] ?>');
+        <?php
+            unset($_SESSION['message']);
+        }
+        ?>
     </script>
 
 </body>

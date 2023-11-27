@@ -1,88 +1,63 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-<meta charset="UTF-8">
+    <meta charset="UTF-8">
     <meta name="description" content="WEBXEL, webxel, IT Service">
     <meta name="keywords" content="HTML,CSS,JavaScript,PHP">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="../assets/css/app_development.css">
-
-    <link rel="preconnect" href="<link rel=" preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css"
-        integrity="sha384-QYIZto+st3yW+o8+5OHfT6S482Zsvz2WfOzpFSXMF9zqeLcFV0/wlZpMtyFcZALm" crossorigin="anonymous">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
-    <title>WEBXEL - App Development Services</title>
+    <link rel="stylesheet" href="../assets/css/sub-pages/app-development/app_development.css">
+    <link rel="stylesheet" href="../assets/css/header.css">
+    <link rel="stylesheet" href="../assets/css/footer.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/c4254e24a8.js"></script>
+
+    <title>WEBXEL - Application Development</title>
+    <link rel="icon" href="/assets/images/logo2.jpg" type="image/jpg">
 </head>
+
+    <!--Start of Tawk.to Script-->
+    <script type="text/javascript">
+    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+    (function(){
+    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+    s1.async=true;
+    s1.src='https://embed.tawk.to/655b9f0991e5c13bb5b1f4be/1hfmuafig';
+    s1.charset='UTF-8';
+    s1.setAttribute('crossorigin','*');
+    s0.parentNode.insertBefore(s1,s0);
+    })();
+    </script>
+    <!--End of Tawk.to Script-->
 
 <body>
 
+    <?php include('../includes/navbar.php'); ?>
 
-
-    <section class="header">
-
-        <nav>
-
-            <a href="deve.html"><img src="logo.png"></a>
-
-            <div class="nav-links" id="navLinks">
-
-                <i class="fa fa-times" onclick="hideMenu()"></i>
-
-                <ul>
-
-                    <li><a href="">HOME</a></li>
-                    <li><a href="">PACKAGE</a></li>
-                    <li><a href="">PLANS</a></li>
-                    <li><a href="">RESOURCES</a></li>
-                    <li><a href="">CONTACT</a></li>
-
-                </ul>
-
-            </div>
-
-            <i class="fa fa-bars" onclick="showMenu()"></i>
-
-        </nav>
-
-
+    <section class="intro">
 
         <div class="text-box">
 
-            <h1>App Development</h1>
-
-            <p>
-                "Turning Ideas into Intuitive Experiences. Your App Journey Starts Here!"
-                <br>
-                "Transforming Ideas into Innovative Apps!"
-                <br>
-                "we specialize in crafting exceptional mobile and web applications tailored to your unique vision.
-                <br>
-                Our expert team combines cutting-edge technology with creative design, ensuring your app not only meets
-                but exceeds industry standards.
-                <br>
-                Let's turn your ideas into reality - where innovation meets functionality."
-            </p>
-
-            <button type="button">START</button>
+            <h1>Application Development</h1>
+            <h3>Transforming Ideas into Innovative Apps!</h3>
+            <a href="../sub_pages/order.php">Place Order Now</a>
 
         </div>
 
     </section>
 
+
     <div class="grad">
 
-
-
-        <!---------Course------>
         <section class="course">
             <h1>Packages We Offer</h1>
-            <p>Thank you for considering our services for your app design needs. </p>
+            <h2>Thank you for considering our services for your app design needs. </h2>
 
             <div class="row">
                 <div class="course-col">
@@ -94,7 +69,6 @@
                         iOS Development<br>
                         Android Development<br>
                         Custom Server Development<br>
-                        <button>View Package</button>
                     </p>
                 </div>
                 <div class="course-col">
@@ -103,10 +77,9 @@
                     <p>
                         Market Demand Verification<br>
                         Vision & Strategy Workshops<br>
-                        Wireframes & Clickable Prototype<br>
+                        Wire-frames & Clickable Prototype<br>
                         User Interviews Report<br>
                         Cost Estimation<br>
-                        <button>View Package</button>
                     </p>
                 </div>
                 <div class="course-col">
@@ -116,37 +89,34 @@
                         Product Definition<br>
                         Product Design (UX & UI)<br>
                         Figma Prototype<br>
-                        Delivery Time - Phase 1<br>
+                        Delivery Time - Phase 1
                         6 to 8 weeks
-                        <button>View Package</button>
                     </p>
                 </div>
             </div>
 
         </section>
 
-        <!------work---->
-
         <section class="work">
 
-            <h1>work we have done</h1>
-            <p>we are pleased to provide you an idea about our work with the following</p>
+            <h1>Work we have done</h1>
+            <h2>We are pleased to provide you an idea about our work with the following.</h2>
 
             <div class="row">
                 <div class="work-col">
-                    <img src="image09.jpg">
+                    <img src="../assets/images/app-development/image09.jpg">
                     <div class="layer">
                         <h3>Desktop Apps</h3>
                     </div>
                 </div>
                 <div class="work-col">
-                    <img src="image03.jpg">
+                    <img src="../assets/images/app-development/image03.jpg">
                     <div class="layer">
                         <h3>Native Mobile Apps</h3>
                     </div>
                 </div>
                 <div class="work-col">
-                    <img src="image07.jpg">
+                    <img src="../assets/images/app-development/image07.jpg">
                     <div class="layer">
                         <h3>Legacy Apps</h3>
                     </div>
@@ -154,23 +124,13 @@
             </div>
         </section>
 
-        <!--------test------>
-
-
-
-
-
-
-
-        <!---------More Options--------->
-
         <section class="moreOp">
             <h1>Explore More</h1>
-            <p>Unlocking possibilities in the digital realm, where innovation meets creativity.</p>
+            <h2>Unlocking possibilities in the digital realm, where innovation meets creativity.</h2>
 
-            <div class="row">
+            <div class="line">
                 <div class="moreOp-col">
-                    <img src="image12.jpg">
+                    <img src="../assets/images/app-development/image12.jpg">
                     <h3>Developer Guides</h3>
 
                     <p>Find training classes that describe how to accomplish a specific task with code samples you can
@@ -178,46 +138,28 @@
 
                 </div>
                 <div class="moreOp-col">
-                    <img src="image13.jpg">
+                    <img src="../assets/images/app-development/image13.jpg">
                     <h3>Sample Code</h3>
                     <p>Jump-start your development using these sample projects</p>
                 </div>
                 <div class="moreOp-col">
-                    <img src="image14.jpg">
+                    <img src="../assets/images/app-development/image14.jpg">
                     <h3>Quality guide lines</h3>
-                    <p>Build a high quality app with these design and behaviour successfully</p>
+                    <p>Build a high quality app with these design and behavior successfully</p>
                 </div>
 
             </div>
 
         </section>
 
-
-
-
-
-
-
-
-        <!---------Javascript for Toggle Menu----------->
-
-        <script>
-
-            var navLinks = document.getElementById("navLinks");
-
-            function showMenu() {
-                navLinks.style.right = "0";
-            }
-            function hideMenu() {
-                navLinks.style.right = "-200px";
-            }
-
-        </script>
-
-
-
-
     </div>
+
+    <div class="order-now">
+		<h1>Want to work with us?</h1>
+		<a href="/sub_pages/order.php">Place Order Now</a>
+	</div>
+
+    <?php include('../includes/footer.php') ?>
 
 </body>
 

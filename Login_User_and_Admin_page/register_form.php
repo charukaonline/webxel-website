@@ -1,45 +1,43 @@
 <?php
-    
-    @include '../config.php';
 
-    if(isset($_POST['submit'])){
-        $name = mysqli_real_escape_string($conn, $_POST['name']);
-        $email = mysqli_real_escape_string($conn, $_POST['email']);
-        $pass = md5($_POST['password']);
-        $cpass = md5($_POST['cpassword']);
-        $user_type = $_POST['user-type'];
+@include '../config.php';
 
-        $select_from_register = "SELECT * FROM login_and_register WHERE email = '$email' && password = '$pass' ";
+if (isset($_POST['submit'])) {
+    $name = mysqli_real_escape_string($conn, $_POST['name']);
+    $email = mysqli_real_escape_string($conn, $_POST['email']);
+    $pass = md5($_POST['password']);
+    $cpass = md5($_POST['cpassword']);
+    $user_type = $_POST['user-type'];
 
-        $result_for_register = mysqli_query($conn, $select_from_register);
+    $select_from_register = "SELECT * FROM login_and_register WHERE email = '$email' && password = '$pass' ";
 
-        if(mysqli_num_rows($result_for_register) > 0){
-            $error[] = 'User already exists!';
-        }
-        else {
-            if($pass != $cpass) {
-                $error[] = 'Password not matched!';
-            }
-            else {
-                $insert_to_register = "INSERT INTO login_and_register (name, email, password, user_type) VALUES ('$name', '$email', '$pass', '$user_type')";
-                mysqli_query($conn, $insert_to_register);
+    $result_for_register = mysqli_query($conn, $select_from_register);
 
-                if ($insert_to_info && $insert_to_register) {
-                    $error[] = 'Register successfully!';
-                    header('location:login_form.php');
-                }
-                else {
-                    $error[] = 'Something went wrong!';
-                    header('location:login_form.php');
-                }
+    if (mysqli_num_rows($result_for_register) > 0) {
+        $error[] = 'User already exists!';
+    } else {
+        if ($pass != $cpass) {
+            $error[] = 'Password not matched!';
+        } else {
+            $insert_to_register = "INSERT INTO login_and_register (name, email, password, user_type) VALUES ('$name', '$email', '$pass', '$user_type')";
+            mysqli_query($conn, $insert_to_register);
+
+            if ($insert_to_info && $insert_to_register) {
+                $error[] = 'Register successfully!';
+                header('location:login_form.php');
+            } else {
+                $error[] = 'Something went wrong!';
+                header('location:login_form.php');
             }
         }
-    };
+    }
+};
 
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -59,24 +57,26 @@
 
 </head>
 
-    <!--Start of Tawk.to Script-->
-    <script type="text/javascript">
-    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-    (function(){
-    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-    s1.async=true;
-    s1.src='https://embed.tawk.to/655b9f0991e5c13bb5b1f4be/1hfmuafig';
-    s1.charset='UTF-8';
-    s1.setAttribute('crossorigin','*');
-    s0.parentNode.insertBefore(s1,s0);
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+    var Tawk_API = Tawk_API || {},
+        Tawk_LoadStart = new Date();
+    (function() {
+        var s1 = document.createElement("script"),
+            s0 = document.getElementsByTagName("script")[0];
+        s1.async = true;
+        s1.src = 'https://embed.tawk.to/655b9f0991e5c13bb5b1f4be/1hfmuafig';
+        s1.charset = 'UTF-8';
+        s1.setAttribute('crossorigin', '*');
+        s0.parentNode.insertBefore(s1, s0);
     })();
-    </script>
-    <!--End of Tawk.to Script-->
+</script>
+<!--End of Tawk.to Script-->
 
 <body>
 
     <?php include('../includes/navbar.php'); ?>
-    
+
     <!-- Register form section start -->
     <section class="register-form-container">
 
@@ -85,25 +85,35 @@
             <h3>Create Your Account</h3>
 
             <?php
-                if(isset($error)) {
-                    foreach($error as $error) {
-                        echo '<span class="error-msg">'.$error.'</span>';
-                    };
+            if (isset($error)) {
+                foreach ($error as $error) {
+                    echo '<span class="error-msg">' . $error . '</span>';
                 };
+            };
             ?>
 
-            <input type="text" name="name" placeholder="Name" required>
-            <input type="email" name="email" placeholder="Email" required>
-            <input type="password" name="password" placeholder="Password" required>
-            <input type="password" name="cpassword" placeholder="Confirm password" required>
-            <!-- If there are any admins, open the code that commented on below  -->
-            <!-- <select name="user-type">
-                <option value="user">User</option>
-                <option value="admin">Admin</option>
-            </select> -->
+            <div class="name">
+                <input type="text" name="name" placeholder="Name" required>
+                <span><i class='bx bxs-user'></i></span>
+            </div>
+
+            <div class="email">
+                <input type="email" name="email" placeholder="Email" required>
+                <span><i class='bx bxs-envelope'></i></span>
+            </div>
+
+            <div class="password">
+                <input type="password" name="password" id="password-input" placeholder="Password" required>
+                <span id="toggle-password" onclick="togglePassword()"><i class="fas fa-eye"></i></span>
+            </div>
+
+            <div class="confirm-password">
+                <input type="password" name="cpassword" id="confirm-password-input" placeholder="Confirm password" required>
+                <span id="toggle-confirm-password" onclick="toggleConfirmPassword()"><i class="fas fa-eye"></i></span>
+            </div>
 
             <input type="submit" name="submit" value="register now" class="form-btn">
-            
+
             <p>already have an account? <a href="login_form.php">Sign In Now</a></p>
 
         </form>
@@ -129,6 +139,8 @@
     <!-- Footer section end -->
 
     <script src="/assets/js/index.js"></script>
+    <script src="/assets/js/register_and_login.js"></script>
 
 </body>
+
 </html>

@@ -107,8 +107,15 @@ function alert($message)
             };
             ?>
 
-            <input type="email" name="email" placeholder="Email" required>
-            <input type="password" name="password" placeholder="Password">
+            <div class="email">
+                <input type="email" name="email" placeholder="Email" required>
+                <span><i class='bx bxs-envelope'></i></span>
+            </div>
+
+            <div class="password">
+                <input type="password" name="password" id="password-input" placeholder="Password">
+                <span id="toggle-password" onclick="togglePassword()"><i class="fas fa-eye"></i></span>
+            </div>
 
             <input type="submit" name="submit" value="Sign in" class="form-btn">
 
@@ -144,6 +151,7 @@ function alert($message)
     <!-- Footer section end -->
 
     <script src="/assets/js/index.js"></script>
+    <script src="/assets/js/register_and_login.js"></script>
     <script>
         <?php
         if (isset($_SESSION['message'])) {
@@ -154,17 +162,6 @@ function alert($message)
             unset($_SESSION['message']);
         }
         ?>
-    </script>
-
-    <script>
-        function togglePasswordVisibility() {
-            var passwordInput = document.getElementById("password");
-            if (passwordInput.type === "password") {
-                passwordInput.type = "text";
-            } else {
-                passwordInput.type = "password";
-            }
-        }
     </script>
 
 </body>

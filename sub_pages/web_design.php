@@ -5,21 +5,47 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>WEBXEL - Web Development</title>
-  <link rel="stylesheet" href="../assets/css/web-design/web-design.css">
-  <link rel="stylesheet" href="../assets/css/web-design/swiper-bundle.min.css">
 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+  <link rel="stylesheet" href="../assets/css/sub-pages/web-design/web-design.css">
+  <link rel="stylesheet" href="../assets/css/sub-pages/web-design/swiper-bundle.min.css">
+  <link rel="stylesheet" href="../assets/css/header.css">
+  <link rel="stylesheet" href="../assets/css/footer.css">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <script src="https://kit.fontawesome.com/c4254e24a8.js"></script>
+
+  <title>WEBXEL - Web Development</title>
   <link rel="icon" type="image/png" href="../assets/images/logo2.jpg">
 
 </head>
 
+    <!--Start of Tawk.to Script-->
+    <script type="text/javascript">
+    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+    (function(){
+    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+    s1.async=true;
+    s1.src='https://embed.tawk.to/655b9f0991e5c13bb5b1f4be/1hfmuafig';
+    s1.charset='UTF-8';
+    s1.setAttribute('crossorigin','*');
+    s0.parentNode.insertBefore(s1,s0);
+    })();
+    </script>
+    <!--End of Tawk.to Script-->
+
 <body>
 
-<?php include('../includes/navbar.php'); ?>
+  <?php include('../includes/navbar.php'); ?>
 
   <div class="explore-main-section top-section">
     <div class="explore-title">
-      <h3>Build Your Dream Website</h3>
+      <h1>Build Your Dream Website</h1>
+      <h3>Your Vision, Our Expertise, Let's Create Your Website</h3>
+      <a href="../sub_pages/order.php">Place Order Now</a>
     </div>
   </div>
 
@@ -28,9 +54,9 @@
       <h3> <span>Are you ready?</span> to launch your self</h3>
       <p> At our Web Design Studio, we're passionate about crafting digital experiences that not only captivate but also convert. Our team of talented designers and developers works tirelessly to bring your vision to life, creating stunning, user-friendly websites that leave a lasting impression. <br><br>
 
-          Whether you're starting from scratch or looking to revamp your existing site, we're here to make your online presence shine. We specialize in responsive designs, ensuring your website looks and performs flawlessly across all devices. From sleek and modern aesthetics to intuitive navigation and seamless functionality, we've got it all covered. <br><br>
+        Whether you're starting from scratch or looking to revamp your existing site, we're here to make your online presence shine. We specialize in responsive designs, ensuring your website looks and performs flawlessly across all devices. From sleek and modern aesthetics to intuitive navigation and seamless functionality, we've got it all covered. <br><br>
 
-          Our process is collaborative and transparent. We'll work closely with you to understand your unique needs and goals, translating them into a web design that not only looks fantastic but also functions seamlessly. Our attention to detail is unmatched, and we're committed to delivering results that exceed your expectations. When you choose our Web Design Studio, you're choosing a partner in your online success journey. Let's embark on this creative adventure together and turn your digital dreams into reality. Get in touch with us today, and let's make your website stand out in the digital landscape!"</p>
+        Our process is collaborative and transparent. We'll work closely with you to understand your unique needs and goals, translating them into a web design that not only looks fantastic but also functions seamlessly. Our attention to detail is unmatched, and we're committed to delivering results that exceed your expectations. When you choose our Web Design Studio, you're choosing a partner in your online success journey. Let's embark on this creative adventure together and turn your digital dreams into reality. Get in touch with us today, and let's make your website stand out in the digital landscape!"</p>
     </div>
     <div class="explore-top-right"></div>
     <div class="explore-bottom-left"></div>
@@ -69,11 +95,10 @@
             </p>
           </div>
         </div>
+
         <div class="card swiper-slide">
-
-
           <div class="card-content">
-            <h2 class="name">Ecommerce</h2>
+            <h2 class="name">E-commerce</h2>
             <p class="description">
             <ul>
               <li>Single product page </li>
@@ -86,8 +111,8 @@
             </p>
           </div>
         </div>
-        <div class="card swiper-slide">
 
+        <div class="card swiper-slide">
           <div class="card-content">
             <h2 class="name">LMS</h2>
             <p class="description">
@@ -100,13 +125,10 @@
               <li>Zoom / Recording support</li>
             </ul>
             </p>
-
-
           </div>
         </div>
+
         <div class="card swiper-slide">
-
-
           <div class="card-content">
             <h2 class="name">WordPress</h2>
             <p class="description">
@@ -119,12 +141,10 @@
               <li>SEO friendly</li>
             </ul>
             </p>
-
           </div>
         </div>
+
         <div class="card swiper-slide">
-
-
           <div class="card-content">
             <h2 class="name">POS</h2>
             <p class="description">
@@ -137,8 +157,6 @@
               <li>Customer preferences tracking</li>
             </ul>
             </p>
-
-
           </div>
         </div>
 
@@ -149,6 +167,11 @@
     <div class="swiper-button-prev swiper-navBtn"></div>
     <div class="swiper-pagination"></div>
   </div>
+
+  <div class="order-now">
+		<h1>Want to work with us?</h1>
+		<a href="/sub_pages/order.php">Place Order Now</a>
+	</div>
 
   <!-- Swiper JS -->
   <script src="../assets/js/web-design/swiper-bundle.min.js"></script>
