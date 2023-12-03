@@ -202,31 +202,12 @@ header .icons #menu-bars {
     text-align: center;
 }
 
-.about-section-2 {
-    background: var(--bg-color);
-    height: 70vh;
-}
-
-.about-section-2 .about-desc2 {
-    position: absolute;
-    margin-top: 235px;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: var(--font-color);
-    font-size: 22px;
-    text-align: center;
-}
-
-.about-section-2 .about-desc2 .content1 {
-    padding-bottom: 5rem;
-}
-
 .team .heading {
     color: var(--font-color);
     text-align: center;
     font-size: 38px;
     padding-bottom: 80px;
-    padding-top: 30px;
+    padding-top: 75px;
 }
 
 /* Container for team members */

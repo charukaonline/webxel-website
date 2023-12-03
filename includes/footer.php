@@ -2,9 +2,9 @@
 <footer class="footer">
     <div class="footer_wrapper">
         <ul>
-            <li>General Inquiries: <a href="mailto:info@webxel.xyz">info@webxel.xyz</a></li>
+            <li><b>General Inquiries: <a href="mailto:info@webxel.xyz">info@webxel.xyz</a></b></li>
             <!-- <li>Technical Inquiries: <a href="mailto:admin@webxel.xyz">admin@webxel.xyz</a></li> -->
-            <li>Service Inquires: <a href="mailto:service@webxel.xyz">service@webxel.xyz</a></li>
+            <li><b>Service Inquires: <a href="mailto:service@webxel.xyz">service@webxel.xyz</a></b></li>
         </ul>
 
         <div class="footer_links">

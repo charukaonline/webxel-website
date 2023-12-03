@@ -175,16 +175,6 @@
 		</div>
 	</div>
 
-
-	<!-- <div class="div10">
-		<div>
-			<img src="">
-		</div>
-		<div>
-			<img src="">
-		</div>
-	</div> -->
-
 	<div class="div11">
 		<h2>Our Vision & Mission</h2>
 		<p>Vision: To innovate and inspire, creating transformable solutions that propel businesses and individuals toward success. <br>
