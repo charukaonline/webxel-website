@@ -117,7 +117,7 @@
                     <p>Full Stack Developer</p>
                     <a href="https://github.com/charukaonline"><i class='bx bxl-github'></i></a>
                     <a href="https://linkedin.com/in/charukaonline"><i class='bx bxl-linkedin'></i></a>
-                    <a href="https://x.com/CharukaOnline"><i class='bx bxl-twitter'></i></a>
+                    <a href="https://twitter.com/CharukaOnline"><i class='bx bxl-twitter'></i></a>
                 </div>
             </div>
 
@@ -147,7 +147,7 @@
                 <img src="assets/images/about_us/profiles/thanuka.jpg" alt="Thanuka">
                 <div class="team-member-info">
                     <h2>Thanuka Rathnayake</h2>
-                    <p>Front End Developer</p>
+                    <p>DevOps | Developer</p>
                     <a href="#"><i class='bx bxl-github'></i></a>
                     <a href="#"><i class='bx bxl-linkedin'></i></a>
                     <a href="#"><i class='bx bxl-twitter'></i></a>
@@ -158,7 +158,7 @@
                 <img src="assets/images/about_us/profiles/dulvanya.jpg" alt="Dulvanya">
                 <div class="team-member-info">
                     <h2>Nethma Dulvanya</h2>
-                    <p>Front End Developer</p>
+                    <p>UI/UX Designer | Developer</p>
                     <a href="https://github.com/Dulvanya"><i class='bx bxl-github'></i></a>
                     <a href="https://www.linkedin.com/in/nethma-dulvanya-26b198270/"><i class='bx bxl-linkedin'></i></a>
                     <a href="#"><i class='bx bxl-twitter'></i></a>
@@ -180,7 +180,7 @@
                 <img src="assets/images/about_us/profiles/mathisha.jpg" alt="Mathisha">
                 <div class="team-member-info">
                     <h2>Dasun Mathisha</h2>
-                    <p>Front End Developer</p>
+                    <p>Testing & QA</p>
                     <a href="#"><i class='bx bxl-github'></i></a>
                     <a href="#"><i class='bx bxl-linkedin'></i></a>
                     <a href="#"><i class='bx bxl-twitter'></i></a>
@@ -191,7 +191,7 @@
                 <img src="assets/images/about_us/profiles/nethmi.jpg" alt="Nethmi">
                 <div class="team-member-info">
                     <h2>Nethmi Pitawala</h2>
-                    <p>Front End Developer</p>
+                    <p>UI Designer | QA</p>
                     <a href="#"><i class='bx bxl-github'></i></a>
                     <a href="#"><i class='bx bxl-linkedin'></i></a>
                     <a href="#"><i class='bx bxl-twitter'></i></a>
