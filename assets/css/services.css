@@ -362,6 +362,7 @@ html {
 	height: auto;
 	background: #141414;
 	display: flex;
+	padding-bottom: 40px;
 }
 
 .div10 div {

@@ -147,41 +147,31 @@
 
 	<div class="div10">
 		<div>
-			<img src="">
+			<img src="/assets/images/services/latest-projects/1.png">
 		</div>
 		<div>
-			<img src="">
+			<img src="/assets/images/services/latest-projects/2.png">
 		</div>
 		<div>
-			<img src="">
+			<img src="/assets/images/services/latest-projects/3.png">
 		</div>
 		<div>
-			<img src="">
+			<img src="/assets/images/services/latest-projects/4.png">
 		</div>
 	</div>
 
 	<div class="div10">
 		<div>
-			<img src="">
+			<img src="/assets/images/services/latest-projects/5.png">
 		</div>
 		<div>
-			<img src="">
+			<img src="/assets/images/services/latest-projects/6.png">
 		</div>
 		<div>
-			<img src="">
+			<img src="/assets/images/services/latest-projects/7.png">
 		</div>
 		<div>
-			<img src="">
-		</div>
-	</div>
-
-
-	<div class="div10">
-		<div>
-			<img src="">
-		</div>
-		<div>
-			<img src="">
+			<img src="/assets/images/services/latest-projects/8.png">
 		</div>
 	</div>
 
