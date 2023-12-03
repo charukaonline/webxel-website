@@ -125,7 +125,7 @@
 
 		<div>
 			<h2>Content writing & Translation</h2>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus imperdiet rhoncus porta. Ut quis sem quis purus lobortis dictum. Aliquam<br>nec dignissim nisl. Vivamus cursus feugiat sapien, eget tincidunt leo ornare quis.</p>
+			<p>#</p>
 			<a href="./sub_pages/writing_&_translation.php">READ MORE</a>
 		</div>
 
