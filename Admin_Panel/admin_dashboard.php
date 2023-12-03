@@ -34,11 +34,14 @@ if (!isset($_SESSION['admin_name'])) {
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-6JKJ2Y1W5K"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+	window.dataLayer = window.dataLayer || [];
 
-  gtag('config', 'G-6JKJ2Y1W5K');
+	function gtag() {
+		dataLayer.push(arguments);
+	}
+	gtag('js', new Date());
+
+	gtag('config', 'G-6JKJ2Y1W5K');
 </script>
 
 <body>
@@ -59,20 +62,56 @@ if (!isset($_SESSION['admin_name'])) {
 			</div>
 
 			<ul class="box-info">
-				<li>
-					<i class='bx bxs-calendar-check'></i>
-					<span class="text">
-						<h3>11</h3>
-						<p>Complete Orders</p>
-					</span>
-				</li>
-				<li>
-					<i class='bx bxs-group'></i>
-					<span class="text">
-						<h3>9</h3>
-						<p>Active Clients</p>
-					</span>
-				</li>
+
+				<?php
+
+				$confirmed_orders = "SELECT COUNT(*) as count FROM confirmed_orders";
+				$order_result = mysqli_query($conn, $confirmed_orders);
+
+				if ($order_result->num_rows > 0) {
+					$row = $order_result->fetch_assoc();
+					$count = $row['count'];
+				?>
+
+					<li>
+						<i class='bx bxs-calendar-check'></i>
+						<span class="text">
+							<?php
+							echo "<h3>$count</h3>"
+							?>
+							<p>Complete Orders</p>
+						</span>
+					</li>
+				<?php
+				} else {
+					echo "<h3>0 results</h3>";
+				}
+				?>
+
+				<?php
+
+				$active_users = "SELECT COUNT(*) as count FROM login_and_register WHERE user_type = '' ";
+				$active_users_result = mysqli_query($conn, $active_users);
+
+				if ($active_users_result->num_rows > 0) {
+					$row = $active_users_result->fetch_assoc();
+					$count = $row['count'];
+				?>
+
+					<li>
+						<i class='bx bxs-group'></i>
+						<span class="text">
+							<?php
+							echo "<h3>$count</h3>"
+							?>
+							<p>Active Clients</p>
+						</span>
+					</li>
+				<?php
+				} else {
+					echo "<h3>0 results</h3>";
+				}
+				?>
 			</ul>
 
 
