@@ -171,7 +171,7 @@
                     Their team is very informed and highly professional.
                     They provide excellent customer service and are always accessible to answer any queries I might
                     have.</p>
-                <h1>Michael Joseph</h1>
+                <h1>Aloka Mendis</h1>
                 <h3>Restaurant Owner</h3>
             </div>
 
@@ -180,7 +180,7 @@
                     <br>I can say with confidence.
                     <br>I heartily endorse WEBXEL to anyone who is searching for high-quality service.
                 </p>
-                <h1>Richard Oliver</h1>
+                <h1>Chamath Sandasara</h1>
                 <h3>Gym Owner</h3>
             </div>
 
@@ -188,7 +188,7 @@
                 <p>I am quite pleased with the calibre of WEBXEL's goods and services as a customer.
                     They provide a wide selection of high-quality services.
                     making them my go-to place for all of my Content writing and translation requirements.</p>
-                <h1>Robert Daniel</h1>
+                <h1>Sasith Bandara</h1>
                 <h3>Writer</h3>
             </div>
 
