@@ -9,7 +9,7 @@ if (isset($_POST['submit'])) {
     $cpass = md5($_POST['cpassword']);
     $user_type = $_POST['user-type'];
 
-    $select_from_register = "SELECT * FROM login_and_register WHERE email = '$email' && password = '$pass' ";
+    $select_from_register = "SELECT * FROM login_and_register WHERE email = '$email' ";
 
     $result_for_register = mysqli_query($conn, $select_from_register);
 
