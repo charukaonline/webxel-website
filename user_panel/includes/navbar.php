@@ -13,7 +13,4 @@
         <i class='bx bxs-bell'></i>
         <span class="num"></span>
     </a>
-    <a href="#profile" class="profile">
-        <img src="/assets/images/profile.png">
-    </a>
 </nav>
