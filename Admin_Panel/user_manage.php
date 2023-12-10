@@ -305,7 +305,7 @@ function alert($message)
                 </section>
 
                 <div class="google-analytics">
-                    <a href="https://analytics.google.com/analytics/web/?authuser=0#/p413781736/reports/intelligenthome?params=_u..nav%3Dmaui">
+                    <a href="https://analytics.google.com/">
                         Click here to Track visitors from Google Analytics</a>
                 </div>
 
