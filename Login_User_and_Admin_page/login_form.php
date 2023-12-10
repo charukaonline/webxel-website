@@ -147,13 +147,13 @@ function alert($message)
     <footer class="footer">
         <div class="footer_wrapper">
             <ul>
-                <li>1. New services coming late 2024.</li>
-                <li>2. We've squashed some pesky bugs to ensure a smoother and more reliable experience for all users.</li>
-                <li>3. Our team has worked on optimizing various aspects of W&#x039E;&#x042;X&#x039E;L, resulting in faster load times and improved efficiency.</li>
+                <li><b>General Inquiries: <a href="mailto:info@webxel.xyz">info@webxel.xyz</a></b></li>
+                <!-- <li>Technical Inquiries: <a href="mailto:admin@webxel.xyz">admin@webxel.xyz</a></li> -->
+                <li><b>Service Inquires: <a href="mailto:service@webxel.xyz">service@webxel.xyz</a></b></li>
             </ul>
 
             <div class="footer-copyright">
-                <p>Copyright © W&#x039E;&#x042;X&#x039E;L 2023</p>
+                <p>Copyright © W&#x039E;&#x042;X&#x039E;L 2023 | Project by <a href="https://nsbm.ac.lk/">NSBM</a> 23.1 Group 05</p>
             </div>
 
         </div>

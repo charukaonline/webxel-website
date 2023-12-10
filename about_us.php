@@ -280,7 +280,7 @@
             <hr>
 
             <div class="footer-copyright">
-                <p>Copyright © W&#x039E;&#x042;X&#x039E;L 2023</p>
+                <p>Copyright © W&#x039E;&#x042;X&#x039E;L 2023 | Project by NSBM 23.1 Group 05</p>
             </div>
 
     </footer>
