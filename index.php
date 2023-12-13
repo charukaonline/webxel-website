@@ -15,6 +15,8 @@
     <link rel="stylesheet" href="/assets/css/header.css">
     <link rel="stylesheet" href="/assets/css/footer.css">
 
+    <link rel="stylesheet" href="/snow-falling/snow.css">
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <script src="https://kit.fontawesome.com/c4254e24a8.js"></script>
 
@@ -23,33 +25,40 @@
 
 </head>
 
-    <!--Start of Tawk.to Script-->
-    <script type="text/javascript">
-    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-    (function(){
-    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-    s1.async=true;
-    s1.src='https://embed.tawk.to/655b9f0991e5c13bb5b1f4be/1hfmuafig';
-    s1.charset='UTF-8';
-    s1.setAttribute('crossorigin','*');
-    s0.parentNode.insertBefore(s1,s0);
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+    var Tawk_API = Tawk_API || {},
+        Tawk_LoadStart = new Date();
+    (function() {
+        var s1 = document.createElement("script"),
+            s0 = document.getElementsByTagName("script")[0];
+        s1.async = true;
+        s1.src = 'https://embed.tawk.to/655b9f0991e5c13bb5b1f4be/1hfmuafig';
+        s1.charset = 'UTF-8';
+        s1.setAttribute('crossorigin', '*');
+        s0.parentNode.insertBefore(s1, s0);
     })();
-    </script>
-    <!--End of Tawk.to Script-->
+</script>
+<!--End of Tawk.to Script-->
 
-        <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6JKJ2Y1W5K"></script>
-    <script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-6JKJ2Y1W5K"></script>
+<script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
     gtag('js', new Date());
 
     gtag('config', 'G-6JKJ2Y1W5K');
-    </script>
+</script>
 
 <body>
 
     <?php include('./includes/navbar.php'); ?>
+
+    <?php include('./snow-falling/snow.php') ?> 
 
     <!-- Home section start -->
     <section class="home" id="home">
