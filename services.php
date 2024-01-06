@@ -42,6 +42,16 @@
 </script>
 <!--End of Tawk.to Script-->
 
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-6JKJ2Y1W5K"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-6JKJ2Y1W5K');
+</script>
+
 <body>
 
 	<?php include('./includes/navbar.php'); ?>
@@ -115,7 +125,7 @@
 
 		<div>
 			<h2>Content writing & Translation</h2>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus imperdiet rhoncus porta. Ut quis sem quis purus lobortis dictum. Aliquam<br>nec dignissim nisl. Vivamus cursus feugiat sapien, eget tincidunt leo ornare quis.</p>
+			<p>#</p>
 			<a href="./sub_pages/writing_&_translation.php">READ MORE</a>
 		</div>
 
@@ -137,41 +147,31 @@
 
 	<div class="div10">
 		<div>
-			<img src="">
+			<img src="/assets/images/services/latest-projects/1.png">
 		</div>
 		<div>
-			<img src="">
+			<img src="/assets/images/services/latest-projects/2.png">
 		</div>
 		<div>
-			<img src="">
+			<img src="/assets/images/services/latest-projects/3.png">
 		</div>
 		<div>
-			<img src="">
+			<img src="/assets/images/services/latest-projects/4.png">
 		</div>
 	</div>
 
 	<div class="div10">
 		<div>
-			<img src="">
+			<img src="/assets/images/services/latest-projects/5.png">
 		</div>
 		<div>
-			<img src="">
+			<img src="/assets/images/services/latest-projects/6.png">
 		</div>
 		<div>
-			<img src="">
+			<img src="/assets/images/services/latest-projects/7.png">
 		</div>
 		<div>
-			<img src="">
-		</div>
-	</div>
-
-
-	<div class="div10">
-		<div>
-			<img src="">
-		</div>
-		<div>
-			<img src="">
+			<img src="/assets/images/services/latest-projects/8.png">
 		</div>
 	</div>
 

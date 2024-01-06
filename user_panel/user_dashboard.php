@@ -18,8 +18,34 @@ if (isset($_POST['submit-info'])) {
     $user_contact_number = $_POST['contact_number'];
     $user_email = $_SESSION['user_email'];
 
-    $user_profile_update = $conn->prepare("UPDATE login_and_register SET name = ?, country = ?, address = ?, contact_number = ?, about = ? WHERE email = ?");
-    $user_profile_update->bind_param("ssssss", $user_name, $user_country, $user_address, $user_contact_number, $user_about, $user_email);
+    // Check if a new profile image is selected
+    if (isset($_FILES['profile-image']['name']) && !empty($_FILES['profile-image']['name'])) {
+        $img_name = $_FILES['profile-image']['name'];
+        $tmp_name = $_FILES['profile-image']['tmp_name'];
+        $error = $_FILES['profile-image']['error'];
+
+        if ($error === 0) {
+            $img_ex = pathinfo($img_name, PATHINFO_EXTENSION);
+            $img_ex_to_lc = strtolower($img_ex);
+
+            $allowed_exs = array('jpg', 'jpeg', 'png');
+            if (in_array($img_ex_to_lc, $allowed_exs)) {
+                $new_img_name = uniqid($user_name, true) . '.' . $img_ex_to_lc;
+                $img_upload_path = '../uploads/' . $new_img_name;
+
+                if (file_exists("../uploads/$old_pp")) {
+                    unlink("../uploads/$old_pp");
+                }
+
+                move_uploaded_file($tmp_name, $img_upload_path);
+            }
+        }
+    } else {
+        $new_img_name = $old_pp;
+    }
+
+    $user_profile_update = $conn->prepare("UPDATE login_and_register SET name = ?, country = ?, address = ?, contact_number = ?, about = ?, pp = ? WHERE email = ?");
+    $user_profile_update->bind_param("sssssss", $user_name, $user_country, $user_address, $user_contact_number, $user_about, $new_img_name, $user_email);
     $user_profile_update->execute();
 
     if ($user_profile_update) {
@@ -140,6 +166,19 @@ function alert($message)
 </script>
 <!--End of Tawk.to Script-->
 
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-6JKJ2Y1W5K"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'G-6JKJ2Y1W5K');
+</script>
+
 <body>
 
     <?php include('../user_panel/includes/sidebar.php'); ?>
@@ -163,7 +202,34 @@ function alert($message)
 
                 <div class="profile-card">
 
-                    <img src="../assets/images/profile.png" alt="Profile" class="rounded-circle">
+                    <?php
+
+                    $user_email = $_SESSION['user_email'];
+                    function getMyEnrollments($table, $user_email)
+                    {
+                        global $conn;
+                        $query = "SELECT * FROM $table WHERE email = '$user_email' ";
+                        return mysqli_query($conn, $query);
+                    }
+
+                    if ($_SESSION['user_email']) {
+                        $user_email = $_SESSION['user_email'];
+                        $profile_image = getMyEnrollments("login_and_register", $user_email);
+
+                        if ($profile_image) {
+                            if (mysqli_num_rows($profile_image) > 0) {
+                                while ($record = mysqli_fetch_assoc($profile_image)) {
+                    ?>
+                                    <img src="../uploads/<?= $record['pp'] ?>" alt="Profile" class="rounded-circle">
+
+                    <?php
+                                }
+                            }
+                        }
+                    }
+
+                    ?>
+
                     <h2><?php echo $_SESSION['user_name'] ?></h2>
                     <h3>W&#x039E;&#x042;X&#x039E;L User</h3>
 
@@ -238,7 +304,7 @@ function alert($message)
 
                     <div class="profile-edit" id="profile-edit">
 
-                        <form action="" method="POST">
+                        <form action="" method="POST" enctype="multipart/form-data">
 
                             <div class="info-edit">
                                 <label for="fullName" class="info-social-links">Full Name</label>
@@ -272,6 +338,13 @@ function alert($message)
                                 <label for="Phone" class="info-social-links">Contact Number</label>
                                 <div class="info-description">
                                     <input name="contact_number" type="text" class="form-control" id="Phone">
+                                </div>
+                            </div>
+
+                            <div class="info-edit">
+                                <label for="profile" class="info-social-links">Profile Image</label>
+                                <div class="info-description">
+                                    <input name="profile-image" type="file" class="form-control" id="profile-image">
                                 </div>
                             </div>
 
@@ -331,8 +404,8 @@ function alert($message)
                         function getAllOrders($table, $user_email)
                         {
                             global $conn;
-                            $query = "SELECT * FROM $table WHERE email = '$user_email' ";
-                            return mysqli_query($conn, $query);
+                            $order = "SELECT * FROM $table WHERE email = '$user_email' ";
+                            return mysqli_query($conn, $order);
                         }
 
                         if ($_SESSION['user_email']) {
@@ -345,21 +418,6 @@ function alert($message)
                         ?>
 
                                         <div class="order-overview" id="order-overview" style="background-color: <?php echo ($record['order_status'] === 'Accepted!') ? '#06c258' : (($record['order_status'] === 'Pending...') ? '#F58216' : 'inherit'); ?>">
-
-                                            <div class="row">
-                                                <div class="order-title">Order ID:</div>
-                                                <div class="order-content"><?= $record['order_id'] ?></div>
-                                            </div>
-
-                                            <div class="row">
-                                                <div class="order-title">Name:</div>
-                                                <div class="order-content"><?= $record['name'] ?></div>
-                                            </div>
-
-                                            <div class="row">
-                                                <div class="order-title">Email:</div>
-                                                <div class="order-content"><?= $record['email'] ?></div>
-                                            </div>
 
                                             <div class="row">
                                                 <div class="order-title">Service Type:</div>

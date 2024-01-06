@@ -37,6 +37,16 @@
 </script>
 <!--End of Tawk.to Script-->
 
+    <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-6JKJ2Y1W5K"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-6JKJ2Y1W5K');
+  </script>
+
 <body>
 
   <?php include('./includes/navbar.php') ?>
@@ -56,33 +66,33 @@
         <div class="contact-info">
           <div class="contact-info-item">
             <div class="contact-info-icon">
-              <i class="fas fa-home"></i>
+              <i class="fa fa-map-marker"></i>
             </div>
 
             <div class="contact-info-content">
-              <h4>Address</h4>
+              <h4>Locate us</h4>
               <p>Negombo Road,<br /> Pannala, Kurunegala, <br />60160</p>
             </div>
           </div>
 
           <div class="contact-info-item">
             <div class="contact-info-icon">
-              <a href="tel:+94712345678"><i class="fas fa-phone"></i></a>
+              <a href="mailto:admin@webxel.xyz"><i class="fa fa-envelope"></i></a>
             </div>
 
             <div class="contact-info-content">
-              <h4>Phone</h4>
-              <p>+94712345678</p>
+              <h4>Admin contact</h4>
+              <p>admin@webxel.xyz</p>
             </div>
           </div>
 
           <div class="contact-info-item">
             <div class="contact-info-icon">
-              <a href="mailto:info@webxel.xyz"><i class="fas fa-envelope"></i></a>
+              <a href="mailto:info@webxel.xyz"><i class="fa fa-envelope"></i></a>
             </div>
 
             <div class="contact-info-content">
-              <h4>Email</h4>
+              <h4>General Inquiries</h4>
               <p>info@webxel.xyz</p>
             </div>
           </div>

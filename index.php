@@ -17,8 +17,6 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <script src="https://kit.fontawesome.com/c4254e24a8.js"></script>
-    <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-H6KFMBG8J1"></script>
 
     <title>WEBXEL</title>
     <link rel="icon" href="/assets/images/logo2.jpg" type="image/jpg">
@@ -38,6 +36,16 @@
     })();
     </script>
     <!--End of Tawk.to Script-->
+
+        <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6JKJ2Y1W5K"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-6JKJ2Y1W5K');
+    </script>
 
 <body>
 
@@ -65,7 +73,7 @@
             <div class="flex-box1">
                 <h3 class="animation">Web Developing</h3>
                 <p class="animation">Mastering Responsive Design, Creating Dynamic Websites for Every Device</p>
-                <a href="/sub_pages/web_develop.php" class="btn animation">Learn more <i class=" fas fa-regular fa-chevron-right"></i></a>
+                <a href="/sub_pages/web_design.php" class="btn animation">Learn more <i class=" fas fa-regular fa-chevron-right"></i></a>
             </div>
 
             <div class="flex-box2">
@@ -163,7 +171,7 @@
                     Their team is very informed and highly professional.
                     They provide excellent customer service and are always accessible to answer any queries I might
                     have.</p>
-                <h1>Michael Joseph</h1>
+                <h1>Aloka Mendis</h1>
                 <h3>Restaurant Owner</h3>
             </div>
 
@@ -172,7 +180,7 @@
                     <br>I can say with confidence.
                     <br>I heartily endorse WEBXEL to anyone who is searching for high-quality service.
                 </p>
-                <h1>Richard Oliver</h1>
+                <h1>Chamath Sandasara</h1>
                 <h3>Gym Owner</h3>
             </div>
 
@@ -180,7 +188,7 @@
                 <p>I am quite pleased with the calibre of WEBXEL's goods and services as a customer.
                     They provide a wide selection of high-quality services.
                     making them my go-to place for all of my Content writing and translation requirements.</p>
-                <h1>Robert Daniel</h1>
+                <h1>Sasith Bandara</h1>
                 <h3>Writer</h3>
             </div>
 

@@ -291,7 +291,6 @@ body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	opacity: 0;
 }
 
 #content nav .profile img {

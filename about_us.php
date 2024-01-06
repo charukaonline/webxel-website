@@ -34,6 +34,16 @@
     </script>
     <!--End of Tawk.to Script-->
 
+        <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6JKJ2Y1W5K"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-6JKJ2Y1W5K');
+    </script>
+
 <body>
 
     <!--Header section start-->
@@ -72,25 +82,10 @@
         </div>
 
         <div class="about-desc1">
-            At W&#x039E;&#x042;X&#x039E;L, we are passionate about turning your digital dreams into reality. Established
-            with a vision
-            to provide <br> cutting-edge web development, photography, and videography services, we pride ourselves on
+            At W&#x039E;&#x042;X&#x039E;L, Our team is full of undergratuates from NSBM Green University.<br><br>
+            Established with a vision to provide <br> 
+            cutting-edge web development, photography, and videography services, we pride ourselves on
             delivering stunning, high-quality results that capture the essence of your brand.
-        </div>
-    </section>
-
-    <section class="about-section-2">
-        <div class="about-desc2">
-            <p class="content1">Our web development team specializes in creating modern and responsive websites that not
-                only look great
-                but also perform exceptionally well. Whether you need a personal blog, an e-commerce platform, or a
-                corporate website, we have the expertise to bring your vision to life. <br></p>
-
-            <p class="content2">Our photography and videography services are designed to capture the beauty and
-                uniqueness of every
-                moment. <br> From professional photoshoots to cinematic videos, we have the skills and equipment to make
-                your
-                memories truly unforgettable.</p>
         </div>
     </section>
 
@@ -104,10 +99,10 @@
                 <img src="assets/images/about_us/profiles/charuka.jpg" alt="Charuka">
                 <div class="team-member-info">
                     <h2>Charuka Karunarathna</h2>
-                    <p>Full Stack Developer</p>
+                    <p>Frontend/Backend Developer</p>
                     <a href="https://github.com/charukaonline"><i class='bx bxl-github'></i></a>
                     <a href="https://linkedin.com/in/charukaonline"><i class='bx bxl-linkedin'></i></a>
-                    <a href="https://x.com/CharukaOnline"><i class='bx bxl-twitter'></i></a>
+                    <a href="https://twitter.com/CharukaOnline"><i class='bx bxl-twitter'></i></a>
                 </div>
             </div>
 
@@ -115,7 +110,7 @@
                 <img src="assets/images/about_us/profiles/sanoj.jpg" alt="Sanoj">
                 <div class="team-member-info">
                     <h2>Sanoj Aminda</h2>
-                    <p>Full Stack Developer</p>
+                    <p>Frontend/Backend Developer</p>
                     <a href="https://github.com/DonSanoj"><i class='bx bxl-github'></i></a>
                     <a href="https://www.linkedin.com/in/sanoj-aminda/"><i class='bx bxl-linkedin'></i></a>
                     <a href="https://twitter.com/Sanoj1128"><i class='bx bxl-twitter'></i></a>
@@ -137,7 +132,7 @@
                 <img src="assets/images/about_us/profiles/thanuka.jpg" alt="Thanuka">
                 <div class="team-member-info">
                     <h2>Thanuka Rathnayake</h2>
-                    <p>Front End Developer</p>
+                    <p>DevOps | Developer</p>
                     <a href="#"><i class='bx bxl-github'></i></a>
                     <a href="#"><i class='bx bxl-linkedin'></i></a>
                     <a href="#"><i class='bx bxl-twitter'></i></a>
@@ -148,7 +143,7 @@
                 <img src="assets/images/about_us/profiles/dulvanya.jpg" alt="Dulvanya">
                 <div class="team-member-info">
                     <h2>Nethma Dulvanya</h2>
-                    <p>Front End Developer</p>
+                    <p>UI/UX Designer | Developer</p>
                     <a href="https://github.com/Dulvanya"><i class='bx bxl-github'></i></a>
                     <a href="https://www.linkedin.com/in/nethma-dulvanya-26b198270/"><i class='bx bxl-linkedin'></i></a>
                     <a href="#"><i class='bx bxl-twitter'></i></a>
@@ -170,9 +165,9 @@
                 <img src="assets/images/about_us/profiles/mathisha.jpg" alt="Mathisha">
                 <div class="team-member-info">
                     <h2>Dasun Mathisha</h2>
-                    <p>Front End Developer</p>
+                    <p>Testing & QA | Developer</p>
                     <a href="#"><i class='bx bxl-github'></i></a>
-                    <a href="#"><i class='bx bxl-linkedin'></i></a>
+                    <a href="https://www.linkedin.com/in/dasun-mathisha-16a3a3180/"><i class='bx bxl-linkedin'></i></a>
                     <a href="#"><i class='bx bxl-twitter'></i></a>
                 </div>
             </div>
@@ -181,9 +176,9 @@
                 <img src="assets/images/about_us/profiles/nethmi.jpg" alt="Nethmi">
                 <div class="team-member-info">
                     <h2>Nethmi Pitawala</h2>
-                    <p>Front End Developer</p>
+                    <p>UI/UX Designer | Developer</p>
                     <a href="#"><i class='bx bxl-github'></i></a>
-                    <a href="#"><i class='bx bxl-linkedin'></i></a>
+                    <a href="https://www.linkedin.com/in/nethmi-pitawala-105b7a23b/"><i class='bx bxl-linkedin'></i></a>
                     <a href="#"><i class='bx bxl-twitter'></i></a>
                 </div>
             </div>
@@ -241,13 +236,11 @@
     <!-- Footer section start -->
     <footer class="footer">
         <div class="footer_wrapper">
-            <ul>
-                <li>1. New services coming late 2024.</li>
-                <li>2. We've squashed some pesky bugs to ensure a smoother and more reliable experience for all users.
-                </li>
-                <li>3. Our team has worked on optimizing various aspects of W&#x039E;&#x042;X&#x039E;L, resulting in
-                    faster load times and improved efficiency.</li>
-            </ul>
+                <ul>
+                    <li><b>General Inquiries: <a href="mailto:info@webxel.xyz">info@webxel.xyz</a></b></li>
+                    <!-- <li>Technical Inquiries: <a href="mailto:admin@webxel.xyz">admin@webxel.xyz</a></li> -->
+                    <li><b>Service Inquires: <a href="mailto:service@webxel.xyz">service@webxel.xyz</a></b></li>
+                </ul>
 
             <div class="footer_links">
 
@@ -287,7 +280,7 @@
             <hr>
 
             <div class="footer-copyright">
-                <p>Copyright © W&#x039E;&#x042;X&#x039E;L 2023</p>
+                <p>Copyright © W&#x039E;&#x042;X&#x039E;L 2023 | Project by NSBM 23.1 Group 05</p>
             </div>
 
     </footer>
