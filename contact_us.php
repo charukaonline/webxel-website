@@ -105,23 +105,23 @@
             <h2>Leave us a message.</h2>
 
             <div class="field">
-              <label for="subject">Subject:</label>
-              <input type="text" name="subject" id="subject" required>
-            </div>
-
-            <div class="field">
-              <label for="from">Email Address:</label>
+              <label for="from">Email:</label>
               <input type="text" name="from" id="from" required>
-            </div>
-
-            <div class="field">
-              <label for="message">Message:</label>
-              <input type="text" name="message" id="message" required>
             </div>
 
             <div class="field">
               <label for="sendername">Name:</label>
               <input type="text" name="sendername" id="sendername" required>
+            </div>
+
+            <div class="field">
+              <label for="subject">Subject:</label>
+              <input type="text" name="subject" id="subject" required>
+            </div>
+
+            <div class="field">
+              <label for="message">Message:</label>
+              <input type="text" name="message" id="message" required>
             </div>
 
             <input type="submit" id="button" value="Send Email">
@@ -138,7 +138,7 @@
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 
   <script type="text/javascript">
-    emailjs.init('IgUc1ffbkghFmeCOK')
+    emailjs.init('xwO4ZXwVNmyhOrGXV')
   </script>
 
 </body>
