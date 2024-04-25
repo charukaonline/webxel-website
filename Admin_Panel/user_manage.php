@@ -106,16 +106,6 @@ function alert($message)
     <link rel="icon" type="image/png" href="../assets/images/logo2.jpg">
 </head>
 
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-6JKJ2Y1W5K"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-6JKJ2Y1W5K');
-</script>
-
 <body>
 
     <section class="admin-page-user-manage">
